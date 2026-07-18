@@ -1,0 +1,183 @@
+{
+    "id": "pf1e-jb2a-macros",
+    "title": "PF1e Animations (Beta)",
+    "description": "<p>A module dedicated to bringing JB2A animations to Pathfinder 1e.</p>",
+    "version": "TO BE REPLACED",
+    "authors": [
+        {
+            "name": "MrVauxs",
+            "discord": "vauxs",
+            "twitter": "@ThatVauxs",
+            "patreon": "mrvauxs",
+            "ko-fi": "mrvauxs",
+            "flags": {}
+        }
+    ],
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "languages/en.json"
+        },
+        {
+            "lang": "pl",
+            "name": "polski",
+            "path": "languages/pl.json"
+        },
+        {
+            "lang": "fr",
+            "name": "Français",
+            "path": "languages/fr.json"
+        },
+        {
+            "lang": "cn",
+            "name": "中文（简体）",
+            "path": "languages/cn.json"
+        },
+        {
+            "lang": "zh-tw",
+            "name": "正體中文",
+            "path": "languages/zh-tw.json"
+        },
+        {
+            "lang": "de",
+            "name": "Deutsch",
+            "path": "languages/de.json"
+        },
+        {
+            "lang": "it",
+            "name": "Italiano",
+            "path": "languages/it.json"
+        }
+    ],
+    "url": "https://github.com/MrVauxs/pf1e-jb2a-macros",
+    "compatibility": {
+        "minimum": "11",
+        "verified": "14"
+    },
+    "esmodules": [
+        "module/pf1e-animations.js",
+        "module/sequencer-extensions.js",
+        "module/updateMenu.js",
+        "module/blacklistMenu.js",
+        "module/settings.js",
+        "module/modifiers-matter.js"
+    ],
+    "scripts": [],
+    "styles": [
+        "styles/pf1e-animation-macros.css"
+    ],
+    "packFolders": [
+        {
+            "name": "PF1e Animations",
+            "sorting": "a",
+            "color": "#6f1c17",
+            "packs": [
+                "Macros",
+                "pf1e-actors",
+                "pf1e-actions"
+            ]
+        }
+    ],
+    "packs": [
+        {
+            "label": "PF1e Animation Macros",
+            "name": "Macros",
+            "path": "packs/macros",
+            "type": "Macro",
+            "private": false,
+            "flags": {}
+        },
+        {
+            "label": "PF1e Animation Actors",
+            "name": "pf1e-actors",
+            "path": "packs/actors",
+            "system": "pf1",
+            "type": "Actor",
+            "private": false,
+            "flags": {}
+        },
+        {
+            "label": "PF1e Animation Items",
+            "name": "pf1e-actions",
+            "path": "packs/actions",
+            "system": "pf1",
+            "type": "Item",
+            "private": false,
+            "flags": {}
+        }
+    ],
+    "relationships": {
+        "recommended": [
+            {
+                "id": "foundry-summons",
+                "type": "module",
+                "manifest": "https://github.com/MrVauxs/foundry-summons/releases/latest/download/module.json",
+                "compatibility": {
+                    "minimum": "1.5.0"
+                }
+            }
+        ],
+        "systems": [
+            {
+                "id": "pf1",
+                "type": "system",
+                "compatibility": {
+                    "minimum": "0.80.0"
+                }
+            }
+        ],
+        "requires": [
+            {
+                "id": "sequencer",
+                "type": "module",
+                "manifest": "https://github.com/fantasycalendar/FoundryVTT-Sequencer/releases/latest/download/module.json",
+                "compatibility": {
+                    "minimum": "3.6.10"
+                }
+            },
+            {
+                "manifest": "https://github.com/theripper93/autoanimations/releases/latest/download/module.json",
+                "id": "autoanimations",
+                "type": "module",
+                "compatibility": {
+                    "minimum": "4.2.60"
+                }
+            }
+        ]
+    },
+    "media": [
+        {
+            "type": "icon",
+            "url": "https://github.com/MrVauxs/pf1e-jb2a-macros/blob/main/logo.png?raw=true"
+        },
+        {
+            "type": "setup",
+            "url": "modules/pf1e-jb2a-macros/cover.png"
+        },
+        {
+            "type": "cover",
+            "url": "https://github.com/MrVauxs/pf1e-jb2a-macros/blob/main/cover.png?raw=true"
+        },
+        {
+            "type": "screenshot",
+            "url": "https://github.com/MrVauxs/pf1e-jb2a-macros/blob/main/preview.gif?raw=true",
+            "caption": "Preview of PF1e Animations module."
+        }
+    ],
+    "flags": {
+        "hotReload": {
+            "extensions": [
+                "css",
+                "hbs"
+            ],
+            "paths": [
+                "templates",
+                "styles"
+            ]
+        }
+    },
+    "changelog": "https://github.com/MrVauxs/pf1e-jb2a-macros/blob/main/CHANGELOG.md",
+    "manifest": "https://github.com/MrVauxs/pf1e-jb2a-macros/releases/latest/download/module.json",
+    "download": "https://github.com/MrVauxs/pf1e-jb2a-macros/releases/latest/download/module.zip"
+}

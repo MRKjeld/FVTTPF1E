@@ -1,0 +1,8 @@
+2026/07/17-13:59:34.446 52bc Recovering log #552
+2026/07/17-13:59:34.454 52bc Delete type=0 #552
+2026/07/17-13:59:34.454 52bc Delete type=3 #550
+2026/07/17-14:04:50.324 245c Level-0 table #557: started
+2026/07/17-14:04:50.324 245c Level-0 table #557: 0 bytes OK
+2026/07/17-14:04:50.327 245c Delete type=0 #555
+2026/07/17-14:04:50.327 245c Manual compaction at level-0 from '!actors!teCoIt8sjArsIl4D' @ 72057594037927935 : 1 .. '!actors!teCoIt8sjArsIl4D' @ 0 : 0; will stop at (end)
+2026/07/17-14:04:50.327 245c Manual compaction at level-1 from '!actors!teCoIt8sjArsIl4D' @ 72057594037927935 : 1 .. '!actors!teCoIt8sjArsIl4D' @ 0 : 0; will stop at (end)
