@@ -1,12 +1,20 @@
 /* {"name":"Clumsy","img":"icons/skills/movement/feet-winged-boots-brown.webp","_id":"XSlxNRM032wVYBBw"} */
-return // WIP
+// PF1-TODO(clumsy-wip): Inherited from the pf2e original as an unfinished stub (hard `return`
+// before any logic runs) — this predates the pf1 fork and isn't a pf1-specific defect. Unlike its
+// sibling condition macros (Encumbered.js, Petrified.js), it never implements the args[0]
+// on/off-detection pattern, and it's unclear how args[0] should resolve to "on"/"off" here: when
+// reached via the getPf1eMacroName chat-keyword fallback (module/pf1e-animations.js's
+// createChatMessage hook), args[0] is the raw chat-message data, not a literal "on"/"off" string —
+// only the Automated Animations "aefx" active-effect-toggle call path
+// (animations/aefx/clumsy.json) passes args[0] as one of those. Needs a human decision on whether
+// to finish this the way Encumbered/Petrified do, and how to reconcile the two call sites' args[0]
+// shapes. Left as a fail-safe no-op rather than guessing.
+return
 let token = args[1].sourceToken
 let conditionOverhead = Sequencer.EffectManager.getEffects({
   name: `${token.name} - Conditions Overhead*`,
   object: token,
 })
-
-console.log(conditionOverhead)
 
 if (args[0] == "on") {
   new Sequence({ moduleName: "PF1e Animations", softFail: true })

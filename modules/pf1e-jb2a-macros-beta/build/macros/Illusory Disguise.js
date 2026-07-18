@@ -1,4 +1,9 @@
 /* {"name":"Illusory Disguise","img":"systems/pf2e/icons/spells/illusory-disguise.webp","_id":"JVtjNvoMoxsfddd7"} */
+// PF1-TODO(icon): no confirmed pf1 equivalent found under systems/pf1/icons/spells/
+// (pf1's spell icon set uses abstract effect-themed names like "beam-acid"/"air-burst",
+// no "disguise"/"mask"/"illusion"-named icon exists there) and this module ships no icon
+// of its own for Illusory Disguise. Left pointing at the pf2e path rather than inventing
+// an unverified pf1 path — see data-model-map.md's icon-path guidance.
 // Original Author: EskieMoh#2969
 // Remastered by: MrVauxs#8622
 
@@ -86,7 +91,7 @@ if (args[0] === "on" || testArgs === "on") {
 
   if (args.length === 1)
     ui.notifications.info(
-      "PF2e x JB2A Macros | You are not using the Active Effect version of this spell, thus requiring you to remove the effect by going into the <i class='fas fa-film'></i> Sequencer Effect Manager."
+      "PF1e Animations | You are not using the Active Effect version of this spell, thus requiring you to remove the effect by going into the <i class='fas fa-film'></i> Sequencer Effect Manager."
     )
 
   // No funny business with empty inputs.

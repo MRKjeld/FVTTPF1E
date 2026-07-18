@@ -1,4 +1,4 @@
-/* {"name":"Brain Drain","img":"systems/pf2e/icons/spells/brain-drain.webp","_id":"BCeeFyLkQhbiqF4b"} */
+/* {"name":"Brain Drain","img":"systems/pf1/icons/misc/brain.png","_id":"BCeeFyLkQhbiqF4b"} */
 // Original Author: @Trueprophet#9165
 // Modified by: @MrVauxs#8622
 

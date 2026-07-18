@@ -1,6 +1,9 @@
-/* {"name":"Scorching Ray","img":"systems/pf2e/icons/spells/scorching-ray.webp","_id":"OOKf1Stu6m8HZNWA"} */
+/* {"name":"Scorching Ray","img":"systems/pf1/icons/spells/fire-arrows-1.jpg","_id":"OOKf1Stu6m8HZNWA"} */
 // Original Author: EskieMoh#2969
 // Remastered by: MrVauxs#8622
+// PF1E: header icon repointed to systems/pf1/icons/spells/fire-arrows-1.jpg (no
+// "scorching"/"ray"-named file exists under systems/pf1/icons/spells/, and this module
+// ships no icon of its own for Scorching Ray; fire-arrows is the closest thematic match).
 
 const assets = game.modules.get("JB2A_DnD5e")?.active
   ? ["jb2a.particles.outward.greenyellow.02.05", { saturate: -1 }]
@@ -17,6 +20,13 @@ if (!tokenD) {
 let targetDialogue = []
 let rayCount = []
 
+// PF1E: game.system.id is "pf1" here (systems/pf1/system.json), so this branch is
+// never taken under this fork — execution always falls to the `else` below, which
+// prompts (via warpgate) for how many rays to send at each target. That matches pf1's
+// actual Scorching Ray mechanic (caster picks ray distribution across targets, unlike
+// pf2e's fixed one-ray-per-target auto behavior), so no functional change is needed;
+// left intact rather than deleted since this file is still shared/dual-system-aware
+// upstream and the branch is harmless dead code under pf1.
 if (game.system.id === "pf2e" || game.system.id === "sf2e") {
   for (let i of targets.keys()) {
     rayCount.push(1)

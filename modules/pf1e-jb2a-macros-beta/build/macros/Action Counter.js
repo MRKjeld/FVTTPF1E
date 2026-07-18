@@ -1,21 +1,29 @@
-/* {"name":"Action Counter","img":"systems/pf2e/icons/actions/TwoThreeActions.webp","_id":"9OXIrvvLr3djpsxE"} */
+/* {"name":"Action Counter","img":"modules/pf1e-jb2a-macros-beta/assets/actions/one.png","_id":"9OXIrvvLr3djpsxE"} */
 if (args?.length === 0) {
   const actors = canvas.tokens.controlled.flatMap((token) => token.actor ?? [])
   if (actors.length === 0 && game.user.character)
     actors.push(game.user.character)
   if (actors.length === 0) {
-    const message = game.i18n.localize("PF2E.ErrorMessage.NoTokenSelected")
+    const message = pf1eAnimations.localize("pf1e-jb2a-macros.notifications.noToken")
     return ui.notifications.error(message)
   }
 
-  const ITEM_UUID = `Compendium.pf1e-jb2a-macros.${game.system.id}-actions.slQlwROqkytVGKKk` // Action Counter
+  const ITEM_UUID = `Compendium.pf1e-jb2a-macros.pf1e-actions.slQlwROqkytVGKKk` // Action Counter
   const source = (await fromUuid(ITEM_UUID)).toObject()
   source.flags = mergeObject(source.flags ?? {}, {
     core: { sourceId: ITEM_UUID },
   })
 
   for (const actor of actors) {
-    const existing = actor.itemTypes.effect.find(
+    // PF1-TODO(item-type): pf2e's "effect" item type has no pf1 equivalent — pf1's Item
+    // types are weapon/equipment/consumable/loot/class/spell/feat/buff/attack/race/implant/container
+    // (systems/pf1/template.json), so `actor.itemTypes.effect` is undefined in pf1 and would
+    // throw on `.find(...)`. The closest analog is "buff", but its counter field is
+    // `system.resource.uses.value`, not pf2e's `system.badge.value` — not a confirmed 1:1
+    // mapping until the compendium item at ITEM_UUID is reauthored as a pf1 buff. Guarding
+    // with optional chaining so this fails safe (always falls through to "create new item")
+    // instead of throwing.
+    const existing = actor.itemTypes.effect?.find(
       (e) => e.flags.core?.sourceId === ITEM_UUID
     )
     if (existing) {
@@ -46,6 +54,11 @@ function amountOfImages(origin) {
 }
 
 async function updateImages(data, changes) {
+  // PF1-TODO(item-type): pf2e's Effect-item `system.badge.value` counter has no pf1
+  // equivalent field (pf1 buffs use `system.resource.uses.value`, a "charges" concept, not
+  // a simple stack counter — see data-model-map.md). Until the ITEM_UUID compendium item is
+  // reauthored for pf1, this optional-chained check just never matches and the hook no-ops,
+  // rather than throwing.
   if (!changes?.system?.badge?.value) return
   if (!pf1eAnimations.hooks.actionCounter.find((h) => h.uuid === data.uuid))
     return
@@ -72,7 +85,7 @@ const actionCounter = (number, origin) =>
   new Sequence({ moduleName: "PF1e Animations", softFail: true })
     .effect()
     .name(tokenD.name + " Action " + (1 + number))
-    .file("modules/pf1e-jb2a-macros/assets/actions/one.png")
+    .file("modules/pf1e-jb2a-macros-beta/assets/actions/one.png")
     .origin(origin.uuid)
     .fadeIn(1000)
     .animateProperty("sprite", `position.y`, {
@@ -107,16 +120,20 @@ const seq = new Sequence({ moduleName: "PF1e Animations", softFail: true })
 
 seq.thenDo(async () => {
   // hides the ugly icons in favour of our own
+  // Converted from pf2e's `system.rules = []` (Rule Elements array — doesn't exist in pf1,
+  // no match in systems/pf1/template.json for any item type). pf1's "buff" item type has
+  // `system.hideFromToken` instead; confirmed via systems/pf1/pf1.js.map ->
+  // module/documents/active-effect.mjs (ActiveEffectPF#isTemporary): a buff-tracker Active
+  // Effect's icon is suppressed from the token when `this.parent?.system?.hideFromToken` is
+  // true, which is exactly the "hide this item's token icon" behavior the original code wanted.
   tokenD.actor.items
     .find((x) => x.uuid === args[1].item.uuid)
     .update({
       system: {
-        rules: [],
+        hideFromToken: true,
       },
     })
 })
-
-console.log(args)
 
 for (let i = 0; i < 3; i++) {
   seq.addSequence(actionCounter(i, args[1].item))

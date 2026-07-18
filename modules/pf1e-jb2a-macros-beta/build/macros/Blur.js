@@ -1,4 +1,8 @@
 /* {"name":"Blur","img":"systems/pf2e/icons/spells/blur.webp","_id":"FBgkeey7TaMLkegd"} */
+// PF1-TODO(icon): no confirmed pf1 equivalent found under systems/pf1/icons/spells/
+// (no "blur"-named file exists there) and this module ships no icon of its own for
+// Blur. Left pointing at the pf2e path rather than inventing an unverified pf1 path —
+// needs a human pick.
 const [tokenD] = pf1eAnimations.macroHelpers(args)
 const tokenMagic = game.settings.get("pf1e-jb2a-macros", "tmfx")
 if (!args.length)

@@ -1,8 +1,24 @@
 /* {"name":"Persistent Conditions","img":"icons/skills/wounds/blood-drip-droplet-red.webp","_id":"Q0hKSbLmADnVbKQB"} */
-let tokenD = args[0].token
-let type = args[0].flavor.match(/Received (regeneration|fast healing)/g)
+// PF1-FIX: pf1's ChatMessagePF has no `.token` property at all (confirmed via
+// pf1.js.map's chat-message.mjs — only `speaker`, `itemSource`, `targets`, and
+// `measureTemplate` getters exist, no `.token`). args[0].token always evaluated
+// to undefined here, so use the shared macroHelpers contract (args[1].sourceToken,
+// falling back to canvas.tokens.controlled[0]) like every other macro in this
+// module, instead of the pf2e-era args[0].token access.
+const [tokenD] = pf1eAnimations.macroHelpers(args)
+// PF1-TODO(persistent-damage): pf2e's ChatMessage exposes `isDamageRoll` /
+// `rolls[0].options.evaluatePersistent` flags that don't exist anywhere in pf1
+// (confirmed absent from every file embedded in pf1.js.map). Under pf1's hook,
+// this macro is only ever reached via the "Received regeneration/fast healing"
+// flavor match, so the formula-parsing fallback below is effectively unreachable
+// today. Left in place — with defensive fallbacks so it fails safe (falls through
+// to the existing `default:` notification below) instead of throwing — in case a
+// future pf1 hook update starts feeding real persistent-damage rolls through here.
+// The "last word of the formula is the damage type" parsing itself is an unverified
+// carryover from pf2e's roll-formula shape and has not been confirmed against pf1's.
+let type = (args[0].flavor ?? "").match(/Received (regeneration|fast healing)/g)
   ? "healing"
-  : args[0].rolls[0].formula.replaceAll(/.+ /g, "").trim()
+  : (args[0].rolls[0]?.formula ?? "").replaceAll(/.+ /g, "").trim()
 let color = "jb2a.liquid.splash.red"
 let scale = 1.5
 let below = false

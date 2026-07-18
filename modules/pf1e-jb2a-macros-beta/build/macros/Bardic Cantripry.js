@@ -3,8 +3,17 @@
 
 let targets = args[1].hitTargets
 const [tokenD, tokenScale] = await pf1eAnimations.macroHelpers(args)
-if (!args[1]?.item?.system?.slug) return
-let spellName = args[1]?.item?.system?.slug
+// PF1E: pf2e items expose a `system.slug` (auto-slugified from the item name)
+// that pf1 items have no equivalent for (not in systems/pf1/template.json;
+// pf1's closest analog, `system.tag`, is camelCase and only present on
+// "tagged" item types — not a reliable match for the kebab-case keys below).
+// `item.name` is a universal Foundry Item document property, so re-derive the
+// same kebab-case slug from it directly instead of a system-specific field.
+if (!args[1]?.item?.name) return
+let spellName = args[1].item.name
+  .toLowerCase()
+  .replace(/[^a-z0-9]+/g, "-")
+  .replace(/(^-+|-+$)/g, "")
   .replaceAll("spell-effect-", "")
   .trim()
 

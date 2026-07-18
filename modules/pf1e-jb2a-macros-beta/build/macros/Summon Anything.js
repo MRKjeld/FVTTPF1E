@@ -12,9 +12,17 @@ if (!Object.keys(scope).length) {
   )
 }
 
-const pf2eAnimArgs = scope.args[2]
-const message = scope.args[0]
-const item = message.item
+// PF1-FIX: item-linked invocation shapes scope.args as [handler.workflow, handler, userData]
+// (confirmed via modules/autoanimations/dist/autoanimations.js: the AAHandler constructor
+// sets `this.workflow`, `this.sourceToken`, `this.item` directly as own properties, and
+// macroSection()/runMacro() both build `{ args: [handler.workflow, handler, userData] }`).
+// scope.args[0] is the bare workflow value (a string like "on"/"off", or undefined) with no
+// `.item` property; the real item lives on scope.args[1] (the handler itself), matching the
+// fix already applied in Mirror Reflection.js/Manifest Eidolon.js. scope.args[2] is
+// `userData` (the parsed autorec `macro.args` string, e.g. ["summon-spell","trait-or-undead"])
+// — that index was already correct, no change needed there.
+const animArgs = scope.args[2]
+const item = scope.args[1].item
 const sourceToken = scope.args[1].sourceToken
 
 const data = {
@@ -28,70 +36,75 @@ const data = {
   },
 }
 
-if (pf2eAnimArgs.length) {
-  if (pf2eAnimArgs.includes("summon-spell")) {
+if (animArgs.length) {
+  if (animArgs.includes("summon-spell")) {
+    // PF1-FIX: pf2e spells expose level via the `item.level` getter; pf1 spells store it
+    // flat at `item.system.level` (confirmed via systems/pf1/template.json's "spell" type).
     let multiplier = -1
-    if (item.level >= 2) multiplier = 1
-    if (item.level >= 3) multiplier = 2
-    if (item.level >= 4) multiplier = 3
-    if (item.level >= 5) multiplier = 5
-    if (item.level >= 6) multiplier = 7
-    if (item.level >= 7) multiplier = 9
-    if (item.level >= 8) multiplier = 11
-    if (item.level >= 9) multiplier = 13
-    if (item.level >= 10) multiplier = 15
+    if (item.system.level >= 2) multiplier = 1
+    if (item.system.level >= 3) multiplier = 2
+    if (item.system.level >= 4) multiplier = 3
+    if (item.system.level >= 5) multiplier = 5
+    if (item.system.level >= 6) multiplier = 7
+    if (item.system.level >= 7) multiplier = 9
+    if (item.system.level >= 8) multiplier = 11
+    if (item.system.level >= 9) multiplier = 13
+    if (item.system.level >= 10) multiplier = 15
     // level equal or less filter
     data.filters.push({
       name: game.i18n.format(
         "pf1e-jb2a-macros.macro.summoning.player.summonArg",
-        { multiplier: multiplier, spellLevel: item.level }
+        { multiplier: multiplier, spellLevel: item.system.level }
       ),
       locked: true,
+      // PF1-FIX: pf2e creature "level" (system.details.level.value) has no equivalent on
+      // pf1 actors; pf1's closest analog for a summonable creature's power is Challenge
+      // Rating. Confirmed via systems/pf1/pf1.js.map: ActorNPCPF derives a runtime
+      // `system.details.cr.total` (via getCR()) from the stored `system.details.cr.base`.
+      // Falls back to `.base` in case these are lightweight compendium index entries that
+      // never ran prepareData (and so never got `.total` computed).
       function: (index) =>
-        index.filter((x) => x.system.details.level.value <= multiplier),
+        index.filter(
+          (x) => (x.system.details.cr?.total ?? x.system.details.cr?.base) <= multiplier
+        ),
     })
   }
 
-  if (pf2eAnimArgs.find((x) => x.includes("trait-or"))) {
-    const traitsOr = pf2eAnimArgs
+  // PF1-TODO(creature-traits): pf2e NPC actors carry a flat `system.traits.value` tag array
+  // (celestial/monitor/fiend/undead/construct/etc.) that this trait-or/trait-and filtering
+  // is built on. pf1 has no equivalent: confirmed via systems/pf1/template.json — the pf1
+  // actor "traits" template only holds size/senses/resistances/languages, no creature-type
+  // tag list. The closest pf1-side concept (`system.creatureTypes`/`system.creatureSubtypes`)
+  // lives on an embedded "race" Item, not summarized onto the actor or its compendium index,
+  // so there's no safe 1:1 field to substitute without inventing a mapping. Failing safe:
+  // these two filters are not registered at all (rather than crash on `x.system.traits.value`
+  // being undefined, or silently matching/excluding everything) — animations driven by
+  // trait-or-*/trait-and-* autorec args (e.g. summon-undead.json, summon-fiend.json) will
+  // fall through to an unfiltered creature list until a human decides the real pf1 axis.
+  if (animArgs.find((x) => x.includes("trait-or"))) {
+    const traitsOr = animArgs
       .find((x) => x.includes("trait-or-"))
       ?.replace("trait-or-", "")
       .split("-")
 
-    data.filters.push({
-      name: game.i18n.format(
-        "pf1e-jb2a-macros.macro.summoning.player.traitsArg",
-        { traits: traitsOr.join(" / ") }
-      ),
-      locked: true,
-      function: (index) =>
-        index.filter((x) =>
-          traitsOr.some((trait) => x.system.traits.value.includes(trait))
-        ),
-    })
+    pf1eAnimations.debug(
+      `Summon Anything: trait-or-${traitsOr?.join("-")} filter skipped — no pf1 creature-trait equivalent (see PF1-TODO(creature-traits)).`
+    )
   }
 
-  if (pf2eAnimArgs.find((x) => x.includes("trait-and"))) {
-    const traitsAnd = pf2eAnimArgs
+  if (animArgs.find((x) => x.includes("trait-and"))) {
+    const traitsAnd = animArgs
       .find((x) => x.includes("trait-and"))
       ?.replace("trait-and-", "")
       .split("-")
 
-    data.filters.push({
-      name: game.i18n.format(
-        "pf1e-jb2a-macros.macro.summoning.player.traitsArg",
-        { traits: traitsAnd.join(" + ") }
-      ),
-      locked: true,
-      function: (index) =>
-        index.filter((x) =>
-          traitsAnd.every((trait) => x.system.traits.value.includes(trait))
-        ),
-    })
+    pf1eAnimations.debug(
+      `Summon Anything: trait-and-${traitsAnd?.join("-")} filter skipped — no pf1 creature-trait equivalent (see PF1-TODO(creature-traits)).`
+    )
   }
 
-  if (pf2eAnimArgs.find((x) => x.includes("name"))) {
-    const name = pf2eAnimArgs
+  if (animArgs.find((x) => x.includes("name"))) {
+    const name = animArgs
       .find((x) => x.includes("name"))
       ?.replace("name-", "")
       .split("|")
@@ -108,9 +121,9 @@ if (pf2eAnimArgs.length) {
   }
 
   if (
-    pf2eAnimArgs.find((x) => x.includes("level") && !x.includes("exact-level"))
+    animArgs.find((x) => x.includes("level") && !x.includes("exact-level"))
   ) {
-    const level = pf2eAnimArgs
+    const level = animArgs
       .find((x) => x.includes("level") && !x.includes("exact-level"))
       ?.replace("level-", "")
       .replaceAll("-1", "~1")
@@ -126,17 +139,23 @@ if (pf2eAnimArgs.length) {
             '<span style="font-size:18px">∞</span>',
         }
       ),
+      // PF1-FIX: same CR substitution as the summon-spell filter above — pf2e creature
+      // "level" (system.details.level.value) has no pf1 equivalent; pf1's closest analog is
+      // Challenge Rating (system.details.cr.total, falling back to .base for compendium
+      // index entries — see systems/pf1/pf1.js.map's ActorNPCPF.getCR()).
       locked: true,
       function: (index) => {
         index = index.filter(
           (x) =>
-            x.system.details.level.value >= Number(level[0].replace("~", "-"))
+            (x.system.details.cr?.total ?? x.system.details.cr?.base) >=
+            Number(level[0].replace("~", "-"))
         )
 
         if (level[1]) {
           index = index.filter(
             (x) =>
-              x.system.details.level.value <= Number(level[1].replace("~", "-"))
+              (x.system.details.cr?.total ?? x.system.details.cr?.base) <=
+              Number(level[1].replace("~", "-"))
           )
         }
 
@@ -145,8 +164,8 @@ if (pf2eAnimArgs.length) {
     })
   }
 
-  if (pf2eAnimArgs.find((x) => x.includes("exact-level"))) {
-    const exactLevel = pf2eAnimArgs
+  if (animArgs.find((x) => x.includes("exact-level"))) {
+    const exactLevel = animArgs
       .find((x) => x.includes("exact-level"))
       ?.replace("exact-level-", "")
 
@@ -158,17 +177,25 @@ if (pf2eAnimArgs.length) {
           level2: exactLevel,
         }
       ),
+      // PF1-FIX: same CR substitution as above (system.details.level.value has no pf1
+      // equivalent; closest analog is Challenge Rating). exactLevel is a string from the
+      // autorec arg, so compare against `.total`/`.base` coerced with Number() rather than
+      // the original strict `===` (which would never match a numeric CR field).
       locked: true,
       function: (index) =>
-        index.filter((x) => x.system.details.level.value === exactLevel),
+        index.filter(
+          (x) =>
+            (x.system.details.cr?.total ?? x.system.details.cr?.base) ===
+            Number(exactLevel)
+        ),
     })
   }
 
-  if (pf2eAnimArgs.find((x) => x.includes("unique"))) {
-    let unique = pf2eAnimArgs
+  if (animArgs.find((x) => x.includes("unique"))) {
+    let unique = animArgs
       .find((x) => x.includes("unique-"))
       ?.replace("unique-", "")
-    if (unique && pf2eAnimArgs.length > 1)
+    if (unique && animArgs.length > 1)
       return ui.notifications.error(
         "You can only select one unique summon type."
       )
@@ -178,25 +205,38 @@ if (pf2eAnimArgs.length) {
           name: game.i18n.format(
             "pf1e-jb2a-macros.macro.summoning.player.unique",
             {
-              unique:
-                '<a class="content-link" draggable="true" data-pack="pf2e.spells-srd" data-uuid="Compendium.pf2e.spells-srd.B0FZLkoHsiRgw7gv" data-id="B0FZLkoHsiRgw7gv"><i class="fas fa-suitcase"></i>Summon Lesser Servitor</a>',
+              // PF1-TODO(compendium-link): pf2e-only "Summon Lesser Servitor" spell link
+              // (Compendium.pf2e.spells-srd.B0FZLkoHsiRgw7gv) has no pf1 equivalent spell —
+              // checked systems/pf1/packs for a matching spell, none found. Stripped the
+              // dangling entity-link HTML down to plain text per conversion-checklist.md #6.
+              unique: "Summon Lesser Servitor",
             }
           ),
           locked: true,
           function: (packs) => {
-            // spell level
+            // PF1-FIX: item.level (pf2e spell-level getter) -> item.system.level (pf1's flat
+            // spell.system.level field, per systems/pf1/template.json).
             let multiplier = -1
-            if (item.level >= 2) multiplier = 1
-            if (item.level >= 3) multiplier = 2
-            if (item.level >= 4) multiplier = 3
+            if (item.system.level >= 2) multiplier = 1
+            if (item.system.level >= 3) multiplier = 2
+            if (item.system.level >= 4) multiplier = 3
+            // PF1-FIX: same CR substitution as the summon-spell filter above (see that
+            // comment for the systems/pf1/pf1.js.map trace).
             packs = packs.filter(
-              (x) => x.system.details.level.value <= multiplier
+              (x) =>
+                (x.system.details.cr?.total ?? x.system.details.cr?.base) <=
+                multiplier
             )
+            // PF1-TODO(creature-traits): the celestial/monitor/fiend trait check has no pf1
+            // equivalent (see the trait-or/trait-and PF1-TODO above for the full trace).
+            // Guarded with optional chaining so it evaluates to `false` instead of throwing
+            // on `x.system.traits.value` being undefined — this safely falls through to the
+            // name-based animal list below rather than breaking the whole filter.
             packs = packs.filter(
               (x) =>
                 // celestial, monitor, or fiend
                 ["celestial", "monitor", "fiend"].some((traitOr) =>
-                  x.system.traits.value.includes(traitOr)
+                  x.system.traits?.value?.includes(traitOr)
                 ) ||
                 // or any of the below animal names
                 [

@@ -1,4 +1,4 @@
-/* {"name":"Petrified","img":"systems/pf2e/icons/conditions/petrified.webp","_id":"tItdi7rFVh3PEyKx"} */
+/* {"name":"Petrified","img":"systems/pf1/icons/conditions/petrified.svg","_id":"tItdi7rFVh3PEyKx"} */
 const [tokenD, tokenScale] = await pf1eAnimations.macroHelpers(args)
 
 const tokenMagic = game.settings.get("pf1e-jb2a-macros", "tmfx")
@@ -27,7 +27,7 @@ if (args[0] == "on") {
         saturation: 0,
       },
     ]
-    TokenMagic.addFilters(token, params)
+    TokenMagic.addFilters(tokenD, params)
   }
   new Sequence({ moduleName: "PF1e Animations", softFail: true })
     .effect()
@@ -74,6 +74,6 @@ if (args[0] == "on") {
     object: tokenD,
   })
   if (tokenMagic) {
-    await TokenMagic.deleteFilters(token, "petrified")
+    await TokenMagic.deleteFilters(tokenD, "petrified")
   }
 }

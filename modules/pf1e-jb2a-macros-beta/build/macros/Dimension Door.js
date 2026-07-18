@@ -1,11 +1,20 @@
 /* {"name":"Dimension Door","img":"systems/pf2e/icons/spells/dimension-door.webp","_id":"kwbdUhAzZv8mv1cX"} */
+// PF1-TODO(icon): no confirmed pf1 equivalent found under systems/pf1/icons/spells/
+// (that tree uses generic effect-themed filenames, not spell-name-based ones — no
+// teleport/portal/door match) and this module ships no icon of its own for
+// Dimension Door. Left pointing at the pf2e path rather than inventing an
+// unverified pf1 path — needs a human pick.
 if (!game.modules.get("jb2a_patreon")?.active) {
   return ui.notifications.error(pf1eAnimations.localize("notifications.noPrem"))
 }
 
 const [tokenD, tokenScale] = await pf1eAnimations.macroHelpers(args)
 
-let spellLevel = args[0]?.item?.level ?? 11
+// Item comes through args[1] per the macroHelpers options-bag contract (see
+// args-and-hooks.md), not args[0] — the crosshairs call below already reads
+// args[1]?.item correctly. pf1 spell items expose a flat system.level number
+// (data-model-map.md), unlike pf2e's wrapped item.level.value.
+let spellLevel = args[1]?.item?.system?.level ?? 11
 
 if (spellLevel === 11 && args.length !== 0)
   pf1eAnimations.debug(

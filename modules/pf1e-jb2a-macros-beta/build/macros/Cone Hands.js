@@ -1,4 +1,9 @@
 /* {"name":"Cone Hands","img":"systems/pf2e/icons/spells/burning-hands.webp","_id":"0O8rNzIVLo8p3tXj"} */
+// PF1-TODO(icon): no confirmed pf1 equivalent found under systems/pf1/icons/spells/
+// (no "burning-hands"/"cone"/"fire-hand"-named file exists there) and this module
+// ships no icon of its own for Cone Hands (a generic cone-template FX launcher used
+// by multiple spells). Left pointing at the pf2e path rather than inventing an
+// unverified pf1 path — needs a human pick.
 const [tokenD, tokenScale] = await pf1eAnimations.macroHelpers(args)
 const template =
   args[1]?.templateData ??
@@ -6,8 +11,6 @@ const template =
 const [templateX, templateY] = [template.x, template.y]
 
 let file = args[2]?.[0]
-
-// file = "rainbow"
 
 if (file === "rainbow") {
   new Sequence({ moduleName: "PF1e Animations", softFail: true })

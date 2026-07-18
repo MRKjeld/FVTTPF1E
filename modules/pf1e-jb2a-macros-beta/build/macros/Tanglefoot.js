@@ -1,4 +1,4 @@
-/* {"name":"Tanglefoot","img":"systems/pf2e/icons/spells/tanglefoot.webp","_id":"AtmVxd86VXE3PhQf"} */
+/* {"name":"Tanglefoot","img":"systems/pf1/icons/items/inventory/bomb.jpg","_id":"AtmVxd86VXE3PhQf"} */
 // Cannot be used standalone
 
 const [tokenD, tokenScale] = await pf1eAnimations.macroHelpers(args)

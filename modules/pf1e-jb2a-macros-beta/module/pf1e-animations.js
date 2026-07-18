@@ -142,9 +142,12 @@ pf1eAnimations.hooks.renderChatMessage = Hooks.on(
 pf1eAnimations.getPf1eMacroName = function getPf1eMacroName(data) {
   if (!data) return null;
 
+  // PF1-FIX: data.item doesn't exist on pf1's ChatMessagePF; the real linked
+  // item is exposed via the `itemSource` getter (see the macroArgs fix above).
+  const linkedItem = data.itemSource;
   const sourceText = [
-    data.item?.name,
-    data.item?.type,
+    linkedItem?.name,
+    linkedItem?.type,
     data.flavor,
     data.content,
     data.system?.description?.value,
@@ -215,13 +218,36 @@ pf1eAnimations.hooks.createChatMessage = Hooks.on(
     if (!token)
       return pf1eAnimations.debug("No token for the animation.", data);
 
+    // Options bag shape expected by pf1eAnimations.macroHelpers() and by the
+    // majority of macros as args[1]. Every macro invoked directly via
+    // runMacro() from this hook must receive this as its second args element,
+    // not just the raw chat-message data.
+    // PF1-FIX: pf1's ChatMessagePF has no `.item` property at all (confirmed via
+    // pf1.js.map's chat-message.mjs) — the real linked item is exposed via the
+    // `itemSource` getter (resolved from `system.item.id` against the speaking
+    // actor's items). Using `data.item` here always evaluated to `undefined`,
+    // so every macro reached via this chat-keyword path that reads
+    // `args[1].item` (Heal.js, Bardic Cantripry.js, Dimension Jumps.js, etc.)
+    // silently no-op'd on this invocation path.
+    const linkedItem = data.itemSource;
+    const macroArgs = [
+      args,
+      {
+        sourceToken: token,
+        allTargets: targets,
+        hitTargets: targets,
+        item: linkedItem,
+        itemUuid: linkedItem?.uuid,
+      },
+    ];
+
     // Persistent Damage Matches
     if (
       (data.isDamageRoll && data.rolls[0]?.options?.evaluatePersistent) ||
       flavor?.match(/Received (regeneration|fast healing)/g)
     ) {
       pf1eAnimations.debug("Persistent Damage / Healing", data);
-      return pf1eAnimations.runMacro("Persistent Conditions", [args]);
+      return pf1eAnimations.runMacro("Persistent Conditions", macroArgs);
     }
     // Default Matches
     if (data.isDamageRoll && /Sneak Attack/.test(flavor)) {
@@ -337,7 +363,7 @@ pf1eAnimations.hooks.createChatMessage = Hooks.on(
       pf1MacroName &&
       !game.settings.get("pf1e-jb2a-macros", "disableHitAnims") &&
       (data.type === "spell" ||
-        data.item?.type === "spell" ||
+        data.itemSource?.type === "spell" ||
         ((data.flavor || data.content) &&
           !data.system?.rolls?.attacks?.length))
     ) {
@@ -345,7 +371,7 @@ pf1eAnimations.hooks.createChatMessage = Hooks.on(
         pf1MacroName,
         data,
       });
-      return pf1eAnimations.runMacro(pf1MacroName, [args]);
+      return pf1eAnimations.runMacro(pf1MacroName, macroArgs);
     }
   }
 );
@@ -363,12 +389,14 @@ pf1eAnimations.hooks.equipOrInvestItem = Hooks.on(
 );
 
 // Call the above hook with updateItem.
+// PF1-FIX: the original pf2e-era code read `data.isInvested`/`data.isEquipped`,
+// neither of which exists on pf1 Item documents (confirmed absent from
+// systems/pf1/pf1.js.map and systems/pf1/template.json) — status was always
+// `false`, so the equip-triggered animation path (e.g. Aeon Stone) could never
+// fire. pf1 has no "invested" concept at all; the real equipped flag lives at
+// `item.system.equipped`.
 pf1eAnimations.hooks.updateItem = Hooks.on("updateItem", (data, changes) => {
-  const status = data.isInvested
-    ? "invested"
-    : data.isEquipped
-      ? "equipped"
-      : false;
+  const status = data.system?.equipped ? "equipped" : false;
   Hooks.call("pf1eAnimations.equipOrInvestItem", status, data);
 });
 

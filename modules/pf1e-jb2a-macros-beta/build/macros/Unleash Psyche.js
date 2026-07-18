@@ -1,4 +1,8 @@
 /* {"name":"Unleash Psyche","img":"systems/pf2e/icons/features/classes/unleash-psyche.webp","_id":"O0RE17QySMEMVdHd"} */
+// PF1-TODO(icon): no confirmed pf1 equivalent found under systems/pf1/icons/**
+// (no "psyche"/"psychic"/"mind"/"mental"-named file exists there) and this module
+// ships no icon of its own for this macro. Left pointing at the pf2e path rather
+// than inventing an unverified pf1 path — needs a human pick.
 const [tokenD, tokenScale] = await pf1eAnimations.macroHelpers(args)
 
 let testArgs

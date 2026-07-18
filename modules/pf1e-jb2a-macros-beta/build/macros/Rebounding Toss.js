@@ -4,10 +4,29 @@ return // Comment me out to test
 
 pf1eAnimations.requireModule("warpgate")
 
+// PF1-VERIFIED-CALLSITE: repo-wide grep for "Rebounding Toss" /
+// "Compendium.pf1e-jb2a-macros.Macros.Rebounding Toss" (build/macros/*.js,
+// module/pf1e-animations.js, animations/ontoken/rebounding-toss.json) shows
+// this macro's only call site is the autorec "ontoken" macro binding, resolved
+// by the third-party Automated Animations module via its own
+// AutomatedAnimations.playAnimation()-driven pipeline (args-and-hooks.md's
+// "path 1") — NOT module/pf1e-animations.js's createChatMessage hook/runMacro
+// path (path 2, where args[0] is raw chat-message data). So args[0].token here
+// is that third-party module's own args shape, unaffected by the pf1
+// ChatMessagePF `.token`-less bug fixed elsewhere in Persistent Conditions.js;
+// left unchanged.
 let targets = Array.from(game.user.targets)
 let token = args[0].token
+// PF1-FIX: pf2e's `WeaponPF2e#isHeld` getter (drawn/wielded check) has no pf1
+// equivalent (confirmed absent from template.json and pf1.js.map). pf1's
+// closest analog for "usable weapon" is the general physical-item flag
+// `system.equipped` (systems/pf1/template.json `physical.equipped`; same
+// mapping already used for the isInvested/isEquipped fix in
+// module/pf1e-animations.js's `updateItem` hook). Not identical semantics
+// (pf1 has no separate "equipped but sheathed" state), but the nearest
+// confirmed field.
 let items = args[0].token._actor.items.filter(
-  (i) => i.type === "weapon" && i.isHeld === true
+  (i) => i.type === "weapon" && i.system.equipped === true
 )
 let weapons = []
 
@@ -84,6 +103,24 @@ const callbacks = {
 }
 
 if (weaponSelection.buttons) {
+  // PF1-TODO(strike-api): pf2e's `actor.system.actions` "Strikes" array (each
+  // entry a `{ type: "strike", name, attack() }` object used to roll a named
+  // weapon's attack programmatically) has no pf1 equivalent — confirmed
+  // absent from template.json and not present as an actor-level derived
+  // getter in pf1.js.map. pf1 attacks are rolled per-Item (e.g. an "attack"
+  // or "weapon" type Item's own roll method), not looked up from a flat
+  // per-actor strikes list keyed by name, so this lookup can't be mechanically
+  // ported without redesigning how "the second throw" re-attacks with the
+  // same weapon. Left as `actor.data.data.actions ?? []`, which already
+  // fails safe: pf1 actors have no `.actions` array, so this always resolves
+  // to `[]`, `weaponOfChoice` stays `undefined`, and `weaponOfChoice?.attack()`
+  // below no-ops instead of throwing. pf1's closest native pattern (per
+  // module/documents/item/item-pf.mjs extracted from pf1.js.map) is
+  // per-Item: look the weapon up by name (`actor.items.getName(name)` /
+  // `actor.itemTypes.weapon.find(...)`) and call `await weapon.use({ ... })`
+  // — there is no actor-level name-indexed strikes list to query. Needs a
+  // human design decision (see CONVERSION_STATUS.md) before this macro's
+  // second-throw attack can actually roll in pf1.
   let weaponOfChoice = (actor.data.data.actions ?? [])
     .filter((action) => action.type === "strike")
     .find((strike) => strike.name === weaponSelection.buttons.data.name)

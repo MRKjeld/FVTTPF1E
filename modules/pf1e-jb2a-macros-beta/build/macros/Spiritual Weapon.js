@@ -1,5 +1,11 @@
 /* {"name":"Spiritual Weapon","img":"systems/pf2e/icons/spells/spiritual-weapon.webp","_id":"FjmWOtfj64kCFydm"} */
-/* Spiritual Weapon Animations for PF2e
+// PF1-TODO(icon): no pf1 equivalent found. systems/pf1/icons/spells/ has no
+// "weapon"-named file (confirmed via directory listing and a full LevelDB scan of
+// systems/pf1/packs/spells for the real "Spiritual Weapon" spell item's img field —
+// no readable match found), and this module ships no icon of its own for Spiritual
+// Weapon either. Left pointing at the pf2e path rather than inventing an unverified
+// pf1 path — needs a human pick.
+/* Spiritual Weapon Animations, ported from PF2e to PF1e
  * The collect target part at the beginning of the macro is made by
  * MIT License (C) 2022 Matthew Haentschke
  * The rest is modified heavily by Jules | JB2A

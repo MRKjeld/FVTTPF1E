@@ -1,4 +1,8 @@
 /* {"name":"Concealed","img":"systems/pf2e/icons/conditions/concealed.webp","_id":"regre2pHDzP3YCnA"} */
+// PF1-TODO(icon): no confirmed pf1 equivalent found under systems/pf1/icons/conditions/
+// (no "concealed"-named file exists there; "invisible.png" is a different condition,
+// not a safe substitute) and this module ships no icon of its own for Concealed. Left
+// pointing at the pf2e path rather than inventing an unverified pf1 path — needs a human pick.
 const [tokenD] = pf1eAnimations.macroHelpers(args)
 const tokenMagic = game.settings.get("pf1e-jb2a-macros", "tmfx")
 

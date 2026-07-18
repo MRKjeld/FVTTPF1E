@@ -6,19 +6,40 @@ pf1eAnimations.requireModule("warpgate")
 let opts = {}
 let seq = new Sequence({ moduleName: "PF1e Animations", softFail: true })
 const [tokenD, tokenScale] = await pf1eAnimations.macroHelpers(args)
-let movementSpeed = args[0].actor.attributes.speed.total
+// PF1E: pf2e's `actor.attributes.speed.total` (a derived alias merged onto the
+// Actor) has no pf1 equivalent under that path. Confirmed via
+// systems/pf1/pf1.js.map -> actor-pf.mjs: pf1's derived land-speed total lives
+// at `actor.system.attributes.speed.land.total` (template.json base shape is
+// `system.attributes.speed.land.base`, with `.total` computed during
+// prepareDerivedData). tokenD.actor is already used elsewhere in this same
+// macro (see tokenD.actor.sheet.minimize()/.maximize() below).
+let movementSpeed = tokenD.actor?.system?.attributes?.speed?.land?.total ?? 0
 
-// Determine spell level, this is BS though.
-// What I am basically doing is searching the latest messages for a spellLevel tag and see if they have it. Whichever is latest wins, rather than which one caused the damage roll.
-// The flag is also created by checking the HTML of the spell than the actual data, since there is no official spell level flag.
-let spellLevel =
-  args[0].data.flags.pf2e?.casting?.level ??
-  [...args[0].collection]
-    .filter((x) => x.data.flags?.pf2e?.casting)
-    .slice(-1)[0].data.flags.pf2e.casting.level
+// PF1-TODO(item-slug): pf2e items expose an auto-slugified `system.slug` (not
+// in systems/pf1/template.json for any pf1 item type) that the original code
+// switched on to identify which spell was cast. pf1 has no equivalent field,
+// so re-derive the same kebab-case key from the universal `item.name`
+// property instead (same pattern already used in the converted
+// Bardic Cantripry.js). Fails safe (skip) if no linked item name is available
+// on this call path rather than guessing an item.
+if (!args[1]?.item?.name) return
+const spellSlug = args[1].item.name
+  .toLowerCase()
+  .replace(/[^a-z0-9]+/g, "-")
+  .replace(/(^-+|-+$)/g, "")
+  .trim()
+
+// PF1E: the original pf2e-era code had no official per-message spell-level
+// flag, so it hunted through recent chat messages for a `flags.pf2e.casting`
+// tag as a workaround (author's own comment called this "BS"). pf1 spells
+// carry a flat, confirmed `system.level` number directly on the item
+// (systems/pf1/template.json, spell type) with no pf2e-style per-cast
+// "heightened" variance, so read it straight from the linked item instead of
+// reviving the message-hunting hack.
+let spellLevel = args[1].item.system.level ?? 0
 
 // Determine Spells Range
-switch (args[0].item.system.slug) {
+switch (spellSlug) {
   case "dimensional-assault":
     opts.range = movementSpeed / 2
     break
@@ -80,7 +101,7 @@ switch (args[0].item.system.slug) {
   }
 }
 
-console.log(opts)
+pf1eAnimations.debug("Dimension Jumps | opts", opts)
 
 tokenD.actor.sheet.minimize()
 const tokenCenter = tokenD.center
@@ -155,7 +176,7 @@ let targetToken = warpgate.crosshairs
     (token) => !canvas.tokens.controlled.map((t) => t.id).includes(tokenD.id)
   )[0]?.object
 
-switch (args[0].item.system.slug) {
+switch (spellSlug) {
   case "dimensional-assault": {
     await Sequencer.Preloader.preloadForClients([
       "jb2a.misty_step.02.purple",

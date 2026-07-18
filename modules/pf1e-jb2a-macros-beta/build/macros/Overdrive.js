@@ -1,4 +1,7 @@
-/* {"name":"Overdrive","img":"systems/pf2e/icons/features/feats/overdrive-success.webp","_id":"ZxnGGJn7z4fbBfcq"} */
+/* {"name":"Overdrive","img":"icons/magic/lightning/bolt-beam-strike-blue.webp","_id":"ZxnGGJn7z4fbBfcq"} */
+// PF1-TODO(icon): no pf1-specific "overdrive" feat icon exists in systems/pf1/icons or the module's own assets/;
+// repointed to the core Foundry icon already used elsewhere in this module (Variable Templates.js) as a thematic
+// (blue lightning) placeholder — swap for a better match if one is found later.
 const [tokenD, tokenScale] = await pf1eAnimations.macroHelpers(args)
 
 let testArgs

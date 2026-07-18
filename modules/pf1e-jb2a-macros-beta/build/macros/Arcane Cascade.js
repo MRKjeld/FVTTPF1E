@@ -1,4 +1,15 @@
 /* {"name":"Arcane Cascade","img":"systems/pf2e/icons/features/classes/arcane-cascade.webp","_id":"uCRBEs5o1lFVhRqT"} */
+// PF1-TODO(icon): no confirmed pf1 equivalent under systems/pf1/icons/feats/ or
+// systems/pf1/icons/features/ (checked for "arcane"/"cascade"/"magus" matches;
+// none found) and this module ships no icon of its own for this effect. Left
+// pointing at the pf2e path rather than inventing an unverified pf1 path.
+// PF1-TODO(mechanic): "Arcane Cascade" is a pf2e magus stance (Player Core 2)
+// with no pf1 equivalent — pf1's magus uses Spell Combat/Spellstrike, not a
+// stance that lets the player pick a damage type on activation. Whether this
+// macro belongs in the pf1 module at all (kept as a generic reusable elemental
+// FX macro? repurposed for a real pf1 magus/arcane mechanic? dropped?) needs a
+// human decision — see CONVERSION_STATUS.md "Needs human judgment". The visual
+// per-damage-type Sequencer effects below are otherwise reusable as-is.
 // Requires drag and dropping the Stance onto a token.
 // Cannot be used standalone.
 
@@ -28,7 +39,12 @@ const assets = game.modules.get("JB2A_DnD5e")?.active
 
 if (args[0] == "on") {
   let seq = new Sequence({ moduleName: "PF1e Animations", softFail: true })
-  let damageType = args[1].item.flags.pf2e.rulesSelections.stanceArcaneCascade
+  // PF1-TODO(mechanic): pf2e stored the player's chosen damage type as a rule-element
+  // selection flag (`flags.pf2e.rulesSelections.stanceArcaneCascade`). pf1 has no
+  // rule-element/flag equivalent and no pf1 feature currently drives this choice, so
+  // this fails safe to `undefined` (matches no case below, no animation plays) rather
+  // than guessing a pf1 field or defaulting to a specific element. See header PF1-TODO.
+  let damageType = args[1]?.item?.flags?.pf2e?.rulesSelections?.stanceArcaneCascade
   switch (damageType) {
     case "sonic":
       seq

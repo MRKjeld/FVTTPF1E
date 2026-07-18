@@ -1,4 +1,8 @@
 /* {"name":"Feral Shades","img":"systems/pf2e/icons/spells/feral-shades.webp","_id":"62nzP4aLTMC5DNF7"} */
+// PF1-TODO(icon): no confirmed pf1 equivalent found under systems/pf1/icons/spells/
+// (no "feral"/"shade"-named spell icon exists there) and this module ships no icon of
+// its own for Feral Shades. Left pointing at the pf2e path rather than inventing an
+// unverified pf1 path — see data-model-map.md's icon-path guidance.
 const [tokenD, tokenScale] = await pf1eAnimations.macroHelpers(args)
 const template =
   args[1]?.templateData ??

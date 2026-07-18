@@ -3,8 +3,6 @@
 
 if (!args.length) return
 
-console.log(args[1].templateData)
-
 const animationName = args[1].animNameFinal + " (" + args[1].templateData + ")"
 
 pf1eAnimations.debug("Variable Templates", [animationName, args])

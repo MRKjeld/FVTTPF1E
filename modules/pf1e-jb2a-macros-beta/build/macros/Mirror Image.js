@@ -1,4 +1,8 @@
 /* {"name":"Mirror Image","img":"systems/pf2e/icons/spells/mirror-image.webp","_id":"QNZOHlyOqO58lVdZ"} */
+// PF1-TODO(icon): no confirmed pf1 equivalent found under systems/pf1/icons/spells/
+// (no "mirror"/"image"/"illusion"-named file exists there) and this module ships no
+// icon of its own for Mirror Image. Left pointing at the pf2e path rather than
+// inventing an unverified pf1 path — needs a human pick.
 const [tokenD, tokenScale] = await pf1eAnimations.macroHelpers(args)
 
 if (args.length === 0) {
@@ -6,18 +10,28 @@ if (args.length === 0) {
   if (actors.length === 0 && game.user.character)
     actors.push(game.user.character)
   if (actors.length === 0) {
-    const message = game.i18n.localize("PF2E.ErrorMessage.NoTokenSelected")
+    const message = pf1eAnimations.localize("pf1e-jb2a-macros.notifications.noToken")
     return ui.notifications.error(message)
   }
 
-  const ITEM_UUID = `Compendium.pf1e-jb2a-macros.${game.system.id}-actions.15XurJzUEax6FhA7` // Mirror Image
+  // PF1-TODO(pack-name): checklist item 11 — `${game.system.id}-actions` evaluates to
+  // the nonexistent pack `pf1-actions`; the real pack name per module.json is
+  // `pf1e-actions`. Hardcoded below.
+  const ITEM_UUID = `Compendium.pf1e-jb2a-macros.pf1e-actions.15XurJzUEax6FhA7` // Mirror Image
   const source = (await fromUuid(ITEM_UUID)).toObject()
   source.flags = mergeObject(source.flags ?? {}, {
     core: { sourceId: ITEM_UUID },
   })
 
   for (const actor of actors) {
-    const existing = actor.itemTypes.effect.find(
+    // PF1-TODO(item-type): pf2e's "effect" item type has no pf1 equivalent — pf1's Item
+    // types are weapon/equipment/consumable/loot/class/spell/feat/buff/attack/race/implant/container
+    // (systems/pf1/template.json), so `actor.itemTypes.effect` is undefined in pf1 and would
+    // throw on `.find(...)`. The closest analog is "buff" (see Add Effect.js/Action
+    // Counter.js precedent), but not confirmed 1:1 until the compendium item at ITEM_UUID
+    // is reauthored as a pf1 buff. Guarding with optional chaining so this fails safe
+    // (always falls through to "create new item") instead of throwing.
+    const existing = actor.itemTypes.effect?.find(
       (e) => e.flags.core?.sourceId === ITEM_UUID
     )
     if (existing) {
@@ -39,6 +53,11 @@ function amountOfImages() {
 Hooks.off("preUpdateItem", pf1eAnimations.hooks.mirrorImage ?? 123)
 
 async function updateImages(data, changes) {
+  // PF1-TODO(item-type): pf2e's Effect-item `system.badge.value` counter has no pf1
+  // equivalent field (pf1 buffs use `system.resource.uses.value` — a "charges" concept,
+  // not a simple stack counter; see Action Counter.js/Add Effect.js precedent and
+  // data-model-map.md). Until the ITEM_UUID compendium item is reauthored for pf1, this
+  // optional-chained check just never matches and the hook no-ops, rather than throwing.
   if (!changes?.system?.badge?.value) return
   if (!(data.name === "Mirror Image")) return
 

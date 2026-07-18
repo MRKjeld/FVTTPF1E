@@ -1,4 +1,4 @@
-/* {"name":"Acid Flask","img":"systems/pf2e/icons/equipment/alchemical-items/alchemical-bombs/acid-flask.webp","_id":"SaXHztUmj7Fh9G58"} */
+/* {"name":"Acid Flask","img":"systems/pf1/icons/items/inventory/flask.jpg","_id":"SaXHztUmj7Fh9G58"} */
 // Can be used standalone!
 
 let tokenD = args[1]?.sourceToken ?? canvas.tokens.controlled[0]
@@ -22,24 +22,34 @@ let mods = [{ label: `No Modifications`, value: 0 }]
 let options
 
 // Special feats
-
-if (tokenD.actor.data.items.filter((x) => x.name === "Bomber").length)
-  mods.push({
-    label: `<a class="entity-link content-link" data-pack="pf2e.classfeatures" data-id="7JbiaZ8bxODM5mzS"><i class="fas fa-suitcase"></i> Bomber</a>`,
-    value: "Bomber",
-  })
-if (tokenD.actor.data.items.filter((x) => x.name === "Expanded Splash").length)
-  mods.push({
-    label: `<a class="entity-link content-link" data-pack="pf2e.feats-srd" data-id="gyVcJfZTmBytLsXq"><i class="fas fa-suitcase"></i> Expanded Splash</a>`,
-    value: "Expanded",
-  })
-if (
-  tokenD.actor.data.items.filter((x) => x.name === "Directional Bombs").length
-)
-  mods.push({
-    label: `<a class="entity-link content-link" data-pack="pf2e.feats-srd" data-id="ozvYhY4hG1deXly8"><i class="fas fa-suitcase"></i> Directional Bombs</a>`,
-    value: "Directional",
-  })
+// PF1-TODO(alchemist-feats): pf2e alchemist feats "Bomber", "Expanded Splash",
+// and "Directional Bombs" (matched here by exact item name, and linked via
+// hardcoded pf2e compendium ids data-pack="pf2e.classfeatures"/"pf2e.feats-srd")
+// have no confirmed pf1 equivalent feat/class feature/discovery. Name equality
+// across systems is not mechanical equality (conversion-checklist.md #7), so
+// rather than guess a pf1 mapping this whole modifier-picker branch is
+// disabled below: `mods` always stays at its single "No Modifications" entry,
+// the warpgate dialog never opens, and `options` stays undefined, so the
+// Directional Bombs/Cone Template branch further down never triggers. A human
+// should decide whether/how to re-key this off a real pf1 alchemist
+// discovery/feat before re-enabling.
+// if (tokenD.actor.items.filter((x) => x.name === "Bomber").length)
+//   mods.push({
+//     label: `<a class="entity-link content-link" data-pack="pf2e.classfeatures" data-id="7JbiaZ8bxODM5mzS"><i class="fas fa-suitcase"></i> Bomber</a>`,
+//     value: "Bomber",
+//   })
+// if (tokenD.actor.items.filter((x) => x.name === "Expanded Splash").length)
+//   mods.push({
+//     label: `<a class="entity-link content-link" data-pack="pf2e.feats-srd" data-id="gyVcJfZTmBytLsXq"><i class="fas fa-suitcase"></i> Expanded Splash</a>`,
+//     value: "Expanded",
+//   })
+// if (
+//   tokenD.actor.items.filter((x) => x.name === "Directional Bombs").length
+// )
+//   mods.push({
+//     label: `<a class="entity-link content-link" data-pack="pf2e.feats-srd" data-id="ozvYhY4hG1deXly8"><i class="fas fa-suitcase"></i> Directional Bombs</a>`,
+//     value: "Directional",
+//   })
 
 if (mods.length > 1) {
   pf1eAnimations.requireModule("warpgate")

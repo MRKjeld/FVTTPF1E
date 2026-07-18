@@ -17,6 +17,17 @@ let mods = [{ label: `No Modifications`, value: 0 }]
 let ID = Sequencer.Helpers.random_int_between(100, 999)
 
 // Special feats
+// PF1-TODO(alchemist-feats): this block was already commented out prior to
+// the pf1 conversion effort (pre-existing precedent, also followed in the
+// sibling macro Acid Flask.js). It checks for pf2e alchemist feats "Bomber",
+// "Expanded Splash", and "Directional Bombs" (matched by exact item name, and
+// linked via hardcoded pf2e compendium ids data-pack="pf2e.classfeatures"/
+// "pf2e.feats-srd"), none of which have a confirmed pf1 equivalent feat/class
+// feature/discovery. Name equality across systems is not mechanical equality
+// (conversion-checklist.md #7), so rather than guess a pf1 mapping this stays
+// disabled: `mods` always stays at its single "No Modifications" entry and
+// the warpgate dialog never opens. A human should decide whether/how to
+// re-key this off a real pf1 alchemist discovery/feat before re-enabling.
 /*
 if (tokenD.actor.data.items.filter(x => x.name === "Bomber").length) mods.push({ "label": `<a class="entity-link content-link" data-pack="pf2e.classfeatures" data-id="7JbiaZ8bxODM5mzS"><i class="fas fa-suitcase"></i> Bomber</a>`, "value": "Bomber" })
 if (tokenD.actor.data.items.filter(x => x.name === "Expanded Splash").length) mods.push({ "label": `<a class="entity-link content-link" data-pack="pf2e.feats-srd" data-id="gyVcJfZTmBytLsXq"><i class="fas fa-suitcase"></i> Expanded Splash</a>`, "value": "Expanded Splash" })

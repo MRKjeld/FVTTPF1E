@@ -1,20 +1,25 @@
 /* {"name":"Harm","img":"systems/pf2e/icons/spells/harm.webp","_id":"kz6IN257FJ58SgmE"} */
+// PF1-TODO(icon): no confirmed pf1 equivalent found under systems/pf1/icons/spells/
+// (no "harm"-named file on disk) and this module ships no icon of its own for Harm.
+// Left pointing at the pf2e path rather than inventing an unverified pf1 path —
+// needs a human pick. Mirrors the same open judgment call already logged for Heal.js.
 if (!scope?.args)
   return ui.notifications.warn(
     "PF1e Animations | Harm macro has been triggered with no arguments. If this was a manual activation, please use the actual spell instead."
   )
 
+// PF1-TODO(undead-detection): the original pf2e-era undead check used
+// `actor.modeOfBeing` and `actor.system.attributes.hp.negativeHealing`. Neither
+// field exists in pf1 (confirmed: no match in systems/pf1/template.json, and no
+// match for "modeOfBeing"/"negativeHealing" in the de-minified systems/pf1/pf1.js.map
+// source). pf1 tracks creature type via `creatureTypes`/`creatureSubtypes` (seen on
+// race item templates in template.json), which likely aggregates onto the actor at
+// a path not yet confirmed here. Failing safe: treat everyone as living (no
+// damage/healing reversal) until a human confirms the real pf1 path and decides
+// whether "undead" should key off creature type instead. Mirrors the identical
+// judgment call already made in Heal.js for consistency.
 function undeadOrNot(actor) {
-  let modeOfBeing = actor?.modeOfBeing === "living" ? false : true
-
-  // If it has negative healing, or dhampir trait, or undead trait, it's undead.
-  if (
-    actor?.system?.attributes?.hp?.negativeHealing ||
-    actor?.traits?.find((trait) => trait === "dhampir" || trait === "undead")
-  )
-    modeOfBeing = true
-
-  return modeOfBeing
+  return false
 }
 
 const sourceToken = args[1].sourceToken
@@ -82,14 +87,14 @@ if (args[0]?.collectionName === "templates") {
       .stretchTo(token, { randomOffset: 0.5 })
       .atLocation(sourceToken)
       .file(
-        sourceToken.distanceTo(token) > sourceToken.actor.attributes.reach.base
+        sourceToken.distanceTo(token) > sourceToken.actor.system.traits.reach.base
           ? "jb2a.magic_missile.dark_red"
           : "jb2a.unarmed_strike.magical.01.dark_purple"
       )
       .waitUntilFinished(-1000)
 
     if (
-      sourceToken.distanceTo(token) > sourceToken.actor.attributes.reach.base
+      sourceToken.distanceTo(token) > sourceToken.actor.system.traits.reach.base
     ) {
       seq
         .filter("ColorMatrix", {

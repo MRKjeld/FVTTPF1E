@@ -36,7 +36,7 @@ let textFinal =
   finalArray[Math.floor(Math.random() * finalArray.length)]
 let colors = args?.[2]?.color ?? ["#" + genColor(), "#" + genColor()]
 
-console.log(args[2])
+pf1eAnimations.debug("Brain Response", args[2])
 
 if (args?.[2]?.prompt) {
   pf1eAnimations.requireModule("warpgate")

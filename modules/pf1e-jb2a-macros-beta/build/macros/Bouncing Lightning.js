@@ -1,4 +1,4 @@
-/* {"name":"Bouncing Lightning","img":"systems/pf2e/icons/spells/electric-arc.webp","_id":"1dUKN6KL7g3cdDdz"} */
+/* {"name":"Bouncing Lightning","img":"systems/pf1/icons/spells/lightning-blue-1.jpg","_id":"1dUKN6KL7g3cdDdz"} */
 // Affected by Interface Volume
 
 const [tokenD, tokenScale] = await pf1eAnimations.macroHelpers(args)

@@ -3,7 +3,19 @@
 // Modified by MrVauxs#8622
 // requires warpgate, jb2a patreon, and sequencer
 
-const tokenD = args[0] ?? token
+// PF1-TODO(cone-template-args): this macro is reached from two incompatible
+// call-site shapes (traced via repo-wide grep for "Cone Template" /
+// "Compendium.pf1e-jb2a-macros.Macros.Cone Template"): (1) as a Sequencer
+// `.macro()` helper (see Acid Flask.js) with args[0] = a token/TokenDocument,
+// args[1] = { templateType, distance, fillColor, angle }, args[2] = a jb2a
+// file-path array; and (2) via the getPf1eMacroName chat-keyword fallback
+// (module/pf1e-animations.js, "cone|fireball|burning hands|..." pattern),
+// where args[0] = the raw chat-message data object (not a token) and
+// args[1] = { sourceToken, allTargets, hitTargets, item, itemUuid }. Blindly
+// trusting args[0] as a token in shape (2) previously produced NaN geometry
+// (tokenD.center/tokenD.data.width undefined). Detect shape by duck-typing
+// a token's `.center` getter instead of guessing which call site "wins".
+const tokenD = args[0]?.center ? args[0] : (args[1]?.sourceToken ?? token)
 const gridSize = canvas.grid.h
 const sourceSquare = (center, widthSquares, heightSquares) => {
   const h = gridSize * heightSquares

@@ -10,13 +10,30 @@ if (!tokenD)
 
 let stone = "jb2a.ioun_stones.01"
 let colors = {}
-let stoneType = args[1].item.slug
-  .replaceAll("aeon-stone-", "")
-  .replaceAll("-", " ")
+// PF1-TODO(aeon-stone-name-key): pf2e Aeon Stones expose a system-generated
+// `item.slug` (e.g. "aeon-stone-clear-spindle") that pf1 items do not have
+// (confirmed: no `slug` field/getter anywhere in systems/pf1/pf1.js.map's
+// item-*.mjs sources or template.json). Falling back to `item.name`, since
+// that's the only universal identifier pf1 items expose. The exact naming
+// convention used by real pf1 "Aeon Stone" items (Ultimate Equipment/Distant
+// Worlds content) was not available to verify in this repo's compendiums
+// (LevelDB blocks are compressed and not greppable as plain text), so this
+// match is best-effort: unmatched names safely fall through to the
+// `default:` case below (random ioun stone animation) instead of throwing.
+let stoneType = (args[1].item?.name ?? "")
+  .toLowerCase()
+  .replace(/aeon stone/g, "")
+  .replace(/[(),]/g, "")
+  .replace(/\s+/g, " ")
   .trim()
 let stoneScale = 0.15
 
-if (args[0] === "invested") {
+// pf1 has no pf2e-style "invested" mechanic (data-model-map.md: no equivalent
+// concept). The item-update hook (module/pf1e-animations.js, off-limits here)
+// only ever reports "equipped" or false for pf1 items, so "equipped" is the
+// closest pf1-native analog to pf2e's "invested" activation state and is used
+// here instead.
+if (args[0] === "equipped") {
   switch (stoneType) {
     case "clear spindle":
       stone = "jb2a.ioun_stones.01.white.regeneration"

@@ -24,8 +24,6 @@ for (let i = 0; i < 2; i++) {
     }
   )
 
-  console.log(location)
-
   if (location === false || location.cancelled) {
     tokenD.actor.sheet.maximize()
     return

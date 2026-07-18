@@ -1,4 +1,16 @@
 /* {"name":"Panache","img":"systems/pf2e/icons/features/classes/panache.webp","_id":"6yeZBx2HjHHrQIRp"} */
+// PF1-TODO(icon): no confirmed pf1 equivalent found — systems/pf1/icons has no
+// features/classes/ tree at all (same gap noted for Manifest Eidolon), and this
+// module ships no swashbuckler/panache-themed icon of its own. Left pointing at
+// the pf2e path rather than inventing an unverified pf1 path — needs a human pick.
+// PF1-TODO(mechanic): this file itself contains no pf2e "Panache" resource logic
+// (no reads of any panache point-pool, no swashbuckler feat checks) — it is a pure
+// token-border/wind toggle animation keyed off an arbitrary Sequencer effect
+// `origin: "panache"` string, triggered externally (via animations/aefx/panache.json,
+// out of scope for this .js-only pass) whenever a linked buff/effect is
+// applied/removed. Since pf1 has no Panache mechanic, nothing in this specific
+// module actually calls this macro today; it remains usable as a generic
+// on/off toggle animation if a GM links a custom pf1 buff item to it.
 const [tokenD, tokenScale] = await pf1eAnimations.macroHelpers(args)
 
 let testArgs

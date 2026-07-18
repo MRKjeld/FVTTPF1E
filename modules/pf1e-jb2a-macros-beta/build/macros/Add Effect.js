@@ -38,7 +38,12 @@ source.flags = mergeObject(source.flags ?? {}, {
   core: { sourceId: ITEM_UUID },
 })
 
-const existing = await args[1].sourceToken.actor.itemTypes.effect.find(
+// PF1-TODO(item-type): pf2e's "effect" item type has no pf1 equivalent — pf1 has no
+// "effect" entry in systems/pf1/template.json's Item.types list. The confirmed pf1
+// analog for a toggleable/temporary condition-style item is the "buff" item type
+// (template.json Item.buff has active/duration/hideFromToken fields matching this
+// use case, and `itemTypes.buff` is used the same way in systems/pf1/pf1.js.map).
+const existing = await args[1].sourceToken.actor.itemTypes.buff.find(
   (e) => e.flags.core?.sourceId === ITEM_UUID
 )
 
@@ -46,12 +51,16 @@ await ask(source, deleteTemplate)
 
 async function ask(source, deleteTemplate) {
   async function add() {
-    if (existing?.system?.badge) {
-      existing.update({
-        "system.badge.value": (existing.system.badge.value += 1),
-      })
-    } else if (!existing) {
+    // PF1-TODO(badge-stacking): pf2e's `system.badge.value` stacking-counter (used to
+    // increment an existing effect instead of adding a duplicate) has no confirmed pf1
+    // equivalent — pf1's "buff" item only exposes a charges-style `system.uses.value`
+    // (template.json), which is not confirmed to carry the same "stack count"
+    // semantics. Failing safe: skip re-adding/incrementing if a matching buff already
+    // exists, rather than guess a stacking field.
+    if (!existing) {
       await args[1].sourceToken.actor.createEmbeddedDocuments("Item", [source])
+    } else {
+      pf1eAnimations.debug("Add Effect - Effect already exists, skipping", args)
     }
     if (deleteTemplate && args[0].documentName === "MeasuredTemplate")
       args[0].delete()

@@ -1,4 +1,11 @@
 /* {"name":"Quickened","img":"systems/pf2e/icons/conditions/quickened.webp","_id":"E1eKr1GPbMu11gDZ"} */
+// PF1-TODO(icon): no confirmed pf1 equivalent found. pf1's condition registry
+// (systems/pf1/module/registry/conditions.mjs, confirmed via pf1.js.map) has no
+// "quickened"/"haste" entry at all — pf1 models Haste as a spell buff, not a discrete
+// status condition, so there's no systems/pf1/icons/conditions/ file to repoint to.
+// systems/pf1/icons/spells/haste-*.jpg exist but represent the Haste spell's own art,
+// not a generic "quickened" marker — left pointing at the pf2e path rather than
+// guessing which one a human would prefer.
 const [tokenD, tokenScale] = await pf1eAnimations.macroHelpers(args)
 
 let testArgs

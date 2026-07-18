@@ -1,4 +1,4 @@
-/* {"name":"Humanoid Form","img":"systems/pf2e/icons/spells/humanoid-form.webp","_id":"7nrt0AppNUZDPmYk"} */
+/* {"name":"Humanoid Form","img":"systems/pf1/icons/races/creature-types/humanoid.jpg","_id":"7nrt0AppNUZDPmYk"} */
 // Original Author: EskieMoh#2969
 // Rebuilt 1 by: MrVauxs#8622
 // Rebuild 2 by: Amayori
@@ -91,10 +91,6 @@ if (args[0] !== "off") {
     );
   }
 
-  console.log(
-    `PF2e x JB2A Macros | Transformed ${tokenD.name} into ${disguise[0]} with ${disguise[1]} image with scale of ${disguise[2]}.`
-  );
-
   new Sequence({ moduleName: "PF1e Animations", softFail: true })
     .effect()
     .origin("Humanoid Form")
@@ -127,7 +123,12 @@ if (args[0] !== "off") {
         ring: {
           enabled: false,
         },
-        flags: { pf2e: { autoscale: false } },
+        // PF1-TODO(autoscale-flag): pf2e's `flags.pf2e.autoscale` toggled off a
+        // pf2e-system-specific per-token auto-resize behavior tied to creature
+        // size; pf1 has no equivalent concept (confirmed: no "autoscale" hit
+        // anywhere in systems/pf1), so this flag write is dropped rather than
+        // invented. If pf1 gains an analogous token-scale-lock flag later,
+        // wire it here.
       });
     })
     .play();

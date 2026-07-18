@@ -1,30 +1,32 @@
 /* {"name":"Stumbling Stance","img":"systems/pf2e/icons/features/feats/stumbling-stance.webp","_id":"ya0hNKP4l4uOfoGJ"} */
+// PF1-TODO(icon): no confirmed pf1 equivalent found. `systems/pf1/icons/conditions/staggered.svg`
+// / `systems/pf1/icons/feats/staggering-critical.jpg` are thematically adjacent ("stumbling" vs.
+// "staggered") but represent distinct pf1 conditions/feats (mirrors the Concealed.js precedent of
+// not substituting a visually-similar-but-mechanically-different icon) — left pointing at the
+// pf2e path rather than guessing. Needs a human pick.
 if (!args || args.length === 0) {
   const actors = canvas.tokens.controlled.flatMap((token) => token.actor ?? [])
   if (actors.length === 0 && game.user.character)
     actors.push(game.user.character)
   if (actors.length === 0) {
-    return ui.notifications.error(
-      game.i18n.localize("PF2E.ErrorMessage.NoTokenSelected")
-    )
+    const message = pf1eAnimations.localize("pf1e-jb2a-macros.notifications.noToken")
+    return ui.notifications.error(message)
   }
 
-  const ITEM_UUID = "Compendium.pf2e.feat-effects.BCyGDKcplkJiSAKJ" // Stance: Stumbling Stance
-  const source = (await fromUuid(ITEM_UUID)).toObject()
-  source.flags = mergeObject(source.flags ?? {}, {
-    core: { sourceId: ITEM_UUID },
-  })
-
-  for (const actor of actors) {
-    const existing = actor.itemTypes.effect.find(
-      (e) => e.flags.core?.sourceId === ITEM_UUID
-    )
-    if (existing) {
-      await existing.delete()
-    } else {
-      await actor.createEmbeddedDocuments("Item", [source])
-    }
-  }
+  // PF1-TODO(mechanic): the pf2e original toggled a "Stance: Stumbling Stance" Effect item
+  // sourced from Compendium.pf2e.feat-effects.BCyGDKcplkJiSAKJ — the pf2e *system's own* core
+  // compendium, not this module's bundled pf1e-actions pack. That compendium doesn't exist under
+  // pf1, so fromUuid(ITEM_UUID) would resolve to null and `.toObject()` would throw. Unlike
+  // Mirror Image.js/Action Counter.js (whose ITEM_UUID already points at a same-module bundled
+  // item), no equivalent "Stumbling Stance" buff item was found in this module's own
+  // packs/actions, and systems/pf1/packs/feats is a compressed LevelDB pack not greppable from
+  // this environment, so a real pf1 feats-compendium match couldn't be confirmed either way.
+  // Pathfinder 1e does have a genuine "Stumbling Stance" feat (Kung Fu Style chain / Drunken
+  // Master), so a pf1-native buff item may exist or be worth authoring — but until one is
+  // confirmed, this fails safe as a no-op (skips the actor Effect-item toggle) rather than
+  // guessing an item UUID or an "effect"→"buff" itemTypes mapping for content that may not exist.
+  // Needs a human decision — see CONVERSION_STATUS.md.
+  return
 }
 
 const [tokenD, tokenScale] = await pf1eAnimations.macroHelpers(args)

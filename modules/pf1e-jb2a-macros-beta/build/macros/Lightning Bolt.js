@@ -1,7 +1,9 @@
-/* {"name":"Lightning Bolt","img":"systems/pf2e/icons/spells/lightning-bolt.webp","_id":"j1cUixlhlZBbeM1r"} */
+/* {"name":"Lightning Bolt","img":"systems/pf1/icons/spells/lightning-blue-2.jpg","_id":"j1cUixlhlZBbeM1r"} */
 // Original Author: EskieMoh#2969
 // Rebuilt by: MrVauxs#8622
 // Requires a pre-placed template.
+// Icon: repointed to systems/pf1/icons/spells/lightning-blue-2.jpg (confirmed on disk;
+// "Bouncing Lightning.js" already claims lightning-blue-1.jpg for its own icon).
 
 const [tokenD, tokenScale] = await pf1eAnimations.macroHelpers(args)
 
