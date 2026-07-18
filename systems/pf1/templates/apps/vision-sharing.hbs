@@ -1,0 +1,11 @@
+<section data-tooltip-class="pf1">
+  {{formGroup fields.default label="PF1.Default" value=default blank=false localize=true name="default"}}
+
+  <hr>
+
+  {{#each users}}
+  {{formGroup @root.fields.toggle label=user.name value=level blank="PF1.Default" localize=true name=(concat "users." user.id)}}
+  {{/each}}
+
+  <hr>
+</section>

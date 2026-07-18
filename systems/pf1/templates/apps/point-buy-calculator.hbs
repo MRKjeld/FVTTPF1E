@@ -1,0 +1,54 @@
+<section class="form-body" data-tooltip-class="pf1-v2">
+  <ol class="ability-list">
+    {{#each abilities as |abl|}}
+      <li class="ability flexrow" data-ability="{{abl.key}}">
+      <span class="name">
+        {{abl.name}}
+      </span>
+
+        {{!-- Subtract --}}
+        <div class="controls">
+          <a class="control subtract" data-action="control">
+            <i class="fa-solid fa-minus" inert></i>
+          </a>
+        </div>
+
+        {{!-- Current Value --}}
+        <span class="value">
+          {{abl.value}}
+        </span>
+
+        {{!-- Add --}}
+        <div class="controls">
+          <a class="control add" data-action="control">
+            <i class="fa-solid fa-plus" inert></i>
+          </a>
+        </div>
+      </li>
+    {{/each}}
+  </ol>
+
+  <div class="info">
+    <p class="usage {{#if invalidPoints}}invalid{{/if}}">
+      {{localize "PF1.Application.PointBuy.Spent"}}: {{points}}
+      {{#if invalidPoints}}
+        <i class="fa-solid fa-triangle-exclamation" data-tooltip="PF1.Application.PointBuy.InvalidPoints"></i>
+      {{/if}}
+    </p>
+    <table class="categories">
+      <tr>
+        <th>{{localize "PF1.Application.PointBuy.CampaignType"}}</th>
+        <th>{{localize "PF1.Application.PointBuy.Points"}}</th>
+      </tr>
+      {{#each limits}}
+        <tr{{#if (eq @root.closest key)}} class="closest"{{/if}} data-category="{{key}}">
+          <td>{{localize label}}</td>
+          <td>{{points}}</td>
+        </tr>
+      {{/each}}
+    </table>
+    <p>
+      <i class="fa-solid fa-exclamation-triangle" inert></i> {{localize "PF1.Application.PointBuy.Warning"}}
+    </p>
+  </div>
+</section>

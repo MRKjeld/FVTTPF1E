@@ -1,0 +1,100 @@
+<div class="pf1 chat-card defense-card" data-actor-id="{{actor.id}}"{{#if tokenUuid}} data-token-uuid="{{tokenUuid}}"{{/if}}>
+  <header class="card-header type-color defenses flexrow">
+    <h3 class="actor-name">{{localize "PF1.Defenses"}}</h3>
+  </header>
+
+  {{#with ac}}
+  <div class="defense">
+    <div class="info-box-joined ac">
+      <div class="info-box">
+        <h5>{{localize "PF1.ACNormal"}}</h5>
+        <span class="value">{{normal}}</span>
+      </div>
+      <div class="info-box">
+        <h5>{{localize "PF1.ACTouch"}}</h5>
+        <span class="value">{{touch}}</span>
+      </div>
+      <div class="info-box">
+        <h5>{{localize "PF1.ACFFAbbr"}}</h5>
+        <span class="value">{{flatFooted}}</span>
+      </div>
+    </div>
+  </div>
+
+  {{> "systems/pf1/templates/chat/parts/item-notes.hbs" header=(localize "PF1.ACNotes") notes=notes}}
+  {{/with}}
+
+  {{#if (or cmd misc.sr)}}
+  <div class="defense">
+    {{#if cmd}}
+    <div class="info-box-joined cmd">
+      <div class="info-box cmd normal">
+        <h5>{{localize "PF1.CMDAbbr"}}</h5>
+        <span class="value">{{cmd.normal}}</span>
+      </div>
+      <div class="info-box cmd flatfooted">
+        <h5>{{localize "PF1.CMDFFAbbr"}}</h5>
+        <span class="value">{{cmd.flatFooted}}</span>
+      </div>
+    </div>
+    {{/if}}
+    {{#if misc.sr}}
+    <div class="info-box sr">
+      <h5>{{localize "PF1.SpellResistanceAbbr"}}</h5>
+      <span class="value">{{misc.sr}}</span>
+    </div>
+    {{/if}}
+  </div>
+
+  {{> "systems/pf1/templates/chat/parts/item-notes.hbs" header=(localize "PF1.CMDNotes") notes=cmd.notes}}
+  {{/if}}
+
+  {{> "systems/pf1/templates/chat/parts/item-notes.hbs" header=(localize "PF1.SpellResistance") notes=misc.srNotes}}
+
+  {{> "systems/pf1/templates/chat/parts/item-notes.hbs" header=(localize "PF1.DamRed") notes=misc.drNotes}}
+
+  {{#if misc.hardness}}
+  <div class="flexcol property-group">
+    <label>{{localize "PF1.Hardness"}}</label>
+    <div class="flexrow tag-list">
+      <span class="tag">{{{misc.hardness}}}</span>
+    </div>
+  </div>
+  {{/if}}
+
+  {{> "systems/pf1/templates/chat/parts/item-notes.hbs" header=(localize "PF1.EnRes") notes=misc.erNotes}}
+
+  {{#with regen}}
+  <div class="defense regen">
+    <div class="info-box regen">
+      <h5>{{localize "PF1.Regeneration"}}</h5>
+      <span class="value">{{#if regen}}{{regen}}{{else}}{{localize "PF1.NonApplicable"}}{{/if}}</span>
+    </div>
+    <div class="info-box fastheal">
+      <h5>{{localize "PF1.FastHealing"}}</h5>
+      <span class="value">{{#if fastHealing}}{{fastHealing}}{{else}}{{localize "PF1.NonApplicable"}}{{/if}}</span>
+    </div>
+  </div>
+  {{/with}}
+
+  {{> "systems/pf1/templates/chat/parts/item-notes.hbs" header=(localize "PF1.ConditionPlural") notes=misc.conditions}}
+
+  <div class="saving-throws flexrow">
+    <button data-action="save" data-save="fort" data-as="speaker">
+      <label>{{localize "PF1.SavingThrowFort"}}</label>
+      <span>{{numberFormat saves.fort sign=true}}</span>
+    </button>
+    <button data-action="save" data-save="ref" data-as="speaker">
+      <label>{{localize "PF1.SavingThrowRef"}}</label>
+      <span>{{numberFormat saves.ref sign=true}}</span>
+    </button>
+    <button data-action="save" data-save="will" data-as="speaker">
+      <label>{{localize "PF1.SavingThrowWill"}}</label>
+      <span>{{numberFormat saves.will sign=true}}</span>
+    </button>
+  </div>
+
+  {{#with saves}}
+  {{> "systems/pf1/templates/chat/parts/item-notes.hbs" header=(localize "PF1.SaveNotes") notes=notes}}
+  {{/with}}
+</div>

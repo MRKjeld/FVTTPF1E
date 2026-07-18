@@ -1,0 +1,66 @@
+<section class="form-body" data-tooltip-class="pf1-v2">
+  <table>
+    <thead>
+    <tr data-drop="true" data-index="0">
+      {{#if @root.editable}}
+      <th class="drag-control"></th>
+      {{/if}}
+      {{#each fields as |value|}}
+        <th>{{value}}</th>
+      {{/each}}
+      {{#if @root.editable}}
+      <th class="entry-control"></th>
+      {{/if}}
+    </tr>
+    </thead>
+    <tbody>
+    {{#each entries as |entry index|}}
+      <tr class="resistance" data-drop="true" data-index="{{index}}">
+        {{#if @root.editable}}
+        <td class="drag-control" data-drag="true">
+          <i class="fa-solid fa-bars" inert></i>
+        </td>
+        {{/if}}
+        <td>
+          <input type="number" class="textarea" data-index="amount" value={{entry.amount}}
+            data-dtype={{@root.dtypes.[0]}} name="{{index}}-amount">
+        </td>
+        <td>
+          <select data-index="types0" data-dtype={{@root.dtypes.[1]}} name="{{index}}-types0">
+            {{#if @root.isDR}}
+              {{selectOptions @root.damages localize=true selected=entry.types.[0] blank="PF1.None"}}
+            {{else}}
+              {{selectOptions @root.damages localize=true selected=entry.types.[0]}}
+            {{/if}}
+          </select>
+        </td>
+        <td>
+          <select data-index="operator" data-dtype={{@root.dtypes.[2]}} name="{{index}}-comboChoice">
+            {{selectOptions @root.operators localize=true selected=entry.operator}}
+          </select>
+        </td>
+        <td>
+          <select data-index="types1" data-dtype={{@root.dtypes.[3]}} name="{{index}}-types1">
+            {{selectOptions @root.damages localize=true selected=entry.types.[1] blank="PF1.None"}}
+          </select>
+        </td>
+        {{#if @root.editable}}
+        <td class="entry-control">
+          <button type="button" data-action="deleteEntry" class="entry-control icon-button delete-entry">
+            <i class="fa-solid fa-trash" inert></i>
+          </button>
+        </td>
+        {{/if}}
+      </tr>
+    {{/each}}
+    </tbody>
+  </table>
+  {{#if editable}}
+  <div class="add-entry"><a data-action="addEntry"><i class="fa-solid fa-plus fa-fw" inert></i> {{localize "PF1.AddEntry"}}</a></div>
+  {{/if}}
+
+  <div class="form-group stacked">
+    <label for="resistance-custom-{{id}}-{{document.id}}">{{localize "PF1.Special"}}</label>
+    <input id="resistance-custom-{{id}}-{{document.id}}" type="text" name="custom" value="{{@root.custom}}">
+  </div>
+</section>

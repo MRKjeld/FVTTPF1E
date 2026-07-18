@@ -1,0 +1,59 @@
+<div class="defenses">
+  {{! Armor Class and CMD }}
+  <div class="ac-cmd">
+    {{! AC, TAC and FFAC }}
+    <div class="info-box-joined ac-tac-ffac">
+    {{#each system.attributes.ac as |ac id|}}
+      <div class="info-box ac-{{id}}" data-tooltip-extended="ac.{{id}}">
+        <h5>{{ac.label}}</h5>
+        <span class="value">{{ac.total}}</span>
+      </div>
+    {{/each}}
+    </div>
+
+    <div class="info-box-joined cmd-ff">
+      {{! CMD }}
+      <div class="info-box cmd" {{#unless system.config.noManeuvers}}data-tooltip-extended="cmd.total"{{/unless}}>
+        <h5>{{localize "PF1.CMDAbbr"}}</h5>
+        <span class="value">
+          {{#if system.config.noManeuvers}}
+          <i class="fa-solid fa-minus" inert></i>
+          {{else}}
+          {{system.attributes.cmd.total}}
+          {{/if}}
+        </span>
+      </div>
+
+      {{! FF CMD }}
+      <div class="info-box ffcmd" {{#unless system.config.noManeuvers}}data-tooltip-extended="cmd.flatFootedTotal"{{/unless}}>
+        <h5>{{localize "PF1.CMDFFAbbr"}}</h5>
+        <span class="value">
+          {{#if system.config.noManeuvers}}
+          <i class="fa-solid fa-minus" inert></i>
+          {{else}}
+          {{system.attributes.cmd.flatFootedTotal}}
+          {{/if}}
+        </span>
+      </div>
+    </div>
+  </div>
+
+  {{! Saving Throws and Spell Resistance }}
+  <div class="saves-sr">
+    {{! Saves }}
+    <div class="info-box-joined saves">
+      {{#each system.attributes.savingThrows as |savingThrow id|}}
+      <div class="info-box saving-throw {{id}}" data-savingthrow="{{id}}" data-tooltip-extended="save.{{id}}">
+        <h5><a class="rollable">{{label}}</a></h5>
+        <span class="value">{{numberFormat savingThrow.total decimals=0 sign=true}}</span>
+      </div>
+      {{/each}}
+    </div>
+
+    {{! SR }}
+    <div class="info-box sr" data-tooltip-extended="sr">
+      <h5>{{localize "PF1.SpellResistance"}}</h5>
+      <span class="value">{{system.attributes.sr.total}}</span>
+    </div>
+  </div>
+</div>

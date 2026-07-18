@@ -1,0 +1,213 @@
+<form class="{{cssClass}} flexcol" autocomplete="off" data-tooltip-class="pf1">
+
+  {{!-- Item Sheet Header --}}
+  <header class="sheet-header flexrow">
+    <img class="profile" src="{{item.img}}" data-tooltip="{{item.name}}" data-edit="img">
+
+    <div class="flexrow header-details">
+      <h1 class="item-name">
+        <input name="name" type="text" value="{{item.name}}" placeholder="{{localize "PF1.ItemName"}}">
+      </h1>
+
+      {{! Content Source }}
+      {{~> "systems/pf1/templates/internal/content-source-view.hbs"}}
+
+      <ul class="summary">
+        <li>
+          <label>
+            <input type="checkbox" name="system.disabled" {{checked system.disabled}}> {{localize "PF1.Disabled"}}
+          </label>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  {{!-- Sidebar --}}
+  <section class="sidebar">
+    <header>
+      <h3 class="item-type">{{itemType}}</h3>
+
+      <h4 class="item-subtype">{{labels.featType}} ({{labels.abilityType}})</h4>
+
+      {{#if labels.traitType}}
+      <h4 class="trait-type">{{labels.traitType}}</h4>
+      {{/if}}
+
+      {{#if labels.raceType}}
+      <h4 class="trait-racetype">{{labels.raceType}}</h4>
+      {{/if}}
+
+      {{#if labels.traitCategory}}
+      <h4 class="trait-category">{{labels.traitCategory}}</h4>
+      {{/if}}
+    </header>
+
+    {{> "systems/pf1/templates/items/parts/item-sidebar-inputs.hbs"}}
+
+    {{#if (and (eq system.subType "racial") system.racePoints)}}
+    <label class="race-points">
+      <span>{{localize "PF1.RacePoints"}}</span>
+      <span class="value">{{system.racePoints}}</span>
+    </label>
+    {{/if}}
+
+    {{#if system.associations.classes.length}}
+    <ul class="property-list classes">
+      <h5>{{localize "PF1.Classes"}}</h5>
+      {{#each system.associations.classes}}
+      <li class="property generic-tag">{{this}}</li>
+      {{/each}}
+    </ul>
+    {{/if}}
+
+    {{> "systems/pf1/templates/items/parts/item-sidebar-creatureTypes.hbs"}}
+
+    {{> "systems/pf1/templates/items/parts/item-sidebar-tags.hbs"}}
+  </section>
+
+  {{!-- Item Sheet Navigation --}}
+  <nav class="sheet-navigation tabs" data-group="primary">
+    <a class="item" data-tab="description">{{ localize "PF1.Description" }}</a>
+    <a class="item" data-tab="details">{{ localize "PF1.Details" }}</a>
+    <a class="item" data-tab="changes">{{ localize "PF1.Changes" }}</a>
+    <a class="item" data-tab="links">{{localize "PF1.Links"}}</a>
+    <a class="item" data-tab="advanced">{{localize "PF1.Advanced"}}</a>
+  </nav>
+
+  {{!-- Item Sheet Body --}}
+  <section class="primary-body">
+
+    {{!-- Description Tab --}}
+    {{> "systems/pf1/templates/items/parts/item-description.hbs"}}
+
+    {{!-- Details Tab --}}
+    <div class="tab details" data-group="primary" data-tab="details">
+      {{> "systems/pf1/templates/items/parts/item-actions.hbs"}}
+
+      {{!-- Feat Type --}}
+      <div class="form-group select">
+        <label>{{localize "PF1.Type"}}</label>
+        <div class="form-fields">
+          <select name="system.subType" value="{{system.subType}}">
+            {{selectOptions config.featTypes selected=system.subType}}
+          </select>
+
+          <select name="system.abilityType" value="{{system.abilityType}}">
+            {{selectOptions abilityTypes selected=system.abilityType}}
+          </select>
+        </div>
+      </div>
+
+      {{! Trait Type }}
+      {{#if (eq system.subType "trait")}}
+      <div class="form-group select">
+        <label>{{localize "PF1.TraitType"}}</label>
+        <div class="form-fields">
+          <select name="system.traitType">
+            <option value=""></option>
+            {{selectOptions config.traitTypes selected=system.traitType}}
+          </select>
+        </div>
+      </div>
+
+      {{! Racial trait }}
+      {{else if (eq system.subType "racial")}}
+      <div class="form-group select">
+        <label>{{localize "PF1.Category"}}</label>
+        <div class="form-fields">
+          <select name="system.traitCategory">
+            <option value=""></option>
+            {{selectOptions config.racialTraitCategories selected=system.traitCategory}}
+          </select>
+        </div>
+      </div>
+      <div class="form-group select">
+        <label>{{localize "PF1.RaceType"}}</label>
+        <div class="form-fields">
+          <select name="system.traitType">
+            <option value=""></option>
+            {{selectOptions config.raceTypes selected=system.traitType}}
+          </select>
+        </div>
+      </div>
+      <div class="form-group select">
+        <label>{{localize "PF1.RacePoints"}}</label>
+        <div class="form-fields">
+          <input type="number" name="system.racePoints" value="{{system.racePoints}}" placeholder="0" min="0" step="1">
+        </div>
+      </div>
+      {{/if}}
+
+      {{!-- Feat class associations --}}
+      {{#if isClassFeature}}
+      <div class="form-group">
+        <div class="data-selector">
+          <a class="entry-selector" data-for="system.associations.classes" data-fields="PF1.ClassPlural" data-flat="true" data-dtypes="String" data-title="PF1.LinkTypeClassAssociations"><i class="fa-solid fa-edit" inert></i></a>
+          <label>{{localize "PF1.ClassPlural"}}</label>
+        </div>
+      </div>
+      {{/if}}
+
+      {{#if isTemplate}}
+      <div class="form-group">
+        <label>{{localize "PF1.CROffset"}}</label>
+        <div class="form-fields">
+          <input type="text" name="system.crOffset" class="formula" value="{{system.crOffset}}" placeholder="{{localize "PF1.Formula"}}">
+        </div>
+      </div>
+      <div class="form-group stacked">
+        <label class="checkbox">
+            <input type="checkbox" name="system.inherited" {{checked system.inherited}}>
+            {{localize "PF1.Template.Inherited"}}
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="system.acquired" {{checked system.acquired}}>
+            {{localize "PF1.Template.Acquired"}}
+          </label>
+        <label class="checkbox">
+          <input type="checkbox" name="system.simple"  {{checked system.simple}} >
+          {{localize "PF1.Template.Simple"}}
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" name="system.summons" {{checked system.summons}} >
+          {{localize "PF1.Template.UsableWithSummons"}}
+        </label>
+      </div>
+      {{/if}}
+
+      {{!-- Proficiencies --}}
+      {{~> "systems/pf1/templates/items/parts/item-proficiencies.hbs"}}
+
+      {{!-- Class Skills --}}
+      {{~> "systems/pf1/templates/items/parts/item-class-skills.hbs"}}
+
+      {{!-- Creature Type --}}
+      {{~> "systems/pf1/templates/items/parts/item-creature-type.hbs"}}
+
+      {{!-- Advanced --}}
+      <h3 class="form-header">{{localize "PF1.Advanced"}}</h3>
+
+      {{! Tags }}
+      {{~> "systems/pf1/templates/items/parts/item-tags.hbs"}}
+
+      {{! Identifier Tag }}
+      {{~> "systems/pf1/templates/items/parts/item-tag.hbs"}}
+
+      {{!-- Associated Class --}}
+      {{> "systems/pf1/templates/items/parts/item-class-link.hbs"}}
+    </div>
+
+    {{!-- Changes Tab --}}
+    <div class="tab changes" data-group="primary" data-tab="changes">
+      {{~> "systems/pf1/templates/items/parts/item-changes.hbs"}}
+    </div>
+
+    <div class="tab links" data-group="primary" data-tab="links">
+      {{> "systems/pf1/templates/items/parts/item-links.hbs"}}
+    </div>
+
+    <div class="tab advanced" data-group="primary" data-tab="advanced">
+      {{> "systems/pf1/templates/items/parts/item-advanced.hbs"}}
+    </div>
+  </section>
+</form>

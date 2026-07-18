@@ -1,0 +1,24 @@
+<div class="damage-type-visual{{#unless damage.types.size}} empty{{/unless}}"{{#if name}} data-name="{{name}}"{{/if}}>
+{{#if damage.types.size}}
+  {{! Standard Damage }}
+  {{#each damage.standard}}
+  <span class="damage-type" data-tooltip="{{name}}">
+    {{#if icon}}
+    <i class="{{icon}} icon-pf" style="color: {{color}}"></i>
+    {{else}}
+    <img class="icon-pf" src="{{img}}">
+    {{/if}}
+    {{#if (eq ../damage.types.size 1)}}
+    <span class="name">{{name}}</span>
+    {{/if}}
+  </span>
+  {{/each}}
+  {{! Custom Damage }}
+  {{#if damage.custom.size}}
+  <span class="custom">{{#each damage.custom}}{{this}}{{#unless @last}};{{/unless}}{{/each}}</span>
+  {{/if}}
+{{else}}
+  {{!-- No types --}}
+  <span>{{localize "PF1.Undefined"}}</span>
+{{/if}}
+</div>

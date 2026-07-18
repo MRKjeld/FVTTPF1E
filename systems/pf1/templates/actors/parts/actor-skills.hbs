@@ -1,0 +1,70 @@
+{{#*inline "skill"}}
+<li class="skill{{#if arbitrary}} arbitrary{{/if}}{{#if subSkillId}} sub-skill{{/if}}{{#if untrained}} untrained{{/if}}{{#if compendiumEntry}} compendium{{/if}}" data-sub-skill="{{subSkillId}}" data-skill="{{skillId}}">
+  <div class="skill-name" data-tooltip-extended="skill.{{key}}">
+    {{#if arbitrary}}
+    <a class="control skill-create" data-tooltip="PF1.AddSkill">
+      <i class="fa-solid fa-plus" inert></i>
+    </a>
+    {{/if}}
+    <h4>{{#if custom}}{{name}}{{else}}{{label}}{{/if}}</h4>
+    <div class="controls">
+      {{#if compendiumEntry}}
+      <a class="compendium-entry" data-compendium-entry="{{compendiumEntry}}" data-document-type="JournalEntry">
+        <i class="fa-solid fa-book compendium-icon" inert></i>
+      </a>
+      {{/if}}
+    </div>
+  </div>
+  <a class="action roll" data-tooltip="PF1.RollSkill" data-sub-skill="{{subSkillId}}" data-skill="{{skillId}}">
+    <i class="fa-solid fa-dice-d20" inert></i>
+  </a>
+
+  {{#unless arbitrary}}
+  <span class="text-box skill-mod readonly" data-tooltip="PF1.SkillModTooltip">{{numberFormat mod decimals=0 sign=true}}</span>
+  <span class="text-box skill-rank allow-relative" name="system.skills.{{path}}.rank" data-min="0" data-step="1" data-dtype="Number" data-tooltip="PF1.SkillRankPlural">{{rank}}</span>
+  <label class="checkbox skill-cs" data-tooltip="PF1.CSTooltip">
+    <abbr>{{localize "PF1.CS"}}</abbr>
+    <input type="checkbox" disabled {{checked cs}}>
+  </label>
+  <label class="checkbox skill-acp" data-tooltip="PF1.ACPTooltip">
+    <abbr>{{localize "PF1.ACP"}}</abbr>
+    <input type="checkbox" class="lockable" name="system.skills.{{path}}.acp" {{disabled @root.skillsLocked}} {{checked acp}}>
+  </label>
+  <label class="checkbox skill-rt" data-tooltip="PF1.RTTooltip">
+    <abbr>{{localize "PF1.RT"}}</abbr>
+    <input type="checkbox" class="lockable" name="system.skills.{{path}}.rt" {{disabled @root.skillsLocked}} {{checked rt}}>
+  </label>
+  <div class="skill-ability">
+    <select class="skill-ability lockable" name="system.skills.{{path}}.ability" {{disabled @root.skillsLocked}}>
+      {{selectOptions @root.config.abilitiesShort selected=ability blank=""}}
+    </select>
+  </div>
+  <div class="controls custom lockable{{#if @root.skillsLocked}} hide-contents{{/if}}">
+    <a class="control skill-edit" data-tooltip="PF1.EditSkill"><i class="fa-solid fa-edit" inert></i></a>
+    {{#if custom}}
+    <a class="control skill-delete" data-tooltip="PF1.DeleteSkill"><i class="fa-solid fa-trash" inert></i></a>
+    {{/if}}
+  </div>
+  {{/unless}}
+</li>
+{{#each subSkills}}
+{{> "skill"}}
+{{/each}}
+{{/inline}}
+
+{{!-- Skills --}}
+<ul class="skills-list {{skillGroup}}" data-background="{{isBackgroundSkills}}">
+  {{#each skillset as |skill s|}}
+  {{> "skill"}}
+  {{/each}}
+
+  {{! Add new custom skill}}
+  <div class="controls skills">
+    {{#if owner}}
+    <a class="control skill-create">
+      <i class="fa-solid fa-plus fa-fw" inert></i>
+      {{localize 'PF1.AddSkill'}}
+    </a>
+    {{/if}}
+  </div>
+</ul>

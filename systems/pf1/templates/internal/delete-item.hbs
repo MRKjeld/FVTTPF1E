@@ -1,0 +1,15 @@
+<p>{{localize "PF1.DeleteItemConfirmation"}}</p>
+
+{{#if linked.length}}
+<p>
+  {{localize "PF1.DeleteChildLinks"}}
+</p>
+<ul>
+  {{#each linked}}
+  <li>
+    <span class="name">{{name}}</span>
+    <span class="type">({{type}})</span>
+  </li>
+  {{/each}}
+</ul>
+{{/if}}

@@ -1,0 +1,20 @@
+<div class="identified-info">
+  <section class="item-description">
+    <header class="flexrow description-header">
+      <h3 class="item-name">{{item.name}}{{#if hasUniqueActionName}} ({{action.name}}){{/if}}</h3>
+      <div class="description-metadata">
+        <i class="fa-solid fa-user-secret" inert></i>
+      </div>
+    </header>
+    {{{item.description}}}
+  </section>
+  {{#if (and action.name action.description)}}
+    {{#if description}}<hr>{{/if}}
+    <section class="action-description">
+      {{#if hasUniqueActionName}}
+      <h3 class="action-name">{{action.name}}</h3>
+      {{/if}}
+      {{{action.description}}}
+    </section>
+  {{/if}}
+</div>

@@ -1,0 +1,46 @@
+{{#*inline "damagetype"}}
+  <div class="damage-type{{#if enabled}} toggled{{/if}}" data-action="toggleDamageType" data-id="{{id}}">
+    {{!-- Icon --}}
+    {{#if icon}}
+      <i class="{{icon}} icon-pf" style="color: {{color}}"></i>
+    {{else}}
+      <img class="icon" src="{{img}}">
+    {{/if}}
+    {{!-- Name --}}
+    <span class="name">{{name}}</span>
+    <input type="checkbox" {{checked enabled}}>
+  </div>
+{{/inline}}
+
+<section class="form-body" data-tooltip-class="pf1-v2">
+  <div class="damage-type-container">
+    <div class="damage-type-categories">
+      {{#each categories}}
+        <div class="damage-types" data-category="{{@key}}">
+          <label>{{localize label}}</label>
+          <div class="icon-row">
+            {{#each types}}
+              {{> "damagetype"}}
+            {{/each}}
+          </div>
+        </div>
+      {{/each}}
+    </div>
+
+    <div class="damage-modifiers">
+      <label>{{localize "PF1.DamageModifiers"}}</label>
+      <div class="icon-row">
+        {{#each modifiers}}
+          {{> "damagetype"}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+
+  <div class="misc-container">
+    <div class="form-group custom">
+      <label>{{localize "PF1.Custom"}}</label>
+      <input type="text" name="custom" value="{{@root.customTypes}}">
+    </div>
+  </div>
+</section>

@@ -1,0 +1,70 @@
+<form class="pf1 custom-skill" data-tooltip-class="pf1-v2" autocomplete="off">
+  <div class="form-group">
+    <label>{{localize "PF1.Name"}}</label>
+    <div class="form-fields">
+      <input type="text" name="skill.name" value="{{skill.name}}" {{disabled skill.static}} required>
+    </div>
+  </div>
+
+  {{#unless skill.static}}
+  <div class="form-group">
+    <label>{{localize "PF1.Tag"}}</label>
+    <div class="form-fields">
+      <input type="text" name="tag" value="{{skill.tag}}" required>
+    </div>
+  </div>
+  {{else}}
+  <input type="hidden" name="tag" value="{{skill.tag}}">
+  {{/unless}}
+
+  <div class="form-group">
+    <label>{{localize "PF1.Rank"}}</label>
+    <div class="form-fields">
+      <input type="number" name="skill.rank" value="{{skill.rank}}" min="0" step="1">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>{{localize "PF1.ACPLong"}}</label>
+    <div class="form-fields">
+      <input type="checkbox" name="skill.acp" {{checked skill.acp}}>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>{{localize "PF1.RTTooltip"}}</label>
+    <div class="form-fields">
+      <input type="checkbox" name="skill.rt" {{checked skill.rt}}>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>{{localize "PF1.Ability"}}</label>
+    <div class="form-fields">
+      <select class="skill-ability" name="skill.ability">
+        {{selectOptions @root.config.abilities selected=skill.ability blank="PF1.None" localize=true}}
+      </select>
+    </div>
+  </div>
+
+  {{#unless skill.static}}
+  <div class="form-group">
+    <label>{{localize "DOCUMENT.JournalEntry"}}</label>
+    {{#if journal}}
+    <div class="compendium-entry flexrow" data-compendium-entry="{{journal.uuid}}" data-document-type="{{journal.documentType}}">
+      <a class="compendium-page">
+        <span>{{journal.name}}</span>
+        <i class="fa-solid fa-book compendium-icon" inert></i>
+      </a>
+      <div class="compendium-controls">
+        <a class="delete"><i class="fa-solid fa-trash" inert></i></a>
+      </div>
+    </div>
+    {{else}}
+    <div class="form-fields">
+      <span class="placeholder">{{localize "PF1.SkillJournalHint"}}</span>
+    </div>
+    {{/if}}
+  </div>
+  {{/unless}}
+</form>

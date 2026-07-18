@@ -1,0 +1,51 @@
+<span class="flavor-text">
+  {{#if compendiumEntry}}
+  <a data-tooltip="PF1.OpenAssociatedCompendiumEntry" data-action="journal" data-uuid="{{compendiumEntry}}"{{#if compendiumEntryType}} data-type="{{compendiumEntryType}}"{{/if}}>
+    <i class="fa-solid fa-book" inert></i>
+  </a>
+  {{/if}}
+
+  {{flavor}}
+
+  {{#if isAbnormal}}
+  <i class="fa-solid fa-dice-d20 abnormal {{#if isStatic}}take-x{{/if}}" data-tooltip="{{abnormalTooltip}}"></i>
+  {{/if}}
+</span>
+
+<div class="dice-roll" data-action="expandRoll">
+  <div class="dice-result">
+    {{! Total Result }}
+    <h3 class="roll-total dice-total has-details{{#if isNat20}} natural-20{{/if}}{{#if isNat1}} natural-1 failure{{/if}}{{#if isCrit}} critical-threat success{{/if}}{{#if isSuccess}} success{{else if isFailure}} failure{{/if}}"
+      data-natural="{{natural}}" data-bonus="{{bonus}}"{{#if hasDC}} data-dc="{{dc}}"{{/if}} data-total="{{total}}">
+      <i class="fa-solid fa-dice-d20" inert></i>
+      {{#if onDemand}}
+      <span class="total">{{total}}</span>
+      {{else}}
+      <span class="natural">{{d20}}</span>
+      <span class="bonus">{{numberFormat bonus sign=true}}</span>
+      <span class="equals">⇒</span>
+      <span class="total">{{total}}</span>
+      {{/if}}
+    </h3>
+
+    {{! Breakdown }}
+    {{{details}}}
+  </div>
+
+  {{#if hasDC}}
+  <div class="difficulty-class">
+    <label>{{#if isSuccess}}{{localize "PF1.Success"}}{{else}}{{localize "PF1.Failure"}}{{/if}}</label>
+    <span class='threshold sensitive'>
+      {{localize "PF1.DCThreshold" threshold=dc}}
+    </span>
+  </div>
+  {{/if}}
+</div>
+
+{{#if extraText}}
+<div class="extra-text gm-sensitive">{{{extraText}}}</div>
+{{/if}}
+
+{{#each properties}}
+{{> "systems/pf1/templates/chat/parts/item-notes.hbs" css=css cssExtra="general-notes" header=header notes=value}}
+{{/each}}

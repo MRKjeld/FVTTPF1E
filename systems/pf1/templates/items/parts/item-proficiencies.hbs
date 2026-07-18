@@ -1,0 +1,37 @@
+<h3 class="form-header">{{localize "PF1.Proficiency.Granted"}}</h3>
+
+<div class="form-group weapon-proficiencies">
+  <label>{{localize "PF1.Proficiency.Weapon.LabelPlural"}}</label>
+  <div class="form-fields">
+    <ul class="traits-list tag-list">
+      {{#each weaponProf.selected as |v k|}}
+        <li class="tag {{k}}">{{v}}</li>
+      {{/each}}
+    </ul>
+    <a class="trait-selector" data-title="PF1.Proficiency.Weapon.LabelPlural" data-options="weaponProficiencies" data-for="system.weaponProf"><i class="fa-solid fa-edit" inert></i></a>
+  </div>
+</div>
+
+<div class="form-group armor-proficiencies">
+  <label>{{localize "PF1.Proficiency.Armor.LabelPlural"}}</label>
+  <div class="form-fields">
+    <ul class="traits-list tag-list">
+      {{#each armorProf.selected as |v k|}}
+        <li class="tag {{k}}">{{v}}</li>
+      {{/each}}
+    </ul>
+    <a class="trait-selector" data-title="PF1.Proficiency.Armor.LabelPlural" data-options="armorProficiencies" data-for="system.armorProf"><i class="fa-solid fa-edit" inert></i></a>
+  </div>
+</div>
+
+<div class="form-group languages">
+  <label>{{localize "PF1.Languages"}}</label>
+  <div class="form-fields">
+    <ul class="traits-list tag-list">
+      {{#each languages.selected as |v k|}}
+        <li class="tag {{k}}">{{v}}</li>
+      {{/each}}
+    </ul>
+    <a class="trait-selector" data-title="PF1.Languages" data-options="languages" data-for="system.languages"><i class="fa-solid fa-edit" inert></i></a>
+  </div>
+</div>

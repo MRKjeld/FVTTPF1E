@@ -1,0 +1,23 @@
+<section class="form-body" data-tooltip-class="pf1-v2">
+  <nav class="top-bar">
+    {{#if hasHistoryBack}}
+      <a class="history-back" data-action="back" data-tooltip="PF1.Help.GoBack"><i class="fa-solid fa-angle-left" inert></i></a>
+    {{else}}
+      <i class="fa-solid fa-angle-left gray" inert></i>
+    {{/if}}
+
+    <a class="history-home" data-action="home" data-tooltip="PF1.Help.GoHome"><i class="fa-solid fa-home" inert></i></a>
+
+    {{#if hasHistoryForward}}
+      <a class="history-forward" data-action="forward" data-tooltip="PF1.Help.GoForward"><i class="fa-solid fa-angle-right" inert></i></a>
+    {{else}}
+      <i class="fa-solid fa-angle-right gray" inert></i>
+    {{/if}}
+  </nav>
+
+  <div class="primary flexrow">
+    <section class="content" data-url="{{url}}">
+      {{{pageContent}}}
+    </section>
+  </div>
+</section>

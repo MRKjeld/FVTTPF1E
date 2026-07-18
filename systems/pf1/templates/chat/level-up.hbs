@@ -1,0 +1,87 @@
+<div class="pf1 level-up">
+  <h1>{{localize "PF1.LevelUp.Chat.Header"}}</h1>
+
+  {{!-- Level name and icon --}}
+  <div class="item">
+    <img src="{{item.img}}" width="24" height="24">
+    <span class="name">{{item.name}}</span>
+  </div>
+
+  {{!-- New level --}}
+  <div class="level-change">
+    {{#if isMythic}}
+    {{localize "PF1.Tier"}}
+    {{else}}
+    {{localize "PF1.Level"}}
+    {{/if}}
+    <span class="level-previous">{{level.previous}}</span>
+    <i class="fa-solid fa-arrow-right" inert></i>
+    <span class="level-new">{{level.new}}</span>
+  </div>
+
+  {{!-- New HP --}}
+  {{#if hp}}
+  <div class="part">
+    <h2>{{localize "PF1.LevelUp.Chat.Health.Header"}}</h2>
+    {{#if hp.roll}}
+    <span>{{{localize hp.label add=hp.add}}}</span>
+    {{else}}
+    <span>{{localize "PF1.LevelUp.Health.None.Desc"}}</span>
+    {{/if}}
+  </div>
+  {{/if}}
+
+  {{!-- Chosen favoured class bonus --}}
+  {{#if fc}}
+  <div class="part">
+    <h2>{{localize "PF1.LevelUp.Chat.FC.Header"}}</h2>
+
+    <span>
+      <i class="fa-solid{{lookup config.favouredClassBonusIcons fc.type}}" inert></i>
+      {{localize fc.label}}
+    </span>
+  </div>
+  {{/if}}
+
+  {{!-- Ability Score increase --}}
+  {{#if ability}}
+  <div class="part">
+    <h2>{{localize "PF1.LevelUp.Chat.AbilityScore.Header"}}</h2>
+
+    {{#each ability}}
+      <span>{{localize "PF1.LevelUp.Chat.AbilityScore.Gain" abl=(lookup @root.config.abilities @key) value=this}}</span>
+    {{/each}}
+  </div>
+  {{/if}}
+
+  {{!-- New class features --}}
+  {{#if newFeatures}}
+  <div class="part">
+    <h2>{{localize "PF1.NewClassFeaturePlural"}}</h2>
+
+    {{#each newFeatures}}
+    <div class="item">
+      <img src="{{img}}" width="24" height="24">
+      <span class="name">{{name}}</span>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+
+  {{!-- Remainder Summary --}}
+  {{#if extra.enabled}}
+  <div class="part">
+    <h2>{{localize "PF1.LevelUp.Chat.Extra.Header"}}</h2>
+
+    {{#if extra.feats.new}}
+    <p class="feats">
+      {{#if (eq extra.feats.new 1)}}
+      {{localize "PF1.LevelUp.Chat.Extra.NewFeat"}}
+      {{else}}
+      {{localize "PF1.LevelUp.Chat.Extra.NewFeats" newValue=extra.feats.new}}
+      {{/if}}
+    </p>
+    {{/if}}
+  </div>
+  {{/if}}
+</div>

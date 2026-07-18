@@ -1,0 +1,54 @@
+<div class="attack-targets">
+  <h2>{{localize "PF1.Targets"}}</h2>
+  {{#each targets}}
+    <div class="target" data-uuid="{{uuid}}">
+      {{!-- Saving Throws --}}
+      <div class="saving-throws" data-gm-sensitive-uuid="{{uuid}}">
+        <div class="fort click" data-save="fort" data-tooltip="PF1.SavingThrowFort">
+          <i class="icon-pf icon-heart-plus"></i>
+          <span class="value"></span>
+        </div>
+        <div class="ref click" data-save="ref" data-tooltip="PF1.SavingThrowRef">
+          <i class="icon-pf icon-divert"></i>
+          <span class="value"></span>
+        </div>
+        <div class="will click" data-save="will" data-tooltip="PF1.SavingThrowWill">
+          <i class="icon-pf icon-brain"></i>
+          <span class="value"></span>
+        </div>
+      </div>
+
+      {{!-- Portrait --}}
+      <img class="target-image" src="{{img}}">
+
+      {{!-- AC --}}
+      {{#if @root.action.isCombatManeuver}}
+      <div class="cmd" data-gm-sensitive-uuid="{{uuid}}">
+        <div class="normal" data-tooltip="PF1.CMDAbbr">
+          <i class="fa-solid fa-shield-alt" inert></i>
+          <span class="value">{{actor.system.attributes.cmd.total}}</span>
+        </div>
+        <div class="flatFooted" data-tooltip="PF1.CMDFlatFooted">
+          <i class="fa-solid fa-shoe-prints" inert></i>
+          <span class="value">{{actor.system.attributes.cmd.flatFootedTotal}}</span>
+        </div>
+      </div>
+      {{else}}
+      <div class="ac" data-gm-sensitive-uuid="{{uuid}}">
+        <div class="normal" data-tooltip="PF1.ACNormal">
+          <i class="fa-solid fa-shield-alt" inert></i>
+          <span class="value">{{actor.system.attributes.ac.normal.total}}</span>
+        </div>
+        <div class="touch" data-tooltip="PF1.ACTouch">
+          <i class="fa-solid fa-hand-point-up" inert></i>
+          <span class="value">{{actor.system.attributes.ac.touch.total}}</span>
+        </div>
+        <div class="flatFooted" data-tooltip="PF1.ACFlatFooted">
+          <i class="fa-solid fa-shoe-prints" inert></i>
+          <span class="value">{{actor.system.attributes.ac.flatFooted.total}}</span>
+        </div>
+      </div>
+      {{/if}}
+    </div>
+  {{/each}}
+</div>

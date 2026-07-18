@@ -1,0 +1,3222 @@
+{
+  "PF1": {
+    "Title": "Pathfinder 1e",
+    "KEYBINDINGS": {
+      "SkipConfirmPrompt": {
+        "Name": "Skip Confirmation Prompt"
+      }
+    },
+    "SpellComponents": {
+      "Label": "Spell Components",
+      "Misc": "Misc Components",
+      "Type": {
+        "verbal": {
+          "Label": "Verbal",
+          "Abbr": "V"
+        },
+        "somatic": {
+          "Label": "Somatic",
+          "Abbr": "S"
+        },
+        "thought": {
+          "Label": "Thought",
+          "Abbr": "T"
+        },
+        "emotion": {
+          "Label": "Emotion",
+          "Abbr": "E"
+        },
+        "material": {
+          "Label": "Material",
+          "Abbr": "M",
+          "Desc": "Material description",
+          "Value": "Material value"
+        },
+        "focus": {
+          "Label": "Focus",
+          "Abbr": "F"
+        },
+        "divineFocus": {
+          "Label": "Divine Focus",
+          "Abbr": "DF"
+        }
+      },
+      "DFVariants": {
+        "DF": "DF",
+        "MDF": "M/DF",
+        "FDF": "F/DF"
+      }
+    },
+    "SpellDescriptors": {
+      "acid": "acid",
+      "air": "air",
+      "chaotic": "chaotic",
+      "cold": "cold",
+      "curse": "curse",
+      "darkness": "darkness",
+      "death": "death",
+      "disease": "disease",
+      "draconic": "draconic",
+      "earth": "earth",
+      "electricity": "electricity",
+      "emotion": "emotion",
+      "evil": "evil",
+      "fear": "fear",
+      "fire": "fire",
+      "force": "force",
+      "good": "good",
+      "languageDependent": "language-dependent",
+      "lawful": "lawful",
+      "light": "light",
+      "meditative": "meditative",
+      "mindAffecting": "mind-affecting",
+      "pain": "pain",
+      "poison": "poison",
+      "ruse": "ruse",
+      "shadow": "shadow",
+      "sonic": "sonic",
+      "water": "water"
+    },
+    "WoundThreshold": "Wound Threshold",
+    "WoundLevel": {
+      "healthy": "Healthy Condition",
+      "grazed": "Grazed Condition",
+      "wounded": "Wounded Condition",
+      "critical": "Critical Condition"
+    },
+    "Sheet": {
+      "PC": "Player Character (PC)",
+      "NPC": "Nonplayer Character (NPC)",
+      "NPCLite": "NPC Lite",
+      "NPCLoot": "Loot",
+      "Haunt": "Haunt",
+      "Trap": "Trap",
+      "Vehicle": "Vehicle",
+      "Item": "Generic Item",
+      "Container": "Container",
+      "TextPage": "Text Page (PF1)"
+    },
+    "LevelUp": {
+      "Add": "Add {class}",
+      "Increase": "Level up {class}",
+      "Action": "Level Up",
+      "NewLevel": "New Level",
+      "NewTier": "New Tier",
+      "SkipHint": "Add class level as is, ignoring choices in this dialog. Class associations and other basic improvements (such as BAB) are still added.",
+      "Health": {
+        "Label": "Health",
+        "None": {
+          "Desc": "No hit dice gained."
+        },
+        "Auto": {
+          "Label": "Auto",
+          "Desc": "Your hit points are set automatically according to predefined rate ({rate}%)."
+        },
+        "Static": {
+          "Label": "Static",
+          "Desc": "You gain set amount of HP defined by your class."
+        },
+        "Maximized": {
+          "Label": "Maximized",
+          "Desc": "You gain maximum possible HP for this level based on your hit die."
+        },
+        "Roll": {
+          "Label": "Roll",
+          "Desc": "Your hit points for this level will be rolled based on your hit die."
+        },
+        "Manual": {
+          "Label": "Manual",
+          "Desc": "You will decide how many hit points you gain for this level."
+        }
+      },
+      "FC": {
+        "Label": "Favoured Class Bonus",
+        "HP": {
+          "Label": "Hit Point",
+          "Desc": "You gain a single hit point."
+        },
+        "Skill": {
+          "Label": "Skill Point",
+          "Desc": "You gain a single skill rank to freely spend."
+        },
+        "Alt": {
+          "Label": "Alternate",
+          "Desc": "You gain something specific for your class and race combination."
+        },
+        "None": {
+          "Label": "None",
+          "Desc": "You gain nothing either because this class can not have FCB or you have not chosen a bonus."
+        }
+      },
+      "AbilityScore": {
+        "Label": "Ability Score",
+        "PointsLeft": "Points remaining: {value}",
+        "Item": {
+          "Name": "Added Ability Scores",
+          "Desc": "<p>This feature is used for tracking your ability score changes from gaining hit die.</p>"
+        },
+        "NextLevel": "Next gained at character level {level}.",
+        "NextTier": "Next gained at mythic tier {tier}."
+      },
+      "Summary": {
+        "Label": "Summary"
+      },
+      "Chat": {
+        "Header": "Level Up Report",
+        "Health": {
+          "Header": "Health",
+          "Roll": "Rolled: {add}",
+          "Manual": "Manual: {add}",
+          "Auto": "Automatic: {add}",
+          "Static": "Static: {add}"
+        },
+        "FC": {
+          "Header": "Favoured Class Bonus"
+        },
+        "AbilityScore": {
+          "Header": "Ability Score Increase",
+          "Gain": "{abl}: +{value}"
+        },
+        "Extra": {
+          "Header": "Extra",
+          "NewFeat": "You have 1 new feat to choose",
+          "NewFeats": "You have {newValue} new feats to choose"
+        }
+      }
+    },
+    "General": "General",
+    "Apply": "Apply",
+    "ApplyHalf": "Apply Half",
+    "ApplyDamage": "Apply Damage",
+    "ApplyHealing": "Apply Healing",
+    "ApplyToAll": "Apply to all",
+    "Roll": "Roll",
+    "TakeX": "Take {number}",
+    "Flags": "Flags",
+    "FlagsBoolean": "Boolean Flags",
+    "FlagsDictionary": "Dictionary Flags",
+    "AbilityDamage": "Ability Damage",
+    "AbilityPenalty": "Ability Penalty",
+    "AbilityDrain": "Ability Drain",
+    "ModifierOnly": "Modifier Only",
+    "CheckOnly": "Check Only",
+    "CreateItem": "Create Item",
+    "EditItem": "Edit Item",
+    "EditAction": "Edit Action",
+    "Delete": "Delete",
+    "Duplicate": "Duplicate",
+    "DuplicateItem": "Duplicate Item",
+    "DuplicateAction": "Duplicate Action",
+    "QuantityAdd": "Increase Quantity<br><br>Click: 1<br>Shift + Click: 5<br>Ctrl + Click: 10",
+    "QuantitySub": "Decrease Quantity<br><br>Click: -1<br>Shift + Click: -5<br>Ctrl + Click: -10",
+    "DeleteItem": "Delete Item",
+    "DeleteItemTitle": "Delete Item: {name}",
+    "DeleteItemConfirmation": "Are you sure you want to delete this item?",
+    "DeleteAction": "Delete Action",
+    "DeleteActionTitle": "Delete Action: {name}",
+    "DeleteActionConfirmation": "Are you sure you want to delete this action from {name}?",
+    "DeleteChildLinks": "Following item(s) will also be deleted due to child links or other associations",
+    "EditSkill": "Edit Skill",
+    "DeleteSkill": "Delete Skill",
+    "DeleteSkillTitle": "Delete Skill: {name}",
+    "DeleteSkillConfirmation": "Are you sure you want to delete this skill?",
+    "LinkTypeChildren": "Children",
+    "LinkTypeCharges": "Charges",
+    "LinkTypeClassAssociations": "Class Associations",
+    "LinkTypeSupplements": "Supplements",
+    "LinkHelpChildren": "Linked children are deleted from the actor when the link parent (this item) is deleted.",
+    "LinkHelpCharges": "Linked items inherit and share the charges from the link parent (this item).",
+    "LinkHelpClassAssociations": "Class association linked items are automatically added to the actor at the appropriate class level. Unlike other item links, these must be linked from a compendium.",
+    "LinkHelpSupplements": "Supplemental items are added alongside this item when added to an actor.",
+    "HelpSellMultiplierN": "Sale Rate",
+    "HelpSellMultiplier": "The rate at which goods sell.<br>Default is 0.5.<br>Trade goods always sell at full price (1.0).",
+    "AbilityStr": "Strength",
+    "AbilityDex": "Dexterity",
+    "AbilityCon": "Constitution",
+    "AbilityInt": "Intelligence",
+    "AbilityWis": "Wisdom",
+    "AbilityCha": "Charisma",
+    "AbilityStrMod": "Strength Modifier",
+    "AbilityDexMod": "Dexterity Modifier",
+    "AbilityConMod": "Constitution Modifier",
+    "AbilityIntMod": "Intelligence Modifier",
+    "AbilityWisMod": "Wisdom Modifier",
+    "AbilityChaMod": "Charisma Modifier",
+    "AbilityStrPen": "Strength Penalty",
+    "AbilityDexPen": "Dexterity Penalty",
+    "AbilityConPen": "Constitution Penalty",
+    "AbilityIntPen": "Intelligence Penalty",
+    "AbilityWisPen": "Wisdom Penalty",
+    "AbilityChaPen": "Charisma Penalty",
+    "AbilityShortStr": "Str",
+    "AbilityShortDex": "Dex",
+    "AbilityShortCon": "Con",
+    "AbilityShortInt": "Int",
+    "AbilityShortWis": "Wis",
+    "AbilityShortCha": "Cha",
+    "SavingThrowFort": "Fortitude",
+    "SavingThrowRef": "Reflex",
+    "SavingThrowWill": "Will",
+    "WeaponHoldTypeOneHanded": "One-handed",
+    "WeaponHoldTypeTwoHanded": "Two-handed",
+    "WeaponHoldTypeOffhand": "Off-hand",
+    "Hands": "Hands Needed",
+    "WeaponGroup": {
+      "axes": "Axes",
+      "bladesHeavy": "Blades, Heavy",
+      "bladesLight": "Blades, Light",
+      "bows": "Bows",
+      "close": "Close",
+      "crossbows": "Crossbows",
+      "double": "Double",
+      "firearms": "Firearms",
+      "flails": "Flails",
+      "hammers": "Hammers",
+      "monk": "Monk",
+      "natural": "Natural",
+      "polearms": "Polearms",
+      "siegeEngines": "Siege Engines",
+      "spears": "Spears",
+      "thrown": "Thrown",
+      "tribal": "Tribal"
+    },
+    "Condition": {
+      "bleed": "Bleed",
+      "blind": "Blind",
+      "confused": "Confused",
+      "cowering": "Cowering",
+      "curse": "Curse Effects",
+      "dazed": "Dazed",
+      "dazzled": "Dazzled",
+      "dead": "Dead",
+      "deaf": "Deaf",
+      "deathEffects": "Death Effects",
+      "disabled": "Disabled",
+      "disease": "Disease",
+      "dying": "Dying",
+      "energyDrain": "Energy Drain",
+      "entangled": "Entangled",
+      "exhausted": "Exhausted",
+      "fatigued": "Fatigued",
+      "fear": "Fear",
+      "flatFooted": "Flat-Footed",
+      "frightened": "Frightened",
+      "grappled": "Grappled",
+      "helpless": "Helpless",
+      "incorporeal": "Incorporeal",
+      "invisible": "Invisible",
+      "moraleEffects": "Morale Effects",
+      "mindAffecting": "Mind-affecting",
+      "nauseated": "Nauseated",
+      "panicked": "Panicked",
+      "paralyzed": "Paralyzed",
+      "petrified": "Petrified",
+      "pinned": "Pinned",
+      "poison": "Poison",
+      "polymorph": "Polymorph",
+      "prone": "Prone",
+      "shaken": "Shaken",
+      "sickened": "Sickened",
+      "sleep": "Sleep",
+      "squeezing": "Squeezing",
+      "stable": "Stable",
+      "staggered": "Staggered",
+      "stunned": "Stunned",
+      "unconscious": "Unconscious"
+    },
+    "ClassType": "Class Type",
+    "ActionTypes": {
+      "mwak": "Melee Weapon Attack",
+      "rwak": "Ranged Weapon Attack",
+      "twak": "Thrown Weapon Attack",
+      "msak": "Melee Spell Attack",
+      "rsak": "Ranged Spell Attack",
+      "mcman": "Melee Combat Maneuver",
+      "rcman": "Ranged Combat Maneuver",
+      "spellSave": "Saving Throw (Spell)",
+      "save": "Saving Throw",
+      "heal": "Healing",
+      "other": "Other"
+    },
+    "Alignment": "Alignment",
+    "Alignments": {
+      "l": "Lawful",
+      "c": "Chaotic",
+      "g": "Good",
+      "e": "Evil",
+      "lg": "Lawful Good",
+      "ng": "Neutral Good",
+      "cg": "Chaotic Good",
+      "ln": "Lawful Neutral",
+      "tn": "Neutral",
+      "cn": "Chaotic Neutral",
+      "le": "Lawful Evil",
+      "ne": "Neutral Evil",
+      "ce": "Chaotic Evil",
+      "Short": {
+        "lg": "LG",
+        "ng": "NG",
+        "cg": "CG",
+        "ln": "LN",
+        "tn": "TN",
+        "cn": "CN",
+        "le": "LE",
+        "ne": "NE",
+        "ce": "CE"
+      }
+    },
+    "DamageAlignment": {
+      "Override": "Overrides parent item",
+      "Inherit": "Inherited from parent item"
+    },
+    "StartingWealth": "Starting Wealth",
+    "Currency": {
+      "Label": "Currency",
+      "Weightless": "Weightless Currency",
+      "Abbr": {
+        "pp": "PP",
+        "gp": "GP",
+        "sp": "SP",
+        "cp": "CP"
+      },
+      "Full": {
+        "pp": "Platinum",
+        "gp": "Gold",
+        "sp": "Silver",
+        "cp": "Copper"
+      },
+      "Inline": {
+        "pp": "{value} pp",
+        "gp": "{value} gp",
+        "sp": "{value} sp",
+        "cp": "{value} cp"
+      }
+    },
+    "Distance": {
+      "personal": "Personal",
+      "touch": "Touch",
+      "melee": "Melee",
+      "reach": "Reach",
+      "close": "Close",
+      "medium": "Medium",
+      "long": "Long",
+      "ft": "Feet",
+      "ftShort": "ft",
+      "mi": "Miles",
+      "miShort": "mi",
+      "m": "Meters",
+      "mShort": "m",
+      "km": "Kilometers",
+      "kmShort": "km"
+    },
+    "Containers": {
+      "Contents": {
+        "Label": "Contents",
+        "Value": "Contents Value",
+        "Take": "Take from Container"
+      },
+      "TotalValue": "Total Value: {gp} gp, {sp} sp, {cp} cp",
+      "SellValue": "Sell Value: {gp} gp, {sp} sp, {cp} cp"
+    },
+    "SplitValue": "{gp} gp, {sp} sp, {cp} cp",
+    "TotalItemValue": "Total Item Value: {gp} gp, {sp} sp, {cp} cp",
+    "WeightReduction": {
+      "Label": "Weight Reduction",
+      "Percentage": "Percentage",
+      "Flat": "Flat"
+    },
+    "Subtypes": {
+      "Item": {
+        "class": {
+          "base": {
+            "Single": "Base Class"
+          },
+          "prestige": {
+            "Single": "Prestige Class"
+          },
+          "npc": {
+            "Single": "NPC Class"
+          },
+          "racial": {
+            "Single": "Racial HD"
+          },
+          "mythic": {
+            "Single": "Mythic Path"
+          }
+        },
+        "equipment": {
+          "shield": {
+            "Single": "Shield",
+            "Types": {
+              "light": "Light Shield",
+              "heavy": "Heavy Shield",
+              "tower": "Tower Shield",
+              "misc": "Miscellaneous Shield"
+            }
+          },
+          "armor": {
+            "Single": "Armor",
+            "Plural": "Armor",
+            "Types": {
+              "light": "Light Armor",
+              "medium": "Medium Armor",
+              "heavy": "Heavy Armor"
+            }
+          },
+          "wondrous": {
+            "Single": "Wondrous"
+          },
+          "clothing": {
+            "Single": "Clothing",
+            "Plural": "Clothing"
+          }
+        },
+        "loot": {
+          "gear": {
+            "Single": "Gear",
+            "Plural": "Gear"
+          },
+          "ammo": {
+            "Single": "Ammunition",
+            "Plural": "Ammunition"
+          },
+          "tradeGoods": {
+            "Single": "Trade Good",
+            "Plural": "Trade Goods"
+          },
+          "tool": {
+            "Single": "Tool",
+            "Plural": "Tools"
+          },
+          "food": {
+            "Single": "Food",
+            "Plural": "Food"
+          },
+          "herb": {
+            "Single": "Herb",
+            "Plural": "Herbs"
+          },
+          "adventuring": {
+            "Single": "Adventuring Gear",
+            "Plural": "Adventuring Gear"
+          },
+          "animal": {
+            "Single": "Animal/Mount",
+            "Plural": "Animals/Mounts"
+          },
+          "animalGear": {
+            "Single": "Animal Gear",
+            "Plural": "Animal Gear"
+          },
+          "reagent": {
+            "Single": "Alchemical Reagent",
+            "Plural": "Alchemical Reagents"
+          },
+          "remedy": {
+            "Single": "Alchemical Remedy",
+            "Plural": "Alchemical Remedies"
+          },
+          "entertainment": {
+            "Single": "Entertainment",
+            "Plural": "Entertainment"
+          },
+          "treasure": {
+            "Single": "Treasure",
+            "Plural": "Treasure"
+          },
+          "vehicle": {
+            "Single": "Vehicle/Transport",
+            "Plural": "Vehicles/Transports"
+          },
+          "misc": {
+            "Single": "Miscellaneous",
+            "Plural": "Miscellaneous"
+          }
+        },
+        "consumable": {
+          "potion": {
+            "Single": "Potion/Oil"
+          },
+          "poison": {
+            "Single": "Poison"
+          },
+          "drug": {
+            "Single": "Drug"
+          },
+          "scroll": {
+            "Single": "Scroll"
+          },
+          "wand": {
+            "Single": "Wand"
+          },
+          "rod": {
+            "Single": "Rod"
+          },
+          "staff": {
+            "Single": "Staff"
+          },
+          "pharmaceutical": {
+            "Single": "Pharmaceutical"
+          }
+        },
+        "attack": {
+          "weapon": {
+            "Single": "Weapon Attack",
+            "Plural": "Weapon Attacks"
+          },
+          "natural": {
+            "Single": "Natural Attack",
+            "Plural": "Natural Attacks"
+          },
+          "ability": {
+            "Single": "Class Ability",
+            "Plural": "Class Abilities"
+          },
+          "racialAbility": {
+            "Single": "Racial Ability",
+            "Plural": "Racial Abilities"
+          },
+          "item": {
+            "Single": "Item",
+            "Plural": "Items"
+          },
+          "misc": {
+            "Single": "Miscellaneous",
+            "Plural": "Miscellaneous"
+          }
+        },
+        "weapon": {
+          "simple": {
+            "Single": "Simple"
+          },
+          "martial": {
+            "Single": "Martial"
+          },
+          "exotic": {
+            "Single": "Exotic"
+          },
+          "firearm": {
+            "Single": "Firearm"
+          },
+          "siege": {
+            "Single": "Siege"
+          },
+          "heavy": {
+            "Single": "Heavy"
+          },
+          "misc": {
+            "Single": "Miscellaneous"
+          }
+        },
+        "feat": {
+          "feat": {
+            "Single": "Feat",
+            "Plural": "Feats"
+          },
+          "classFeat": {
+            "Single": "Class Feature",
+            "Plural": "Class Features"
+          },
+          "trait": {
+            "Single": "Trait",
+            "Plural": "Traits"
+          },
+          "racial": {
+            "Single": "Racial Trait",
+            "Plural": "Racial Traits"
+          },
+          "template": {
+            "Single": "Template",
+            "Plural": "Templates"
+          },
+          "misc": {
+            "Single": "Miscellaneous",
+            "Plural": "Miscellaneous"
+          }
+        },
+        "buff": {
+          "temp": {
+            "Single": "Temporary",
+            "Plural": "Temporary"
+          },
+          "spell": {
+            "Single": "Spell",
+            "Plural": "Spells"
+          },
+          "feat": {
+            "Single": "Feature",
+            "Plural": "Features"
+          },
+          "perm": {
+            "Single": "Permanent",
+            "Plural": "Permanent"
+          },
+          "item": {
+            "Single": "Item",
+            "Plural": "Items"
+          },
+          "misc": {
+            "Single": "Miscellaneous",
+            "Plural": "Miscellaneous"
+          }
+        },
+        "implant": {
+          "cybertech": {
+            "Single": "Cybertech"
+          }
+        }
+      }
+    },
+    "AmmoType": {
+      "arrow": "Arrow",
+      "bolt": "Bolt",
+      "repeatingBolt": "Bolt (Repeating)",
+      "slingBullet": "Bullet (Sling)",
+      "gunBullet": "Bullet (Firearm)",
+      "dragoonBullet": "Bullet (Dragoon Firearm)",
+      "dart": "Dart",
+      "siege": "Siege"
+    },
+    "Sense": {
+      "blindsense": "Blindsense",
+      "blindsight": "Blindsight",
+      "darkvision": "Darkvision",
+      "tremorsense": "Tremorsense",
+      "trueseeing": "True seeing",
+      "lifesense": "Lifesense",
+      "lowlight": "Low-light",
+      "seeInvis": "See Invisibility",
+      "seeInDark": "See in darkness",
+      "scent": "Scent"
+    },
+    "BuffTarACGeneric": "Generic AC",
+    "BuffTarACArmor": "Armor AC",
+    "BuffTarACShield": "Shield AC",
+    "BuffTarACNatural": "Natural Armor AC",
+    "BuffTarACTouch": "Touch AC",
+    "BuffTarACFlatFooted": "Flat-footed AC",
+    "BuffTarStrSkills": "Strength Skills",
+    "BuffTarDexSkills": "Dexterity Skills",
+    "BuffTarConSkills": "Constitution Skills",
+    "BuffTarIntSkills": "Intelligence Skills",
+    "BuffTarWisSkills": "Wisdom Skills",
+    "BuffTarChaSkills": "Charisma Skills",
+    "BuffTarSpecificSkill": "Specific Skill",
+    "BuffTarAbilityChecks": "Ability Checks",
+    "BuffTarStrChecks": "Strength Checks",
+    "BuffTarDexChecks": "Dexterity Checks",
+    "BuffTarConChecks": "Constitution Checks",
+    "BuffTarIntChecks": "Intelligence Checks",
+    "BuffTarWisChecks": "Wisdom Checks",
+    "BuffTarChaChecks": "Charisma Checks",
+    "BuffTarBonusSkillRanks": "Bonus Skill Ranks",
+    "BuffTarBonusFeats": "Bonus Feats",
+    "BuffTarAllAttackRolls": "All Attack Rolls",
+    "BuffTarAllDamageRolls": "All Damage Rolls",
+    "BuffTarAllSavingThrows": "All Saving Throws",
+    "BuffTarAllSkills": "All Skills",
+    "BuffTarUntrainedSkills": "Untrained Skills",
+    "BuffTarAllAbilityChecks": "All Ability Checks",
+    "BuffTarReach": "Natural Reach",
+    "BuffTarAllSpeeds": "All Speeds",
+    "BuffTarMeleeAttack": "Melee Attack Rolls",
+    "BuffTarWeaponAttack": "Weapon Attack Rolls",
+    "BuffTarSpellAttack": "Spell Attack Rolls",
+    "BuffTarNaturalAttack": "Natural Attack Rolls",
+    "BuffTarRangedAttack": "Ranged Attack Rolls",
+    "BuffTarThrownAttack": "Thrown Attack Rolls",
+    "BuffTarSpells": "Spells",
+    "BuffTarSpellEffect": "Spell Effect",
+    "SkillAcr": "Acrobatics",
+    "SkillApr": "Appraise",
+    "SkillArt": "Artistry",
+    "SkillBlf": "Bluff",
+    "SkillClm": "Climb",
+    "SkillCrf": "Craft",
+    "SkillDip": "Diplomacy",
+    "SkillDev": "Disable Device",
+    "SkillDis": "Disguise",
+    "SkillEsc": "Escape Artist",
+    "SkillFly": "Fly",
+    "SkillHan": "Handle Animal",
+    "SkillHea": "Heal",
+    "SkillInt": "Intimidate",
+    "SkillKAr": "Knowledge (Arcana)",
+    "SkillKDu": "Knowledge (Dungeoneering)",
+    "SkillKEn": "Knowledge (Engineering)",
+    "SkillKGe": "Knowledge (Geography)",
+    "SkillKHi": "Knowledge (History)",
+    "SkillKLo": "Knowledge (Local)",
+    "SkillKNa": "Knowledge (Nature)",
+    "SkillKNo": "Knowledge (Nobility)",
+    "SkillKPl": "Knowledge (Planes)",
+    "SkillKRe": "Knowledge (Religion)",
+    "SkillLin": "Linguistics",
+    "SkillLor": "Lore",
+    "SkillPer": "Perception",
+    "SkillPrf": "Perform",
+    "SkillPro": "Profession",
+    "SkillRid": "Ride",
+    "SkillSen": "Sense Motive",
+    "SkillSlt": "Sleight of Hand",
+    "SkillSpl": "Spellcraft",
+    "SkillSte": "Stealth",
+    "SkillSur": "Survival",
+    "SkillSwm": "Swim",
+    "SkillUMD": "Use Magic Device",
+    "AddSkill": "Add Skill",
+    "Time": {
+      "Format": "{value} {unit}",
+      "Period": {
+        "inst": {
+          "Label": "Instantaneous"
+        },
+        "turn": {
+          "Label": "Turn",
+          "Short": "turn"
+        },
+        "round": {
+          "Label": "Rounds",
+          "Short": "rnds"
+        },
+        "second": {
+          "Label": "Seconds",
+          "Short": "secs"
+        },
+        "minute": {
+          "Label": "Minutes",
+          "Short": "mins"
+        },
+        "hour": {
+          "Label": "Hours",
+          "Short": "hrs"
+        },
+        "day": {
+          "Label": "Days"
+        },
+        "month": {
+          "Label": "Months"
+        },
+        "year": {
+          "Label": "Years"
+        },
+        "perm": {
+          "Label": "Permanent"
+        }
+      },
+      "Turn": {
+        "Start": "Turn Start",
+        "End": "Turn End"
+      }
+    },
+    "AssociatedClass": "Associated Class",
+    "SpellPrepAtWill": "At-will",
+    "SpellPrepPrepared": "Prepared",
+    "SpellPrepSpontaneous": "Spontaneous",
+    "SpellsKnown": "Spells Known",
+    "Arcanist": "Arcanist",
+    "RedMantisAssassin": "Red Mantis Assassin",
+    "Psychic": "Psychic",
+    "Spellcasting": {
+      "Progression": {
+        "Label": "Progression",
+        "Hint": "High goes up to level 9.<br>Medium goes up to level 6.<br>Low goes up to level 4."
+      },
+      "Type": {
+        "Label": "Spell Type",
+        "Arcane": "Arcane",
+        "Divine": "Divine",
+        "Psychic": "Psychic",
+        "Alchemy": "Alchemical"
+      }
+    },
+    "AutoSpellClassLevelOffset": {
+      "Formula": "Class Level Modification",
+      "InfoBox": "If you have a prestige class that alters your class level, add that here (e.g. @classes.mysticTheurge.level)"
+    },
+    "Spellbook": {
+      "Known": "Known",
+      "OpenSlots": "Open Slots",
+      "InsufficientAbility": "Insufficient Ability Score",
+      "InsufficientLevel": "Insufficient Level"
+    },
+    "CompendiumBrowser": {
+      "ShowPack": "Show in compendium browsers",
+      "HidePack": "Hide in compendium browsers",
+      "ActiveFilters": "Active Filters<br><br>Click to clear",
+      "ClearFilters": "Clear Filters",
+      "ReloadPacks": "Reload Packs"
+    },
+    "CompendiumBrowserTitle": "Compendium Browser: {type}",
+    "Any": "Any",
+    "FilterBooleanOperatorHint": "Switch between requiring an item to match all filters, or any single one.",
+    "FilterNoChoices": "No matching choices found.",
+    "LoadingItemsFromIndexes": "Loading {items} items from {indexes} indexes…",
+    "CopyUuidToClipboard": "Copy UUID to clipboard",
+    "WeaponType": "Weapon Type",
+    "WeaponTypeSplash": "Splash",
+    "WeaponProperty": {
+      "Automatic": "Automatic",
+      "Blocking": "Blocking",
+      "Brace": "Brace",
+      "Deadly": "Deadly",
+      "Distracting": "Distracting",
+      "Double": "Double",
+      "Disarm": "Disarm",
+      "Finesse": "Finesse",
+      "Fragile": "Fragile",
+      "Grapple": "Grapple",
+      "Improvised": "Improvised",
+      "Monk": "Monk",
+      "NonLethal": "Non-lethal",
+      "Performance": "Performance",
+      "Reach": "Reach",
+      "Scatter": "Scatter",
+      "SemiAutomatic": "Semi-automatic",
+      "SlowFiring": "Slow-firing",
+      "Sunder": "Sunder",
+      "Special": "Special",
+      "Thrown": "Thrown",
+      "Trip": "Trip"
+    },
+    "WeaponSubtype": "Weapon Subtype",
+    "WeaponSubtypeLight": "Light",
+    "WeaponSubtypeOneHanded": "One-handed",
+    "WeaponSubtypeTwoHanded": "Two-handed",
+    "WeaponSubtypeRanged": "Ranged",
+    "WeaponSubtypeAssault": "Assault",
+    "WeaponSubtypeDirect": "Direct-fire",
+    "WeaponSubtypeIndirect": "Indirect-fire",
+    "EquipSlots": {
+      "none": "Slotless",
+      "armor": "Armor",
+      "shield": "Shield",
+      "clothing": "Clothing",
+      "head": "Head",
+      "headband": "Headband",
+      "eyes": "Eyes",
+      "shoulders": "Shoulders",
+      "neck": "Neck",
+      "chest": "Chest",
+      "body": "Body",
+      "belt": "Belt",
+      "wrists": "Wrists",
+      "hands": "Hands",
+      "ring": "Ring",
+      "feet": "Feet"
+    },
+    "Implanted": "Implanted",
+    "Cybertech": {
+      "Implantation": "Implantation",
+      "Install": "Install DC",
+      "Slots": {
+        "none": "None",
+        "arm": "Arm",
+        "body": "Body",
+        "brain": "Brain",
+        "ears": "Ears",
+        "eyes": "Eyes",
+        "head": "Head",
+        "legs": "Legs"
+      }
+    },
+    "TraitType": "Trait Type",
+    "Trait": {
+      "combat": "Combat",
+      "magic": "Magic",
+      "faith": "Faith",
+      "social": "Social",
+      "campaign": "Campaign",
+      "cosmic": "Cosmic",
+      "equipment": "Equipment",
+      "exemplar": "Exemplar",
+      "faction": "Faction",
+      "family": "Family",
+      "mount": "Mount",
+      "race": "Race",
+      "region": "Region",
+      "religion": "Religion",
+      "drawback": "Drawback"
+    },
+    "Template": {
+      "Acquired": "Acquired",
+      "Inherited": "Inherited",
+      "Simple": "Simple",
+      "UsableWithSummons": "Usable with summons"
+    },
+    "RacePoints": "Race Points",
+    "RacialTraitCategories": {
+      "defense": "Defense",
+      "featSkills": "Feat and Skills",
+      "magical": "Magical",
+      "movement": "Movement",
+      "senses": "Senses",
+      "offense": "Offense",
+      "other": "Other",
+      "weakness": "Weakness"
+    },
+    "RaceType": "Race Type",
+    "RaceTypes": {
+      "standard": "Standard",
+      "advanced": "Advanced",
+      "monstrous": "Monstrous"
+    },
+    "Activation": {
+      "passive": {
+        "Single": "Passive",
+        "Plural": "Passive"
+      },
+      "free": {
+        "Single": "Free",
+        "Plural": "Free Actions"
+      },
+      "swift": {
+        "Single": "Swift",
+        "Plural": "Swift Actions"
+      },
+      "immediate": {
+        "Single": "Immediate",
+        "Plural": "Immediate Actions"
+      },
+      "move": {
+        "Single": "Move",
+        "Plural": "Move Actions"
+      },
+      "standard": {
+        "Single": "Standard",
+        "Plural": "Standard Actions"
+      },
+      "fullRound": {
+        "Single": "Full-round",
+        "Plural": "Full-round Actions"
+      },
+      "attack": {
+        "Single": "Attack",
+        "Plural": "Attack Actions"
+      },
+      "round": {
+        "Single": "Round",
+        "Plural": "Rounds"
+      },
+      "minute": {
+        "Single": "Minute",
+        "Plural": "Minutes"
+      },
+      "hour": {
+        "Single": "Hour",
+        "Plural": "Hours"
+      },
+      "special": {
+        "Single": "Special",
+        "Plural": "Special"
+      },
+      "nonaction": {
+        "Single": "Nonaction"
+      },
+      "aoo": {
+        "Single": "Attack of Opportunity",
+        "Plural": "Attacks of Opportunity"
+      },
+      "reaction": {
+        "Single": "Reaction",
+        "Plural": "Reactions"
+      },
+      "action": {
+        "Single": "Action",
+        "Plural": "Actions"
+      }
+    },
+    "LimitedUses": {
+      "Label": "Limited Uses",
+      "Periods": {
+        "single": "Single Use",
+        "round": "Per Round",
+        "minute": "Per Minute",
+        "hour": "Per Hour",
+        "day": "Per Day",
+        "week": "Per Week",
+        "charges": "Charges"
+      }
+    },
+    "SpellSchools": {
+      "abj": "Abjuration",
+      "con": "Conjuration",
+      "div": "Divination",
+      "enc": "Enchantment",
+      "evo": "Evocation",
+      "ill": "Illusion",
+      "nec": "Necromancy",
+      "tra": "Transmutation",
+      "uni": "Universal"
+    },
+    "SpellSubschools": {
+      "calling": "Calling",
+      "charm": "Charm",
+      "compulsion": "Compulsion",
+      "creation": "Creation",
+      "figment": "Figment",
+      "glamer": "Glamer",
+      "haunted": "Haunted",
+      "healing": "Healing",
+      "pattern": "Pattern",
+      "phantasm": "Phantasm",
+      "polymorph": "Polymorph",
+      "scrying": "Scrying",
+      "shadow": "Shadow",
+      "summoning": "Summoning",
+      "teleportation": "Teleportation"
+    },
+    "SpellLevels": {
+      "0": "Cantrip/Orison",
+      "1": "1st Level",
+      "2": "2nd Level",
+      "3": "3rd Level",
+      "4": "4th Level",
+      "5": "5th Level",
+      "6": "6th Level",
+      "7": "7th Level",
+      "8": "8th Level",
+      "9": "9th Level"
+    },
+    "FavouredClass": {
+      "Bonuses": {
+        "Label": "Favoured Class Bonuses",
+        "hp": "Hit Points",
+        "skill": "Skills",
+        "alt": "Alt"
+      }
+    },
+    "FavouredClassBonus": {
+      "HP": "Hit Point",
+      "Skill": "Skill",
+      "Alt": "Alt"
+    },
+    "Proficiency": {
+      "Armor": {
+        "LabelPlural": "Armor Proficiencies",
+        "light": "Light Armor",
+        "medium": "Medium Armor",
+        "heavy": "Heavy Armor",
+        "shield": "Shields",
+        "tower": "Tower Shields"
+      },
+      "Weapon": {
+        "LabelPlural": "Weapon Proficiencies",
+        "simple": "Simple Weapons",
+        "martial": "Martial Weapons",
+        "firearm": "Firearms",
+        "siege": "Siege Weaponry",
+        "heavy": "Heavy Weaponry"
+      },
+      "Granted": "Granted Proficiencies",
+      "Penalty": "Proficiency Penalty"
+    },
+    "InventoryWeapons": "Weapons",
+    "InventoryEquipment": "Equipment",
+    "InventoryConsumables": "Consumables",
+    "InventoryContainers": "Containers",
+    "InventoryImplants": "Implants",
+    "ChangeFlags": {
+      "ImmuneToMoraleEffects": "Immune to Morale Effects",
+      "LoseDexToAC": "Lose Dex to AC",
+      "NoMediumEncumbrance": "Unaffected by Medium Encumbrance",
+      "NoHeavyEncumbrance": "Unaffected by Heavy Encumbrance",
+      "MediumArmorFullSpeed": "Full Speed in Medium Armor",
+      "HeavyArmorFullSpeed": "Full Speed in Heavy Armor",
+      "LowLightVision": "Low-light vision",
+      "SeeInvisibility": "See invisibility",
+      "SeeInDarkness": "See in darkness"
+    },
+    "Undefined": "Undefined",
+    "Error": {
+      "NoActorPermission": "You are not authorized to control this actor",
+      "NoActorPermissionAlt": "You are not authorized to control actor \"{name}\"",
+      "NoItemPermission": "You are not authorized to modify this item.",
+      "DisallowedActionType": "Actor \"{name}\" is not permitted to perform this kind of action.",
+      "TooManyConditionSources": "Too many condition sources to edit.",
+      "NoDefenseCard": "Failed to display defense card. Actor does not support it?",
+      "NoSave": "Failed to roll saving throw. Actor does not support it?",
+      "ItemNoOwner": "This item has no owner",
+      "SpellbookExists": "Spellbook already exists",
+      "NoFreeSpellbooks": "No free spellbooks",
+      "UUIDNotFound": "UUID \"{uuid}\" did not resolve to anything relevant.",
+      "NoInitOnDuplicateCombatant": "Could not determine which combatant to roll initiative for.",
+      "InvalidContentLinkDrop": "Could not create content link from drop data.",
+      "NoGiftTargets": "No valid targets to give something to.",
+      "InsufficientCharges": "There's insufficient charges left in {name}",
+      "InsufficientPreparation": "{name} has not been prepared or is not known.",
+      "NoQuantity": "You don't have any more of that item",
+      "ItemNotFound": "Item with ID {id} not found",
+      "CantIdentify": "You are not allowed to identify items",
+      "FeatDisabled": "This feat is disabled",
+      "CommandParse": "Failed to parse chat command.",
+      "NoMacroID": "No macro with id '{id}' was found",
+      "EmptySkillTag": "Skill tag cannot be empty",
+      "SkillTagAlreadyExists": "Skill tag '{tag}' already exists"
+    },
+    "Warning": {
+      "NoSizeDie": "Could not determine size-appropriate die for {formula}, defaulting to rolling {fallback}",
+      "DuplicateDFlag": "Conflicting dictionary flag \"{key}\" for item \"{item}\" (with identifier \"{tag}\") on actor \"{actor}\".",
+      "DuplicateTag": "Duplicate item identifier \"{tag}\" found in item \"{item}\" on actor \"{actor}\".",
+      "NoDiceAllowedInFormula": "No dice rolls are allowed in formula '{formula}' for {context}",
+      "NoConditionalTargetOptions": "No conditional target options available.",
+      "ConditionalRoll": "Rolling conditional formula № {number} of conditional {name} caused an error",
+      "NoItemOnActor": "Actor \"{actor}\" has no item \"{item}\"",
+      "NoActionInItem": "Item \"{item}\" has no action \"{action}\"",
+      "InvalidItemSheetDrop": "Invalid drop type \"{type}\" received.",
+      "ImmuneToCondition": "{name} is immune to {condition} condition.",
+      "CannotCreateChargeLink": "Could not make {target} inherit Charges from {source}, because {target} is sharing its charges already.",
+      "CannotCreateChargeLink2": "Could not make {target} inherit Charges from {source}, because {target} is already inheriting from {deeptarget}",
+      "LinkOwnerMismatch": "Can not create link on item with different owner.",
+      "LinkOnlyUnowned": "Can not link owned items.",
+      "LinkOnlyCompendium": "Can not link items outside of compendiums.",
+      "NoActorSelected": "No actor(s) selected for the action.",
+      "NoMultiLink": "Can not link same item multiple times.",
+      "NoCombatantFound": "No combatant found",
+      "FormulaMustBeDeterministic": "Formula must be deterministic (no die rolls or other random elements).",
+      "FormulaMustBeSimple": "Formula must be simple (no variables, dice rolls or other non-math elements).",
+      "InvalidInput": "Invalid value"
+    },
+    "NotificationCreatedAttack": "Created attack for {item}",
+    "Info_FirstClass": "Drag and drop from {browser}<br>or click the {create} button above to start from scratch.",
+    "Info_FirstClass_Compendium": "Class Compendium",
+    "Info_MissingClass": "Your character is missing a class. Go to the Classes section on the Summary tab of your character sheet.",
+    "CMDNotes": "CMD Notes",
+    "Footnotes": "Footnotes",
+    "FootnotesHint": "Notes printed at the bottom of a chat card only.",
+    "EffectNotes": "Effect Notes",
+    "EffectNotesHint": "Notes printed for each instance, e.g. for each individual attack about the effects of it.",
+    "SpellResistanceNotes": "Spell Resistance Notes",
+    "ContextNotes": "Context Notes",
+    "ACNotes": "AC Notes",
+    "SaveNotes": "Save Notes",
+    "CLNotes": "Caster Level Notes",
+    "CLSchoolNotes": "CL Notes ({school})",
+    "DCSchoolNotes": "DC Notes ({school})",
+    "SourceNote": "Source: {source}",
+    "NonApplicable": "N/A",
+    "SkillTypeAdventure": "Adventure",
+    "SkillTypeBackground": "Background",
+    "ACP": "ACP",
+    "ACPLong": "Armor Check Penalty",
+    "ACPTooltip": "Armor Check Penalties",
+    "CS": "CS",
+    "CSTooltip": "Class Skill",
+    "RT": "RT",
+    "RTTooltip": "Requires Training",
+    "SkillJournalHint": "Drag & drop journal or journal page here to link it.",
+    "SkillModTooltip": "Skill Modifier",
+    "BrowseSpells": "Browse Spells",
+    "BrowseItems": "Browse Items",
+    "BrowseBestiary": "Browse Bestiary",
+    "BrowseFeats": "Browse Features",
+    "BrowseClasses": "Browse Classes",
+    "BrowseRaces": "Browse Races",
+    "BrowseBuffs": "Browse Buffs",
+    "Language": {
+      "aboleth": "Aboleth",
+      "abyssal": "Abyssal",
+      "aklo": "Aklo",
+      "ancientosiriani": "Ancient Osiriani",
+      "androffan": "Androffan",
+      "aquan": "Aquan",
+      "auran": "Auran",
+      "azlanti": "Azlanti",
+      "boggard": "Boggard",
+      "catfolk": "Catfolk",
+      "celestial": "Celestial",
+      "common": "Common",
+      "cyclops": "Cyclops",
+      "dark": "Dark Folk",
+      "draconic": "Draconic",
+      "drowsign": "Drow Sign Language",
+      "druidic": "Druidic",
+      "dwarven": "Dwarven",
+      "dziriak": "D'ziriak",
+      "elven": "Elven",
+      "giant": "Giant",
+      "gnoll": "Gnoll",
+      "gnome": "Gnome",
+      "goblin": "Goblin",
+      "grippli": "Grippli",
+      "halfling": "Halfling",
+      "hallit": "Hallit",
+      "ib": "Ib",
+      "ignan": "Ignan",
+      "infernal": "Infernal",
+      "jistka": "Jistka",
+      "kasatha": "Kasatha",
+      "kelish": "Kelish",
+      "kuru": "Kuru",
+      "lashunta": "Lashunta",
+      "munavri": "Munavri",
+      "necril": "Necril",
+      "orc": "Orc",
+      "orvian": "Orvian",
+      "osiriani": "Osiriani",
+      "polyglot": "Polyglot",
+      "protean": "Protean",
+      "reptoid": "Reptoid",
+      "rougarou": "Rougarou",
+      "samsaran": "Samsaran",
+      "sasquatch": "Sasquatch",
+      "shadowtongue": "Shadow Tongue",
+      "shoanti": "Shoanti",
+      "skald": "Skald",
+      "sphinx": "Sphinx",
+      "strix": "Strix",
+      "sylvan": "Sylvan",
+      "syrinx": "Syrinx",
+      "taldane": "Taldane",
+      "tekritanin": "Tekritanin",
+      "tengu": "Tengu",
+      "terran": "Terran",
+      "thassilonian": "Thassilonian",
+      "tien": "Tien",
+      "treant": "Treant",
+      "triaxian": "Triaxian",
+      "undercommon": "Undercommon",
+      "vanaran": "Vanaran",
+      "varisian": "Varisian",
+      "vegepygmy": "Vegepygmy",
+      "vishkanya": "Vishkanya",
+      "vudrani": "Vudrani",
+      "yaddithian": "Yaddithian"
+    },
+    "Rest": "Rest",
+    "CreatureTypes": {
+      "Single": "Creature Type",
+      "Plural": "Creature Types",
+      "aberration": "Aberration",
+      "animal": "Animal",
+      "construct": "Construct",
+      "dragon": "Dragon",
+      "fey": "Fey",
+      "humanoid": "Humanoid",
+      "magicalBeast": "Magical Beast",
+      "monstrousHumanoid": "Monstrous Humanoid",
+      "ooze": "Ooze",
+      "outsider": "Outsider",
+      "plant": "Plant",
+      "undead": "Undead",
+      "vermin": "Vermin"
+    },
+    "CreatureSubTypes": {
+      "Single": "Creature Subtype",
+      "Plural": "Creature Subtypes",
+      "adlet": "Adlet",
+      "aeon": "Aeon",
+      "aether": "Aether",
+      "agathion": "Agathion",
+      "air": "Air",
+      "android": "Android",
+      "angel": "Angel",
+      "aquatic": "Aquatic",
+      "archon": "Archon",
+      "astomoi": "Astomoi",
+      "asura": "Asura",
+      "augmented": "Augmented",
+      "azata": "Azata",
+      "behemoth": "Behemoth",
+      "blight": "Blight",
+      "catfolk": "Catfolk",
+      "changeling": "Changeling",
+      "chaotic": "Chaotic",
+      "clockwork": "Clockwork",
+      "cold": "Cold",
+      "colossus": "Colossus",
+      "daemon": "Daemon",
+      "darkFolk": "Dark Folk",
+      "deepOne": "Deep One",
+      "demodand": "Demodand",
+      "demon": "Demon",
+      "derro": "Derro",
+      "devil": "Devil",
+      "div": "Div",
+      "dwarf": "Dwarf",
+      "earth": "Earth",
+      "elemental": "Elemental",
+      "elf": "Elf",
+      "evil": "Evil",
+      "extraplanar": "Extraplanar",
+      "fire": "Fire",
+      "giant": "Giant",
+      "gnome": "Gnome",
+      "goblinoid": "Goblinoid",
+      "good": "Good",
+      "gray": "Gray",
+      "greatOldOne": "Great Old One",
+      "grippli": "Grippli",
+      "halfling": "Halfling",
+      "hive": "Hive",
+      "herald": "Herald",
+      "human": "Human",
+      "incorporeal": "Incorporeal",
+      "inevitable": "Inevitable",
+      "kaiju": "Kaiju",
+      "kami": "Kami",
+      "kasatha": "Kasatha",
+      "kitsune": "Kitsune",
+      "kyton": "Kyton",
+      "lawful": "Lawful",
+      "leshy": "Leshy",
+      "manasaputra": "Manasaputra",
+      "mortic": "Mortic",
+      "munavri": "Munavri",
+      "mythic": "Mythic",
+      "native": "Native",
+      "nightshade": "Nightshade",
+      "oni": "Oni",
+      "orc": "Orc",
+      "sahkil": "Sahkil",
+      "phantom": "Phantom",
+      "protean": "Protean",
+      "psychopomp": "Psychopomp",
+      "qlippoth": "Qlippoth",
+      "rakshasa": "Rakshasa",
+      "ratfolk": "Ratfolk",
+      "reptilian": "Reptilian",
+      "robot": "Robot",
+      "samsaran": "Samsaran",
+      "sasquatch": "Sasquatch",
+      "shapechanger": "Shapechanger",
+      "skinwalker": "Skinwalker",
+      "spawnOfRovagug": "Spawn of Rovagug",
+      "swarm": "Swarm",
+      "troop": "Troop",
+      "vanara": "Vanara",
+      "vishkanya": "Vishkanya",
+      "water": "Water",
+      "wayang": "Wayang",
+      "wildHunt": "Wild Hunt"
+    },
+    "RestoreHealth": "Restore Health",
+    "RestoreDailyUses": "Restore Daily Uses",
+    "LongTermCare": "Long-Term Care",
+    "RestMessage": "{name} rested for {hours} hours.",
+    "FullRestMessage": "{name} rested for {hours} hours and restored daily uses.",
+    "ModifierType": {
+      "untyped": "Untyped",
+      "untypedPerm": "Untyped (Permanent)",
+      "base": "Base",
+      "enhancement": "Enhancement",
+      "dodge": "Dodge",
+      "inherent": "Inherent",
+      "deflection": "Deflection",
+      "morale": "Morale",
+      "luck": "Luck",
+      "sacred": "Sacred",
+      "insight": "Insight",
+      "resistance": "Resistance",
+      "profane": "Profane",
+      "trait": "Trait",
+      "racial": "Racial",
+      "size": "Size",
+      "competence": "Competence",
+      "circumstance": "Circumstance",
+      "alchemical": "Alchemical",
+      "haste": "Haste"
+    },
+    "AbilityTypes": {
+      "na": {
+        "Label": "Natural",
+        "Short": "Na"
+      },
+      "ex": {
+        "Label": "Extraordinary",
+        "Short": "Ex"
+      },
+      "su": {
+        "Label": "Supernatural",
+        "Short": "Su"
+      },
+      "sp": {
+        "Label": "Spell-Like",
+        "Short": "Sp"
+      }
+    },
+    "RollSkillMacroName": "{actor}: Roll {skill}",
+    "DisplayDefensesMacroName": "{actor}: Display Defenses",
+    "RollCMBMacroName": "{actor}: Roll Combat Maneuver Bonus",
+    "RollCLMacroName": "{actor}: Roll Caster Level ({book})",
+    "RollConcentrationMacroName": "{actor}: Roll Concentration ({book})",
+    "RollBABMacroName": "{actor}: Roll Base Attack Bonus",
+    "RollSaveMacroName": "{actor}: Roll {type} Save",
+    "RollInitiativeMacroName": "{actor}: Roll Initiative",
+    "RollAbilityMacroName": "{actor}: Roll {ability}",
+    "RollMeleeMacroName": "{actor}: Roll Melee Attack",
+    "RollRangedMacroName": "{actor}: Roll Ranged Attack",
+    "DamageTypes": {
+      "untyped": {
+        "Label": "Untyped"
+      },
+      "areaOfEffect": {
+        "Label": "Area of Effect"
+      },
+      "bludgeoning": {
+        "Label": "Bludgeoning",
+        "Abbr": "B"
+      },
+      "piercing": {
+        "Label": "Piercing",
+        "Abbr": "P"
+      },
+      "slashing": {
+        "Label": "Slashing",
+        "Abbr": "S"
+      },
+      "cold": {
+        "Label": "Cold"
+      },
+      "fire": {
+        "Label": "Fire"
+      },
+      "electricity": {
+        "Label": "Electricity"
+      },
+      "sonic": {
+        "Label": "Sonic"
+      },
+      "acid": {
+        "Label": "Acid"
+      },
+      "force": {
+        "Label": "Force"
+      },
+      "negative": {
+        "Label": "Negative"
+      },
+      "positive": {
+        "Label": "Positive"
+      }
+    },
+    "DamageTypeCategory": {
+      "misc": "Miscellaneous",
+      "physical": "Physical",
+      "energy": "Energy"
+    },
+    "Materials": {
+      "Label": "Materials",
+      "Base": "Base Material",
+      "Normal": "Material",
+      "Addon": "Add-on",
+      "NormalOverride": "Material Override",
+      "AddonOverride": "Add-on Overrides",
+      "Types": {
+        "abysium": "Abysium",
+        "adamantine": "Adamantine",
+        "alchemicalSilver": "Alchemical Silver",
+        "angelSkin": "Angelskin",
+        "aszite": "Aszite",
+        "blackwood": "Blackwood",
+        "blightQuartz": "Blight Quartz",
+        "bloodCrystal": "Blood Crystal",
+        "buletteArmor": "Bulette Armor",
+        "caphorite": "Caphorite",
+        "cloth": "Cloth",
+        "coldIron": "Cold Iron",
+        "cryptstone": "Cryptstone",
+        "darkleafCloth": "Darkleaf Cloth",
+        "darkwood": "Darkwood",
+        "dragonhide": "Dragonhide",
+        "druchite": "Druchite",
+        "eelHide": "Eel Hide",
+        "elysianBronze": "Elysian Bronze",
+        "fireForgedSteel": "Fire-forged Steel",
+        "frostForgedSteel": "Frost-forged Steel",
+        "glaucite": "Glaucite",
+        "greenwood": "Greenwood",
+        "griffonMane": "Griffon Mane",
+        "heatstonePlating": "Heatstone Plating",
+        "horacalcum": "Horacalcum",
+        "inubrix": "Inubrix",
+        "irespanbasalt": "Irespan Basalt",
+        "lazurite": "Lazurite",
+        "leather": "Leather",
+        "liquidGlass": "Liquid Glass",
+        "livingSteel": "Living Steel",
+        "mithral": "Mithral",
+        "nexavaranSteel": "Nexavaran Steel",
+        "noqual": "Noqual",
+        "paueliel": "Paueliel",
+        "pyresteel": "Pyre Steel",
+        "siccatite": "Siccatite",
+        "silver": "Silver",
+        "silversheen": "Silversheen",
+        "singingSteel": "Singing Steel",
+        "spireSteel": "Spiresteel",
+        "steel": "Steel",
+        "sunsilk": "Sunsilk",
+        "sunsilver": "Sunsilver",
+        "throneglass": "Throneglass",
+        "viridium": "Viridium",
+        "voidglass": "Voidglass",
+        "whipwood": "Whipwood",
+        "wyroot": "Wyroot",
+        "bone": "Bone",
+        "bronze": "Bronze",
+        "glass": "Glass",
+        "gold": "Gold",
+        "obsidian": "Obsidian",
+        "stone": "Stone",
+        "wood": "Wood",
+        "magic": "Magic",
+        "epic": "Epic"
+      }
+    },
+    "SourceInfoSkillRank_ClassBase": "{className} (Base)",
+    "SourceInfoSkillRank_ClassFC": "{className} (Favoured Class)",
+    "CreateItemForSpell": "Create Item for {name}",
+    "CreateItemWand": "Wand",
+    "CreateItemScroll": "Scroll",
+    "CreateItemPotion": "Potion",
+    "CreateItemNamePlaceholder": "Wand, Scroll, or Potion",
+    "CreateItemWandOf": "Wand of {name}",
+    "CreateItemScrollOf": "Scroll of {name}",
+    "CreateItemPotionOf": "Potion of {name}",
+    "Trigger": "Trigger",
+    "Haunt": {
+      "Notice": "Notice",
+      "Weakness": "Weakness",
+      "Destruction": "Destruction",
+      "Shape": "Shape",
+      "Template": {
+        "belligerent": "Belligerent",
+        "itemBound": "Item-bound",
+        "chained": "Chained",
+        "elusive": "Elusive",
+        "fast": "Fast",
+        "freeRoaming": "Free-roaming",
+        "increasedArea": "Increased Area",
+        "latent": "Latent",
+        "persistent": "Persistent",
+        "possessing": "Possessing",
+        "spiteful": "Spiteful",
+        "tenacious": "Tenacious",
+        "unyielding": "Unyielding",
+        "vaporous": "Vaporous",
+        "variant": "Variant"
+      }
+    },
+    "Trap": {
+      "Bypass": {
+        "HiddenLock": "Hidden Lock",
+        "HiddenSwitch": "Hidden Switch",
+        "Lock": "Lock"
+      },
+      "Labels": {
+        "Bypass": "Bypass",
+        "DisableDeviceDC": "Disable Device DC",
+        "EffectsDetails": "Effects",
+        "PerceptionDC": "Perception DC",
+        "Technology": "Technology"
+      },
+      "Reset": {
+        "Automatic": "Automatic",
+        "Manual": "Manual",
+        "Repair": "Repair"
+      },
+      "Tooltips": {
+        "Bypass": "Bypass Type",
+        "Reset": {
+          "Period": "Reset Period",
+          "Time": "Reset Time",
+          "Type": "Reset Type"
+        },
+        "Technology": "Is this a technological trap?",
+        "Trigger": {
+          "Period": "Trigger Period",
+          "Range": "Trigger Range",
+          "Time": "Trigger Time",
+          "Type": "Trigger Type"
+        },
+        "Vision": "Vision Type"
+      },
+      "Triggers": {
+        "ElectricEyes": "Electric Eyes",
+        "Genetic": "Genetic",
+        "Location": "Location",
+        "Manual": "Manual",
+        "Proximity": "Proximity",
+        "Sound": "Sound",
+        "Spell": "Spell",
+        "Timed": "Timed",
+        "Touch": "Touch",
+        "Visual": "Visual"
+      },
+      "Types": {
+        "Magic": "Magic",
+        "Mechanical": "Mechanical"
+      },
+      "Vision": {
+        "ArcaneEye": "Arcane Eye",
+        "Clairvoyance": "Clairvoyance",
+        "TrueSeeing": "True Seeing"
+      }
+    },
+    "Vehicles": {
+      "Space": {
+        "Large": "2-6 squares",
+        "Huge": "7-12 squares",
+        "Gargantuan": "13-20 squares",
+        "Colossal": "21+ squares"
+      },
+      "Types": {
+        "Land": "Land",
+        "Sea": "Sea",
+        "Air": "Air"
+      },
+      "OccupiedSpace": "Occupied Space",
+      "CurrentSpeed": "Current Speed",
+      "MaximumSpeed": "Maximum Speed",
+      "Acceleration": "Acceleration",
+      "Propulsion": "Propulsion",
+      "DrivingCheck": "Driving Check",
+      "ForwardFacing": "Forward Facing",
+      "DrivingDevice": "Driving Device",
+      "DrivingSpace": "Driving Space",
+      "Crew": "Crew",
+      "Decks": "Decks",
+      "SelectDriver": "Select a Driver",
+      "DriverSkill": "Driver Skill",
+      "Passengers": "Passengers",
+      "ACStoppedMotion": "Stopped",
+      "CMDStoppedMotion": "CMD (Stopped)",
+      "Cargo": "Cargo",
+      "Metal": "Metal",
+      "MagicallyHardened": "Magically Hardened",
+      "Squares": "Squares",
+      "Full": "Full"
+    },
+    "CombatInfo_Header": "Combat",
+    "CombatInfo_Round": "Round {round}",
+    "ScriptCalls": {
+      "Name": "Script Calls",
+      "NewName": "New Script Call",
+      "Create": "Create embedded script call",
+      "Use": {
+        "Name": "Use",
+        "Info": "Called when the item has been 'used' (attack, drink potion, etc.). Has the extra array variable <code>attacks</code>, which contains the action's attack rolls, if any."
+      },
+      "PostUse": {
+        "Name": "Post-Use",
+        "Info": "Called after the item has been 'used' and all relevant processing by the system has finished."
+      },
+      "Equip": {
+        "Name": "Equip",
+        "Info": "Called when the item has been equipped or unequipped. Has the extra boolean variable <code>equipped</code>."
+      },
+      "Implant": {
+        "Name": "Implant",
+        "Info": "Called when the item has been implanted or unimplanted. Has the extra boolean variable <code>implanted</code>."
+      },
+      "Toggle": {
+        "Name": "Toggle",
+        "Info": "Called when the item has been enabled or disabled. Has the extra boolean variable <code>state</code>."
+      },
+      "ChangeQuantity": {
+        "Name": "Change Quantity",
+        "Info": "Called when the quantity of the item has been changed. Has the extra numeric variables <code>quantity.previous</code> and <code>quantity.new</code>."
+      },
+      "ChangeLevel": {
+        "Name": "Change Level",
+        "Info": "Called when the level of the item has been changed. Has the extra numeric variables <code>level.previous</code> and <code>level.new</code>."
+      }
+    },
+    "Abundant": "Abundant",
+    "AbundantDesc": "Never remove this ammunition when used.",
+    "Action": "Action",
+    "ActionPlural": "Actions",
+    "ActionType": "Action Type",
+    "All": "All",
+    "Attack": "Attack",
+    "AddEffect": "Add Effect",
+    "AddConditional": "Add Conditional",
+    "AddNote": "Add Note",
+    "AddEntry": "Add Entry",
+    "Attributes": "Attributes",
+    "ArmorClass": "Armor Class",
+    "NaturalArmor": "Natural Armor",
+    "Attacks": "Attacks",
+    "Biography": "Biography",
+    "Buffs": "Buffs",
+    "Change": "Change",
+    "Changes": "Changes",
+    "Conditionals": "Conditional Modifiers",
+    "ConImm": "Condition Immunities",
+    "ConRes": "Condition Resistances",
+    "Copy": "Copy",
+    "Critical": "Critical",
+    "CriticalConfirmation": "Critical Confirmation",
+    "DefenseDC": "Defense DC",
+    "Damage": "Damage",
+    "DamageCritical": "Critical Damage",
+    "DamImm": "Damage Immunities",
+    "DamRed": "Damage Reduction",
+    "DamVuln": "Damage Vulnerabilities",
+    "Drain": "Drain",
+    "Penalty": "Penalty",
+    "Defense": "Defense",
+    "Defenses": "Defenses",
+    "Description": "Description",
+    "NoDescription": "No description.",
+    "Instructions": "Instructions",
+    "NoInstrutions": "No instructions provided.",
+    "Descriptor": "Descriptor",
+    "DescriptorPlural": "Descriptors",
+    "Details": "Details",
+    "Edit": "Edit",
+    "EnRes": "Energy Resistances",
+    "Equipped": "Equipped",
+    "Carried": "Carried",
+    "Identified": "Identified",
+    "Iterative": "Iterative",
+    "Unidentified": "Unidentified",
+    "UnidentifiedDescription": "Superficial Details",
+    "IdentifiedDescription": "Identified Properties",
+    "Health": "Health",
+    "Healing": "Healing",
+    "Wounds": "Wounds",
+    "Vigor": "Vigor",
+    "HitDice": "Hit Dice",
+    "HitDie": "Hit Die",
+    "ActiveFeedback": {
+      "Deltas": {
+        "Health": "{value} Hit Points",
+        "Nonlethal": "{value} Nonlethal",
+        "TempHP": "{value} Temp. HP",
+        "Wounds": "{value} Wounds",
+        "Vigor": "{value} Vigor",
+        "TempVigor": "{value} Temp. Vigor",
+        "AbilityDrain": "{value} {ability} Drain",
+        "AbilityDamage": "{value} {ability} Damage",
+        "AbilityPenalty": "{value} {ability} Penalty",
+        "NegativeLevel": "{value} Negative Level"
+      }
+    },
+    "HealthPerTier": "Health Per Tier",
+    "CustomHitDice": "Custom Hit Dice",
+    "CustomHitDiceHint": "Enter formula, e.g. floor(@item.level / 2)",
+    "DieSize": "d{size}",
+    "InfoShort": "Info",
+    "Inventory": "Inventory",
+    "Feature": "Feature",
+    "Features": "Features",
+    "Languages": "Languages",
+    "NegativeLevels": "Negative Levels",
+    "None": "None",
+    "Notes": "Notes",
+    "Operator": "Operator",
+    "Quadruped": "Quadruped",
+    "Senses": "Senses",
+    "Save": "Save",
+    "Size": "Size",
+    "Reach": "Reach",
+    "AgeCategory": {
+      "Base": "Age Category",
+      "Mental": "Mental Age Category",
+      "Physical": "Physical Age Category"
+    },
+    "Resizing": "Resizing",
+    "Special": "Special",
+    "Movement": {
+      "Label": "Movement",
+      "Speed": "Speed",
+      "Short": "{speed} {unit} {mode}",
+      "Mode": {
+        "land": "Land",
+        "swim": "Swim",
+        "fly": "Fly",
+        "climb": "Climb",
+        "burrow": "Burrow"
+      },
+      "FlyManeuverability": {
+        "Label": "Fly Maneuverability",
+        "Abbr": "Fly Maneuv.",
+        "Quality": {
+          "clumsy": "Clumsy",
+          "poor": "Poor",
+          "average": "Average",
+          "good": "Good",
+          "perfect": "Perfect"
+        }
+      }
+    },
+    "ActorSize": {
+      "fine": "Fine",
+      "dim": "Diminutive",
+      "tiny": "Tiny",
+      "sm": "Small",
+      "med": "Medium",
+      "lg": "Large",
+      "huge": "Huge",
+      "grg": "Gargantuan",
+      "col": "Colossal"
+    },
+    "AgeCategories": {
+      "young": "Young",
+      "adult": "Adult",
+      "middleAge": "Middle Age",
+      "old": "Old",
+      "venerable": "Venerable"
+    },
+    "Spells": "Spells",
+    "Stature": "Stature",
+    "StatureLong": "Long",
+    "StatureTall": "Tall",
+    "Items": "Items",
+    "Skill": "Skill",
+    "Skills": "Skills",
+    "CharacterName": "Character Name",
+    "Level": "Level",
+    "Gender": "Gender",
+    "Deity": "Deity",
+    "Race": "Race",
+    "RaceSubtypePlural": "Subtypes",
+    "Age": "Age",
+    "Height": "Height",
+    "Weight": "Weight",
+    "ItemWeight": "Weight",
+    "StackDetails": {
+      "Base": "Base: {value}",
+      "Stack": "Stack: {value}",
+      "Contents": "Contents: {value}",
+      "Total": "Total: {value}"
+    },
+    "Base": "Base",
+    "TempShort": "Temp.",
+    "TempHP": "Temporary Hit Points",
+    "Nonlethal": "Nonlethal",
+    "Precision": "Precision",
+    "Splash": "Splash",
+    "Initiative": "Initiative",
+    "Tiebreaker": "Tiebreaker",
+    "MaxDexShort": "Max Dex",
+    "Type": "Type",
+    "Subtype": "Subtype",
+    "ChargePlural": "Charges",
+    "ConditionPlural": "Conditions",
+    "Add": "Add",
+    "ItemName": "Item Name",
+    "BuffName": "Buff Name",
+    "AttackName": "Attack Name",
+    "CreateAttack": "Create Attack",
+    "CreateSpellbook": "Create Spellbook",
+    "Active": "Active",
+    "SpellBook": "Spellbook",
+    "SpellBookPrimary": "Primary",
+    "SpellBookSecondary": "Secondary",
+    "SpellBookTertiary": "Tertiary",
+    "SpellBookSpelllike": "Spell-like",
+    "SpellLevel": "Spell Level",
+    "SpellSchool": "Spell School",
+    "SpellResistance": "Spell Resistance",
+    "SpellResistanceAbbr": "SR",
+    "Subschool": "Subschool",
+    "TypePlural": "Types",
+    "SpellEffectExample": "e.g. one glob of acid",
+    "Area": "Area",
+    "Melee": "Melee",
+    "MeleeWeapon": "Melee Weapon",
+    "MeleeSpell": "Melee Spell",
+    "Ranged": "Ranged",
+    "RangedWeapon": "Ranged Weapon",
+    "RangedSpell": "Ranged Spell",
+    "WeaponDamage": "Weapon Damage",
+    "MeleeWeaponDamage": "Melee Weapon Damage",
+    "RangedWeaponDamage": "Ranged Weapon Damage",
+    "ThrownWeaponDamage": "Thrown Weapon Damage",
+    "AllRangedDamage": "All Ranged Damage",
+    "AllMeleeDamage": "All Melee Damage",
+    "NaturalAttackDamage": "Natural Attack Damage",
+    "SpellDamage": "Spell Damage",
+    "AttackRollPlural": "Attack Rolls",
+    "CriticalHitPlural": "Critical Hits",
+    "AbilityScore": "Ability Score",
+    "AbilityScoreLinks": "Ability Score Links",
+    "KeyAbility": "Key Ability",
+    "KeyAbilityRef": "Key Ability ({ability})",
+    "BaseSetup": "Base Setup",
+    "UtilityFunctions": "Utility Functions",
+    "SavingThrow": "Saving Throw",
+    "SavingThrowPlural": "Saving Throws",
+    "SavingThrowEffect": "Saving Throw Effect",
+    "SavingThrowGoodFractionalBonus": "Good Saving Throw Bonus",
+    "Misc": "Miscellaneous",
+    "MiscShort": "Misc",
+    "HitPoints": "Hit Points",
+    "VulnerableTo": "Vulnerable to {vulnerability}",
+    "Immune": "Immune",
+    "ImmuneTo": "Immune to {immunity}",
+    "Check": "{type} Check",
+    "SavingThrowRoll": "{save} Saving Throw",
+    "SavingThrowButtonLabel": "{type} DC {dc}",
+    "SavingThrowButtonLabelGMSensitive": "{save} Save",
+    "SpellResistanceNote": "Spell Resistance {value}",
+    "ImmunityPlural": "Immunities",
+    "BABAbbr": "BAB",
+    "BAB": "Base Attack Bonus",
+    "HalfBAB": "1/2 BAB",
+    "BABOverride": "BAB Override",
+    "CMBAbbr": "CMB",
+    "CMB": "Combat Maneuver Bonus",
+    "ACNormal": "AC",
+    "ACTouch": "Touch",
+    "ACFlatFooted": "Flat-footed",
+    "ACFFAbbr": "FF AC",
+    "CMDFlatFooted": "Flat-footed CMD",
+    "CMDAbbr": "CMD",
+    "CMDFFAbbr": "FF CMD",
+    "CMD": "Combat Maneuver Defense",
+    "Untrained": "Untrained",
+    "Range": "Range",
+    "RangeFormat": "{distance} {units}",
+    "MinRange": "Minimum Range",
+    "RangeNote": "Range: {distance} {units}",
+    "MaxRangeNote": "Max range: {distance} {units}",
+    "Radius": "Radius",
+    "Target": "Target",
+    "Targets": "Targets",
+    "Effect": "Effect",
+    "Effects": "Effects",
+    "Prepared": "Prepared",
+    "Unprepared": "Unprepared",
+    "InitiallyPrepared": "Initially prepared",
+    "ClassPlural": "Classes",
+    "NewClassFeaturePlural": "New Class Features",
+    "TemplatePlural": "Templates",
+    "Temporary": "Temporary",
+    "Permanent": "Permanent",
+    "Item": "Item",
+    "WeaponProperties": "Weapon Properties",
+    "Enhancement": "Enhancement",
+    "EnhancementInline": "+{bonus} Enhancement",
+    "EnhancementBonus": "Enhancement Bonus",
+    "EnhancementBonusOverride": "Enhancement Bonus Override",
+    "AttackAlignment": "Alignment Traits",
+    "AttackAlignmentOverride": "Alignment Traits Override",
+    "Preparation": "Preparation",
+    "CastsLeft": "Casts Left",
+    "Harmless": "Harmless",
+    "CasterLevelOffset": "Caster Level Offset",
+    "CasterLevelCheck": "Caster Level Check",
+    "CasterLevel": "Caster Level",
+    "CasterLevelAbbr": "CL",
+    "LevelOffset": "Level Offset",
+    "CasterLevelBonusFormula": "Caster Level Bonus Formula",
+    "CasterLevelNotes": "Caster Level Notes",
+    "School": "School",
+    "Domain": "Domain",
+    "SubDomain": "Subdomain",
+    "CastingTime": "Casting Time",
+    "Components": "Components",
+    "SpellRangeShort": "25 ft. + 5 ft./2 levels",
+    "SpellRangeMedium": "100 ft. + 10 ft./level",
+    "SpellRangeLong": "400 ft. + 40 ft./level",
+    "SpellRangeShortMetric": "7.5 m + 1.5 m/2 levels",
+    "SpellRangeMediumMetric": "30 m + 3 m/level",
+    "SpellRangeLongMetric": "120 m + 12 m/level",
+    "Aura": {
+      "Single": "Aura",
+      "Plural": "Auras",
+      "Strength": {
+        "faint": "Faint",
+        "moderate": "Moderate",
+        "strong": "Strong",
+        "overwhelming": "Overwhelming"
+      }
+    },
+    "Unknown": "Unknown",
+    "ElementalSchool": "Elemental School",
+    "Bloodline": "Bloodline",
+    "ConcentrationCheck": "Concentration Check",
+    "Concentration": "Concentration",
+    "ConcentrationBonusFormula": "Concentration Bonus Formula",
+    "ConcentrationNotes": "Concentration Notes",
+    "Dismissable": "Dismissable",
+    "DismissableMark": "(D)",
+    "SpellLevelOffset": "Spell Level Offset",
+    "SpellSlotCost": "Spell Slot Cost",
+    "CastsPerDayUsedFormula": "Casts Per Day Used Formula",
+    "SpellCasting": "Spell Casting",
+    "SpellcastingClass": "Spellcasting Class",
+    "SpellcastingAbility": "Spellcasting Ability",
+    "Usage": "Usage",
+    "Slot": "Slot",
+    "MaxDexterityModifier": "Max. Dexterity Modifier",
+    "ArmorCheckPenalty": "Armor Check Penalty",
+    "ArcaneSpellFailure": "Arcane Spell Failure",
+    "ArcaneSpellFailureAbbr": "ASF",
+    "AutomaticSpellSlots": "Ability Score Bonus Slots",
+    "RequiresAutoSlots": "Requires auto spell slots to be enabled.",
+    "AutoCalculateSpellSlots": "Auto Calculate Spell Slots",
+    "AutoSlotIncompatible": "Requires auto spell slots to be disabled.",
+    "HasCantrips": "Has Cantrips/Orisons",
+    "NoCastingAbilityLimit": "Ignore Ability Limit",
+    "InvalidSpellLevelHint": "Invalid Spell Level<br>Displayed only because of spells assigned to it.",
+    "Modifications": "Modifications",
+    "PreparePerDay": "Prepare Per Day",
+    "CastPerDay": "Cast Per Day",
+    "SkillsPerLevel": "Skills/Level",
+    "Source": "Source",
+    "Unlimited": "Unlimited",
+    "Infinite": "Infinite",
+    "Requirements": "Requirements",
+    "Formula": "Formula",
+    "BonusFormula": "Bonus Formula",
+    "AttackRollBonus": "Attack Roll Bonus",
+    "SecondaryAttackModifier": "Secondary Attack Modifier",
+    "Rolls": {
+      "Check": {
+        "Label": "Check",
+        "Override": "Check Override",
+        "OverrideHint": "e.g. 2d20kl"
+      },
+      "Bonus": "Check Bonus",
+      "BonusHint": "e.g. 1d6[Inspiration] + 2[Aid] + 1"
+    },
+    "CriticalThreatRange": "Critical Threat Range",
+    "CriticalMultiplier": "Critical Multiplier",
+    "CriticalConfirmBonus": "Critical Confirmation Bonus",
+    "AttackAbility": "Attack Ability",
+    "ExtraAttacks": {
+      "Label": "Extra Attacks",
+      "Standard": "Iteratives",
+      "Advanced": "Iteratives + Custom",
+      "Flurry": "Flurry of Blows (Chained)",
+      "UnFlurry": "Flurry of Blows (Unchained)",
+      "FlurryFlavor": "Flurry",
+      "FlurryAttack": "Flurry #{0}",
+      "Custom": "Custom",
+      "Add": "Add Extra Attack",
+      "ModifierFormula": "Attack Modifier Formula",
+      "ModifierTooltip": "<code>@formulaicAttack</code> can be used to refer how manyth attack in sequence this is.",
+      "Formula": {
+        "Label": "By Formula",
+        "LabelDefault": "Attack #{0}",
+        "LabelTooltip": "Insert <code>{0}</code> to show iteration counter.",
+        "Count": "Attack Count Formula"
+      }
+    },
+    "Name": "Name",
+    "DamageAbility": "Damage Ability",
+    "AbilityBonus": "Ability Bonus",
+    "MaxAbilityHint": "Maximum ability score modifier allowed. Limit applied before multiplier. Unlimited if undefined.",
+    "SecondaryAttackAbilityMultiplier": "Secondary Attack Ability Multiplier",
+    "BaseFormula": "Base Formula",
+    "DamageFormulaHint": "e.g. sizeRoll(1, 8, @size)",
+    "OnCritBonusFormula": "On-critical Bonus Formula",
+    "NonMultBonusFormula": "Non-multiplying Bonus Formula",
+    "AddBaseInstance": "Add Base Instance",
+    "AddOnCritInstance": "Add On-critical Instance",
+    "AddNonMultInstance": "Add Non-multiplying Instance",
+    "DamageType": "Damage Type",
+    "DamageModifiers": "Damage Modifiers",
+    "DamageBonus": "Damage Bonus",
+    "DamageBonusHint": "e.g. 1d4[Fire] + 2",
+    "HealBonus": "Heal Bonus",
+    "HealBonusHint": "e.g. 1d6 + 6[Incredible Healer]",
+    "ActivationCost": "Activation Cost",
+    "Duration": "Duration",
+    "ConcentationDuration": "concentration, up to {duration}",
+    "ForDuration": "{subject} for {duration}",
+    "DurationEndTiming": "End Timing",
+    "EnabledCheckFlags": "Enabled Flags",
+    "CheckFlags": "Flags",
+    "Quantity": "Quantity",
+    "Price": "Price",
+    "PricePerCharge": "Price per Charge",
+    "HPShort": "HP",
+    "Hardness": "Hardness",
+    "SituationalBonus": "Situational Bonus",
+    "RollMode": "Roll Mode",
+    "UpdateActor": "Update Actor",
+    "UpdateItem": "Update Item",
+    "BonusCarryStrength": "Bonus Carry Strength",
+    "BonusCarryMultiplier": "Bonus Carry Multiplier",
+    "CarryStrength": "Carry Strength",
+    "CarryMultiplier": "Carry Multiplier",
+    "Multiplier": "Multiplier",
+    "CarryLightLoad": "Light Load",
+    "CarryMediumLoad": "Medium Load",
+    "CarryHeavyLoad": "Heavy Load",
+    "CarryAboveHead": "Above Head",
+    "CarryOffGround": "Off Ground",
+    "CarryDragPush": "Drag & Push",
+    "CarryLabel": "Carrying {lbs} lbs",
+    "CarryLabelKg": "Carrying {kg} kg",
+    "SkillBonusRankFormula": "Bonus Rank Formula",
+    "ToggleSkillLock": "Toggle edit lock on rarely needed parts of the skill list.",
+    "Rank": "Rank",
+    "SkillRankPlural": "Skill Ranks",
+    "Used": "Used",
+    "Transferred": "Transferred",
+    "BGSkillRanks": "BG Skill Ranks",
+    "BGUsed": "BG Used",
+    "SeeText": "See Text",
+    "DC": "DC",
+    "DifficultyClass": "Difficulty Class",
+    "SpellDC": "Spell DC",
+    "DCFormula": "DC Formula",
+    "DCOffset": "DC Offset",
+    "DCOffsetFormula": "DC Offset Formula",
+    "DCThreshold": "DC {threshold}",
+    "DCDescriptionExample": "e.g. Reflex half",
+    "Success": "Success",
+    "Failure": "Failure",
+    "PowerAttack": "Power Attack",
+    "DeadlyAim": "Deadly Aim",
+    "Flanking": "Flanking",
+    "HighGround": "High Ground",
+    "Charge": "Charge",
+    "PrimaryAttack": "Primary Attack",
+    "SecondaryAttack": "Secondary Attack",
+    "TouchAttack": "Touch Attack",
+    "TouchAttackShort": "Touch",
+    "Enabled": "Enabled",
+    "Disabled": "Disabled",
+    "Low": "Low",
+    "Medium": "Medium",
+    "High": "High",
+    "Poor": "Poor",
+    "Good": "Good",
+    "Proficient": "Proficient",
+    "ProficientAttack": "Proficient (Attack)",
+    "Masterwork": "Masterwork",
+    "ClassSkills": "Class Skills",
+    "MeasureTemplate": "Measure Template",
+    "TemplateType": "Template Type",
+    "TemplateSizeFormula": "Size Formula (ft)",
+    "TemplateSizeFormulaHint": "Defines cone's & ray's distance, circle's radius, and rectangle's side.",
+    "LearnedAt": "Learned At",
+    "EquipmentType": "Equipment Type",
+    "EquipmentSubtype": "Equipment Subtype",
+    "ConsumableType": "Consumable Type",
+    "CreatureType": "Creature Type",
+    "InheritAs": "Inherit ({inherited})",
+    "Standard": "Standard",
+    "Manual": "Manual",
+    "Override": "Override",
+    "NoOverride": "No Override",
+    "CustomColor": "Custom Color",
+    "CustomTexture": "Custom Texture",
+    "CustomSkill": "Custom Skill",
+    "FromSources": "From Sources",
+    "UnidentifiedName": "Unidentified Name",
+    "UnidentifiedPriceShort": "Unid. Price",
+    "Finish": "Finish",
+    "Yes": "Yes",
+    "No": "No",
+    "Other": "Other",
+    "BaseDCFormula": "Base DC Formula",
+    "Lbs": "lbs",
+    "Kgs": "kg",
+    "Category": "Category",
+    "Quickbar": "Quickbar",
+    "QuickbarHint": "Display in token HUD and in summary quick actions.",
+    "QuickCombat": "Combat Tab",
+    "QuickCombatHint": "Include this item also in combat tab.",
+    "Tag": "Tag",
+    "Tags": "Tags",
+    "Identifier": "Identifier",
+    "Reset": "Reset",
+    "AttackType": "Attack Type",
+    "SingleAttack": "Single Attack",
+    "FullAttack": "Full Attack",
+    "Use": "Use",
+    "Regeneration": "Regeneration",
+    "FastHealing": "Fast Healing",
+    "Links": "Links",
+    "Confirm": "Confirm",
+    "CROffset": "Challenge Rating Offset",
+    "Offsets": "Offsets",
+    "Haste": "Haste",
+    "Manyshot": "Manyshot",
+    "RapidShot": "Rapid Shot",
+    "PointBlankShot": "Point-Blank Shot",
+    "Ammunition": "Ammunition",
+    "AmmunitionType": "Ammunition Type",
+    "AmmunitionPerAttack": "Ammunition Cost (Per Attack)",
+    "AmmunitionAbbr": "Ammo",
+    "AmmoRemaining": "Ammunition Remaining: {quantity}",
+    "AmmoDepleted": "Out of Ammunition!",
+    "ChargesDepleted": "Out of Charges!",
+    "NotSelected": "Not Selected",
+    "InvalidAmmoType": "Invalid Ammunition Type",
+    "DefaultAmmo": "Default Ammunition",
+    "Misfire": "Misfire",
+    "Capacity": "Capacity",
+    "Priority": "Priority",
+    "ChangePriority": {
+      "Early": "Early",
+      "Late": "Late",
+      "Normal": "Normal"
+    },
+    "Creatures": "Creatures",
+    "ChargeCost": "Charge Cost",
+    "ChargeCostFormula": "Charge Cost Formula",
+    "ChargeCostItemFormulaHint": "How many charges (or casts, spell points, etc.) this item consumes by default. Negative values will restore charges instead.",
+    "ChargeCostActionFormulaHint": "How many charges (or casts, spell points, etc.) this action consumes. Negative values will restore charges instead.",
+    "PerAttack": "Per Attack",
+    "ChargeSource": "Charge Source",
+    "MaximumUsesFormula": "Maximum Uses Formula",
+    "RechargeFormula": "Recharge Formula",
+    "RechargeFormulaHint": "Recharging sets the current charges to result of the formula. For relative recharging, use the current charge value <code>@item.uses.value</code> as part of the formula.",
+    "Value": "Value",
+    "SellValue": "Sell Value",
+    "TotalItems": "{count} Total Items",
+    "FilteredItems": "{count} Filtered Items",
+    "SearchFilterPlaceholder": "Search filter…",
+    "FilterPrepared": "Filter out unprepared.",
+    "FilterEmpty": "Filter out empty sections.",
+    "QuickActions": "Quick Actions",
+    "ConvertCurrency": "Convert Currency",
+    "SoundEffect": "Sound Effect",
+    "Classes": "Classes",
+    "Races": "Races",
+    "SetTo": "Set to {value}",
+    "Feats": "Feats",
+    "ByLevel": "By Level",
+    "ByBonus": "By Bonus",
+    "FromLevels": "From Levels",
+    "FromMythic": "From Mythic",
+    "Total": "Total",
+    "Missing": "Missing",
+    "Excess": "Excess",
+    "BonusFeatFormula": "Bonus Feat Formula",
+    "CustomBonus": "Custom Bonus",
+    "CustomBonusType": "Custom Bonus ({type})",
+    "Advanced": "Advanced",
+    "LeftToPrepare": "Amount left to prepare",
+    "SpellsTotalEachDay": "Total spells each day",
+    "UseItem": "Use Item",
+    "UseSpell": "Use Spell",
+    "UseFeat": "Use Feature",
+    "UseBuff": "Use Buff",
+    "RollSkill": "Roll Skill Check",
+    "PerformAttack": "Perform Attack",
+    "DisplayInChat": "Display in chat",
+    "UseSpellPoints": "Use Spell Points",
+    "MaxFormula": "Maximum Formula",
+    "SpellPoints": "Spell Points",
+    "SpellPointsMax": "Maximum Spell Points",
+    "SpellPointsCost": "Spell Point Cost",
+    "RestoredOnRest": "Restored on Rest",
+    "Broken": "Broken",
+    "AutoBroken": "Automatically broken due to remaining health.",
+    "Cursed": "Cursed",
+    "Timeworn": "Timeworn",
+    "Artifact": "Artifact",
+    "Compendium": "Compendium",
+    "Custom": "Custom",
+    "RecoverChancePercentage": "Recover Chance %",
+    "RecoverAmmunition": "Recover Ammunition",
+    "RecoveredAmmo": "Recovered {count} ammunition",
+    "ForceRecover": "Recover (Force)",
+    "Default": "Default",
+    "DefaultRef": "Default ({value})",
+    "Held": "Held",
+    "HeldMult": "Held (×{mult})",
+    "BaseTypes": {
+      "Label": "Equipment Base Types",
+      "Description": "For features that function on specific type such as Weapon Focus or specific weapon proficiency (such as exotic weapon proficiency), or when the item's name deviates from its base.<p>For example, the Fate Blade has base type of Dagger."
+    },
+    "ArmorOrShield": "Armor/Shield",
+    "WeaponGroups": "Weapon Groups",
+    "GiveItem": "Give Item",
+    "GiveItemToActor": "Give item to actor",
+    "SplitItem": "Split Item",
+    "HideFromToken": "Hide from token",
+    "ACPArmor": "ACP (Armor)",
+    "ACPShield": "ACP (Shield)",
+    "MaxDexArmor": "Max Dexterity Bonus (Armor)",
+    "MaxDexShield": "Max Dexterity Bonus (Shield)",
+    "Encumbrance": "Encumbrance",
+    "MediumEncumbrance": "Medium Encumbrance",
+    "HeavyEncumbrance": "Heavy Encumbrance",
+    "Normal": "Normal",
+    "IdentifyDC": "Identify DC",
+    "IdentifyCurseDC": "Identify Curse DC",
+    "Identify": "Identify",
+    "Unidentify": "Unidentify",
+    "MagicItems": "Magic Items",
+    "Summary": "Summary",
+    "HitDieShort": "HD",
+    "ChallengeRatingShort": "CR",
+    "Experience": "Experience",
+    "XPValue": "{value} XP",
+    "Combat": "Combat",
+    "Current": "Current",
+    "Maximum": "Maximum",
+    "MaxShort": "Max",
+    "Minimum": "Minimum",
+    "Average": "Average",
+    "AverageShort": "Avg.",
+    "Ability": "Ability",
+    "AbilityPlural": "Abilities",
+    "Modifier": "Modifier",
+    "ModifierAbbr": "Mod.",
+    "Bonus": "Bonus",
+    "OpenAssociatedCompendiumEntry": "Open associated compendium entry",
+    "Tier": "Tier",
+    "ReducedMovementSpeed": "Reduced Movement Speed",
+    "Settings": "Settings",
+    "SpellbookUsage": "Spellbook Usage",
+    "SpellSlotAbilityBonus": "Spell Slot Ability Bonus",
+    "SpellbookName": "Spellbook Name",
+    "StaticSize": "Static Size",
+    "StaticSizeHint": "If enabled, token dimensions and scale are not automatically adjusted to match character size.",
+    "CustomVisionRules": {
+      "Label": "Disable System Controlled Vision",
+      "Description": "Prevent system from controlling vision, allowing you to customize it.",
+      "ConfigHint": "System controlled senses are configured on actor sheet's attributes tab.",
+      "Warning": "This configuration has no effect while system controlled vision is disabled either globally or in token. Please disable both if you wish to continue using this."
+    },
+    "DomainSlotValue": "Domain/School Slots",
+    "DomainSlotValueDesc": "Number of bonus spell slots Domain/School spells have for each spell level.",
+    "Command": "Command",
+    "MaximumRangeIncrements": "Maximum Range Increments",
+    "DuplicateInitiative": "Duplicate Initiative",
+    "InitiativeOffset": "Initiative Offset",
+    "CustomRollDesc": "This roll uses a non-default formula",
+    "Hidden": "Hidden",
+    "Bright": "Bright",
+    "Dim": "Dim",
+    "PCs": "PCs",
+    "NPCs": "NPCs",
+    "Options": "Options",
+    "Split": "Split",
+    "ChooseAnAction": "Choose an action",
+    "Select": "Select",
+    "SelectSpecific": "Select {specifier}",
+    "Drink": "Drink",
+    "Properties": "Properties",
+    "Driving": "Driving",
+    "Migration": {
+      "Start": "Applying PF1 System Migration for version {version}. Please stand by.",
+      "InProgress": "PF1 System Migration is in progress. Please wait for it to finish.",
+      "End": "PF1 System Migration to version {version} completed!",
+      "Dialog": {
+        "Title": "Migration",
+        "Ongoing": "Migration In Progress!",
+        "Completed": "Migration Completed!",
+        "IgnoreLocked": "Ignoring Locked Compendiums",
+        "ProcessLocked": "Processing Locked Compendiums",
+        "FastMode": "Skipping Migrated Documents.",
+        "SlowMode": "Processing All Documents.",
+        "RefreshRequired": "Refresh required to finalize migration!",
+        "ReloadAll": "Reload All Clients",
+        "Category": "Category",
+        "Issues": "Migration Issues",
+        "InvalidDocuments": "Invalid Documents",
+        "ErrorHelp": "Click on the category error counters to see details.",
+        "Errors": "Errors",
+        "Tooltip": {
+          "Ignored": "Ignored",
+          "Invalid": "Invalid",
+          "Errors": "Errors",
+          "Processed": "Processed",
+          "Total": "Total",
+          "Status": "Status"
+        }
+      },
+      "Category": {
+        "World": "World",
+        "Modules": "Module Packs",
+        "System": "System",
+        "Actors": "Actors Directory",
+        "Items": "Items Directory",
+        "Chat": "Chat Messages",
+        "Scenes": "Scenes",
+        "Packs": "Compendiums"
+      },
+      "Issues": {
+        "ID": "ID",
+        "UUID": "UUID",
+        "Message": "Message"
+      }
+    },
+    "ContentSource": {
+      "Title": "Content Sources: {name}",
+      "EditHint": "Edit Content Source Details",
+      "Missing": "No source information",
+      "Extras": "Additional Sources",
+      "AddEntry": "Add Source",
+      "NewEntry": "New Source",
+      "DelEntry": "Delete Source",
+      "DelTitle": "Delete source: {entry}",
+      "DelEntryDesc": "Are you sure you want to delete \"{entry}\"?",
+      "Pages": "p. {pages}",
+      "Autofill": "Autofilled from source registry.",
+      "DateFormat": "YYYY-MM-DD",
+      "Errors": {
+        "DuplicateID": "Source entry with same ID already exists."
+      },
+      "Info": {
+        "Title": "Title",
+        "TitleHint": "Title of the source material, usually book name.",
+        "ID": "ID",
+        "IDHint": "Book ID or similar, e.g. PZO1110",
+        "Edition": "Edition",
+        "EditionHint": "e.g. 6",
+        "Errata": "Errata",
+        "ErrataHint": "Errata version or date",
+        "Release": "Release",
+        "Pages": "Pages",
+        "PagesHint": "Page number, range (e.g. 276-278), or list (e.g. 124,270)",
+        "Publisher": "Publisher",
+        "PublisherHint": "e.g. Paizo"
+      }
+    },
+    "Application": {
+      "Damage": {
+        "Instances": "Instances",
+        "ReduceBy": "Reduce by",
+        "ApplyDamage": "Applied damage to {targets} target(s).",
+        "ApplyHeal": "Applied healing to {targets} target(s).",
+        "DualHeal": "Dual Heal",
+        "DualHealHint": "Heal both normal health and nonlethal.",
+        "AsWounds": "As Wounds"
+      },
+      "Changelog": {
+        "Title": "Changelog",
+        "DontShowAgain": "Don't show changelog after system updates",
+        "OpenInBrowser": "Open in Browser",
+        "Latest": "Latest",
+        "Major": "Major",
+        "Legacy": "Legacy"
+      },
+      "PartyRest": {
+        "Title": "Party Rest",
+        "Watch": "Watch",
+        "Rested": "Party of {people} has fully rested! {hours} hour(s) passed.",
+        "Watches": {
+          "Label": "Watches",
+          "PerShift": "Hours per Shift",
+          "None": "No watches",
+          "Length": "Watch Length",
+          "NoneHint": "No-one is keeping watch.",
+          "Solo": "Solo",
+          "SoloHint": "Singular person stands watch.",
+          "Duo": "Duo",
+          "DuoHint": "Two people stand watch simultaneously.<br>Requires at least 4 people."
+        }
+      },
+      "ActionSelector": {
+        "Title": "{actor} using {item}"
+      },
+      "ChangeTargetSelector": {
+        "Title": "Select change target",
+        "InvalidChoice": "Choice is not valid for the current actor."
+      },
+      "ContextNoteTargetSelector": {
+        "Title": "Select context note target"
+      },
+      "CurrencyTransfer": {
+        "Send": "Send Currency",
+        "Failed": "Currency Transfer Failed: ",
+        "GMRequired": "A GM is required to finish the transfer.",
+        "Insufficient": "Insufficient Currency"
+      },
+      "XPDistributor": {
+        "Title": "Experience Distributor",
+        "Options": {
+          "BonusExperience": "Bonus Experience"
+        },
+        "Warnings": {
+          "NoRecipients": "No recipients selected.",
+          "NoReward": "No reward defined."
+        },
+        "Result": "{xp} XP rewarded.",
+        "Reward": "Reward",
+        "SplitEvenly": "Split Evenly",
+        "GiveToAll": "Give to All",
+        "TotalExperience": "Total Experience",
+        "SplitExperience": "Split Experience"
+      },
+      "VisionSharing": {
+        "Label": "Vision Sharing"
+      },
+      "EntrySelector": {
+        "Title": "Entry Selector",
+        "TitleIsolated": "{item} – {title}",
+        "TitleOwned": "{item} – {actor} – {title}"
+      },
+      "TraitSelector": {
+        "NoCustomEntries": "No custom entries.",
+        "CustomPlaceholder": "Enter custom entry",
+        "CustomHint": "Add new entries with enter or semicolon (;). Hitting backspace twice when input is empty removes last item."
+      },
+      "DamageResistanceSelector": {
+        "DRTitle": "Damage Reduction Selection",
+        "ERTitle": "Energy Resistance Selection",
+        "DamageAmount": "Amount",
+        "Bypassed": "Bypassed by",
+        "Resisted": "Against",
+        "CombinationType": "Operator",
+        "CombinationOr": "or",
+        "CombinationAnd": "and",
+        "CombinationFormattedOr": "{type1} or {type2}",
+        "CombinationFormattedAnd": "{type1} and {type2}"
+      },
+      "ChangeEditor": {
+        "Label": "Change Editor",
+        "AddChange": "Add Change",
+        "Invalid": "Invalid",
+        "Operator": {
+          "Add": "Adjust",
+          "AddVerb": "Adjust",
+          "AddHint": "Adjust target property by formula",
+          "Set": "Set",
+          "SetVerb": "Set",
+          "SetHint": "Set target property to formula",
+          "InvalidHint": "Unknown operator."
+        },
+        "Help": {
+          "Link": "Information on Changes",
+          "Value": "Value",
+          "ValueHint": "Must be deterministic with no random elements such as dice rolls.",
+          "Roll": "Roll",
+          "RollHint": "Supports random elements such as dice rolls.",
+          "Simple": "Simple",
+          "SimpleHint": "Supports only numeric terms, with no variables or dice rolls."
+        },
+        "AsType": "As"
+      },
+      "Settings": {
+        "Player": "Player",
+        "World": "World",
+        "Integration": {
+          "Title": "Module Integration",
+          "Label": "Configure Integration",
+          "Hint": "Alter which modules the system adds special functionality for.",
+          "Reset": "Reset Integration configuration to default values.",
+          "Modules": {
+            "dice-so-nice": {
+              "Label": "Dice So Nice",
+              "Info": "Triggers DSN where the system obfuscates roll data and groups rolls by context."
+            },
+            "drag-ruler": {
+              "Label": "Drag Ruler",
+              "Info": "Adds speed provider to Drag Ruler."
+            },
+            "babele": {
+              "Label": "Babele",
+              "Info": "Delays pack data preparation so Babele translations are accounted for."
+            }
+          }
+        },
+        "Performance": {
+          "Title": "Performance Configuration",
+          "Button": "Performance Settings",
+          "Hint": "Adjust performance impacting settings.",
+          "Reset": "Reset Performance configuration to default values.",
+          "Options": {
+            "reachLimit": {
+              "Label": "Reach highlight limit",
+              "Hint": "Maximum range in squares reach highlight is drawn. Default is 60 (300 ft). First increment is displayed fully regardless of this setting. Values below 10 disable reach highlight entirely."
+            }
+          }
+        },
+        "Health": {
+          "Title": "Health Configuration",
+          "Label": "Configure Health",
+          "Hint": "Configure health computations for actors.",
+          "Reset": "Health configuration reset to default values. Save to confirm.",
+          "Instructions": "Health computation for the various types of classes. For reference, Pathfinder Society uses the following configuration for player characters: automatic computation, 0.5 rate, one HD maximized, round up, discrete continuity.",
+          "Compute": "Compute",
+          "Rate": "Rate",
+          "CanMaximize": "Can Maximize",
+          "CanMaximizeHint": "Counts towards maximized hit dice.",
+          "ComputeAuto": "Auto",
+          "ComputeManual": "Manual",
+          "AutoConfig": "Automated Health Configuration",
+          "MaximizedLimit": "Maximized HD Limit",
+          "Rounding": "Health Rounding",
+          "RoundingHint": "Health values must be whole numbers. Which way to round them?",
+          "RoundingUp": "Up",
+          "RoundingDown": "Down",
+          "RoundingNearest": "Nearest",
+          "Continuity": "Health Continuity",
+          "ContinuityHint": "Health can be computed discretely or continuously.  Discrete health is rounded at each level, meaning creatures will receive a stable amount of health for each hitdie.  Continuous health is rounded after each source of hitdie is evaluated, meaning creatures will receive a fluctuating amount of health for each hitdie.",
+          "Continuous": "Continuous",
+          "Discrete": "Discrete",
+          "Class": {
+            "base": "Base",
+            "npc": "NPC",
+            "racial": "Racial"
+          },
+          "WoundsAndVigor": {
+            "Label": "Wounds and Vigor",
+            "Hint": "Use the Wounds and Vigor optional ruleset for this actor type."
+          },
+          "WoundThresholds": {
+            "Label": "Wound thresholds",
+            "Hint": "Use wound threshold optional ruleset for this actor type.",
+            "VigorConflict": "Wound Thresholds has no effect with Wounds & Vigor optional rule also enabled.",
+            "Disabled": "Disabled",
+            "Normal": "Normal",
+            "Gritty": "Gritty"
+          }
+        },
+        "Experience": {
+          "Title": "Experience Configuration",
+          "Name": "Experience Configuration",
+          "Label": "Configure Experience",
+          "Hint": "Configure aspects about leveling up.",
+          "Reset": "Reset Experience configuration to default values.",
+          "Track": {
+            "Label": "Experience Track",
+            "Hint": "The rate at which characters advance in levels",
+            "Options": {
+              "Slow": "Slow",
+              "Medium": "Medium",
+              "Fast": "Fast",
+              "Custom": "Custom"
+            },
+            "CustomPlaceholder": "e.g. '@level * 1000'",
+            "CustomUsage": "Custom experience formula is cumulative. Meaning for example, to mimic PF2 style experience you would simply enter <code>1000</code>, since every single level requires 1000 experience exactly, while setting it to <code>@level * 1000</code> would mean every single level requires thousand more than the last. Uses character's normal roll data with added <code>@level</code> for the level to achieve."
+          },
+          "Disable": "Disable Experience Tracking",
+          "DisableHint": "Disables experience tracking features from the system, such as experience bars, level up detection, XP thresholds, etc.",
+          "Distributor": "Open XP Distributor",
+          "DistributorHint": "Opens the XP distributor on combat end unless Shift is held when the combat's deletion is confirmed"
+        }
+      },
+      "GetNumber": {
+        "Title": "Input number",
+        "Confirm": "Confirm"
+      },
+      "PointBuy": {
+        "Title": "Point Buy Calculator",
+        "SetupHint": "Point buy calculator is available here only temporarily. You can always access it from the settings tab.",
+        "Warning": "The point buy calculator will OVERRIDE the character's base ability scores.",
+        "InvalidPoints": "Invalid point usage.",
+        "Spent": "Points Spent",
+        "Points": "Points",
+        "CampaignType": "Campaign Type",
+        "Type": {
+          "low": "Low Fantasy",
+          "standard": "Standard Fantasy",
+          "high": "High Fantasy",
+          "epic": "Epic Fantasy"
+        }
+      },
+      "DocumentSelector": {
+        "Title": "Document Selector",
+        "None": "None"
+      },
+      "ItemSelector": {
+        "Title": "Item Selector",
+        "Items": "Items",
+        "Quantity": "Quantity"
+      },
+      "ActorSelector": {
+        "Title": "Actor Selector",
+        "You": "You",
+        "Owner": "Owner",
+        "OwnedActors": "Owned",
+        "UnownedActors": "Other",
+        "NoUnownedActors": "You do not have permission to see any actors.",
+        "MinimumPermissionLevel": "Minimum required permission level is Limited."
+      }
+    },
+    "Dialog": {
+      "SplitItem": {
+        "Title": "Split item: {name}",
+        "Keep": "Keep",
+        "Split": "Split"
+      },
+      "VehicleSave": {
+        "Title": "Select save type",
+        "Message": "Select the type of save to make."
+      }
+    },
+    "Info": {
+      "NotFunctioning": "The system (currently) doesn't use this feature"
+    },
+    "Troubleshooter": {
+      "Button": "Troubleshooter",
+      "Title": "Pathfinder 1e System Troubleshooting",
+      "Prelude": "Here are some things you may do when facing problems.",
+      "Steps": {
+        "Label": "Steps",
+        "Foundry": "Read Foundry's {link}.",
+        "FoundryLink": "user documentation",
+        "Help": "Check the {link}, found normally near the troubleshooter button.",
+        "HelpLink": "system documentation",
+        "FAQ": "Check the FAQ",
+        "Log": "Check dev tools console log for errors (F12 [or Option+Command+I on Mac], console tab)",
+        "Modules": "Ensure modules are not the cause.",
+        "DisableModules": "Launching in safe mode is quick way to disable all modules.",
+        "ModuleSuggest": "{link} can alternatively speed up ruling out modules.",
+        "Discord": "Stop by in {link} Discord server.",
+        "DiscordChannel": "<code>{channel}</code> channel is for your Pathfinder 1e needs.",
+        "DiscordHint": "The channel pins usually hold any pertinent information.",
+        "Report": "Consider {reportlink} as a bug or a feature request.",
+        "ReportLinkText": "reporting your issue"
+      },
+      "Actions": {
+        "Label": "Operations",
+        "UnlockPacks": "Unlock packs for migration. Locked packs are otherwise ignored.",
+        "Reprocess": "Process all documents regardless if they've already been migrated.",
+        "MigrateWorld": "Migrate World",
+        "MigrateWorldHint": "Normally migration automatically runs, if there are pertinent migrations pending, whenever PF1 update happens and GM logs in the first time.<br>Running migration manually may sometimes solve problems, such as with documents imported from unmigrated sources.",
+        "MigrateModules": "Migrate Module Packs",
+        "MigrateModulesHint": "In case you have modules with compendiums that have not been migrated on their end to be fully compatible with current version."
+      }
+    },
+    "Tours": {
+      "ActorSheet": {
+        "Title": "Overview of the Actor Sheet",
+        "Description": "A quick glance at what a character sheet looks like in the Pathfinder 1e for Foundry and where's everything.",
+        "GoToBasicMonsters": {
+          "Title": "Ready-to-use Basic Monsters",
+          "Content": "Pathfinder 1e comes with some ready-to-use basic monsters.<br>We'll use one of them in order to review the sheet and how it has been configured."
+        },
+        "HighlightStreetMagicianInCompendium": {
+          "Title": "Street Magician",
+          "Content": "This is one of the most complete NPCs in the compendium.<br>It has a lot of abilities and features as well as some Spell-like abilities and some magic items with scripts."
+        },
+        "HighlightSheet": {
+          "Title": "The sheet",
+          "Content": "This is the sheet of the NPC.<br>It seems complicated at first glance, but you will understand it soon."
+        },
+        "TooltipsWithDefinitions": {
+          "Title": "Data references",
+          "Content": "You can hover over any entry in the sheet and a tooltip will be shown listing how to reference the data in formulas (for example, <code>@attributes.hp.max</code> among others by hovering Max HP for example)."
+        },
+        "RollButtons": {
+          "Title": "Roll buttons",
+          "Content": "Keep in mind the icons <i class='fas fa-dice-d20'></i> and <i class='fas fa-dice'></i>.<br>They are all over the sheet and you can click on them to roll saves, attacks, display defenses, etc..."
+        },
+        "OtherCommonButtons": {
+          "Title": "Other common buttons",
+          "Content": "Also keep an eye for the following buttons, since they all share common <em>item</em> (race, class, weapon, feat, class ability...) functionality across the sheet. If you are not a GM you won't be able see these icons in <strong>this specific sheet</strong>.<br><ul class='pf1-tour'><li><i class='fas fa-folder-plus'></i> Search for an <em>item</em> in the <code>CompendiumBrowser</code>.</li><li><i class='fas fa-edit'></i> Edit an <em>item</em>.</li><li><i class='fas fa-trash'></i> Delete an <em>item</em>.</li><li><i class='fas fa-copy'></i> Clone the <em>item</em>.</li><li><i class='fas fa-plus'></i> Add an <em>item</em> from scratch.</li></ul>"
+        },
+        "SheetTabs": {
+          "Title": "Sheet tabs",
+          "Content": "The sheet contains many different tabs that store different parts of data.<br>You can think of them as different sections of the sheet."
+        },
+        "DetailsInSheet": {
+          "Title": "Details section",
+          "Content": "The summary tab is made up of many different sections.<br><br>In this part you'll declare the details such as <em>Gender</em>, <em>Age</em>, etc... as well as the race.<br>We'll come back to this later."
+        },
+        "HdCrAndExperience": {
+          "Title": "Hit Dice, CR and Experience",
+          "Content": "This is only for <strong>NPC sheets</strong>. For <strong>PC sheets</strong> it will display instead a experience bar if enabled (as per default).<br><br>The hit dice and the experience this NPC gives it's calculated automatically. The hit dice is base on the classes section while the experience in based on the CR.<br><br>The GM can manually edit the CR."
+        },
+        "RestButton": {
+          "Title": "Rest",
+          "Content": "The rest button will automatically fill all the charges for the daily abilities and items.<br>It will also add the hit points for resting based on the hours rested."
+        },
+        "Race": {
+          "Title": "Race",
+          "Content": "Here's the display of the race.<br>When the actor doesn't have a race yet you'll be able to select one from the <code>CompendiumBrowser</code> by clicking on <i class='fas fa-folder-plus'></i> or create a custom one by clicking <i class='fas fa-plus'></i>.<br><br>Additionally you can edit the race and add the missing bits if needed (such as Human's +2 to any ability score) by clicking on <i class='fas fa-edit'></i> or delete it by clicking on <i class='fas fa-trash'></i>."
+        },
+        "HitPointsAndSpeed": {
+          "Title": "Hit Points and Speed",
+          "Content": "You can manually edit all the inputs in here but <strong>Maximum</strong> that it's calculated based on the Constitution modifier and the hit dice."
+        },
+        "QuickActionsInSummary": {
+          "Title": "Quick Actions and Rolls",
+          "Content": "You can roll from here everything with <i class='fas fa-dice'></i> icon by clicking it, as well as any of the quick actions."
+        },
+        "Classes": {
+          "Title": "Classes",
+          "Content": "In the same way as Race you can click on <i class='fas fa-folder-plus'></i> to add a class from the <code>CompendiumBrowser</code>, click on <i class='fas fa-edit'></i> to edit the class or delete it by clicking on <i class='fas fa-trash'></i>.<br><br>Whenever a class is added or an existing class is leveled up, a Wizard Level Up dialog will pop up to help you configure the changes.<br><br>Additionally you can clone an existing class by clicking on <i class='fas fa-copy'></i>."
+        },
+        "AttributesTab": {
+          "Title": "Attributes tab",
+          "Content": "Here's a display of the ability scores and traits.<br>We call traits to the combination of Senses, Size, Languages, Resistances, Immunities... We'll go over them quickly."
+        },
+        "AbilityScoresSection": {
+          "Title": "Ability Scores",
+          "Content": "The ability score <em>Total</em> is is editable, but it edits the base value. <em>Damage</em>, <em>Drain</em> and <em>Penalty</em> can be adjusted here as well."
+        },
+        "TraitsSection": {
+          "Title": "Traits",
+          "Content": "Size, Senses, Resistances Immunities... all the entries here are editable by clicking on <i class='fas fa-edit'></i>, directly typing in the input or selecting from a dropdown.<br><br>Senses work automatically with Foundry light system except for those that are not supported and marked as such (<code>*</code>)."
+        },
+        "ResistancesAndImmunitiesDialog": {
+          "Title": "Resistances and Immunities dialog",
+          "Content": "Whenever you are about to apply damage you can use <code>Shift+Click</code> to display your resistances and immunities and reduce damage from such."
+        },
+        "CombatTab": {
+          "Title": "Combat tab",
+          "Content": "Here you'll find all the shortcuts you might need for an encounter. As you can see the items are grouped by type.<br><br>You can edit the entries by clicking on <i class='fas fa-edit'></i>, delete them by clicking on <i class='fas fa-trash'></i> or clone them by clicking on <i class='fas fa-copy'></i>.<br>Aditionally you can add an item from scratch by clicking on <code><i class='fas fa-plus'></i>Add</code>."
+        },
+        "FilterOptions": {
+          "Title": "Filter options",
+          "Content": "Notice the filter options. These options are used to filter the entries. And they are available in other tabs as well.<br><br>Each tab will have filters for its own specific items types."
+        },
+        "InventoryTab": {
+          "Title": "Inventory tab",
+          "Content": "Here you'll be able to see all the items you have in your inventory.<br>Same as with the <em>Combat tab</em> the entries are grouped by type.<br><br>You can add items from the <code>CompendiumBrowser</code> by clicking on <i class='fas fa-folder-plus'></i>.<br>You also have the <i class='fas fa-plus'></i>, <i class='fas fa-edit'></i>, <i class='fas fa-trash'></i> and <i class='fas fa-copy'></i> options."
+        },
+        "ItemsDetails": {
+          "Title": "Item details and options",
+          "Content": "You can hover over each of the icons in the group header (<i class='icon-pf text-icon icon-inventory-slot'></i>, <i class='icon-pf text-icon icon-gears'></i>, <i class='icon-pf text-icon icon-weight'></i>, <i class='icon-pf text-icon icon-quill-ink'></i>, ...) to find more information about what they mean."
+        },
+        "FeaturesTab": {
+          "Title": "Feats & Class Abilities tab",
+          "Content": "Everything related to feats or abilities granted by class, race die or other effects can be found here.<br><br>As before, you'll find the filter on top as well as the <i class='fas fa-folder-plus'></i>, <i class='fas fa-plus'></i>, <i class='fas fa-edit'></i>, <i class='fas fa-trash'></i> and <i class='fas fa-copy'></i> options.<br><br>You can also hover the icons for information."
+        },
+        "Charges": {
+          "Title": "Charges",
+          "Content": "This is the amount of charges an item has (<strong>not the amount of uses left</strong>; for example 4 remaining <em>Lay on hands</em> don't mean 4 remaining <em>Channel positive energy</em>). Followed by the maximum amount.<br><br>You can manually edit the charges by typing in the input or clicking on <i class='fas fa-edit'></i>.<br><br>You can also edit charge cost by clicking on <i class='fas fa-edit'></i>."
+        },
+        "SkillsTab": {
+          "Title": "Skills tab",
+          "Content": "Here lays all the Pathfinder skills.<br>If you hover over any of the it will show a <i class='fas fa-book'></i> icon that will open the compendium entry for the skill.<br><br>Additionally you can add custom skills by clicking on <code><i class='fas fa-plus'></i> Add skill</code> at the bottom of the list."
+        },
+        "UnlockSkills": {
+          "Title": "Unlock skills for edit",
+          "Content": "You can unlock the skills for editing by clicking on <i class='fas fa-lock'></i>.<br>After that you'll see the <i class='fas fa-edit'></i> icon. You can also lock the skills again by clicking on <i class='fas fa-lock-open'></i>."
+        },
+        "AddSubskill": {
+          "Title": "Add subskill",
+          "Content": "You can add a subskill from an skill (such as <em>Alchemy</em> for <em>Craft</em>) by clicking on <i class='fas fa-plus'></i> for the skill."
+        },
+        "BuffsTab": {
+          "Title": "Buffs & Conditons tab",
+          "Content": "All the conditions and buffs can be found here.<br>Once a buff is added you'll see <i class='fas fa-edit'></i>, <i class='fas fa-trash'></i> and <i class='fas fa-copy'></i> options. You can also create one with the <i class='fas fa-folder-plus'></i> and <i class='fas fa-plus'></i> options.<br><br>Most of the Pathfinder 1e conditions are displayed above, if not you can search for them in the <code>CompendiumBrowser</code>."
+        },
+        "ConditionDuration": {
+          "Title": "Condition duration",
+          "Content": "As expected you can activate/deactivate the condition by clicking over the icon.<br><br>You can also set a duration for the condition by <em>right clicking</em> on them."
+        },
+        "SpellsTab": {
+          "Title": "Spells tab",
+          "Content": "If your class is a caster or you have configured Spell-like abilities they will be shown here.<br>As usual you can find the <i class='fas fa-folder-plus'></i>, <i class='fas fa-plus'></i>, <i class='fas fa-edit'></i>, <i class='fas fa-trash'></i> and <i class='fas fa-copy'></i> options."
+        },
+        "SpellbooksTab": {
+          "Title": "Spellbooks",
+          "Content": "Depending on where do your spells come from or how have you configured the spellbooks you'll see multiple tabs in here. You can switch between them in order to add/modify/delete spells."
+        },
+        "SpellbooksConfiguration": {
+          "Title": "Spellbooks configuration",
+          "Content": "You can configure the spellbooks here by clicking on the <i class='fas fa-cogs'></i> icon. Here you'll be able to tweak at need the many options of the spellbooks.<br><br>If your spellbook comes from caster from the <code>CompendiumBrowser</code> it's already configured except for some minor tweaks (such as extra spells for Sorcerer)."
+        },
+        "BiographyTab": {
+          "Title": "Biography tab",
+          "Content": "This is a free text field that you can use to write your character's biography, perks, etc.<br><br>The only thing to keep in mind is that the text here is <strong>visible to everyone with <code>Limited</code> permission</strong>."
+        },
+        "NotesTab": {
+          "Title": "Notes tab",
+          "Content": "Free text field that you can use to write notes about your character such as NPC tactics, backstory (to avoid spoilers), etc."
+        },
+        "MagicItemsTable": {
+          "Title": "Magic Items",
+          "Content": "In here the GM would also be able to see all the magic items of the character, as well as the DC for identifying, school and a shortcut to set them as identified."
+        },
+        "SettingsTab": {
+          "Title": "Settings",
+          "Content": "Here you'll be able to configure which abilities to use for specific calculations (for example <em>Charisma</em> instead of <em>Constitution</em> for Undead) as well as the spellbooks.<br><br>Additionally you can make use of the <code>Point Buy Calculator</code> at any time, not only on character creation."
+        }
+      }
+    },
+    "Help": {
+      "Label": "Documentation",
+      "GoForward": "Click to go forward",
+      "GoBack": "Click to go back",
+      "GoHome": "Click to go to home"
+    },
+    "EnrichedText": {
+      "Add": "Add {value}",
+      "Remove": "Remove {value}",
+      "Toggle": "Toggle {value}",
+      "Browse": "Browse {value}",
+      "AsSpeaker": "Act as Speaker",
+      "AsCard": "Generate Chat Card",
+      "Direct": "Apply Directly",
+      "Subject": "Subject: {name}",
+      "Error": "Error",
+      "Condition": {
+        "Duration": "Duration: {period} {unit}"
+      },
+      "Errors": {
+        "NoCategory": "Category not found",
+        "ItemNotFound": "Specified item not found.",
+        "UnsupportedItemType": "Unsupported item type \"{type}\"",
+        "NoItemInMessage": "No relevant item found in message.",
+        "BrowserNotFound": "Compendium Browser for \"{category}\" not found!",
+        "NoActors": "No valid actors found."
+      },
+      "Health": {
+        "Heal": "Heal {value} {NL}",
+        "Damage": "Damage {value} {NL}",
+        "NL": "NL"
+      }
+    },
+    "Chat": {
+      "FocusReference": "Scroll to Referenced Message",
+      "Visibility": {
+        "Public": "Public",
+        "Private": "Private",
+        "Self": "Self",
+        "Blind": "Blind"
+      }
+    },
+    "Calendar": {
+      "Label": "Golarian Calendar",
+      "Months": {
+        "1": {
+          "Name": "Abadius"
+        },
+        "2": {
+          "Name": "Calistril"
+        },
+        "3": {
+          "Name": "Pharast"
+        },
+        "4": {
+          "Name": "Gozran"
+        },
+        "5": {
+          "Name": "Desnus"
+        },
+        "6": {
+          "Name": "Sarenith"
+        },
+        "7": {
+          "Name": "Erastus"
+        },
+        "8": {
+          "Name": "Arodus"
+        },
+        "9": {
+          "Name": "Rova"
+        },
+        "10": {
+          "Name": "Lamashan"
+        },
+        "11": {
+          "Name": "Neth"
+        },
+        "12": {
+          "Name": "Kuthona"
+        }
+      },
+      "Days": {
+        "1": {
+          "Name": "Moonday"
+        },
+        "2": {
+          "Name": "Toilday"
+        },
+        "3": {
+          "Name": "Wealday"
+        },
+        "4": {
+          "Name": "Oathday"
+        },
+        "5": {
+          "Name": "Fireday"
+        },
+        "6": {
+          "Name": "Starday"
+        },
+        "7": {
+          "Name": "Sunday"
+        }
+      }
+    },
+    "SETTINGS": {
+      "NoManeuvers": "No Maneuvers",
+      "DisableLLV": {
+        "Label": "Disable LLV",
+        "Hint": "Prevent Low-light Vision from affecting this light source's radius."
+      },
+      "InitTiebreaker": {
+        "Label": "Initiative Tiebreaker",
+        "Hint": "Append total initiative divided by 100 to break ties in Initiative."
+      },
+      "HealthDisplay": {
+        "Label": "Health Floater Permission",
+        "Hint": "Minimum permission level needed to see health-related (hit points, ability damage, negative levels, etc.) floaters on tokens.",
+        "AnyPermission": "Any, Full Transparency"
+      },
+      "Vision": {
+        "Sharing": "Shared Vision",
+        "SharingHint": "How to handle Shared Vision between players.",
+        "SharingWithoutSelection": "Without selected token",
+        "SharingWithSelection": "Always",
+        "Guaranteed": "Base Vision Permission",
+        "GuaranteedHint": "Minimum permission required to always see from a token. Foundry default is Observer.",
+        "PCDefault": "Player character vision",
+        "PCDefaultHint": "Player Characters by default have token vision, regardless of default token setup.",
+        "SystemControl": "System Controlled Vision",
+        "SystemControlHint": "Use creature's vision configuration to determine vision, supporting PF specific concepts such as low-light vision. If disabled, vision is determined in Foundry's token settings alone.",
+        "RequiresSelection": "Special vision requires selection",
+        "RequiresSelectionHint": "When checked, players who have no token selected will NOT benefit from any of their tokens' low-light vision or darkvision."
+      },
+      "VariantRules": {
+        "BackgroundSkills": "Use Background Skills",
+        "BackgroundSkillsHint": "Use the Background Skills optional ruleset",
+        "FractionalBaseBonuses": "Use Fractional Base Bonuses",
+        "FractionalBaseBonusesHint": "Use the Fractional Base Bonuses optional ruleset"
+      },
+      "Token": {
+        "PCDisposition": "Player character disposition",
+        "PCDispositionHint": "Override to default token disposition for player characters.",
+        "NPCDisposition": "Non-player character disposition",
+        "NPCDispositionHint": "Override to default token disposition for non-player characters"
+      },
+      "Canvas": {
+        "MeasureStyle": "Use Pathfinder measure style",
+        "MeasureStyleHint": "Whether to use Pathfinder's measurement style instead of FoundryVTT's default style"
+      },
+      "HideTokenConditionsN": "Hide Token Buffs",
+      "HideTokenConditionsH": "Whether buffs should hide their icons from token status effects",
+      "CoreEffectsN": "Default Token Conditions",
+      "CoreEffectsH": "Displays only PF1 conditions on tokens (unchecked) or core icons as well (checked)",
+      "UnchainedActionEconomyN": "Unchained Action Economy",
+      "UnchainedActionEconomyH": "Whether to use the Unchained Action Economy optional ruleset.",
+      "Cybertech": "Cybertech",
+      "CybertechHint": "Enable cybertech features even without cybertech installed, such as displaying implantation capacity.",
+      "CriticalConfirm": "Critical Confirmation Rolls",
+      "CriticalConfirmHint": "If disabled, critical confirmation rolls are replaced with Defense DC display, for Armor as DR optional rule.",
+      "SkipActionDialogsN": "Skip Action Prompts",
+      "SkipActionDialogsH": "Skips action prompts (such as those from attacks and saving throws) unless you Shift-click them",
+      "MeasureOnQuickUse": "Measure Template on quick use",
+      "MeasureOnQuickUseHint": "Enables the placement of measure templates when skipping the action prompt.",
+      "DualHealDefault": "Dual Heal by default",
+      "DualHealDefaultHint": "Heal both hit points and nonlethal damage when healing hit points, as per the rule that magic and abilties heal both when normal hit points are healed (and as such resting is not affected).",
+      "Sheet": {
+        "InvertFilters": "Invert inventory filter behaviour",
+        "InvertFiltersHint": "Inverts shift-click behaviour on type filters in (item) sections."
+      },
+      "Houserules": {
+        "CoinDivisor": "Coin Weight Divisor",
+        "CoinDivisorHint": "How many coins weigh 1 lbs. Set to zero (0) to disable coin weight. Default is 50.",
+        "SpellPointCost": "Spell point default cost",
+        "SpellPointCostHint": "Default cost spell point using spells use if not configured per spell.",
+        "AltReach": "Alternative Reach Rule",
+        "AltReachHint": "Hides the outer corners from 10-ft reach measurements",
+        "NPCProficiencies": "NPC proficiencies",
+        "NPCProficienciesHint": "NPC actors also use proficiencies. With this disabled (default), they are considered proficient with everything they have as per RAW."
+      },
+      "Chat": {
+        "ObscureInlineRolls": "Obfuscate Rolls",
+        "ObscureInlineRollsHint": "Hide roll bonuses and details from those without at least observer permission.",
+        "ObscureSaveDCs": "Obscure DCs",
+        "ObscureSaveDCsHint": "Hide DC values from chat cards from players.",
+        "AutoCollapse": "Collapse Item Cards in Chat",
+        "AutoCollapseHint": "Automatically collapse Item Card descriptions in the Chat Log",
+        "HideButtons": "Hide Chat Card Buttons",
+        "HideButtonsHint": "Whether to hide chat card buttons, such as those found on attack rolls.",
+        "NoTargets": "Disable Attack Targets",
+        "NoTargetsHint": "Disables targeted actors from showing up on attack cards",
+        "ClearTargets": "Clear targets after attack",
+        "ClearTargetsHint": "Whether to untarget everything after an attack roll."
+      },
+      "DragRulerWalk": "walk",
+      "DragRulerDash": "dash",
+      "DragRulerRun": "run",
+      "DragRulerUseElevationName": "Use elevation to determine movement type",
+      "DragRulerUseElevationHint": "Use a token's elevation to determine whether it is flying or burrowing",
+      "Units": {
+        "System": "System of units",
+        "SystemHint": "System of units to be used in the world",
+        "Imperial": "Imperial (feet, lbs)",
+        "ImperialDistance": "Imperial (feet)",
+        "ImperialWeight": "Imperial (lbs)",
+        "Metric": "Metric (meters, kg)",
+        "MetricDistance": "Metric (meters)",
+        "MetricWeight": "Metric (kg)",
+        "Distance": "System of units for distances",
+        "DistanceHint": "Override system of units to be used with distances.",
+        "Weight": "System of units for weights",
+        "WeightHint": "Override system of units to be used with weights."
+      },
+      "OverlandVariantN": "Overland speed variant",
+      "OverlandVariantL": "Variant of how overland speed is calculated with metric distances.",
+      "OverlandMetricRounded": "Rounded (German & French)",
+      "OverlandMetricExact": "Exact (Spanish)"
+    },
+    "PACKS": {
+      "classes": "Classes",
+      "companion-features": "Companion Features",
+      "mythic-paths": "Mythic Paths",
+      "buffs": "Common Buffs",
+      "spells": "Spells",
+      "feats": "Feats",
+      "items": "Items",
+      "armors-and-shields": "Armor & Shields",
+      "weapons-and-ammo": "Weapons & Ammo",
+      "technology": "Technology",
+      "monster-abilities": "Monster Abilities",
+      "monsters": "Basic Monsters",
+      "racial-hd": "Racial HD",
+      "races": "Races",
+      "class-abilities": "Class Abilities",
+      "monster-templates": "Monster Templates",
+      "template-abilities": "Template Abilities",
+      "macros": "Sample Macros",
+      "roll-tables": "Roll Tables",
+      "ultimate-equipment": "Ultimate Equipment",
+      "rules": "Pathfinder 1e Rules"
+    }
+  },
+  "TOKEN": {
+    "VisionLowLight": "Low-light Vision",
+    "VisionLowLightMultiplier": "Low-light Multiplier"
+  },
+  "TYPES": {
+    "Actor": {
+      "character": "Player Character (PC)",
+      "npc": "Nonplayer Character (NPC)",
+      "haunt": "Haunt",
+      "trap": "Trap",
+      "vehicle": "Vehicle",
+      "basic": "Basic (for modules)"
+    },
+    "Item": {
+      "weapon": "Weapon",
+      "equipment": "Equipment",
+      "consumable": "Consumable",
+      "loot": "Loot",
+      "class": "Class",
+      "spell": "Spell",
+      "feat": "Feature",
+      "buff": "Buff",
+      "attack": "Attack",
+      "race": "Race",
+      "implant": "Implant",
+      "container": "Container"
+    }
+  },
+  "EFFECT": {
+    "StatusSwim": "Swimming"
+  },
+  "PF1.Help/Actors": "# Actors\n\n## Normal Actor Types\n\n- [Character](Help/Actors/Character)\n- [NPC](Help/Actors/NPC)\n\n## Miscellaneous Actor Types\n\n- [Haunt](Help/Actors/Haunt)\n- [Trap](Help/Actors/Trap)\n- [Vehicle](Help/Actors/Vehicle)\n",
+  "PF1.Help/Enrichers": "# Text Enrichers\n\nCommon input format: `@Command[key;options]{label}`\n\nOptions format: `key=value` pairs separated with semicolon (`;`)\n\nLabel adds a prefix to the button, for example `@Ability[str]{Flex}` would show up as `Flex: Strength`. Some enrichers deviate from this however.\n\nRoll data is drawn from the card speaker by default.\n\n## Common Options\n\n| Option    | Example                                   | Explanation                                                                                                                                                                                                   |\n| :-------- | :---------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |\n| `speaker` | `@Use[Cure Light Wounds;speaker]`         | Limit activation to card speaker. Alias of `as=speaker`.                                                                                                                                                      |\n| `as`      | `@Use[Cure Light Wounds;as=speaker]`      | Limit or guide activation.<br>`speaker`, `sheet`, and `auto` are the only valid options for now. Speaker is for chat cards, sheet is for sheets, and auto tries to automatically choose either of the former. |\n| `bonus`   | `@Skill[per;bonus=15]`                    | Bonus to the roll.                                                                                                                                                                                            |\n| `roll`    | `@Skill[dip;roll=10]`                     | Roll replacement, e.g. for Take 10 or fortune effect.                                                                                                                                                         |\n| `vars`    | `@Heal[@attributes.hd.total;vars=target]` | Roll data is pulled from something else than speaker.<br>`target` is only valid option for now.                                                                                                               |\n\n## Button Enrichers\n\nThese enrichers provide buttons you may press.\n\n### `@Ability`\n\n| Input           | Explanation                         |\n| :-------------- | :---------------------------------- |\n| `@Ability[str]` | Roll strength with any valid actor. |\n\n### `@Action`\n\nTrigger action from same item as the card is for.\n\nMeant as a shorthand for `@Use` when you don't need to refer to different items.\n\n#### Examples\n\n| Input                     | Explanation                           |\n| :------------------------ | :------------------------------------ |\n| `@Action[Grab]{Followup}` | Trigger Grab action on the same item. |\n\n### `@Apply`\n\nApply defined buff (by UUID or name) to actors. The buff is set to active state automatically.\n\nIf the item is found, displays the item name as default label.\n\nIf name is defined instead of UUID, item is searched from items directory and compendiums.\n\n#### Examples\n\n| Input                                                              | Explanation                                                         |\n| :----------------------------------------------------------------- | :------------------------------------------------------------------ |\n| `@Apply[Special Mood]`                                             | Add custom buff with level untouched.                               |\n| `@Apply[Compendium.pf1.commonbuffs.Item.IlO0CNpAIKZtNYu8;level=5]` | Add Mage Armor with buff level set to 5.                            |\n| `@Apply[Rage;level=3]`                                             | Add Rage with buff level set to 3.                                  |\n| `@Apply[Shield;level=@cl]`                                         | Add Shield at caster level as defined by action at time of casting. |\n\n#### Special Options\n\n- `level` for setting buff level.\n\n### `@Toggle`\n\nToggle existing buff by defined name on selected actors.\n\n#### Examples\n\n| Input                                     | Explanation                                                                       |\n| :---------------------------------------- | :-------------------------------------------------------------------------------- |\n| `@Toggle[Mage Armor;level=@cl;type=buff]` | Toggle existing Mage Armor buff and set its level to `@cl` if it's being enabled. |\n| `@Toggle[Rage;type=buff;disable]`         | Toggle off Rage buff.                                                             |\n| `@Toggle[Bless;enable;level=5;type=buff]` | Toggle on Bless buff with level of 5.                                             |\n\n#### Special Options\n\n- `level` for setting buff level.\n- `type` item type to toggle\n\n### `@Browse`\n\nOpen specified compendium browser.\n\nCurrently only supports raw IDs as they appear in `pf1.applications.compendiums`.\n\nUnlike other enrichers, custom label replaces the text entirely.\n\n#### Special Options\n\n- `tag` for a tag to filter by. Can be repeated for multiple tags.\n\n#### Examples\n\n| Input                                             | Explanation                                                                                                                    |\n| :------------------------------------------------ | :----------------------------------------------------------------------------------------------------------------------------- |\n| `@Browse[feats]`                                  | Open feats browser.                                                                                                            |\n| `@Browse[items;tag=Mundane]`                      | Open items browser for mundane items.                                                                                          |\n| `@Browse[feats;tag=Sneak Attack;tag=Ninja Trick]` | Open feats browser for sneak attack talents that are also ninja tricks. Plus is used here since comma is present in some tags. |\n\n### `@Condition`\n\nAdd, remove, toggle or link conditions.\n\nIf toggle or removal is not defined, the condition is added.\n\nLabel replaces the entire text unlike with most enrichers.\n\n#### Examples\n\n| Input                               | Explanation                            |\n| :---------------------------------- | :------------------------------------- |\n| `@Condition[nauseated]`             | Add nauseated condition.               |\n| `@Condition[grappled;toggle]`       | Toggle grappled condition.             |\n| `@Condition[dazed;disable]{Undaze}` | Remove dazed condition.                |\n| `@Condition[fatigued;info]`         | Link sleep condition compendium entry. |\n| `@Condition[fatigued;duration=10m]` | Add fatigued condition for 10 minutes. |\n| `@Condition[blind;duration=3d6]`    | Add blinded condition for 3d6 rounds.  |\n\n#### Special Options\n\n- `toggle` - Toggle condition.\n- `remove` - Remove condition.\n- `disable` - Alias for remove.\n- `info` - Link compendium entry as defined in\n- `duration` - Simple duration (e.g. 15s) or duration formula. Formula result is always treated as rounds.\n\n### `@Damage`\n\nDamages selected tokens by defined amount.\n\nThe key is damage formula instead.\n\n#### Examples\n\n| Input                  | Explanation                                    |\n| :--------------------- | :--------------------------------------------- |\n| `@Damage[2d4]`         | Rolls 2d4 and damages the actors by that much. |\n| `@Damage[6;nonlethal]` | Causes 6 nonlethal damage.                     |\n| `@Damage[1d6;wounds]`  | Causes 2d4 wounds.                             |\n\n#### Special Options\n\n- `nonlethal` - Adds nonlethal damage.\n- `wounds` - Causes damage to wounds. Without this damage is applied to vigor.\n- `card` - Generates a card for use instead of applying directly. No targeting is required.\n\n### `@Draw`\n\nDraws an entry from the given Roll Table.\n\n#### Examples\n\n| Input                                                          | Explanation                                                                 |\n| :------------------------------------------------------------- | :-------------------------------------------------------------------------- |\n| `@Draw[Your Roll Table]`                                       | Draws from the tabled named \"Your Roll Table\" within your world.            |\n| `@Draw[Compendium.pf1.roll-tables.RollTable.NQ3T7rnXC5agjl6D]` | Draws from the system's Confusion table.                                    |\n| `@Draw[Your Roll Table]{Displayed Name}`                       | Draws from \"Your Roll Table\" but the button shows \"Displayed Name\" instead. |\n\n### `@Heal`\n\nHeals selected tokens by defined amount.\n\nThe key is heal formula instead.\n\n**Note!** Label replaces formula display instead of becoming a prefix.\n\n#### Examples\n\n| Input                | Explanation                                  |\n| :------------------- | :------------------------------------------- |\n| `@Heal[3d6]`         | Rolls 3d6 and heals the actors by that much. |\n| `@Heal[6;nonlethal]` | Heals 6 nonlethal damage.                    |\n| `@Heal[17;dual]`     | Heals 17 health _and_ nonlethal damage.      |\n| `@Heal[3;wounds]`    | Heals 3 wounds.                              |\n\n#### Special Options\n\n- `nonlethal` - Heals nonlethal damage.\n- `dual` - Heals both normal health and nonlethal.\n- `wounds` - Heal wounds. Without this heals vigor.\n- `card` - Generates a card for use instead of applying directly. No targeting is required.\n\n### `@Save`\n\n#### Examples\n\n| Input                       | Explanation                                                               |\n| :-------------------------- | :------------------------------------------------------------------------ |\n| `@Save[ref]{Dodge!}`        | Roll reflex saving throw with any valid actor.                            |\n| `@Save[fort;dc=15]{Resist}` | Roll fortitude save, displaying DC 15 as additional detail in the button. |\n\n#### Special Options\n\n- `dc` - Defines DC for the roll. Only used for display.\n\n### `@Skill`\n\nSkill roll button.\n\n#### Examples\n\n| Input                                   | Explanation                                                                                  |\n| :-------------------------------------- | :------------------------------------------------------------------------------------------- |\n| `@Skill[acr]`                           | Roll acrobatics with any valid actor.                                                        |\n| `@Skill[acr;bonus=15;roll=10]{Take 10}` | Roll acrobatics with Take 10, +15 bonus, and with extra Take 10 label, with any valid actor. |\n| `@Skill[acr;speaker]`                   | Roll acrobatics as card's speaker.                                                           |\n| `@Skill[per;info]`                      | Link to perception's compendium entry.                                                       |\n| `@Skill[hea;dc=15]`                     | Roll Heal, display DC 15 threshold.                                                          |\n\n#### Special Options\n\n- `info` - Button instead links to the compendium entry as configured in `pf1.config.skillCompendiumEntries`\n- `dc` - Defines DC for the roll. Only used for display.\n\n#### Limitations\n\n- Subskills and custom skills are not supported.\n\n### `@Use`\n\nItem use button.\n\n#### Examples\n\n| Input                                              | Explanation                                                                                             |\n| :------------------------------------------------- | :------------------------------------------------------------------------------------------------------ |\n| `@Use[Hero Points]`                                | Use hero points item's default action as any valid actor.                                               |\n| `@Use[Fireball#cast;type=spell;speaker]{Cast}`     | Use Fireball spell's cast action as card's speaker.                                                     |\n| `@Use[Fireball#tag:cast;type=spell;speaker]{Cast}` | Use Fireball spell's cast action with card's speaker, using action tag instead of name to match action. |\n\n#### Special Options\n\n| Option     | Description                                     |\n| :--------- | :---------------------------------------------- |\n| `type`     | Item type                                       |\n| `#tag:TAG` | Action tag, needs to be part of the item name.  |\n| `#id:ID`   | Action ID, needs to be part of the item name.   |\n| `#name`    | Action name, needs to be part of the item name. |\n\n## Information Enrichers\n\nThese enhance provided information.\n\n### `@Distance`\n\nInformational distance conversion and display.\n\nFormat: `@Distance[value;options]`\n\nValue parameter can either be a formula, or a number with `ft` or `m` unit.\n\nDefault unit is imperial feet unless otherwise specified.\n\n#### Examples\n\nExamples outputs are with imperial unit system enabled.\n\n| Input                     | Explanation                                                                  | Output        |\n| :------------------------ | :--------------------------------------------------------------------------- | :------------ |\n| `@Distance[100]`          | Convert and display 100 feet.                                                | `100 ft`      |\n| `@Distance[9 * 4;metric]` | Convert and display result of 9×4, treating the math result to be in meters. | `120 ft`      |\n| `@Distance[30 ft;dual]`   | Convert and display 30 feet in both imperial and metric.                     | `30 ft (9 m)` |\n\n#### Special Options\n\n| Options    | Description                                  |\n| :--------- | :------------------------------------------- |\n| `dual`     | Displays both imperial and metric distances. |\n| `metric`   | Treats provided distance as meters.          |\n| `imperial` | Treats provided distance as feet.            |\n\n### `@Source`\n\nSource book display.\n\nFormat: `@Source[ID;options]`\n\n#### Examples\n\n| Input                        | Explanation                            | Output                     |\n| :--------------------------- | :------------------------------------- | :------------------------- |\n| `@Source[CRB]`               | Book abbreviation.                     | `Core Rulebook`            |\n| `@Source[CRB;pages=198-201]` | Book abbreviation with page reference. | `Core Rulebook p. 198-201` |\n| `@Source[PZO1135;pages=182]` | Book ID with page reference.           | `Horror Adventures p. 182` |\n\n#### Special Options\n\n| Options | Description                                                        |\n| :------ | :----------------------------------------------------------------- |\n| `pages` | Display pages alongside source name. Has no special functionality. |\n\n### `@Weight`\n\nInformational weight conversion and display.\n\nFormat: `@Weight[value;options]`\n\nValue parameter can either be a formula, or a number with or without `lbs` or `kg` unit attached.\n\nDefault unit is imperial pounds unless otherwise specified.\n\n#### Examples\n\nExamples outputs are with imperial unit system enabled.\n\n| Input                   | Explanation                                                                     | Output           |\n| :---------------------- | :------------------------------------------------------------------------------ | :--------------- |\n| `@Weight[100]`          | Convert and display 100 lbs.                                                    | `100 lbs`        |\n| `@Weight[3 * 5;metric]` | Convert and display result of 3×5, treating the math result to be in kilograms. | `30 lbs`         |\n| `@Weight[30 lbs;dual]`  | Convert and display 30 lbs in both imperial and metric.                         | `30 lbs (15 kg)` |\n\n#### Special Options\n\n| Options    | Description                                |\n| :--------- | :----------------------------------------- |\n| `dual`     | Displays both imperial and metric weights. |\n| `metric`   | Treats provided weight as kilograms.       |\n| `imperial` | Treats provided weight as pounds.          |\n",
+  "PF1.Help/Formulas": "# Formulas\n\nThis section is currently a Work In Progress (WIP).\n\nFormulas are an important aspect in the Pathfinder 1e system. They can be as simple as a single numerical value, or as complex as single lines of code. They play a great role in item changes.\n\n## Variables\n\n### General Actor Variables\n\nFor a quick reference, you can find a lot of this information in tooltips on actor sheets as well.\n\n#### `@abilities.X.total`\n\nThe total value of an ability score. Replace `X` with one of the following: `str`, `dex`, `con`, `int`, `wis`, `cha`.\n\n#### `@abilities.X.mod`\n\nThe modifier of an ability score. Replace `X` with one of the following: `str`, `dex`, `con`, `int`, `wis`, `cha`.\n\n#### `@attributes.hd.total`\n\nThe total hit die the actor has. This is a combination of class levels and racial hit die, and it excludes mythic tiers.\n\n#### `@attributes.savingThrows.X.total`\n\nThe total bonus of the appropriate saving throw for that actor. X can be either 'fort' (Fortitude), 'ref' (Reflex) or 'will' (Will)\n\n#### `@attributes.savingThrows.X.base`\n\nThe total bonus of the appropriate saving throw for that actor. X can be either 'fort' (Fortitude), 'ref' (Reflex) or 'will' (Will)\n\n#### `@attributes.encumbrance.level`\n\nThe current encumbrance level of the actor.\n\n- `0`: Light Load\n- `1`: Medium Load\n- `2`: Heavy Load\n\n#### `@armor.type`\n\nThe type of armor the actor is wearing.\n\n- `0`: No Armor\n- `1`: Light Armor\n- `2`: Medium Armor\n- `3`: Heavy Armor\n\n#### `@shield.type`\n\nThe type of shield the actor is holding.\n\n- `0`: No Shield\n- `1`: Miscellaneous Shield (such as a buckler)\n- `2`: Light Shield\n- `3`: Heavy Shield\n- `4`: Tower Shield\n\n#### `@combat.round`\n\nThe current round of combat, or `0` if not in combat.\n\n### Attack & Damage Variables\n\nThese are only available in attack and damage rolls. Some may be more limited in availability than others.\n\nThese are not documented or easily discoverable otherwise than this documentation.\n\n#### `@critMult`\n\nThe critical multiplier of the attack, or `1` if the attack is not a critical threat.\nOnly appropriate for use in damage rolls and attack and effect notes.\n\n#### `@sizeBonus`\n\nEffective attack roll bonus or penalty from size.\n\n#### `@powerAttackBonus`\n\nBase bonus damage given by power attack to individual damage. E.g. two-handed attack at level 2 would always give 3 for this.\n\nDefaults to `0` if power attack is disabled.\n\n#### `@powerAttackPenalty`\n\nAttack penalty power attacking causes. Goes hand in hand with `@powerAttackBonus`.\n\nFor example furious focus is easy to implement with conditional attack roll modifier of `-@powerAttackPenalty` on the first attack.\n\nDefaults to `0` if power attack is disabled.\n\n#### `@attackCount`\n\nZero-indexed counter for which attack is being processed. So if this was placed as damage bonus, it would give you `0`, `1`, `2`, `3`, etc. bonus to damage as the attacks progress.\n\nCan also be used for ternaries to add modifications to specific attack, e.g. `eq(@attackCount, 0) * 4` would add 4 to first attack but no other.\n\n#### `@base` & `@previous`\n\nDamage rolls have additional `@base` and `@previous` data. Both have identical format, but `@base` records the first damage roll instance, while `@previous` is always the one preceding the one currently being processed.\n\nFollowing is with the example damage formula of `sizeRoll(2, 6, @size)` for medium creature.\n\n| Variable          | Description                                                        | Example Output |\n| :---------------- | :----------------------------------------------------------------- | :------------- |\n| `@base.total`     | Total damage rolled with base dice.                                | `9`            |\n| `@base.dice`      | Dice used for the base roll. Only first die expression is counted. | `2d6`          |\n| `@base.die.size`  | Die size in `@base.dice`.                                          | `6`            |\n| `@base.die.count` | Dice count in `@base.dice`.                                        | `2`            |\n\nSo, for example, if you have `sizeRoll(2, 6, @size)` as the first one, second one having plain `1d8` as baseline.\n\nEntering your third damage instance:\n\n- `@base.dice` would give `2d6` since it is referring to the base damage declared in the first instance.\n- `@previous.dice` would give `1d8` since that was the one preceding the current one.\n\n## Functions\n\nFoundry (and by extension this system) allow using JavaScript's [`Math` functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) in its formulas.\nInformation about writing formulas using such expressions and referencing actor and item data can be found in [Foundry's Knowledge Base](https://foundryvtt.com/article/dice-advanced/).\nIn addition to the functions mentioned there, the Pathfinder 1e system provides some specific helpers available for use in some formulas.\n\nNote on booleans: zero (`0`) is false, any non-zero is true.\n\n### `sizeRoll`\n\nAlters a damage roll to that of another size category.\n\n**Format**: `sizeRoll(count, size, target, origin)`\n\n| Parameter | Optional | Default | Notes                                         |\n| :-------- | :------- | :------ | :-------------------------------------------- |\n| count     | No       |         |                                               |\n| size      | No       |         |                                               |\n| target    | Yes      | `4`     | Target size to transform to.                  |\n| origin    | Yes      | `4`     | Origin size that `count` and `size` describe. |\n\n**Example:** `sizeRoll(1, 8, @size)` – Rolls 1d8 for medium actors, and alters the damage formula according to the calling actor's current size.\n\n**Example:** `sizeRoll(1, 4, 6, 2)` – Translates a damage roll of `1d4` from a tiny actor (size `2`) to a huge actor (size `6`); Output: `3d6`\n\n| `@size` | Actual     |\n| :------ | :--------- |\n| `0`     | Fine       |\n| `1`     | Diminutive |\n| `2`     | Tiny       |\n| `3`     | Small      |\n| `4`     | Small      |\n| `5`     | Large      |\n| `6`     | Huge       |\n| `7`     | Gargantuan |\n| `8`     | Colossal   |\n\nNormally you should not need the fourth parameter. It's mainly useful if you have damage for non-medium character and use that info to fill the first two parameters, then the fourth parameter should include the size for which the first two were for.\n\nThe function does not really do anything useful with less than 3 parameters provided.\n\nYou can also use `@item.size` to use the item's own size instead of `@size` which refers to actor's size.\n\nExample of common uses:\n\n- `sizeReach(1, 8, @size)`\n- `sizeReach(2, 6, @size, 5)`\n\n### `sizeReach`\n\nGenerates a number equal to the reach of a creature of a certain size and stature.\n\n**Format**: `sizeReach(size, reach, tall)`\n\n| Parameter | Optional | Default |\n| :-------- | :------- | :------ |\n| size      | No       |         |\n| reach     | Yes      | false   |\n| tall      | Yes      | true    |\n\n**Example:** `sizeReach(@size + 1, false, @traits.stature)` – Returns the normal melee reach as if the actor was 1 size category higher.\n\n**Example:** `sizeReach(6, true, \"long\")` – Returns the reach a huge, long actor would have with a reach weapon.\n\n### `ifelse`\n\nIf-Else logic, serving similar purpose to what ternary syntax did before, providing a method to have conditional numbers in the formulas.\n\n**Format**: `ifelse(condition, if-true, if-false)`\n\n| Parameters | Optional | Notes               |\n| :--------- | :------- | :------------------ |\n| condition  | No       |                     |\n| if-true    | No       |                     |\n| if-false   | No       | The else condition. |\n\n**Example:** `ifelse(gt(@class.level, 7), 4, 2)` – Returns 4 if class level is greater than 7, and 2 otherwise.\n\n### `if`\n\nAlias for `ifelse()` with `if(a, b)` being equivalent of `ifelse(a, b, 0)`, the else statement set to zero.\n\n**Format**: `if(condition, if-true)`\n\n| Parameter | Optional |\n| :-------- | :------- |\n| condition | No       |\n| if-true   | No       |\n\n**Example:** `if(gt(@attributes.hd.total, 5), 2)` – gives 2 if HD is greater than 5, and zero otherwise.\n\n### `lookup`\n\nLookup function when none of the above provide meaningful solution.\n\n**Format**: `lookup(search, fallback, results...)`\n\n| Parameter | Optional | Notes                                          |\n| :-------- | :------- | :--------------------------------------------- |\n| search    | No       |                                                |\n| fallback  | No       | Returned if search fails or goes out of range. |\n| results   | No       | Any number of results                          |\n\nFallback value is provided if the search formula goes off bounds. If other form of bounding is desired, include it in your formula.\n\nThe results are 1-indexed, so 1 will give the first result. You can also treat the parameters as 0 indexed by using the fallback as result for 0, tho this does not strictly follow the underlying logic.\n\n**Example**: `lookup(1d6, 0, 0, 2, 2, 4, 4, 5)` -\nResulting in 1d6 roll turning into [1=0, 1=2, 3=2, 4=4, 5=4, 6=5] mapping.\n\n**Example**: `lookup(min(@class.level, 7), 0, 1, 1, 1, 2, 2, 2, 4)` -\nResulting in 1 to 4 range from level being 1 to 7 or higher with 7 or higher giving 1 more than previous increments.\n\n### Basic Logic Functions\n\nThese return one (`1`) if the comparison is true, and zero (`0`) if not, allowing simple math logic.\n\n| Function              | Name  | Math | Example                                                         | Example Explanation                                                   |\n| :-------------------- | :---- | :--- | :-------------------------------------------------------------- | :-------------------------------------------------------------------- |\n| Equal                 | `eq`  | `=`  | `eq(@attributes.hd.total, 5)`                                   | HD equal to 5                                                         |\n| Not equal             | `ne`  | `!=` | `ne(@attributes.hd.total, 5)`                                   | HD not equal to 5                                                     |\n| Less than             | `lt`  | `<`  | `lt(@class.level, 5)`                                           | Class level is less than 5                                            |\n| Less or equal than    | `lte` | `<=` | `lte(@class.level, 9)`                                          | Class level is 9 or less                                              |\n| Greater than          | `gt`  | `>`  | `gt(@class.level, 5)`                                           | Class level is greater than 5                                         |\n| Greater or equal than | `gte` | `>=` | `gte(@class.level, 9)`                                          | Class level is 9 or greater                                           |\n| And                   | `and` |      | `and(lt(@attributes.encumbrance.level, 2), lt(@armor.type, 3))` | Encumbrance level is lesser than 2 and worn armor type is less than 3 |\n| Or                    | `or`  |      | `or(@armor.type, @shield.type)`                                 | Is equipped with any armor or shield (types is non-zero)              |\n| Exclusive or          | `xor` |      | `xor(@armor.type, @shield.type)`                                | Is wearing armor or shield, but not both.                             |\n| Not                   | `not` |      | `not(@armor.type)`                                              | Is not wearing armor (armor type is non-zero)                         |\n\n🛈 Note! And, Or, and Exclusive Or functions allow any number of parameters.\n",
+  "PF1.Help/Home": "# Pathfinder 1 Knowledge Base\n\n## Rules\n\n- [Core Rules](Help/Rules)\n- [Optional](Help/Rules/Optional)\n- [Homebrew](Help/Rules/Homebrew)\n\n## Actors\n\n- [Character](Help/Actors/Character)\n- [NPC](Help/Actors/NPC)\n- [Haunt](Help/Actors/Haunt)\n- [Trap](Help/Actors/Trap)\n- [Vehicle](Help/Actors/Vehicle)\n\n## Items\n\n### Item Types\n\n- [Attacks](Help/Items/Attacks)\n- [Classes](Help/Items/Classes)\n- [Consumables](Help/Items/Consumables)\n- [Containers](Help/Items/Containers)\n- [Equipment](Help/Items/Equipment)\n- [Loot](/Help/Items/Loot)\n- [Weapons](Help/Items/Weapons)\n\n### Concepts\n\n- [Description](Help/Items/Description)\n- [Changes](Help/Items/Changes)\n- [Actions](Help/Items/Actions)\n- [Flags](Help/Items/Flags)\n- [Script Calls](Help/Items/Script-Calls)\n\n## Special\n\n- [Formulas](Help/Formulas)\n- [Enrichers](Help/Enrichers)\n",
+  "PF1.Help/Items": "# Items\n\n## Physical Item Types\n\n- [Weapons](Help/Items/Weapons)\n- [Equipment](Help/Items/Equipment)\n- [Consumables](Help/Items/Consumables)\n- [Containers](Help/Items/Containers)\n- [Loot](Help/Items/Loot)\n\n## Other\n\n- [Attacks](Help/Items/Attacks)\n",
+  "PF1.Help/Rules": "# Rules\n\n## Core Rule Deficiencies\n\nThe following rules are not directly supported. They require manual work to make them work as expected.\n\n- Archetypes\n  - Workaround: Manually alter the existing base class.\n- Hands of Effort\n  - Workaround: Manually unequip excess.\n- Hasty Donning\n- Materials for weapons and armor\n  - Workaround: Manually alter the affected item.\n- Metamagic\n  - Workaround: Create altered copies of spells.\n- Opposition Schools\n  - Workaround: Manually edit slot cost of each spell.\n- Qualities for magic weapons and armor\n  - Workaround: Manually alter the affected item.\n- Racial weapon proficiency\n  - e.g. dwarves treating anything with dwarven in its name as martial\n  - Workaround: Mark forced proficiency on relevant items on actors.\n- School / Domain slot spells\n  - Slots themselves are supported, but not automatically knowing what spells should be in them.\n  - Workaround: Manually mark affected spells as school/domain.\n- Shapeshifting / Polymorphing / Wild Shaping\n- Siege Weapons\n- Spontaneous casting (cleric, druid, etc. variant where prepared slots are substituted)\n- Inappropriately Sized Weapons\n\n### Quality of Life deficiencies\n\n- Ability Damage/Drain for actions\n  - Workaround: Manually adjust the values.\n- Persistent effects from spells and abilities\n  - Workaround: Manually add relevant buff item to target.\n- Summons\n  - No tracking of available summons or their duration\n- Tracking of how many rogue talents, rage powers, mystery powers, or the like you're supposed to have.\n",
+  "PF1.Help/Rules/Homebrew": "# Homebrew, House Rules, and Third Party\n\nThis describes settings in the system to support non-standard rules.\n\n## Spell Points\n\nEnabled per character spellbook.\n\nDefault spellpoint cost can be configured in system settings. Individual spells can have their own cost.\n\n## NPC proficiencies\n\nToggled in system settings.\n\nBy default NPCs/monsters are fully proficient with everything with the system implementation. That is, their lacking proficiency is ignored. The NPC proficiency toggle allows them to follow same rules as PCs.\n\n## Coin Weight\n\nCoin Weight Divisor in system settings. Zero disables coin weight.\n",
+  "PF1.Help/Rules/Optional": "# Optional Rules\n\n## Fully Supported\n\n### Background Skills\n\nEnabled in system settings.\n\n[Rules reference](https://www.aonprd.com/Rules.aspx?ID=1732)\n\n### Fractional Base Bonuses\n\nEnabled in system settings.\n\n[Rules reference](https://www.aonprd.com/Rules.aspx?ID=1726)\n\n### Wound Thresholds\n\nEnabled in health settings in system settings.\n\nNot compatible with Wounds & Vigor due to Paizo not providing guidelines how the two would interact.\n\n[Rules reference](https://www.aonprd.com/Rules.aspx?ID=1903)\n\n### Revised Action Economy\n\nEnabled in system settings.\n\n[Rules reference](https://www.aonprd.com/Rules.aspx?ID=1884)\n\n## Partially Supported\n\n### Armor as Damage Reduction (DR)\n\nCritical confirmation rolls can be disabled in system settings for partial support.\n\n[Rules reference](https://www.aonprd.com/Rules.aspx?ID=1123)\n\n### Wounds & Vigor\n\nEnabled in health settings in system settings.\n\n[Rules reference](https://www.aonprd.com/Rules.aspx?ID=1155)\n\n## Unsupported\n\n### Automatic Bonus Progression\n\nRequires manual work.\n\n[Rules reference](https://www.aonprd.com/Rules.aspx?ID=1950)\n\n### Consolidated Skills\n\nNo easy workarounds.\n\n[Rules reference](https://www.aonprd.com/Rules.aspx?ID=1745)\n\n### Corruption\n\nWorkaround: Track with misc features.\n\n[Rules reference](https://www.aonprd.com/Rules.aspx?ID=2278)\n\n### Hero Points\n\nWorkaround: Track with misc feature.\n\n[Rules reference](https://www.aonprd.com/Rules.aspx?ID=445)\n\n### Horror Rules\n\n[Rules reference](https://www.aonprd.com/Rules.aspx?ID=2258)\n\n#### Levels of Fear\n\nWorkaround: Create and use fear buffs.\n\n[Rules reference](https://www.aonprd.com/Rules.aspx?ID=2268)\n\n#### Sanity\n\nWorkaround: Track with misc feature.\n\n[Rules reference](https://www.aonprd.com/Rules.aspx?ID=2274)\n\n### Piecemeal Armor\n\nNo easy workarounds.\n\n[Rules reference](https://www.aonprd.com/Rules.aspx?ID=1141)\n\n### Words of Power\n\nNo easy workarounds.\n\n[Rules reference](https://www.aonprd.com/Rules.aspx?ID=1016)\n",
+  "PF1.Help/Items/Actions": "# Actions\n\nEach action defines singular way to use an item. Although most usable items have only one action associated with them, some may have more, such as a dagger might have stab and throw actions.\n\n## Usage Tab\n\nUsage tab defines how the action is used, action cost, charge cost, its targeting, range, duration, area, ammunition usage and similar information. Anything that is needed to know _before_ you can resolve the effects of the action.\n\n## Action Tab\n\nHere you define the actual effects of the action.\n\n### Attack\n\nAttack Roll Bonus is used to define any modifiers specific to this attack, such as two-weapon fighting penalty\n\n### Extra Attacks\n\nYou configure iteratives and other additional attacks that are performed on full-attack here.\n\nYou can add static extra attacks here with specific modifiers that are performed on full attack always, for example if you have multiple identical claw attacks, defining them in the static top part is an easy way to deal with them.\n\nThe formula-based extra attacks below is for more advanced cases that previously were used for BAB iterative handling or other similar complex or automatically scaling cases.\n\n#### Options\n\n| Option                      | Details                                                                                                                         |\n| :-------------------------- | :------------------------------------------------------------------------------------------------------------------------------ |\n| Iteratives                  | BAB based extra attacks are automatically accounted for.                                                                        |\n| Flurry of Blows (Chained)   | Original _monk_ two-weapon fighting style _Flurry of Blows_. Requires _BAB override_ to be configured. See below for details.   |\n| Flurry of Blows (Unchained) | Unchained Monk's Flurry of Blows. See below for details.                                                                        |\n| Iteratives + Custom         | Same as the first option but with additional customization options.                                                             |\n| Custom                      | Fully customizable, no automatically handled iteratives. Most useful for spells and natural attacks with specific requirements. |\n\n##### Flurry\n\nChained flurry will display the two-weapon fighting penalty (`-2`) in attack dialog always as it is integrated. This will not be applied when performing singular attacks.\n\nChained flurry is easiest to handle for single class monk, ensuring the ability is linked to monk class at bottom of details tab, and adding BAB override in the attack simply as `@class.level`.\n\nBoth chained and unchained flurry require you set class association for the attack item to the monk class at bottom of the item's details tab.\n\n#### Formula-based extra attacks\n\n**Variables**\n\n| Variable       | Use                                                                                             |\n| :------------- | :---------------------------------------------------------------------------------------------- |\n| `@bab`         | Short-hand for `@attributes.bab.total` and may later has more meaning.                          |\n| `@attackCount` | How manyth attack in the defined set it is, starting with `0`. Only accounting for the formula. |\n\nHistorically the following were the BAB iterative formulas.\n\n| Use          | Formula                                       |\n| :----------- | :-------------------------------------------- |\n| Attack count | `min(3, ceil(@attributes.bab.total / 5) - 1)` |\n| Attack bonus | `@formulaicAttack * -5`                       |\n\n### Damage / Healing\n\n**Base Formula** is for the base damage or healing of the action. This is multiplied on critical if the action has an attack roll.\n\n**On-critical Bonus Formula** is damage added _only_ to critical damage rolls. This is multiplied by critical multiplier with one subtracted, so _Flaming Burst_ for example should be entered simply as `1d10` for all weapons.\n\n**Non-multiplying Bonus Formula** is damage added to base damage that is unaffected by critical hits, usually this is elemental and precision bonus damge, such as from magical weapon qualities.\n\n_Historical note: Formerly these were labeled in order: Damage Formula, Critical Damage Bonus Formula, and Non-critical Damage Bonus Formula_\n\nSee [Formulas](Help/Formulas) article for more help in how to write damage formulas.\n\n#### Special Variables\n\n| Variable       | Description                                        |\n| :------------- | :------------------------------------------------- |\n| `@critCount`   | Which critical multiplier pass is being processed. |\n| `@attackCount` | Which attack is being processed.                   |\n\n#### Advanced Formulas\n\nCritical-only bonus damage that is not multiplied:\n`if(eq(@critCount, 1), 1d6)`\n\nDamage only on the second attack:\n`if(eq(@attackCount, 1), 2d8)`\n\n## Miscellaneous\n\nThis allows you to define a template for the action or sound effect.\n\nThe template size formula should resolve to number of feet.\n\nNon-square rectangles are not possible, nor placing multiple templates.\n\n## Conditional Modifiers\n\nConditional Modifiers are useful for any modifiers that affect specific attack or are only occasionally true.\n\nThe available options here depend on the action and item they're used on.\n\nThese are presented as choices in the attack dialog. Any default on conditionals are enabled even when skipping the dialog.\n",
+  "PF1.Help/Items/Attacks": "# Attacks\n\nAttacks are types of items that can be used to roll various types of attacks\nwithout requiring a physical weapon. Examples include natural attacks and\nattacks generated from weapons.\n\nAside from not being a physical item and lacking physical properties, they\nfunction very similar to [Weapons](Help/Items/Weapons).\n",
+  "PF1.Help/Items/Changes": "# Changes\n\n![Changes examples](/Help/img/item-changes.webp)\n\n## Flags\n\n- **Unaffected by Heavy Encumbrance**: While an item with this change is active, its actor will not be slowed down by being in a medium load.\n- **Unaffected by Heavy Encumbrance**: While an item with this change is active, its actor will not be slowed down by being in a heavy load.\n- **Full Speed in Medium Armor**: While an item with this change is active, its actor will not be slowed down by wearing medium armor.\n- **Full Speed in Heavy Armor**: While an item with this change is active, its actor will not be slowed down by wearing heavy armor.\n- **Lose Dex to AC**: While an item with this change is active, a character loses his Dexterity bonuses to Armor Class.\n\n## Changes\n\nThis is a list of changes which affect the actor owning the item directly.\n\nFrom left to right:\n\n- **Operator**: The operators are '±' (relative) or '=' (absolute). Relative values add to an attribute, while absolute values set the attribute to the result of the formula.\n- **Target**: The attribute or attribute set to alter with this change.\n- **Type**: The bonus type of this change.\n- **Priority**: The priority of this change. Changes with lower priorities will be processed later. In rare cases, a lower priority is necessary.\n- **Formula**: The formula by which to affect this particular change. The way this alters an actor's attribute depends on the operator (see next). See this page for more details.\n\n## Context Notes\n\nThis a list of contextual notes, which are shown in appropriate situations.\n\nFrom left to right:\n\n- **Text**: The text to show in appropriate situations. Every newline adds a new note block to the same target without needing to multiply notes for same target. The contents are enriched so inline rolls and enrichers work in these.\n- **Target**: The context in which the text is to be provided in.\n",
+  "PF1.Help/Items/Classes": "# Classes\n\nClass item covers base PC classes, NPC classes, racial HD, prestige classes, and mythic paths.\n\n## Homebrew\n\nCustom BAB and saving throw formulas accept only few special variables:\n\n| Variable   | Description                                 |\n| :--------- | :------------------------------------------ |\n| `@level`   | Same as `@item.level` but only used here.   |\n| `@hitDice` | Same as `@item.hitDice` but only used here. |\n\nNo other variables are available for these as they're resolved before anything else is calculated.\n",
+  "PF1.Help/Items/Consumables": "# Consumables\n\nConsumables represent physical items with limited uses, such as potions, scrolls, poisons, drugs or wands.\n",
+  "PF1.Help/Items/Containers": "# Containers\n\nContainers are items which can contain other items.\n\nThese have few special fields not available to other items.\n\n- Currency\n- Weight reducton % - for minor 3.5 compatibility.\n- Weight reduction, flat\n",
+  "PF1.Help/Items/Description": "# Descriptions\n\n![Description example](/Help/img/item-description.webp)\n\n1. **Name**: The name of the item, if identified.\n1. **Unidentified Name**: The name of the item, if unidentified. Shows the identified name for players if left empty.\n1. **Description**: The description to show, if identified.\n1. **Unidentified Description**: The description to show to players, if unidentified.\n1. **Price**: The price of the item, in gold pieces, if identified.\n1. **Unidentified Price**: The price of the item, in gold pieces, if unidentified.\n",
+  "PF1.Help/Items/Equipment": "# Equipment\n\nEquipment represents all non-weapon equippable items, including armor, shields, rings and wondrous items.\n\n![Equipment details](/Help/img/equipment-details.webp)\n\n**Weapon/Armor Proficiencies, Languages**: Proficiencies and languages granted by this item, which will appear in the actor's attributes and affect e.g. Armor Check Penalty due to not being proficient in armor.\n\n**Category**: The armor's category (whether it's armor, a shield, or something else)\n\n**Type**: Armor or Shield size type, or other item type (clothing, wondrous item, etc.)\n\n**Slot**: What slot this item is for (only shows up for items other than armor or shields)\n\n**Size**: The item's size, similar to a character's size\n\n**Equipment Status**: Status flags of this particular item:\n\n- **Equipped**: Whether the item is currently equipped, and transfers its changes to its actor (if any)\n- **Identified (GM only)**: Whether the item is currently identified, and shows its identified information to players\n- **Masterwork**: Whether the item is masterwork, as per the Core rules\n- **Broken**: Whether the item is broken, as per the Core rules\n",
+  "PF1.Help/Items/Flags": "# Flags\n\nFlags can be used for arbitrary purposes.\n\n## Roll formulas\n\nThe flag contents are used as-is in formulas. Foundry does not do recursive variable resolution. That is, any `@var` references will remain unresolved.\n\nFlag that is not defined or if the item is disabled will cause the variables to resolve as zero (`0`) as per Foundry's normal non-existing variable resolution.\n\n### Dictionary Flags\n\nYou can access Dictionary Flags within rolls by using `@dFlags.(itemTag).(flagName)`<sup>1</sup>, or with `@item.dFlags.(flagName)` within the current item.\n\nFor example: `@dFlags.rageHeart.feels`\n\n<sup>1</sup> Item tag here refers to the identifier defined at bottom of item's details tab.\n\n### Boolean Flags\n\nBoolean flags are available via `@bFlags.(flagName)` or item specific flags with `@item.bFlags.(flagName)` within the item.\n\nThese resolve as `0` for false and `1` for true.\n\nFor example: `@bFlags.bombIsSet`\n\n## Raw Data\n\nIn macros and modules `item.system.flags.dictionary` and `item.system.flags.boolean` respectively contain the flag data, though unlike in roll data, these are always present if defined regardless if the item is active.\n",
+  "PF1.Help/Items/Loot": "# Loot\n\nLoot items are all types of physical items that don't have a specific item type, such as trade goods and ammunition.\n",
+  "PF1.Help/Items/Script-Calls": "# Script Calls\n\nMost items have certain categories of script calls, which are a combination of macros and inline scripts which run at specific events for that item.\n\n## Using Macros as Script Calls\n\nIn order to use Macros as Script Calls, simply drag a macro over from somewhere to the category of Script Calls you wish to run them on.\n\n## Variables\n\nThe variable availability differs somewhat from what's available in regular Macros.\nBelow you will find a list of variables which are present within Script Calls.\n| Name | Description |\n| ------ | ------ |\n| `item` | The item from which this event was called. |\n| `actor` | The actor which owns the calling item. Can be `null` if the item is not on an actor. |\n| `action` | The action that triggered this. Can be `null` if there's no action. |\n| `token` | Token associated with unlinked actor, or the first active token for linked actor on currently viewed scene. |\n| `shared` | An object which starts out as empty, but is shared between all script calls of a single event, after which it is returned to the calling function, which may or may not do something with it. |\n\n## Categories\n\n### Use\n\nCalled when an item has been used.\n\nIf an item has at least one script call under this category, it's usable no matter what.\n\n| Special Variables | Description                                                                         |\n| :---------------- | :---------------------------------------------------------------------------------- |\n| `action`          | refers to the specific action being used.                                           |\n| `shared.reject`   | can be set to `true` to cancel the item's use similar to cancelling the use dialog. |\n| `shared.hideChat` | can be set to `true` to eliminate the action's normal chat message creation.        |\n\nYou can use `action.tag` to differentiate between actions.\n\n### Post-Use\n\nCalled after an item has been used and all its processing has completed, including the chat message creation.\n\n| Special Variables | Description                                     |\n| :---------------- | :---------------------------------------------- |\n| `shared.message`  | Reference to the chat message created (if any). |\n\n### Equip\n\nCalled when an item has been equipped or unequipped.\n\n| Special Variables | Description                                                                                     |\n| :---------------- | :---------------------------------------------------------------------------------------------- |\n| `equipped`        | which is either `true` if it has just been equipped, or `false` if it has just been unequipped. |\n\n### Implant\n\nCalled when an item has been implanted or unimplanted. Works nearly identically to _Equip_ script.\n\n| Special Variables | Description                                                                                                   |\n| :---------------- | :------------------------------------------------------------------------------------------------------------ |\n| `implanted`       | works identically to _Equip_ script's `equipped` variable. A boolean representing the new implantation state. |\n\n### Toggle\n\nCalled when a buff or feature has been toggled on/off.\n\n| Special Variables | Description                                                                   |\n| :---------------- | :---------------------------------------------------------------------------- |\n| `state`           | Representation of the buff's state, `false` for disabled, `true` for enabled. |\n\n### Change Quantity\n\nCalled when the quantity of a physical item has been changed.\n\n| Special Variables   | Description                 |\n| :------------------ | :-------------------------- |\n| `quantity.previous` | Quantity before the update. |\n| `quantity.new`      | Quantity after the update.  |\n\n### Change Level\n\nCalled when the level of a item has been changed.\n\n| Special Variables | Description              |\n| :---------------- | :----------------------- |\n| `level.previous`  | Level before the update. |\n| `level.new`       | Level after the update.  |\n\n## Shared Data Object\n\nYou can control item use workflow by altering the `shared` object.\n\nThe shared object contains additional data based on use that you can investigate via normal JS debugging methods, such as `console.log(shared)` or `debugger`. It is too expansive and variable to describe here.\n",
+  "PF1.Help/Items/Weapons": "# Weapons\n\nWeapons are meant to represent physical weapons that a character can hold.\n\n![Weapon Details](/Help/img/weapon-details.webp)\n\n## Actions\n\nIndividual actions embedded in this action can be found here.\nWhen attacking, it will be the action's configuration that determines how the attack is rolled.\n\n**Limited Uses**: If the item only has a limited number of uses, or charges per day, this can be configured here.\n\n## Attack & Effect Notes\n\nThese notes will appear in chat cards, visible only to users with owner permissions for this item.\n\n## Aura\n\nThe weapon's magic aura, including its school and caster level, can be entered here.\n\n## Details\n\n**Create Attack**: Clicking this button will create an Attack item in this actor's combat tab.\n\n**Category**: The weapon's category (simple, martial, exotic or misc)\n\n**Type**: The weapon's type (light, one-handed, two-handed or ranged)\n\n**Weapon Size**: The weapon's size, similar to a character's size\n\n**Equipment Status**:\n\n- **Equipped**: Whether the item is currently equipped, and transfers its changes to its actor (if any)\n- **Identified (GM only)**: Whether the item is currently identified, and shows its identified information to players\n- **Masterwork** Whether the item is masterwork, as per the Core rules\n- **Broken** Whether the item is broken, as per the Core rules\n\n**Weapon Properties**: The weapon's properties, as per the Core rules (does nothing mechanically)\n\n**Enhancement Bonus**: The item's enhancement bonus, as per the Core rules\n",
+  "PF1.Help/Actors/Character": "# Characters\n\nThis part of the help file is WIP.\n\nActor type for player characters, providing all basic functionality needed.\n\nCharacter actors by default have vision and actor linking enabled regardless of default token settings, and their disposition is set to friendly. Some of these default can be configured in system settings.\n\n## Tabs\n\n### Summary\n\nGeneral overview of the character with health, level, classes, defenses, quick actions and classes.\n\n### Attributes\n\nAbility scores, senses, size, languages and other proficiencies, and great number of other small details.\n\nPoint buy calculator can be found here for actors that have not been configured yet.\n\n### Combat\n\nListing of dedicated attack items and details needed for combat. Caveat: Health is not here.\n\n### Inventory\n\nAll your physical items and equipment.\n\n### Features\n\nClass features, feats, and other special abilities and features.\n\n### Skills\n\nAll of your skills. Self explanatory.\n\n### Spells\n\nOnly visible if you've enabled a spellbook either via settings tab or added a class with spellcasting.\n\nIncludes all your spellbooks. Currently limited to 4. The default labels of them don't mean anything for their functionality.\n\nEach spellbook can be farther configured via the gear icon found at top-right corner of each spellbook.\n\n### Buffs\n\nListing of all available conditions and their state, along with buff and debuff items.\n\nClicking a condition toggles it, right-clicking a condition prompts for duration and enables the condition if it wasn't so already.\n\n### Biography\n\nFor recording details about your character.\n\nBiography is visible to players with limited permissions to the character. Secret blocks can be used to limit what such people see here.\n\n### Notes\n\nFor all your recording needs. Has no explicit purpose than what you give it.\n\nAdditionally GM can see list of magical items the character has here with their identified state along with identified and unidentified names and other relevant info.\n\n### Settings\n\nFor configuring the actor in unusual ways, such as ability score used for hit points, initiative and AC.\n\nPoint buy calculator can be found here after the actor is configured.\n",
+  "PF1.Help/Actors/Haunt": "# Haunts\n\nSpecialized actor and sheet for haunts, to handle their unique features.\n\nThis part of the help file is WIP.\n",
+  "PF1.Help/Actors/NPC": "# NPCs\n\nThe only notable difference between [Characters](Help/Actors/Character) and\nNPCs, is that NPCs _give_ experience points, and Characters _earn_ experience\npoints, which is represented in the top-right of their sheets.\n\nNPCs also by default do not care about proficiencies (as per RAW), though there is a system setting to enable this functionality for them.\n\n## Sheets\n\n### NPC Sheet\n\nSame as PC sheet except displays CR and experience reward on the summary tab.\n\n### NPC Lite Sheet\n\nBare bones sheet with special handling for minimalist actor handling.\n\n### Loot\n\nSimple container sheet to ease looting monsters after they're defeated. Can also function for party storage or similar uses.\n",
+  "PF1.Help/Actors/Trap": "# Traps\n\nSpecialized actor and sheet for traps, to handle their unique features.\n\nProvides dedicated fields on their detection, disabling, and how the trap operates.\n",
+  "PF1.Help/Actors/Vehicle": "# Vehicles\n\nSpecialized actor and sheet for vehicles, to handle their unique features.\n\nThis part of the help file is WIP.\n",
+  "PF1.Help/img/equipment-details.webp": "help/en/img/equipment-details.webp",
+  "PF1.Help/img/item-changes.webp": "help/en/img/item-changes.webp",
+  "PF1.Help/img/item-description.webp": "help/en/img/item-description.webp",
+  "PF1.Help/img/weapon-details.webp": "help/en/img/weapon-details.webp"
+}

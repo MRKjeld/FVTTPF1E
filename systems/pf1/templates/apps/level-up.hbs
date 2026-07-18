@@ -1,0 +1,49 @@
+<form autocomplete="off" data-tooltip-class="pf1">
+  <div class="summary">
+    <h2>{{localize "PF1.LevelUp.Summary.Label"}}</h2>
+    {{> "systems/pf1/templates/apps/level-up/summary.hbs"}}
+  </div>
+
+  <section>
+    <div class="segment health">
+      <h2>{{localize "PF1.LevelUp.Health.Label"}}</h2>
+      {{> "systems/pf1/templates/apps/level-up/health.hbs"}}
+    </div>
+
+    <div class="segment fcb">
+      <h2>{{localize "PF1.LevelUp.FC.Label"}}</h2>
+      {{> "systems/pf1/templates/apps/level-up/fcb.hbs"}}
+    </div>
+
+    <div class="segment ability-score">
+      <h2>{{localize "PF1.LevelUp.AbilityScore.Label"}}</h2>
+      {{#if abilityScore.new}}
+      {{> "systems/pf1/templates/apps/level-up/ability-score.hbs"}}
+      {{else if abilityScore.next}}
+        {{#if isMythic}}
+          <p class="info">{{localize "PF1.LevelUp.AbilityScore.NextTier" tier=abilityScore.next}}</p>
+        {{else}}
+          <p class="info">{{localize "PF1.LevelUp.AbilityScore.NextLevel" level=abilityScore.next}}</p>
+        {{/if}}
+      {{/if}}
+    </div>
+  </section>
+
+  <footer class="buttons">
+    <button type="button" data-action="skip" data-tooltip="PF1.LevelUp.SkipHint">
+      <i class="fa-solid fa-pen" inert></i>
+      {{localize "PF1.Manual"}}
+    </button>
+
+    <div class="padding"> </div>
+
+    <select name="visibility">
+      {{selectOptions visibilityOptions selected=visibility localize=true blank="PF1.Default"}}
+    </select>
+
+    <button type="submit" {{#unless ready}}disabled{{/unless}} data-action="commit">
+      <i class="fa-solid fa-floppy-disk" inert></i>
+      {{localize "PF1.Finish"}}
+    </button>
+  </footer>
+</form>

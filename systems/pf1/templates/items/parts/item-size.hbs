@@ -1,0 +1,13 @@
+<div class="form-group" data-tooltip="@item.size : {{system.size}}">
+  <label>{{localize "PF1.Size"}}</label>
+  <div class="form-fields">
+    <select name="system.size">
+      {{selectOptions config.actorSizes selected=system.size}}
+    </select>
+    {{#if allowAutoResizing}}
+    <label class="resizing checkbox">
+      <input type="checkbox" name="system.resizing" {{checked system.resizing}}> {{localize "PF1.Resizing"}}
+    </label>
+    {{/if}}
+  </div>
+</div>

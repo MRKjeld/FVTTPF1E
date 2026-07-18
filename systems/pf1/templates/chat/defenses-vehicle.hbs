@@ -1,0 +1,83 @@
+<div class="pf1 chat-card defense-card" data-actor-id="{{actor.id}}"{{#if tokenUuid}} data-token-uuid="{{tokenUuid}}"{{/if}}>
+  <header class="card-header type-color defenses flexrow">
+    <h3 class="actor-name">{{localize "PF1.Defenses"}}</h3>
+  </header>
+
+  {{#with ac}}
+  <div class="defense">
+    <div class="info-box-joined ac">
+      <div class="info-box">
+        <h5>{{localize "PF1.ACNormal"}}</h5>
+        <span class="value">{{normal}}</span>
+      </div>
+      <div class="info-box">
+        <h5>{{localize "PF1.ACTouch"}}</h5>
+        <span class="value">{{touch}}</span>
+      </div>
+      {{#if (eq @root.type "sea")}}
+        <div class="info-box">
+          <h5>{{localize "PF1.Vehicles.ACStoppedMotion"}}</h5>
+          <span class="value">{{stopped}}</span>
+        </div>
+      {{/if}}
+    </div>
+  </div>
+
+  {{> "systems/pf1/templates/chat/parts/item-notes.hbs" header=(localize "PF1.ACNotes") notes=notes}}
+  {{/with}}
+
+  {{#if cmd}}
+  <div class="defense">
+    <div class="info-box-joined cmd">
+      <div class="info-box cmd normal">
+        <h5>{{localize "PF1.CMDAbbr"}}</h5>
+        <span class="value">{{cmd.normal}}</span>
+      </div>
+      {{#if (eq type "sea")}}
+        <div class="info-box cmd flatfooted">
+          <h5>{{localize "PF1.Vehicles.CMDStoppedMotion"}}</h5>
+          <span class="value">{{cmd.stopped}}</span>
+        </div>
+      {{/if}}
+    </div>
+  </div>
+
+  {{> "systems/pf1/templates/chat/parts/item-notes.hbs" header=(localize "PF1.CMDNotes") notes=cmd.notes}}
+  {{/if}}
+
+
+  {{#if misc.hardness}}
+  <div class="flexcol property-group">
+    <label>{{localize "PF1.Hardness"}}</label>
+    <div class="flexrow tag-list">
+      <span class="tag">{{{misc.hardness}}}</span>
+    </div>
+  </div>
+  {{/if}}
+
+  {{#if misc.conditions}}
+  <div class="flexcol property-group">
+    <label>{{localize "PF1.ConImm"}}</label>
+    <div class="flexrow tag-list">
+      {{#each misc.conditions}}
+      <span class="tag">{{{this}}}</span>
+      {{/each}}
+    </div>
+  </div>
+  {{/if}}
+
+  <div class="saving-throws flexrow">
+    <button data-action="defense-save" data-save="fort">
+      <label>{{localize "PF1.SavingThrowFort"}}</label>
+      <span>{{numberFormat saves.save sign=true}}</span>
+    </button>
+    <button data-action="defense-save" data-save="ref">
+      <label>{{localize "PF1.SavingThrowRef"}}</label>
+      <span>{{numberFormat saves.save sign=true}}</span>
+    </button>
+  </div>
+
+  {{#with saves}}
+  {{> "systems/pf1/templates/chat/parts/item-notes.hbs" header=(localize "PF1.SaveNotes") notes=notes}}
+  {{/with}}
+</div>

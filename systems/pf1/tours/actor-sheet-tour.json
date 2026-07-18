@@ -1,0 +1,349 @@
+{
+  "title": "PF1.Tours.ActorSheet.Title",
+  "description": "PF1.Tours.ActorSheet.Description",
+  "canBeResumed": false,
+  "display": true,
+  "actorId": "AQQnEgudQaoQsLF6",
+  "compendiumId": "pf1.basic-monsters",
+  "steps": [
+    {
+      "id": "go-to-basic-monsters",
+      "selector": "li.directory-item.folder li[data-pack='pf1.basic-monsters']",
+      "title": "PF1.Tours.ActorSheet.GoToBasicMonsters.Title",
+      "content": "PF1.Tours.ActorSheet.GoToBasicMonsters.Content"
+    },
+    {
+      "id": "highlight-street-magician-in-compendium",
+      "selector": "li.directory-item.actor:is([data-document-id='AQQnEgudQaoQsLF6'],[data-entry-id='AQQnEgudQaoQsLF6'])",
+      "title": "PF1.Tours.ActorSheet.HighlightStreetMagicianInCompendium.Title",
+      "content": "PF1.Tours.ActorSheet.HighlightStreetMagicianInCompendium.Content"
+    },
+    {
+      "id": "highlight-sheet",
+      "selector": ".sheet.pf1",
+      "title": "PF1.Tours.ActorSheet.HighlightSheet.Title",
+      "content": "PF1.Tours.ActorSheet.HighlightSheet.Content",
+      "tabs": {
+        "id": "summary",
+        "group": "primary"
+      }
+    },
+    {
+      "id": "tooltips-with-definitions",
+      "title": "PF1.Tours.ActorSheet.TooltipsWithDefinitions.Title",
+      "content": "PF1.Tours.ActorSheet.TooltipsWithDefinitions.Content"
+    },
+    {
+      "id": "roll-buttons",
+      "selector": ".sheet.pf1 .subdetails-body .quick-info .generic-defenses h3 i.fa-dice-d20",
+      "title": "PF1.Tours.ActorSheet.RollButtons.Title",
+      "content": "PF1.Tours.ActorSheet.RollButtons.Content",
+      "tabs": {
+        "id": "summary",
+        "group": "primary"
+      }
+    },
+    {
+      "id": "other-common-buttons",
+      "title": "PF1.Tours.ActorSheet.OtherCommonButtons.Title",
+      "content": "PF1.Tours.ActorSheet.OtherCommonButtons.Content"
+    },
+    {
+      "id": "sheet-tabs",
+      "selector": ".sheet.pf1 nav.sheet-navigation",
+      "title": "PF1.Tours.ActorSheet.SheetTabs.Title",
+      "content": "PF1.Tours.ActorSheet.SheetTabs.Content"
+    },
+    {
+      "id": "details-in-sheet",
+      "selector": ".sheet.pf1 .summary-header",
+      "title": "PF1.Tours.ActorSheet.DetailsInSheet.Title",
+      "content": "PF1.Tours.ActorSheet.DetailsInSheet.Content",
+      "tabs": {
+        "id": "summary",
+        "group": "primary"
+      }
+    },
+    {
+      "id": "hd-cr-and-experience",
+      "selector": ".sheet.pf1 .summary-header .hd-level",
+      "title": "PF1.Tours.ActorSheet.HdCrAndExperience.Title",
+      "content": "PF1.Tours.ActorSheet.HdCrAndExperience.Content",
+      "tabs": {
+        "id": "summary",
+        "group": "primary"
+      }
+    },
+    {
+      "id": "rest-button",
+      "selector": ".sheet.pf1 .tab.summary .summary-header .actor-quick-actions",
+      "title": "PF1.Tours.ActorSheet.RestButton.Title",
+      "content": "PF1.Tours.ActorSheet.RestButton.Content",
+      "tabs": {
+        "id": "summary",
+        "group": "primary"
+      }
+    },
+    {
+      "id": "race",
+      "selector": ".sheet.pf1 .summary-header .race",
+      "title": "PF1.Tours.ActorSheet.Race.Title",
+      "content": "PF1.Tours.ActorSheet.Race.Content",
+      "tabs": {
+        "id": "summary",
+        "group": "primary"
+      }
+    },
+    {
+      "id": "hit-points-and-speed",
+      "selector": ".sheet.pf1 .tab.summary .attributes",
+      "title": "PF1.Tours.ActorSheet.HitPointsAndSpeed.Title",
+      "content": "PF1.Tours.ActorSheet.HitPointsAndSpeed.Content",
+      "tabs": {
+        "id": "summary",
+        "group": "primary"
+      }
+    },
+    {
+      "id": "quick-actions-in-summary",
+      "selector": ".sheet.pf1 .subdetails-body .quick-info",
+      "title": "PF1.Tours.ActorSheet.QuickActionsInSummary.Title",
+      "content": "PF1.Tours.ActorSheet.QuickActionsInSummary.Content",
+      "tabs": {
+        "id": "summary",
+        "group": "primary"
+      }
+    },
+    {
+      "id": "classes",
+      "selector": ".sheet.pf1 .classes-body",
+      "title": "PF1.Tours.ActorSheet.Classes.Title",
+      "content": "PF1.Tours.ActorSheet.Classes.Content",
+      "tabs": {
+        "id": "summary",
+        "group": "primary"
+      }
+    },
+    {
+      "id": "attributes-tab",
+      "selector": ".sheet.pf1 .tab.attributes[data-tab='attributes']",
+      "title": "PF1.Tours.ActorSheet.AttributesTab.Title",
+      "content": "PF1.Tours.ActorSheet.AttributesTab.Content",
+      "tabs": {
+        "id": "attributes",
+        "group": "primary"
+      }
+    },
+    {
+      "id": "ability-scores-section",
+      "selector": ".sheet.pf1 .attributes .ability-scores",
+      "title": "PF1.Tours.ActorSheet.AbilityScoresSection.Title",
+      "content": "PF1.Tours.ActorSheet.AbilityScoresSection.Content",
+      "tabs": {
+        "id": "attributes",
+        "group": "primary"
+      }
+    },
+    {
+      "id": "traits-section",
+      "selector": ".sheet.pf1 .attributes .traits",
+      "title": "PF1.Tours.ActorSheet.TraitsSection.Title",
+      "content": "PF1.Tours.ActorSheet.TraitsSection.Content",
+      "tabs": {
+        "id": "attributes",
+        "group": "primary"
+      }
+    },
+    {
+      "id": "resistances-and-immunities-dialog",
+      "title": "PF1.Tours.ActorSheet.ResistancesAndImmunitiesDialog.Title",
+      "content": "PF1.Tours.ActorSheet.ResistancesAndImmunitiesDialog.Content"
+    },
+    {
+      "id": "combat-tab",
+      "selector": ".sheet.pf1 .tab.combat[data-tab='combat']",
+      "title": "PF1.Tours.ActorSheet.CombatTab.Title",
+      "content": "PF1.Tours.ActorSheet.CombatTab.Content",
+      "tabs": {
+        "id": "combat",
+        "group": "primary"
+      }
+    },
+    {
+      "id": "filter-options",
+      "selector": ".sheet.pf1 .tab.combat .inventory-filters",
+      "title": "PF1.Tours.ActorSheet.FilterOptions.Title",
+      "content": "PF1.Tours.ActorSheet.FilterOptions.Content",
+      "tabs": {
+        "id": "combat",
+        "group": "primary"
+      }
+    },
+    {
+      "id": "inventory-tab",
+      "selector": ".sheet.pf1 .tab.inventory[data-tab='inventory']",
+      "title": "PF1.Tours.ActorSheet.InventoryTab.Title",
+      "content": "PF1.Tours.ActorSheet.InventoryTab.Content",
+      "tabs": {
+        "id": "inventory",
+        "group": "primary"
+      }
+    },
+    {
+      "id": "items-details",
+      "selector": ".sheet.pf1 .tab.inventory ol[data-list='equipment'] li.item-list-header",
+      "title": "PF1.Tours.ActorSheet.ItemsDetails.Title",
+      "content": "PF1.Tours.ActorSheet.ItemsDetails.Content",
+      "tabs": {
+        "id": "inventory",
+        "group": "primary"
+      }
+    },
+    {
+      "id": "features-tab",
+      "selector": ".sheet.pf1 .tab.features[data-tab='feats']",
+      "title": "PF1.Tours.ActorSheet.FeaturesTab.Title",
+      "content": "PF1.Tours.ActorSheet.FeaturesTab.Content",
+      "tabs": {
+        "id": "feats",
+        "group": "primary"
+      }
+    },
+    {
+      "id": "charges",
+      "selector": ".sheet.pf1 .tab.features ol[data-list='classFeat'] li.item .item-detail.item-uses:has(.max)",
+      "title": "PF1.Tours.ActorSheet.Charges.Title",
+      "content": "PF1.Tours.ActorSheet.Charges.Content",
+      "tabs": {
+        "id": "feats",
+        "group": "primary"
+      }
+    },
+    {
+      "id": "skills-tab",
+      "selector": ".sheet.pf1 .tab.skills[data-tab='skills']",
+      "title": "PF1.Tours.ActorSheet.SkillsTab.Title",
+      "content": "PF1.Tours.ActorSheet.SkillsTab.Content",
+      "tabs": {
+        "id": "skills",
+        "group": "primary"
+      }
+    },
+    {
+      "id": "unlock-skills",
+      "selector": ".sheet.pf1 .tab.skills a.skill-lock-button",
+      "title": "PF1.Tours.ActorSheet.UnlockSkills.Title",
+      "content": "PF1.Tours.ActorSheet.UnlockSkills.Content",
+      "tabs": {
+        "id": "skills",
+        "group": "primary"
+      }
+    },
+    {
+      "id": "add-subskill",
+      "selector": ".sheet.pf1 .tab.skills li.skill[data-skill='crf'] a.skill-create",
+      "title": "PF1.Tours.ActorSheet.AddSubskill.Title",
+      "content": "PF1.Tours.ActorSheet.AddSubskill.Content",
+      "tabs": [
+        {
+          "id": "background",
+          "group": "skills",
+          "setting": "allowBackgroundSkills"
+        },
+        {
+          "id": "skills",
+          "group": "primary"
+        }
+      ]
+    },
+    {
+      "id": "buffs-tab",
+      "selector": ".sheet.pf1 .tab.buffs[data-tab='buffs']",
+      "title": "PF1.Tours.ActorSheet.BuffsTab.Title",
+      "content": "PF1.Tours.ActorSheet.BuffsTab.Content",
+      "tabs": {
+        "id": "buffs",
+        "group": "primary"
+      }
+    },
+    {
+      "id": "condition-duration",
+      "selector": ".sheet.pf1 .tab.buffs a[data-condition-id='bleed']",
+      "title": "PF1.Tours.ActorSheet.ConditionDuration.Title",
+      "content": "PF1.Tours.ActorSheet.ConditionDuration.Content",
+      "tabs": {
+        "id": "buffs",
+        "group": "primary"
+      }
+    },
+    {
+      "id": "spells-tab",
+      "selector": ".sheet.pf1 .tab.spellbook[data-tab='spellbook']",
+      "title": "PF1.Tours.ActorSheet.SpellsTab.Title",
+      "content": "PF1.Tours.ActorSheet.SpellsTab.Content",
+      "tabs": {
+        "id": "spellbook",
+        "group": "primary"
+      }
+    },
+    {
+      "id": "spellbooks-tab",
+      "selector": ".sheet.pf1 .tab.spellbook nav.tabs.spellbooks",
+      "title": "PF1.Tours.ActorSheet.SpellbooksTab.Title",
+      "content": "PF1.Tours.ActorSheet.SpellbooksTab.Content",
+      "tabs": {
+        "id": "spellbook",
+        "group": "primary"
+      }
+    },
+    {
+      "id": "spellbooks-configuration",
+      "selector": ".sheet.pf1 .tab.spellbook a[data-for='spellbook-info_primary']",
+      "title": "PF1.Tours.ActorSheet.SpellbooksConfiguration.Title",
+      "content": "PF1.Tours.ActorSheet.SpellbooksConfiguration.Content",
+      "tabs": {
+        "id": "spellbook",
+        "group": "primary"
+      }
+    },
+    {
+      "id": "biography-tab",
+      "selector": ".sheet.pf1 .tab.biography[data-tab='biography']",
+      "title": "PF1.Tours.ActorSheet.BiographyTab.Title",
+      "content": "PF1.Tours.ActorSheet.BiographyTab.Content",
+      "tabs": {
+        "id": "biography",
+        "group": "primary"
+      }
+    },
+    {
+      "id": "notes-tab",
+      "selector": ".sheet.pf1 .tab.actor-notes[data-tab='notes']",
+      "title": "PF1.Tours.ActorSheet.NotesTab.Title",
+      "content": "PF1.Tours.ActorSheet.NotesTab.Content",
+      "tabs": {
+        "id": "notes",
+        "group": "primary"
+      }
+    },
+    {
+      "id": "magic-items-table",
+      "title": "PF1.Tours.ActorSheet.MagicItemsTable.Title",
+      "content": "PF1.Tours.ActorSheet.MagicItemsTable.Content",
+      "tabs": {
+        "id": "notes",
+        "group": "primary"
+      }
+    },
+    {
+      "id": "settings-tab",
+      "selector": ".sheet.pf1 .tab.settings[data-tab='settings']",
+      "title": "PF1.Tours.ActorSheet.SettingsTab.Title",
+      "content": "PF1.Tours.ActorSheet.SettingsTab.Content",
+      "tabs": {
+        "id": "settings",
+        "group": "primary"
+      }
+    }
+  ]
+}

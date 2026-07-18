@@ -1,0 +1,114 @@
+{{#*inline "actorConfig"}}
+<fieldset class="actor-config-{{id}}">
+  {{! Hit Die Config }}
+  <table class="hitdice-table">
+    <thead>
+    <tr>
+      <th class="index table-header">
+        {{localize 'PF1.ClassType'}}
+      </th>
+      <th class="table-header">
+        {{localize "PF1.Application.Settings.Health.Compute"}}
+      </th>
+      <th class="table-header">
+        {{localize "PF1.Application.Settings.Health.Rate"}}
+      </th>
+      <th class="table-header" data-tooltip="PF1.Application.Settings.Health.CanMaximizeHint">
+        {{localize "PF1.Application.Settings.Health.CanMaximize"}}
+      </th>
+    </tr>
+    </thead>
+
+    <tbody>
+      {{#each settings.classes}}
+      <tr>
+        <td class="index">
+          {{localize label}}
+        </td>
+        <td>
+          <div class="switch">
+            <input class="switch-check" type="checkbox" {{checked auto}}
+              name="{{fields.auto.fieldPath}}" id="hp-conf-{{fields.auto.fieldPath}}">
+            <label class="switch-label" for="hp-conf-{{fields.auto.fieldPath}}">
+              <span class="switch-auto button">
+                <i class="fa-solid fa-gears" inert></i>
+                {{localize 'PF1.Application.Settings.Health.ComputeAuto'}}
+              </span>
+              <span class="switch-manual button">
+                <i class="fa-solid fa-dice-d20" inert></i>
+                {{localize 'PF1.Application.Settings.Health.ComputeManual'}}
+              </span>
+            </label>
+          </div>
+        </td>
+        <td>
+          {{formInput fields.rate value=rate disabled=(not auto)}}
+        </td>
+        <td>
+          {{formInput fields.maximized value=maximized}}
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+  {{! Variant Rules }}
+  <div class="variant-rules">
+    {{! Wounds & Vigor }}
+    {{formGroup fields.rules.fields.useWoundsAndVigor value=settings.rules.useWoundsAndVigor label="PF1.Application.Settings.Health.WoundsAndVigor.Label" hint="PF1.Application.Settings.Health.WoundsAndVigor.Hint" localize=true}}
+
+    {{! Wound Thresholds }}
+    {{formGroup fields.rules.fields.useWoundThresholds value=settings.rules.useWoundThresholds label="PF1.Application.Settings.Health.WoundThresholds.Label" hint="PF1.Application.Settings.Health.WoundThresholds.Hint" localize=true}}
+
+    {{#if (and settings.rules.useWoundsAndVigor settings.rules.useWoundThresholds)}}
+    <p class="warning">
+      <i class="fa-solid fa-triangle-exclamation" inert></i>
+      {{localize "PF1.Application.Settings.Health.WoundThresholds.VigorConflict"}}
+    </p>
+    {{/if}}
+  </div>
+</fieldset>
+{{/inline}}
+<section class="form-body scrollable" data-tooltip-class="pf1-v2">
+  <p>
+    {{localize 'PF1.Application.Settings.Health.Instructions'}}
+  </p>
+
+  {{! Actor Type }}
+  {{> "templates/generic/tab-navigation.hbs"}}
+
+  {{! PC Tab }}
+  <section class="tab {{tabs.pc.cssClass}}" data-group="{{tabs.pc.group}}" data-tab="{{tabs.pc.id}}">
+    {{> "actorConfig" id="pc" settings=settings.pc fields=fields.pc.fields}}
+  </section>
+
+  {{! NPC Tab }}
+  <section class="tab {{tabs.npc.cssClass}}" data-group="{{tabs.npc.group}}" data-tab="{{tabs.npc.id}}">
+    {{> "actorConfig" id="npc" settings=settings.npc fields=fields.npc.fields}}
+  </section>
+
+  <hr>
+
+  {{! Common Config }}
+  <fieldset class="common-config">
+    <legend>{{localize "PF1.Application.Settings.Health.AutoConfig"}}</legend>
+
+    {{formGroup fields.maximized value=settings.maximized label="PF1.Application.Settings.Health.MaximizedLimit" localize=true}}
+
+    {{formGroup fields.rounding value=settings.rounding label="PF1.Application.Settings.Health.Rounding" hint="PF1.Application.Settings.Health.RoundingHint" localize=true}}
+
+    <div class="form-group">
+      <label for="health-continuity">
+        {{localize 'PF1.Application.Settings.Health.Continuity'}}
+      </label>
+      <div class="form-fields">
+        <select id="health-continuity" name="continuous" data-dtype="Boolean">
+          {{selectOptions model.healthContinuityOptions selected=settings.continuous localize=true}}
+        </select>
+      </div>
+      <p class="hint">
+        {{localize 'PF1.Application.Settings.Health.ContinuityHint'}}
+      </p>
+    </div>
+  </fieldset>
+</section>

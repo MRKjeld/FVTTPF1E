@@ -1,0 +1,67 @@
+<section class="form-body {{cssClass}}" data-tooltip-class="pf1-v2">
+  <table>
+    <colgroup>
+      <col class="grip">
+      {{#if (or @root.isBoolean @root.isFlat)}}
+      <col class="key no-value">
+      {{else}}
+      <col class="key">
+      <col class="value">
+      {{/if}}
+      <col class="controls">
+    </colgroup>
+    {{#if (gt fields.length 1)}}
+      <thead>
+      <tr data-drop="true" data-index="0">
+        {{#if editable}}
+        <th class="drag-control"></th>
+        {{/if}}
+        {{#each fields}}
+          <th>{{localize this}}</th>
+        {{/each}}
+        {{#if editable}}
+        <th class="entry-control"></th>
+        {{/if}}
+      </tr>
+      </thead>
+    {{/if}}
+    <tbody>
+    {{#each entries as |entry index|}}
+      <tr class="entry" data-drop="true" data-index="{{index}}">
+        <td class="drag-control" {{#if @root.editable}}data-drag="true"{{/if}}>
+          {{#if @root.editable}}
+          <i class="fa-solid fa-bars" inert></i>
+          {{/if}}
+        </td>
+        {{#if @root.isFlat}}
+          <td>
+            <input type="text" class="textarea" data-index="{{index}}"
+                   value="{{0}}" data-dtype="{{1}}" name="{{index}}">
+          </td>
+        {{else}}
+          {{#each entry as |field subindex|}}
+            {{#with field}}
+              <td>
+                <input type="text" class="textarea" data-index="{{subindex}}"
+                       value="{{0}}" data-dtype="{{1}}" name="{{index}}-{{subindex}}">
+              </td>
+            {{/with}}
+          {{/each}}
+        {{/if}}
+        <td class="entry-control">
+          {{#if @root.editable}}
+          <button type="button" data-action="deleteEntry" class="entry-control icon-button delete-entry">
+            <i class="fa-solid fa-trash" inert></i>
+          </button>
+          {{/if}}
+        </td>
+      </tr>
+    {{/each}}
+    </tbody>
+  </table>
+  {{#if editable}}
+  <div class="add-entry">
+    <a data-action="addEntry"><i class="fa-solid fa-plus fa-fw" inert></i> {{localize "PF1.AddEntry"}}</a>
+  </div>
+  {{/if}}
+</section>

@@ -1,0 +1,18 @@
+<div class='journal-page-content'>
+  {{#if data.title.show}}
+  {{#with pf1}}
+  <span class='pf1 page-nesting'>
+    {{#each headers}}
+      <span class='parent h{{@key}}'>{{name}}</span>
+      {{#if (not @last)}}<span class='page-nesting-separator'>&gt;</span>{{/if}}
+    {{/each}}
+  </span>
+  {{/with}}
+  <header class="journal-page-header pf1">
+    <h{{data.title.level}}>{{name}}</h{{data.title.level}}>
+  </header>
+  {{/if}}
+  <section class="journal-page-content pf1">
+    {{{text.enriched}}}
+  </section>
+</div>

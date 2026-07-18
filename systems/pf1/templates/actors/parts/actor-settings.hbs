@@ -1,0 +1,39 @@
+<div class="base-setup">
+  <h2>{{localize "PF1.BaseSetup"}}</h2>
+
+  {{!-- Spellbooks --}}
+  <div class="flexcol spellbook-usage">
+    <h3>{{localize "PF1.SpellbookUsage"}}</h3>
+
+    <div class="flexrow">
+      {{#each spellbookData as |spellbook a|}}
+      <label class="checkbox">
+        <input type="checkbox" {{checked spellbook.inUse}} name="system.attributes.spells.spellbooks.{{a}}.inUse">
+        {{spellbook.label}}
+      </label>
+      {{/each}}
+    </div>
+  </div>
+
+  {{! Misc Setup Utilities }}
+  <div class="flexcol">
+    <h3>{{localize "PF1.UtilityFunctions"}}</h3>
+
+    <button type="button" class="pointbuy-calculator">
+      <i class="fa-solid fa-calculator" inert></i>
+      {{localize "PF1.Application.PointBuy.Title"}}
+    </button>
+  </div>
+</div>
+
+{{> "systems/pf1/templates/actors/parts/actor-settings-ability-scores.hbs"}}
+
+<div class="misc-settings">
+  <h2>{{localize "PF1.Misc"}}</h2>
+  <div class="form-group stacked">
+    <label class="checkbox">
+      <input type="checkbox" name="system.config.noManeuvers" {{checked system.config.noManeuvers}}>
+      {{localize "PF1.SETTINGS.NoManeuvers"}}
+    </label>
+  </div>
+</div>

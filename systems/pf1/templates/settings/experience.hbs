@@ -1,0 +1,27 @@
+<section class="form-body" data-tooltip-class="pf1-v2">
+  {{formGroup fields.disable value=settings.disable localize=true classes="slim disable-experience"
+    label="PF1.Application.Settings.Experience.Disable" hint="PF1.Application.Settings.Experience.DisableHint"}}
+
+  <div class="{{#if (not enabled)}}hidden{{/if}}" id="experience-details">
+    {{formGroup fields.track value=settings.track localize=true disabled=settings.disable choices=model.progressionOptions blank=false
+      label="PF1.Application.Settings.Experience.Track.Label" hint="PF1.Application.Settings.Experience.Track.Hint"}}
+
+    <div class="{{#if (not hasCustomFormula)}}hidden{{/if}}" id="experience-custom">
+      <div class="form-group">
+        <label for="xp-custom-formula">
+          {{localize "PF1.Formula"}}
+        </label>
+        <div class="form-fields">
+          {{formInput fields.custom.fields.formula value=settings.custom.formula placeholder=(localize "PF1.Application.Settings.Experience.Track.CustomPlaceholder") id="xp-custom-formula" disabled=settings.disable}}
+        </div>
+      </div>
+      <p class="hint">
+        <i class="fa-solid fa-circle-info" inert></i>
+        {{{localize "PF1.Application.Settings.Experience.Track.CustomUsage"}}}
+      </p>
+    </div>
+
+    {{formGroup fields.openDistributor value=settings.openDistributor disabled=settings.disable classes="slim"
+      label="PF1.Application.Settings.Experience.Distributor" hint="PF1.Application.Settings.Experience.DistributorHint" localize=true}}
+  </div>
+</section>

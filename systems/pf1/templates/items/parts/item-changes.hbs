@@ -1,0 +1,158 @@
+{{!-- Flags --}}
+<div class="item-groups-list changeflags-list">
+  <div class="item-list-header flexrow">
+    <h3>{{localize "PF1.EnabledCheckFlags"}}</h3>
+
+    <div class="controls">
+      <a class="control flag-selector" data-title="PF1.CheckFlags"
+         data-options="changeFlags" data-for="system.changeFlags" data-tooltip="PF1.Edit">
+        <i class="fa-solid fa-edit" inert></i>
+      </a>
+    </div>
+  </div>
+
+  <ol class="item-list">
+    {{#each config.changeFlags as |label key|}}
+      {{#if (lookup ../system.changeFlags key)}}
+        <li class="item change-flag flexrow">
+          <div class="item-name flag-name flexrow {{key}}">
+            <h4>{{label}}</h4>
+          </div>
+        </li>
+      {{/if}}
+    {{/each}}
+  </ol>
+</div>
+
+{{!-- Changes --}}
+<ol class="item-groups-list changes-list">
+  <li class="item-list-header change-header flexrow">
+    <h3>{{localize "PF1.Changes"}}</h3>
+    <div class="controls">
+      <a class="control change-control add-change" data-target="change" data-action="add"  data-tooltip="PF1.Add">
+        <i class="fa-solid fa-plus" inert></i>
+      </a>
+    </div>
+  </li>
+
+  <ol class="item-list changes">
+  {{#each changes}}
+    <li class="change flexrow {{cssClass}}" data-change-id="{{id}}">
+      <span class="operator"
+        {{#if isAdd}}
+        data-tooltip="PF1.Application.ChangeEditor.Operator.AddHint">
+        <i class="fa-solid fa-plus-minus fa-fw" inert></i>
+        {{else if isSet}}
+        data-tooltip="PF1.Application.ChangeEditor.Operator.SetHint">
+        <i class="fa-solid fa-equals fa-fw" inert></i>
+        {{else}}
+        data-tooltip="PF1.Application.ChangeEditor.Operator.InvalidHint">
+        {{operator}}
+        {{/if}}
+      </span>
+
+      <div class="details">
+        <div class="target">
+          <label>
+            {{#if isAdd}}
+            {{localize "PF1.Application.ChangeEditor.Operator.AddVerb"}}
+            {{else if isSet}}
+            {{localize "PF1.Application.ChangeEditor.Operator.SetVerb"}}
+            {{/if}}
+          </label>
+          <span class="value{{#unless isValid}} invalid{{/unless}}">
+            {{#if isValid}}
+            {{label}}
+            {{else}}
+            <i class="fa-solid fa-triangle-exclamation" inert></i>
+              {{#if isCustom}}
+              {{localize "PF1.Missing"}}
+              {{else}}
+              {{localize "PF1.Application.ChangeEditor.Invalid"}}
+              {{/if}}
+              {{#if target}} ({{target}}){{/if}}
+            {{/if}}
+          </span>
+        </div>
+
+        <div class="type">
+          <label>{{localize "PF1.Application.ChangeEditor.AsType"}}</label>
+          <span class="type value{{#unless isValidType}} invalid{{/unless}}">
+            {{#if isValidType}}
+            {{typeLabel}}
+            {{else}}
+            <i class="fa-solid fa-triangle-exclamation" inert></i>
+            {{localize "PF1.Application.ChangeEditor.Invalid"}}{{#if modifier}} ({{modifier}}){{/if}}
+            {{/if}}
+          </span>
+        </div>
+
+        {{#if @root.changePriority}}
+        <div class="priority" data-tooltip="{{localize "PF1.Priority"}}: {{numberFormat priority sign=true}}">
+          <label>{{localize "PF1.Priority"}}</label>
+          <span>
+            {{#if (gt priority 0)}}
+            {{localize "PF1.ChangePriority.Early"}}
+            {{else if (lt priority 0)}}
+            {{localize "PF1.ChangePriority.Late"}}
+            {{else}}
+            {{localize "PF1.ChangePriority.Normal"}}
+            {{/if}}
+          </span>
+        </div>
+        {{/if}}
+      </div>
+
+      <div class="value">
+        <input class="formula {{cssClass}}"
+          type="text" value="{{formula}}" placeholder="0" readonly>
+      </div>
+
+      <div class="controls">
+        <a class="menu" data-change-id="{{id}}">
+          <i class="fa-solid fa-ellipsis-vertical fa-fw" inert></i>
+        </a>
+      </div>
+    </li>
+  {{/each}}
+  </ol>
+</ol>
+
+{{! Context Notes }}
+<ol class="item-groups-list contextnotes-list">
+  <li class="item-list-header change-header flexrow">
+    <div class="item-name">
+      <h3>{{localize "PF1.ContextNotes"}}</h3>
+    </div>
+    <div class="item-target flexrow">
+      <h3>{{localize "PF1.Target"}}</h3>
+    </div>
+    {{#if @root.owner}}
+    <div class="controls basic">
+      <a class="context-note-control add-note" data-tooltip="PF1.Add">
+        <i class="fa-solid fa-plus" inert></i>
+      </a>
+    </div>
+    {{/if}}
+  </li>
+
+  <ol class="item-list context-notes">
+    {{#each contextNotes as |note a|}}
+    <li class="item context-note flexrow" data-note="{{a}}">
+      <div class="item-name flexrow">
+        <textarea class="context-note-text context-text" name="system.contextNotes.{{a}}.text" placeholder="{{localize "PF1.Notes"}}">{{{text}}}</textarea>
+      </div>
+
+      <div class="item-target flexrow">
+        <span class="context-note-target{{#unless isValid}} invalid{{/unless}}">{{label}}</span>
+      </div>
+
+      <div class="controls basic">
+        {{#if @root.owner}}
+        <a class="context-note-control delete-note"><i class="fa-solid fa-trash fa-fw" inert></i></a>
+        {{/if}}
+      </div>
+    </li>
+    {{/each}}
+  </ol>
+</ol>

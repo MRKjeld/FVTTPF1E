@@ -1,0 +1,21 @@
+<form autocomplete="off" data-tooltip-class="pf1">
+  {{!-- Spell Level --}}
+  {{formGroup fields.sl value=sl name="sl" placeholder="1" label="PF1.SpellLevel" localize=true}}
+
+  {{!-- Caster Level --}}
+  {{formGroup fields.cl value=cl name="cl" placeholder="1" label="PF1.CasterLevel" localize=true autofocus=true}}
+
+  {{formGroup fields.spellType value=spellType name="spellType" label=(localize "PF1.Spellcasting.Type.Label")}}
+
+  {{#if isGM}}
+  <div class="form-group stacked">
+    <label class="checkbox">
+      {{formInput fields.identified value=identified name="identified"}}
+      {{localize "PF1.Identified"}}
+    </label>
+  </div>
+
+  {{! Unidentified Name }}
+  {{formGroup fields.unidentifiedName name="unidentifiedName" label="PF1.UnidentifiedName" placeholder=(localize "PF1.CreateItemNamePlaceholder") localize=true}}
+  {{/if}}
+</form>

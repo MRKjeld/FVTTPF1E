@@ -1,0 +1,81 @@
+{{!-- Conditionals --}}
+<ol class="conditionals form-group">
+  {{#each conditionals}}
+  <li class="conditional" data-conditional="{{_id}}">
+    {{! Label }}
+    <div class="flexrow" data-conditional="{{_id}}">
+      <input class="conditional-default" type="checkbox" data-tooltip="PF1.Default" name="conditionals.{{@key}}.default" {{checked default}}>
+      <input class="conditional-name" type="text" name="conditionals.{{@key}}.name" value="{{name}}"
+        placeholder="{{localize "PF1.Name"}}" required>
+
+      {{! Delete Conditional}}
+      <a class="delete-conditional conditional-control delete-conditional"><i class="fa-solid fa-trash" inert></i></a>
+    </div>
+
+    {{! Modifiers }}
+    <ol class="conditionals form-group">
+      {{#each modifiers as |mod modKey|}}
+      <li class="conditional-modifier flexrow" data-conditional="{{../_id}}" data-modifier="{{_id}}">
+        <input class="conditional-formula formula" type="text" name="conditionals.{{@../key}}.modifiers.{{@key}}.formula" value="{{formula}}"
+        placeholder="{{localize "PF1.Formula"}}" required>
+
+        <select class="conditional-target" name="conditionals.{{@../key}}.modifiers.{{@key}}.target" required>
+          {{selectOptions targets selected=target blank=""}}
+        </select>
+
+        {{#unless targetEntry.simple}}
+          {{#if (and target subTargets)}}
+          <select class="conditional-sub-target" name="conditionals.{{@../key}}.modifiers.{{@key}}.subTarget" required>
+            {{#if (and target subTargets)}}
+            {{selectOptions subTargets selected=subTarget}}
+            {{else}}
+            <option value="">{{localize "PF1.NonApplicable"}}</option>
+            {{/if}}
+          </select>
+          {{/if}}
+
+          {{#if (eq target "attack")}}
+          <select class="conditional-type" name="conditionals.{{@../key}}.modifiers.{{@key}}.type" required>
+            {{#if target}}
+            {{selectOptions conditionalModifierTypes selected=type}}
+            {{else}}
+            <option value=""></option>
+            {{/if}}
+          </select>
+          {{/if}}
+
+          {{#if (eq target "damage")}}
+          <div class="conditional-damage-type">
+            {{> "systems/pf1/templates/internal/damage-type-visual.hbs" damage=damage name=(concat "conditionals." @../key ".modifiers." @key ".damageType")}}
+          </div>
+          {{/if}}
+
+          {{#if (or (eq target "attack") (eq target "damage"))}}
+          <select class="conditional-critical" name="conditionals.{{@../key}}.modifiers.{{@key}}.critical" required>
+            {{#if target}}
+            {{selectOptions conditionalCritical selected=critical localize=true}}
+            {{else}}
+            <option value=""></option>
+            {{/if}}
+          </select>
+          {{/if}}
+        {{/unless}}
+
+        {{! Delete Modifier }}
+        <a class="conditional-control delete-conditional-modifier"><i class="fa-solid fa-trash" inert></i></a>
+      </li>
+      {{/each}}
+
+      {{! Add Effect }}
+      {{#if @root.hasConditionalTargets}}
+      <li class="flexrow"><a class="conditional-control add-conditional-modifier"><i class="fa-solid fa-plus" inert></i> {{localize "PF1.AddEffect"}}</a></li>
+      {{else}}
+      <li class="info"><i class="fa-solid fa-circle-info" inert></i> {{localize "PF1.Warning.NoConditionalTargetOptions"}}</li>
+      {{/if}}
+    </ol>
+  </li>
+  {{/each}}
+
+  {{! Add Conditional }}
+  <li class="conditional flexrow"><a class="conditional-control add-conditional"><i class="fa-solid fa-plus" inert></i> {{localize "PF1.AddConditional"}}</a></li>
+</ol>

@@ -1,0 +1,34 @@
+{{!-- Template Type --}}
+<div class="form-group select">
+  <label>{{localize "PF1.TemplateType"}}</label>
+    <div class="form-fields">
+    <select name="measureTemplate.type">
+      {{selectOptions @root.choices.measureTemplateTypes selected=data.measureTemplate.type blank=(localize "PF1.NonApplicable")}}
+    </select>
+  </div>
+</div>
+
+{{#if data.measureTemplate.type}}
+{{!-- Template Size --}}
+<div class="form-group">
+  <label>{{localize "PF1.TemplateSizeFormula"}}</label>
+  <div class="form-fields">
+    <input class="formula" type="text" name="measureTemplate.size" value="{{data.measureTemplate.size}}" placeholder="{{localize "PF1.Formula"}}">
+  </div>
+  <p class="hint">{{localize "PF1.TemplateSizeFormulaHint"}}</p>
+</div>
+
+<div class="form-group">
+  <label>{{localize "PF1.CustomColor"}}</label>
+  <div class="form-fields">
+    {{formInput fields.measureTemplate.fields.color value=data.measureTemplate.color placeholder=user.color}}
+  </div>
+</div>
+
+<div class="form-group">
+  <label>{{localize "PF1.CustomTexture"}}</label>
+  <div class="form-fields">
+    {{formInput fields.measureTemplate.fields.texture value=data.measureTemplate.texture placeholder="path/to/image.png"}}
+  </div>
+</div>
+{{/if}}

@@ -1,0 +1,31 @@
+<div class="item-summary {{#if isIdentified}}identified{{else}}unidentified{{/if}}">
+  {{#if (and (not identifiedDescription) (not unidentifiedDescription))}}
+  <p class="info">{{localize "PF1.NoDescription"}}</p>
+  {{/if}}
+
+  {{#if unidentifiedDescription}}
+  <div class="description unidentified">
+    {{#if (and identifiedDescription showIdentified)}}
+    <h3>{{localize "PF1.UnidentifiedDescription"}}</h3>
+    {{/if}}
+    {{{unidentifiedDescription}}}
+  </div>
+  {{/if}}
+
+  {{#if showIdentified}}
+  {{#if identifiedDescription}}
+  <div class="description identified">
+    {{#if unidentifiedDescription}}
+    <h3>{{localize "PF1.IdentifiedDescription"}}{{#unless isIdentified}} <i class="unidentified fa-solid fa-eye-slash" data-tooltip="PF1.Hidden"></i>{{/unless}}</h3>
+    {{/if}}
+    {{{identifiedDescription}}}
+  </div>
+  {{/if}}
+  {{/if}}
+
+  <div class="item-properties tag-list">
+  {{#each properties}}
+    <span class="tag">{{{this}}}</span>
+  {{/each}}
+  </div>
+</div>

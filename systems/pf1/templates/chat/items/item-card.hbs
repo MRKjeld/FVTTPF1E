@@ -1,0 +1,40 @@
+<div class="pf1 chat-card item-card" data-actor-id="{{actor.id}}" data-item-id="{{item.id}}" {{#if tokenId}}data-token-id="{{tokenId}}"{{/if}}>
+  <header class="card-header type-color type-{{item.type}} flexrow">
+    <img src="{{item.img}}" data-tooltip="{{name}}" width="36" height="36">
+    <div class="item-name">
+      <h3>{{name}}</h3>
+    </div>
+  </header>
+
+  <div class="card-content">
+    <section class="item-description">
+      {{{description}}}
+    </section>
+  </div>
+
+  <footer class="card-footer">
+    {{#if isSpell}}
+    {{#if spellFailure}}
+    <div class="spell-failure">
+      <h3>{{localize "PF1.ArcaneSpellFailure"}}</h3>
+      <div class="dice-roll">
+        <div class="dice-result">
+          <h4 class="dice-total spell-failure {{#unless spellFailureSuccess}}failure{{/unless}}">{{spellFailure}}</h4>
+        </div>
+      </div>
+    </div>
+    {{/if}}
+    {{/if}}
+
+    {{#each properties}}
+    <div class="flexcol property-group gm-sensitive general-notes {{css}}">
+      <label>{{header}}</label>
+      <div class="flexrow tag-list">
+        {{#each value}}
+          <span class="tag">{{{this}}}</span>
+        {{/each}}
+      </div>
+    </div>
+    {{/each}}
+  </footer>
+</div>
