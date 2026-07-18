@@ -1,4 +1,4 @@
-/* {"name":"Action Counter","img":"modules/pf1e-jb2a-macros-beta/assets/actions/one.png","_id":"9OXIrvvLr3djpsxE"} */
+/* {"name":"Action Counter","img":"modules/pf1e-jb2a-macros/assets/actions/one.png","_id":"9OXIrvvLr3djpsxE"} */
 if (args?.length === 0) {
   const actors = canvas.tokens.controlled.flatMap((token) => token.actor ?? [])
   if (actors.length === 0 && game.user.character)
@@ -85,7 +85,7 @@ const actionCounter = (number, origin) =>
   new Sequence({ moduleName: "PF1e Animations", softFail: true })
     .effect()
     .name(tokenD.name + " Action " + (1 + number))
-    .file("modules/pf1e-jb2a-macros-beta/assets/actions/one.png")
+    .file("modules/pf1e-jb2a-macros/assets/actions/one.png")
     .origin(origin.uuid)
     .fadeIn(1000)
     .animateProperty("sprite", `position.y`, {
