@@ -1,0 +1,203 @@
+{
+  "icons": [
+    {
+      "id": "ancient-columns",
+      "label": "Ancient Columns",
+      "src": "modules/augur-nexus/assets/site_icons/fantasy/ancient-columns.png",
+      "role": "landmark"
+    },
+    {
+      "id": "ancient-ruins",
+      "label": "Ancient Ruins",
+      "src": "modules/augur-nexus/assets/site_icons/fantasy/ancient-ruins.png",
+      "role": "landmark"
+    },
+    {
+      "id": "barred-entrance",
+      "label": "Barred Entrance",
+      "src": "modules/augur-nexus/assets/site_icons/fantasy/barred-entrance.png",
+      "role": "entrance"
+    },
+    {
+      "id": "block-house",
+      "label": "Block House",
+      "src": "modules/augur-nexus/assets/site_icons/fantasy/block-house.png",
+      "role": "landmark"
+    },
+    {
+      "id": "cabin",
+      "label": "Cabin",
+      "src": "modules/augur-nexus/assets/site_icons/fantasy/cabin.png",
+      "role": "landmark"
+    },
+    {
+      "id": "castle",
+      "label": "Castle",
+      "src": "modules/augur-nexus/assets/site_icons/fantasy/castle.png",
+      "role": "landmark"
+    },
+    {
+      "id": "citadel",
+      "label": "Citadel",
+      "src": "modules/augur-nexus/assets/site_icons/fantasy/citadel.png",
+      "role": "landmark"
+    },
+    {
+      "id": "closed-doors",
+      "label": "Closed Doors",
+      "src": "modules/augur-nexus/assets/site_icons/fantasy/closed-doors.png",
+      "role": "entrance"
+    },
+    {
+      "id": "crypt-entrance",
+      "label": "Crypt Entrance",
+      "src": "modules/augur-nexus/assets/site_icons/fantasy/crypt-entrance.png",
+      "role": "entrance"
+    },
+    {
+      "id": "domed-temple",
+      "label": "Domed Temple",
+      "src": "modules/augur-nexus/assets/site_icons/fantasy/domed-temple.png",
+      "role": "landmark"
+    },
+    {
+      "id": "doorway",
+      "label": "Doorway",
+      "src": "modules/augur-nexus/assets/site_icons/fantasy/doorway.png",
+      "role": "entrance"
+    },
+    {
+      "id": "dungeon-gate",
+      "label": "Dungeon Gate",
+      "src": "modules/augur-nexus/assets/site_icons/fantasy/dungeon-gate.png",
+      "role": "entrance"
+    },
+    {
+      "id": "grand-hall",
+      "label": "Grand Hall",
+      "src": "modules/augur-nexus/assets/site_icons/fantasy/grand-hall.png",
+      "role": "landmark"
+    },
+    {
+      "id": "grand-palace",
+      "label": "Grand Palace",
+      "src": "modules/augur-nexus/assets/site_icons/fantasy/grand-palace.png",
+      "role": "landmark"
+    },
+    {
+      "id": "guardian-statue",
+      "label": "Guardian Statue",
+      "src": "modules/augur-nexus/assets/site_icons/fantasy/guardian-statue.png",
+      "role": "landmark"
+    },
+    {
+      "id": "high-keep",
+      "label": "High Keep",
+      "src": "modules/augur-nexus/assets/site_icons/fantasy/high-keep.png",
+      "role": "landmark"
+    },
+    {
+      "id": "hexmap-site",
+      "label": "Hexmap Site",
+      "src": "modules/augur-nexus/assets/site_icons/scifi/site.png",
+      "role": "landmark"
+    },
+    {
+      "id": "ladder",
+      "label": "Ladder",
+      "src": "modules/augur-nexus/assets/site_icons/fantasy/ladder.png",
+      "role": "entrance"
+    },
+    {
+      "id": "longhouse",
+      "label": "Longhouse",
+      "src": "modules/augur-nexus/assets/site_icons/fantasy/longhouse.png",
+      "role": "landmark"
+    },
+    {
+      "id": "gatehouse",
+      "label": "Gatehouse",
+      "src": "modules/augur-nexus/assets/site_icons/fantasy/gatehouse.png",
+      "role": "landmark"
+    },
+    {
+      "id": "noble-house",
+      "label": "Noble House",
+      "src": "modules/augur-nexus/assets/site_icons/fantasy/noble-house.png",
+      "role": "landmark"
+    },
+    {
+      "id": "ornate-door",
+      "label": "Ornate Door",
+      "src": "modules/augur-nexus/assets/site_icons/fantasy/ornate-door.png",
+      "role": "entrance"
+    },
+    {
+      "id": "palisade",
+      "label": "Palisade",
+      "src": "modules/augur-nexus/assets/site_icons/fantasy/palisade.png",
+      "role": "landmark"
+    },
+    {
+      "id": "portal",
+      "label": "Portal",
+      "src": "modules/augur-nexus/assets/site_icons/fantasy/portal.png",
+      "role": "entrance"
+    },
+    {
+      "id": "portcullis",
+      "label": "Portcullis",
+      "src": "modules/augur-nexus/assets/site_icons/fantasy/portcullis.png",
+      "role": "entrance"
+    },
+    {
+      "id": "pyramid",
+      "label": "Pyramid",
+      "src": "modules/augur-nexus/assets/site_icons/fantasy/pyramid.png",
+      "role": "landmark"
+    },
+    {
+      "id": "sanctuary",
+      "label": "Sanctuary",
+      "src": "modules/augur-nexus/assets/site_icons/fantasy/sanctuary.png",
+      "role": "landmark"
+    },
+    {
+      "id": "sandstone-temple",
+      "label": "Sandstone Temple",
+      "src": "modules/augur-nexus/assets/site_icons/fantasy/sandstone-temple.png",
+      "role": "landmark"
+    },
+    {
+      "id": "stairs",
+      "label": "Stairs",
+      "src": "modules/augur-nexus/assets/site_icons/fantasy/stairs.png",
+      "role": "entrance"
+    },
+    {
+      "id": "steel-door",
+      "label": "Steel Door",
+      "src": "modules/augur-nexus/assets/site_icons/fantasy/steel-door.png",
+      "role": "entrance"
+    },
+    {
+      "id": "stone-tower",
+      "label": "Stone Tower",
+      "src": "modules/augur-nexus/assets/site_icons/fantasy/stone-tower.png",
+      "role": "landmark"
+    },
+    {
+      "id": "tiered-shrine",
+      "label": "Tiered Shrine",
+      "src": "modules/augur-nexus/assets/site_icons/fantasy/tiered-shrine.png",
+      "role": "landmark"
+    },
+    {
+      "id": "wooden-door",
+      "label": "Wooden Door",
+      "src": "modules/augur-nexus/assets/site_icons/fantasy/wooden-door.png",
+      "role": "entrance"
+    }
+  ]
+}
+

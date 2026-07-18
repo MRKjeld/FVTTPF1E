@@ -1,0 +1,103 @@
+<section id="midi-config-gm" class="tab midi-scrollable-list{{#if tab.active}} active{{/if}}" data-group="{{tab.group}}"
+  data-tab="{{tab.id}}">
+  <div class="midi-qol-box">
+    <div class="form-group">
+      <label>{{localize "midi-qol.AutoFastForward.Name"}}</label>
+      <multi-select name="gmAutoFastForward">
+        {{selectOptions fastForwardOptions selected=configSettings.gmAutoFastForward}}
+      </multi-select>
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "midi-qol.AutoAttack.Name"}}</label>
+      <input type="checkbox" name="gmAutoAttack" data-dtype="Boolean" {{checked configSettings.gmAutoAttack}} />
+    </div>
+    <div class="form-group">
+      <label>{{localize "midi-qol.ConsumeResource.Name"}}</label>
+      <select name="gmConsumeResource" data-dtype="String">
+        {{selectOptions ConsumeResourceOptions selected=configSettings.gmConsumeResource localize=true}}
+      </select>
+      <div class="notes midi-qol-faint">{{{localize "midi-qol.ConsumeResource.Hint"}}}</div>
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "midi-qol.ConfirmAmmunition.Name"}}</label>
+      <input type="checkbox" name="gmConfirmAmmunition" data-dtype="Boolean" {{checked
+        configSettings.gmConfirmAmmunition}} />
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "midi-qol.RequireAmmunition.Name"}}</label>
+      <input type="checkbox" name="gmRequireAmmunition" data-dtype="Boolean" {{checked
+        configSettings.gmRequireAmmunition}} />
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "midi-qol.AutoDamage.Name"}}</label>
+      <select name="gmAutoDamage" data-dtype="String">
+        {{selectOptions autoRollDamageOptions selected=configSettings.gmAutoDamage localize=true}}
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "midi-qol.AverageDamage.Name"}}</label>
+      <select name="averageDamage" data-dtype="String">
+        {{selectOptions AverageDamageOptions selected=configSettings.averageDamage localize=true}}
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "midi-qol.RemoveButtons.Name"}}</label>
+      <select name="gmRemoveButtons" data-dtype="String">
+        {{selectOptions removeButtonsOptions selected=configSettings.gmRemoveButtons localize=true}}
+      </select>
+    </div>
+
+    <div class="midi-qol-box">
+      <div class="midi-qol-settings heading">{{localize "midi-qol.GMRollHiding"}}</div>
+      <div class="form-group">
+        <label>{{localize "midi-qol.GMAttackDisplay.Name"}}</label>
+        <div class="form-fields">
+          <select name="gmAttackDisplay" data-dtype="String">
+            {{midiSelectOptions gmAttackDisplayOptions selected=configSettings.gmAttackDisplay localize=true}}
+          </select>
+          <select name="gmAttackDsn" data-dtype="String">
+            {{midiSelectOptions gmDsnDisplayOptions selected=configSettings.gmAttackDsn localize=true}}
+          </select>
+        </div>
+        <div class="notes midi-qol-faint">{{{localize "midi-qol.GMAttackDisplay.Hint"}}}</div>
+      </div>
+      <div class="form-group">
+        <label>{{localize "midi-qol.GMDamageDisplay.Name"}}</label>
+        <div class="form-fields">
+          <select name="gmDamageDisplay" data-dtype="String">
+            {{midiSelectOptions gmDamageDisplayOptions selected=configSettings.gmDamageDisplay localize=true}}
+          </select>
+          <select name="gmDamageDsn" data-dtype="String">
+            {{midiSelectOptions gmDsnDisplayOptions selected=configSettings.gmDamageDsn localize=true}}
+          </select>
+        </div>
+        <div class="notes midi-qol-faint">{{{localize "midi-qol.GMDamageDisplay.Hint"}}}</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "midi-qol.dummyCards.Name"}}</label>
+      <input type="checkbox" name="gmAttackDamageCards" data-dtype="Boolean" {{checked configSettings.gmAttackDamageCards}} />
+      <div class="notes midi-qol-faint">{{localize "midi-qol.dummyCards.Hint"}}</div>
+    </div>
+    <div class="form-group">
+      <label>{{localize "midi-qol.AddFakeDice.Name"}}</label>
+      <input type="checkbox" name="addFakeDice" data-dtype="Boolean" {{checked configSettings.addFakeDice}} />
+      <div class="notes midi-qol-faint">{{localize "midi-qol.AddFakeDice.Hint"}}</div>
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "midi-qol.PreferredGM.Name"}}</label>
+      <select name="preferredGM" data-dtype="String">
+        {{selectOptions preferredGMOptions selected=configSettings.preferredGM}}
+      </select>
+      <div class="notes midi-qol-faint">{{localize "midi-qol.PreferredGM.Hint"}}</div>
+    </div>
+  </div>
+</section>

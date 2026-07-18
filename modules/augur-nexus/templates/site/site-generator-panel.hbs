@@ -1,0 +1,260 @@
+<div class="augur-nexus-tool nexus-site-panel">
+    {{#if hasSupportedScene}}
+    <fieldset class="site-panel-section">
+        <legend><i class="fas fa-swatchbook"></i> Genre</legend>
+        <div class="form-group site-genre-group">
+            <div class="site-role-switcher site-genre-switcher" role="tablist" aria-label="Genre">
+                {{#each genres}}
+                <button type="button" class="site-role-option {{#if (eq ../selectedGenreId this.id)}}active{{/if}}" data-site-genre-id="{{this.id}}" aria-pressed="{{#if (eq ../selectedGenreId this.id)}}true{{else}}false{{/if}}">{{this.label}}</button>
+                {{/each}}
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset class="site-panel-section">
+        <legend><i class="fas fa-map"></i> Scene</legend>
+
+        <div class="form-group">
+            <label>Scene Type</label>
+            <div class="site-role-switcher site-scene-type-switcher" role="tablist" aria-label="Scene Type">
+                {{#each sceneTypes}}
+                <button type="button" class="site-role-option {{#if (eq ../selectedSceneType this.id)}}active{{/if}}" data-site-scene-type="{{this.id}}" aria-pressed="{{#if (eq ../selectedSceneType this.id)}}true{{else}}false{{/if}}">{{this.label}}</button>
+                {{/each}}
+            </div>
+        </div>
+
+        {{#unless selectedSceneTypeAvailable}}
+        <div class="site-scene-requires">
+            <div class="site-scene-requires-copy">{{selectedSceneTypeRequiresText}}</div>
+            {{#if selectedSceneTypeRequiresUrl}}
+            <button type="button" class="site-scene-requires-link" data-action="viewRequiredModule" title="View required module">
+                <span>View Module</span>
+                <i class="fas fa-up-right-from-square"></i>
+            </button>
+            {{/if}}
+        </div>
+        {{/unless}}
+
+        {{#if showMapColor}}
+        <div class="form-group">
+            <label>Map Color</label>
+            <div class="site-map-color-row">
+                <div class="site-map-color-chip" style="--map-color: {{selectedMapColorValue}};"></div>
+                <select name="mapColorId">
+                    {{#each mapColors}}
+                    <option value="{{this.id}}" {{#if (eq ../selectedMapColorId this.id)}}selected{{/if}}>{{this.label}}</option>
+                    {{/each}}
+                </select>
+            </div>
+        </div>
+        {{/if}}
+
+        {{#if showLinkedSceneControls}}
+        <div class="form-group">
+            <label>Linked Scene</label>
+            <div class="site-name-entry site-linked-scene-entry">
+                <button type="button" class="site-linked-scene-name" data-action="pickLinkedScene" title="Choose linked scene">
+                    <span class="site-linked-scene-name-label" title="{{linkedSceneName}}">{{linkedSceneName}}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <button type="button" class="site-entry-clear" data-action="pickLinkedScene" title="Choose linked scene"><i class="fas fa-map"></i></button>
+                {{#if linkedSceneId}}
+                <button type="button" class="site-entry-clear" data-action="clearLinkedScene" title="Clear linked scene"><i class="fas fa-xmark"></i></button>
+                {{/if}}
+            </div>
+        </div>
+        {{/if}}
+
+        {{#if showImageControls}}
+        <div class="form-group">
+            <label>Image</label>
+            <div class="site-name-entry site-linked-scene-entry">
+                <button type="button" class="site-linked-scene-name" data-action="pickSceneImage" title="Choose image">
+                    <span class="site-linked-scene-name-label" title="{{sceneImageSrc}}">{{sceneImageName}}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <button type="button" class="site-entry-clear" data-action="pickSceneImage" title="Choose image"><i class="fas fa-image"></i></button>
+            </div>
+        </div>
+        {{/if}}
+
+        {{#if showPresetControls}}
+        <div class="form-group">
+            <label>{{sceneTypePresetLabel}}</label>
+            <select name="sceneTypePresetId">
+                {{#each sceneTypePresetOptions}}
+                <option value="{{this.id}}" {{#if (eq ../selectedSceneTypePresetId this.id)}}selected{{/if}}>{{this.label}}</option>
+                {{/each}}
+            </select>
+        </div>
+        {{/if}}
+
+        {{#if showBiomeControls}}
+        <div class="form-group">
+            <label>{{sceneTypeBiomeLabel}}</label>
+            <div class="site-visual-select-row">
+                <div class="site-visual-select biome-selector">
+                    <button type="button" class="site-visual-select-trigger selected-option" data-action="toggleSceneTypeBiomeList">
+                        {{#if selectedSceneTypeBiome.iconSrc}}
+                        <img src="{{selectedSceneTypeBiome.iconSrc}}" class="site-visual-select-image option-image" alt="{{selectedSceneTypeBiome.label}}">
+                        {{/if}}
+                        <span class="site-visual-select-label option-label">{{selectedSceneTypeBiome.label}}</span>
+                        <i class="fas fa-chevron-down chevron"></i>
+                    </button>
+                    <div class="site-visual-select-list options-list hidden" data-role="sceneTypeBiomeList">
+                        {{#each sceneTypeBiomeOptions}}
+                        <button type="button" class="site-visual-select-option option-item {{#if (eq ../selectedSceneTypeBiomeId this.id)}}selected{{/if}}" data-action="selectSceneTypeBiome" data-value="{{this.id}}">
+                            {{#if this.iconSrc}}
+                            <img src="{{this.iconSrc}}" class="site-visual-select-image option-image" alt="{{this.label}}">
+                            {{/if}}
+                            <span class="site-visual-select-label option-label">{{this.label}}</span>
+                        </button>
+                        {{/each}}
+                    </div>
+                </div>
+                {{#if canRandomizeSceneTypeBiome}}
+                <button type="button" class="site-entry-clear site-visual-randomize" data-action="randomizeSceneTypeBiome" title="Randomize {{sceneTypeBiomeLabel}}"><i class="fas fa-dice"></i></button>
+                {{/if}}
+            </div>
+        </div>
+        {{/if}}
+
+        <div class="form-group">
+            <label class="checkbox"><input type="checkbox" name="autoSortScenes" {{#if autoSortScenes}}checked{{/if}}> Auto-sort linked scenes into folders</label>
+            {{#if showAutoSortMoveWarning}}
+            <div class="site-scene-warning">Linked scene will be moved into this scene's Nexus folder.</div>
+            {{/if}}
+        </div>
+
+        {{#if showSizeControls}}
+        <div class="form-group">
+            <label>Dungeon Size</label>
+            <div class="site-size-row">
+                <select name="sizeId">
+                    {{#each sizes}}
+                    <option value="{{this.id}}" {{#if (eq ../selectedSizeId this.id)}}selected{{/if}}>{{this.label}}</option>
+                    {{/each}}
+                </select>
+                <div class="site-room-count">
+                    <span>Rooms</span>
+                    <strong data-site-room-count>{{selectedRoomCount}}</strong>
+                </div>
+            </div>
+        </div>
+        {{/if}}
+
+        {{#if showThemeControls}}
+        <div class="form-group">
+            <label>Theme</label>
+            <div class="site-theme-row">
+                <div class="site-icon-preview">
+                    {{#if selectedIconSrc}}
+                    <img data-site-icon-preview src="{{selectedIconSrc}}" alt="Selected site theme icon">
+                    {{else}}
+                    <i class="fas fa-location-dot"></i>
+                    {{/if}}
+                </div>
+                <select name="themeId">
+                    {{#each themes}}
+                    <option value="{{this.id}}" {{#if (eq ../selectedThemeId this.id)}}selected{{/if}}>{{this.label}}</option>
+                    {{/each}}
+                </select>
+                <button type="button" class="site-entry-clear" data-action="rerollTheme" title="Randomize theme"><i class="fas fa-dice"></i></button>
+            </div>
+        </div>
+        {{/if}}
+
+        <div class="form-group">
+            <label>{{sceneTypeNameLabel}}</label>
+            <div class="site-name-entry">
+                <input type="text" name="siteName" value="{{siteName}}" placeholder="{{sceneTypeNamePlaceholder}}">
+                {{#if canRerollSiteName}}
+                <button type="button" class="site-entry-clear" data-action="rerollSiteName" title="Reroll suggested name"><i class="fas fa-dice"></i></button>
+                {{/if}}
+                <button type="button" class="site-entry-clear" data-action="clearSiteName" title="Reset to suggested name"><i class="fas fa-xmark"></i></button>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset class="site-panel-section">
+        <legend><i class="fas fa-location-dot"></i> Icon</legend>
+
+        {{#if showIconRoleControls}}
+        <div class="form-group">
+            <label>Icon Type</label>
+            <div class="site-role-switcher site-icon-type-switcher" role="tablist" aria-label="Icon Type">
+                {{#each iconRoles}}
+                <button type="button" class="site-role-option {{#if (eq ../selectedIconRole this.id)}}active{{/if}}" data-site-icon-role="{{this.id}}" aria-pressed="{{#if (eq ../selectedIconRole this.id)}}true{{else}}false{{/if}}">{{this.label}}</button>
+                {{/each}}
+            </div>
+        </div>
+        {{/if}}
+
+        <div class="form-group">
+            <label>Icon</label>
+            <button type="button" class="picker-btn" data-action="pickSiteIcon">
+                <div class="picker-btn-thumb">
+                    {{#if selectedIconSrc}}
+                    <img src="{{selectedIconSrc}}" alt="{{selectedIconLabel}}" style="filter: drop-shadow(0 0 4px {{selectedIconColor}});">
+                    {{else}}
+                    <i class="fas fa-location-dot"></i>
+                    {{/if}}
+                </div>
+                <span class="picker-btn-label">{{selectedIconLabel}}</span>
+                <i class="fas fa-image picker-btn-icon"></i>
+            </button>
+        </div>
+
+        <div class="form-group">
+            <label>Icon Color</label>
+            <div class="site-color-grid">
+                {{#each colors}}
+                <button type="button" class="site-color-swatch {{#if (eq ../selectedIconColor this.value)}}active{{/if}}" data-site-color="{{this.value}}" title="{{this.label}}" style="--site-color: {{this.value}};"></button>
+                {{/each}}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Icon Size</label>
+            <div class="form-fields">
+                <input type="range" name="iconSize" min="50" max="256" step="1" value="{{selectedIconSize}}">
+                <span class="range-value" data-site-icon-size-value>{{selectedIconSize}}</span>
+                <button type="button" class="site-entry-clear" data-action="resetIconSize" title="Reset to current scene grid size" {{#if iconSizeUsesSceneDefault}}disabled{{/if}}><i class="fas fa-rotate-left"></i></button>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset class="site-panel-section">
+        <legend><i class="fas fa-sliders"></i> Behavior</legend>
+
+        <div class="site-behavior-row">
+            <div class="form-group site-randomize-toggle">
+                <label class="checkbox"><input type="checkbox" name="snapToGrid" {{#if snapToGrid}}checked{{/if}}> Snap to grid</label>
+            </div>
+
+            {{#if showRandomizeToggle}}
+            <div class="form-group site-randomize-toggle">
+                <label class="checkbox"><input type="checkbox" name="randomizeAfterPlacement" {{#if randomizeAfterPlacement}}checked{{/if}}> Randomize next site</label>
+            </div>
+            {{/if}}
+        </div>
+    </fieldset>
+
+    <div class="site-info compact">
+        <div class="site-action place"><i class="fas fa-location-dot"></i><span><strong>Left Click</strong> to place</span></div>
+        <div class="site-action delete"><i class="fas fa-eraser"></i><span><strong>Shift + Click</strong> to delete</span></div>
+    </div>
+
+    <div class="site-panel-footer-actions">
+        <button type="button" class="site-mode-action" data-action="openSiteEditor">
+            <i class="fas fa-pen-to-square"></i>
+            <span>Edit Site</span>
+        </button>
+    </div>
+    {{else}}
+    <div class="site-panel-empty">
+        <p class="site-panel-empty-icon"><i class="fas fa-exclamation-triangle"></i></p>
+        <p>Sites are hidden on Sci-Fi module scenes.</p>
+    </div>
+    {{/if}}
+</div>

@@ -1,0 +1,122 @@
+{
+  "_id": "V8wANGhTYerUamC4",
+  "name": "Bodhi Tree (Sacred Fig)",
+  "type": "consumable",
+  "img": "modules/brodericks-compendium-plants-fungi/images/bodhi-tree.webp",
+  "effects": [],
+  "folder": null,
+  "sort": 33700000,
+  "flags": {
+    "betterRolls5e": {
+      "critRange": {
+        "value": null
+      },
+      "critDamage": {
+        "value": ""
+      },
+      "quickDesc": {
+        "value": true,
+        "altValue": true
+      },
+      "quickProperties": {
+        "value": true,
+        "altValue": true
+      },
+      "quickOther": {
+        "value": true,
+        "altValue": true
+      },
+      "quickFlavor": {
+        "value": true,
+        "altValue": true
+      },
+      "quickCharges": {
+        "value": {
+          "quantity": false
+        },
+        "altValue": {
+          "quantity": false
+        }
+      }
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.348",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": 1756493242358,
+    "lastModifiedBy": "lQk7CCByj6wH9AQa",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "ownership": {
+    "default": 0,
+    "0dke80Cb9LhbPTyn": 3
+  },
+  "system": {
+    "description": {
+      "value": "<p><em>Biome: Cities, Jungles</em></p><p>According to legend, the bodhi tree was the spiritual home of a monk seeking enlightenment. The monk sat beneath this tree and meditated for nearly seven years, surviving on the tree&rsquo;s collected water and its figs. A corrupt king, coveting the monk&rsquo;s understanding, ordered the tree destroyed. The roots were hacked and major limbs felled, yet the monk continued to meditate. After the servants finished, the monk fed a bottle of sacramental wine to the damaged roots, vowing that if the tree should die, so would he. The roots absorbed the wine and began to heal rapidly, and the tree grew larger and lusher than before. The original tree’s location is lost, but cuttings have been transplanted to many monasteries as symbols of divine power and faith.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "Broderick's Compendium: Plants and Fungi Across the Realm (version 2.0)",
+    "quantity": 1,
+    "weight": 0,
+    "price": 0,
+    "attunement": 0,
+    "equipped": false,
+    "rarity": "rare",
+    "identified": true,
+    "activation": {
+      "type": "",
+      "cost": 0,
+      "condition": ""
+    },
+    "duration": {
+      "value": null,
+      "units": ""
+    },
+    "target": {
+      "value": null,
+      "width": null,
+      "units": "",
+      "type": ""
+    },
+    "range": {
+      "value": null,
+      "long": null,
+      "units": ""
+    },
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": null,
+      "autoDestroy": false
+    },
+    "consume": {
+      "type": "",
+      "target": null,
+      "amount": null
+    },
+    "ability": null,
+    "actionType": "",
+    "attackBonus": 0,
+    "chatFlavor": "",
+    "critical": null,
+    "damage": {
+      "parts": [],
+      "versatile": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "",
+      "dc": null,
+      "scaling": "spell"
+    },
+    "consumableType": "potion",
+    "attuned": false
+  },
+  "_key": "!items!V8wANGhTYerUamC4"
+}

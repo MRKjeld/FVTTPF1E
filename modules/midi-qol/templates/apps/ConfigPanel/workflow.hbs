@@ -1,0 +1,295 @@
+<section id="midi-config-workflow" class="tab midi-scrollable-list{{#if tab.active}} active{{/if}}"
+  data-group="{{tab.group}}" data-tab="{{tab.id}}">
+  <!-- Targeting -->
+  <div class="midi-qol-box">
+    <div class="midi-qol-settings heading">{{ localize "midi-qol.Targeting"}}</div>
+    <div class="form-group">
+      <label>{{localize "midi-qol.AutoTarget.Name"}}</label>
+      <select name="autoTarget" data-dtype="String">
+        {{midiSelectOptions autoTargetOptions selected=configSettings.autoTarget localize=true}}
+      </select>
+      <div class="notes midi-qol-faint">{{{localize "midi-qol.AutoTarget.Hint"}}}</div>
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "midi-qol.RangeTarget.Name"}}</label>
+      <select name="rangeTarget" data-dtype="String">
+        {{selectOptions rangeTargetOptions selected=configSettings.rangeTarget localize=true}}
+      </select>
+      <div class="notes midi-qol-faint">{{{localize "midi-qol.RangeTarget.Hint"}}}</div>
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "midi-qol.RequiresTargets.Name"}}</label>
+      <select name="requiresTargets" data-dtype="String">
+        {{selectOptions requiresTargetsOptions selected=configSettings.requiresTargets localize=true}}
+      </select>
+      <div class="notes midi-qol-faint">{{{localize "midi-qol.RequiresTargets.Hint"}}}</div>
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "midi-qol.EnforceSingleWeaponTarget.Name"}}</label>
+      <input id="enforceSingleWeaponTarget" type="checkbox" name="enforceSingleWeaponTarget" data-dtype="Boolean"
+        {{checked configSettings.enforceSingleWeaponTarget}} />
+      <div class="notes midi-qol-faint">{{{localize "midi-qol.EnforceSingleWeaponTarget.Hint"}}}</div>
+    </div>
+
+  </div>
+
+  <!-- Specials -->
+  <div class="midi-qol-box">
+    <div class="midi-qol-settings heading">{{ localize "midi-qol.Special"}}</div>
+    <div class="form-group">
+      <label>{{localize "midi-qol.AutoRemoveTemplate.Name"}}</label>
+      <input id="autoRemoveTemplate" type="checkbox" name="autoRemoveTemplate" data-dtype="Boolean" {{checked
+        configSettings.autoRemoveTemplate}} />
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "midi-qol.AutoRemoveInstantaneousTemplate.Name"}}</label>
+      <input id="autoRemoveInstantaneousTemplate" type="checkbox" name="autoRemoveInstantaneousTemplate"
+        data-dtype="Boolean" {{checked configSettings.autoRemoveInstantaneousTemplate}} />
+      <div class="notes midi-qol-faint">{{{localize "midi-qol.AutoRemoveInstantaneousTemplate.Hint"}}}</div>
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "midi-qol.AutoRemoveSummonedCreature.Name"}}</label>
+      <input id="autoRemoveSummonedCreature" type="checkbox" name="autoRemoveSummonedCreature" data-dtype="Boolean"
+        {{checked configSettings.autoRemoveSummonedCreature}} />
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "midi-qol.AutoEffects.Name"}}</label>
+      <select name="autoItemEffects" data-dtype="String">
+        {{selectOptions AutoEffectsOptions selected=configSettings.autoItemEffects localize=true}}
+      </select>
+      <p class="notes midi-qol-faint">{{{localize "midi-qol.AutoEffects.Hint"}}}</p>
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "midi-qol.AutoUndoTransformations.Name"}}</label>
+        <input type="checkbox" name="autoUndoTransformations" data-dtype="Boolean" {{checked
+          configSettings.autoUndoTransformations}} />
+      <p class="notes midi-qol-faint">{{{localize "midi-qol.AutoUndoTransformations.Hint"}}}</p>
+    </div>
+
+    {{#if hasConvenientEffects}}
+    <div class="form-group">
+      <label>{{localize "midi-qol.AutoCEEffects.Name"}}</label>
+      <select name="autoCEEffects" data-dtype="String">
+        {{selectOptions AutoCEEffectsOptions selected=configSettings.autoCEEffects localize=true}}
+      </select>
+      <p class="notes midi-qol-faint">{{{localize "midi-qol.AutoCEEffects.Hint"}}}</p>
+    </div>
+    {{/if}}
+  </div>
+
+  <!-- Hits-->
+  <div class="midi-qol-box">
+    <div class="midi-qol-settings heading">{{localize "midi-qol.Hits"}}</div>
+    <div class="form-group">
+      <label>DND5E {{{localize "SETTINGS.DND5E.VISIBILITY.Attack.Name"}}}</label>
+      <select name="dnd5eAttackRollVisibility" data-dtype="String">
+        {{selectOptions attackRollVisibilityOptions selected=attackRollVisibilityValue localize=true}}
+      </select>
+      <div class="notes midi-qol-faint">{{{localize "SETTINGS.DND5E.VISIBILITY.Attack.Hint"}}}</div>
+    </div>
+    <div class="form-group">
+      <label>{{localize "midi-qol.HighlightSuccess.Name"}}</label>
+      <input type="checkbox" name="highlightSuccess" data-dtype="Boolean" {{checked
+      configSettings.highlightSuccess}} />
+      <div class="notes midi-qol-faint">{{{localize "midi-qol.HighlightSuccess.Hint"}}}</div>
+    </div>
+    <div class="form-group">
+      <label>{{localize "midi-qol.HighLightCriticalAttackOnly.Name"}}</label>
+      <input type="checkbox" name="highLightCriticalAttackOnly" data-dtype="Boolean" {{checked
+      configSettings.highLightCriticalAttackOnly}} />
+      <div class="notes midi-qol-faint">{{{localize "midi-qol.HighLightCriticalAttackOnly.Hint"}}}</div>
+    </div>
+    <div class="form-group">
+      <label>{{localize "midi-qol.AutoCheckHit.Name"}}</label>
+      <select name="autoCheckHit" data-dtype="String">
+        {{midiSelectOptions autoCheckHitOptions selected=configSettings.autoCheckHit localize=true}}
+      </select>
+      <div class="notes midi-qol-faint">{{{localize "midi-qol.AutoCheckHit.Hint"}}}</div>
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "midi-qol.AttackPerTarget.Name"}}</label>
+      <input type="checkbox" name="attackPerTarget" data-dtype="Boolean" {{checked configSettings.attackPerTarget}} />
+    </div>
+    <div class="midi-qol-box">
+      <div class="form-group">
+        <label>{{localize "midi-qol.WallsBlockRange.Name"}}</label>
+        <select name="optionalRules.wallsBlockRange" data-dtype="String">
+          {{midiSelectOptions wallsBlockRangeOptions selected=configSettings.optionalRules.wallsBlockRange localize=true}}
+        </select>
+        <div class="notes midi-qol-faint">{{localize "midi-qol.WallsBlockRange.Hint"}}</div>
+      </div>
+      <div class="form-group">
+        <label>{{localize "midi-qol.CoverCalculation.Name"}}</label>
+        <select name="optionalRules.coverCalculation" data-dtype="String">
+          {{selectOptions CoverCalculationOptions selected=configSettings.optionalRules.coverCalculation localize=true}}
+        </select>
+        <div class="notes midi-qol-faint">{{localize "midi-qol.CoverCalculation.Hint"}}</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Saves-->
+  <div class="midi-qol-box">
+    <div class="midi-qol-settings heading">{{localize "midi-qol.Saves"}}</div>
+    <div class="form-group">
+      <label>DND5E {{{localize "SETTINGS.DND5E.VISIBILITY.Challenge.Name"}}}</label>
+      <select name="dnd5eChallengeVisibility" data-dtype="String">
+        {{selectOptions challengeVisibilityOptions selected=challengeVisibilityValue localize=true}}
+      </select>
+      <div class="notes midi-qol-faint">{{{localize "SETTINGS.DND5E.VISIBILITY.Challenge.Hint"}}}</div>
+    </div>
+    <div class="form-group">
+      <label>{{localize "midi-qol.AutoCheckSaves.Name"}}</label>
+      <select name="autoCheckSaves" data-dtype="String">
+        {{midiSelectOptions autoCheckSavesOptions selected=configSettings.autoCheckSaves localize=true}}
+      </select>
+      <div class="notes midi-qol-faint">{{localize "midi-qol.AutoCheckSaves.Hint"}}</div>
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "midi-qol.DisplaySaveAdvantage.Name"}}</label>
+      <input type="checkbox" name="displaySaveAdvantage" data-dtype="Boolean" {{checked
+        configSettings.displaySaveAdvantage}} />
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "midi-qol.DefaultSaveMult.Name"}}</label>
+      <input type="number" step="any" name="defaultSaveMult" value="{{configSettings.defaultSaveMult}}" />
+      <div class="notes midi-qol-faint">{{{localize "midi-qol.DefaultSaveMult.Hint"}}}</div>
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "midi-qol.PlayerRollSaves.Name"}}</label>
+      <select name="playerRollSaves" data-dtype="String">
+        {{midiSelectOptions playerRollSavesOptions selected=configSettings.playerRollSaves localize=true}}
+      </select>
+      <div class="notes midi-qol-faint">{{{localize "midi-qol.PlayerRollSaves.Hint"}}}</div>
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "midi-qol.rollNPCSaves.Name"}}</label>
+      <select name="rollNPCSaves" data-dtype="String">
+        {{midiSelectOptions rollNPCSavesOptions selected=configSettings.rollNPCSaves localize=true}}
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "midi-qol.rollNPCLinkedSaves.Name"}}</label>
+      <select name="rollNPCLinkedSaves" data-dtype="String">
+        {{midiSelectOptions rollNPCSavesOptions selected=configSettings.rollNPCLinkedSaves localize=true}}
+      </select>
+      <div class="notes midi-qol-faint">{{{localize "midi-qol.rollNPCSaves.Hint"}}}</div>
+    </div>
+    <div class="form-group">
+      <label>{{localize "midi-qol.PlayerSaveTimeout.Name"}}</label>
+      <input type="number" name="playerSaveTimeout" value="{{configSettings.playerSaveTimeout}}" />
+      <div class="notes midi-qol-faint">{{{localize "midi-qol.PlayerSaveTimeout.Hint"}}}</div>
+    </div>
+  </div>
+
+  <!-- Damage -->
+  <div class="midi-qol-box">
+    <div class="midi-qol-settings heading">{{localize "midi-qol.Damage" }}</div>
+
+    <div class="form-group">
+      <label>{{localize "midi-qol.CriticalDamage.Name"}}</label>
+      <select name="criticalDamage" data-dtype="String">
+        {{selectOptions criticalDamageChoices selected=configSettings.criticalDamage localize=true}}
+      </select>
+      <div class="notes midi-qol-faint">{{{localize "midi-qol.CriticalDamage.Hint"}}}</div>
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "midi-qol.CriticalDamageGM.Name"}}</label>
+      <select name="criticalDamageGM" data-dtype="String">
+        {{selectOptions criticalDamageChoices selected=configSettings.criticalDamageGM localize=true}}
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "midi-qol.AutoApplyDamage.Name"}}</label>
+      <select name="autoApplyDamage" data-dtype="String">
+        {{selectOptions autoApplyDamageOptions selected=configSettings.autoApplyDamage localize=true}}
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "midi-qol.DamageCardStyle.Name"}}</label>
+      <select name="damageCardStyle" data-dtype="String">
+        {{selectOptions damageCardStyleOptions selected=configSettings.damageCardStyle localize=true}}
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "midi-qol.AddChatDamageButtons.Name"}}</label>
+      <select name="addChatDamageButtons" data-dtype="String">
+        {{selectOptions AddChatDamageButtonsOptions selected=configSettings.addChatDamageButtons localize=true}}
+      </select>
+      <div class="notes midi-qol-faint">{{{localize "midi-qol.AddChatDamageButtons.Hint"}}}</div>
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "midi-qol.PlayerDamageCard.Name"}}</label>
+      <select name="playerDamageCard" data-dtype="String">
+        {{selectOptions playerDamageCardOptions selected=configSettings.playerDamageCard localize=true}}
+      </select>
+      <div class="notes midi-qol-faint">{{{localize "midi-qol.PlayerDamageCard.Hint"}}}</div>
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "midi-qol.PlayerCardDamageDifferent.Name"}}</label>
+      <input type="checkbox" name="playerCardDamageDifferent" data-dtype="Boolean" {{checked
+        configSettings.playerCardDamageDifferent}} />
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "midi-qol.DamageImmunities.Name"}}</label>
+      <select name="damageImmunities" data-dtype="String">
+        {{selectOptions damageImmunitiesOptions selected=configSettings.damageImmunities localize=true}}
+      </select>
+      <div class="notes midi-qol-faint">{{{localize "midi-qol.DamageImmunities.Hint"}}}</div>
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "midi-qol.DamageImmunityMultiplier.Name"}}</label>
+      <input type="number" step="any" name="damageImmunityMultiplier"
+        value="{{configSettings.damageImmunityMultiplier}}" />
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "midi-qol.DamageResistanceMultiplier.Name"}}</label>
+      <input type="number" step="any" name="damageResistanceMultiplier"
+        value="{{configSettings.damageResistanceMultiplier}}" />
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "midi-qol.DamageVulnerabilityMultiplier.Name"}}</label>
+      <input type="number" step="any" name="damageVulnerabilityMultiplier"
+        value="{{configSettings.damageVulnerabilityMultiplier}}" />
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "midi-qol.SaveDROrder.Name"}}</label>
+      <select name="saveDROrder" data-dtype="String">
+        {{selectOptions SaveDROrderOptions selected=configSettings.saveDROrder localize=true}}
+      </select>
+      <div class="notes midi-qol-faint">{{{localize "midi-qol.SaveDROrder.Hint"}}}</div>
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "midi-qol.RequireMagical.Name"}}</label>
+      <select name="requireMagical" data-dtype="String">
+        {{selectOptions RequireMagicalOptions selected=configSettings.requireMagical localize=true}}
+      </select>
+      <div class="notes midi-qol-faint">{{{localize "midi-qol.RequireMagical.Hint"}}}</div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,122 @@
+{
+  "_id": "KeYIkF3CvgRpKXPG",
+  "name": "Cachuga Pepper",
+  "type": "consumable",
+  "img": "modules/brodericks-compendium-plants-fungi/images/cachuga-pepper.webp",
+  "effects": [],
+  "folder": null,
+  "sort": 22400000,
+  "flags": {
+    "betterRolls5e": {
+      "critRange": {
+        "value": null
+      },
+      "critDamage": {
+        "value": ""
+      },
+      "quickDesc": {
+        "value": true,
+        "altValue": true
+      },
+      "quickProperties": {
+        "value": true,
+        "altValue": true
+      },
+      "quickOther": {
+        "value": true,
+        "altValue": true
+      },
+      "quickFlavor": {
+        "value": true,
+        "altValue": true
+      },
+      "quickCharges": {
+        "value": {
+          "quantity": false
+        },
+        "altValue": {
+          "quantity": false
+        }
+      }
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.348",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": 1756493242358,
+    "lastModifiedBy": "lQk7CCByj6wH9AQa",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "ownership": {
+    "default": 0,
+    "0dke80Cb9LhbPTyn": 3
+  },
+  "system": {
+    "description": {
+      "value": "<p><em>Biome: Plains</em></p><p>Cachuga Peppers grow in plains near hot springs or geysers. The plant is a vaguely pyramidal, woody bush with profuse foliage that bears clusters of small, fragrant yellow blooms which give way to marbled red-orange peppers. In the tropical Swordfish Islands the bushes bloom continuously, producing many of these fiery peppers. Each pepper is 2–4 inches long and hangs from the bush by thick, green, vein-like stalks. The peppers are exceptionally spicy and flavorful; their leathery skins can be mashed into a paste, shaped, and dried into chips or a paper-like wrapping that pairs well with raw fish. The peppers dry well, retaining heat and flavor for long periods. Their seeds can be ground into a powder that causes *severe* eye and skin irritation (DC 16 Con. save or blindness for [[/roll 3d10]] minutes).</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "Broderick's Compendium: Plants and Fungi Across the Realm (version 2.0)",
+    "quantity": 1,
+    "weight": 0,
+    "price": 0,
+    "attunement": 0,
+    "equipped": false,
+    "rarity": "uncommon",
+    "identified": true,
+    "activation": {
+      "type": "",
+      "cost": 0,
+      "condition": ""
+    },
+    "duration": {
+      "value": null,
+      "units": ""
+    },
+    "target": {
+      "value": null,
+      "width": null,
+      "units": "",
+      "type": ""
+    },
+    "range": {
+      "value": null,
+      "long": null,
+      "units": ""
+    },
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": null,
+      "autoDestroy": false
+    },
+    "consume": {
+      "type": "",
+      "target": null,
+      "amount": null
+    },
+    "ability": null,
+    "actionType": "",
+    "attackBonus": 0,
+    "chatFlavor": "",
+    "critical": null,
+    "damage": {
+      "parts": [],
+      "versatile": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "",
+      "dc": null,
+      "scaling": "spell"
+    },
+    "consumableType": "potion",
+    "attuned": false
+  },
+  "_key": "!items!KeYIkF3CvgRpKXPG"
+}

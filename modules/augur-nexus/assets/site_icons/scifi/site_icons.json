@@ -1,0 +1,113 @@
+{
+  "icons": [
+    {
+      "id": "airtight-hatch",
+      "label": "Airtight Hatch",
+      "src": "modules/augur-nexus/assets/site_icons/scifi/airtight-hatch.png",
+      "role": "entrance"
+    },
+    {
+      "id": "ancient-columns",
+      "label": "Ancient Columns",
+      "src": "modules/augur-nexus/assets/site_icons/scifi/ancient-columns.png",
+      "role": "landmark"
+    },
+    {
+      "id": "ancient-ruins",
+      "label": "Ancient Ruins",
+      "src": "modules/augur-nexus/assets/site_icons/scifi/ancient-ruins.png",
+      "role": "landmark"
+    },
+    {
+      "id": "barracks",
+      "label": "Barracks",
+      "src": "modules/augur-nexus/assets/site_icons/scifi/barracks.png",
+      "role": "landmark"
+    },
+    {
+      "id": "crosshair",
+      "label": "Crosshair",
+      "src": "modules/augur-nexus/assets/site_icons/scifi/crosshair.png",
+      "role": "landmark"
+    },
+    {
+      "id": "digital-trace",
+      "label": "Digital Trace",
+      "src": "modules/augur-nexus/assets/site_icons/scifi/digital-trace.png",
+      "role": "landmark"
+    },
+    {
+      "id": "door",
+      "label": "Door",
+      "src": "modules/augur-nexus/assets/site_icons/scifi/door.png",
+      "role": "entrance"
+    },
+    {
+      "id": "double-doors",
+      "label": "Double Doors",
+      "src": "modules/augur-nexus/assets/site_icons/scifi/double-doors.png",
+      "role": "entrance"
+    },
+    {
+      "id": "elevator",
+      "label": "Elevator",
+      "src": "modules/augur-nexus/assets/site_icons/scifi/elevator.png",
+      "role": "entrance"
+    },
+    {
+      "id": "habitat-dome",
+      "label": "Habitat Dome",
+      "src": "modules/augur-nexus/assets/site_icons/scifi/habitat-dome.png",
+      "role": "landmark"
+    },
+    {
+      "id": "impact-point",
+      "label": "Impact Point",
+      "src": "modules/augur-nexus/assets/site_icons/scifi/impact-point.png",
+      "role": "landmark"
+    },
+    {
+      "id": "radar-dish",
+      "label": "Radar Dish",
+      "src": "modules/augur-nexus/assets/site_icons/scifi/radar-dish.png",
+      "role": "landmark"
+    },
+    {
+      "id": "select",
+      "label": "Select",
+      "src": "modules/augur-nexus/assets/site_icons/scifi/select.png",
+      "role": "landmark"
+    },
+    {
+      "id": "hexmap-site",
+      "label": "Hexmap Site",
+      "src": "modules/augur-nexus/assets/site_icons/scifi/site.png",
+      "role": "landmark"
+    },
+    {
+      "id": "steel-door",
+      "label": "Steel Door",
+      "src": "modules/augur-nexus/assets/site_icons/scifi/steel-door.png",
+      "role": "entrance"
+    },
+    {
+      "id": "targeted",
+      "label": "Targeted",
+      "src": "modules/augur-nexus/assets/site_icons/scifi/targeted.png",
+      "role": "landmark"
+    },
+    {
+      "id": "targeting",
+      "label": "Targeting",
+      "src": "modules/augur-nexus/assets/site_icons/scifi/targeting.png",
+      "role": "landmark"
+    },
+    {
+      "id": "triangle-target",
+      "label": "Triangle Target",
+      "src": "modules/augur-nexus/assets/site_icons/scifi/triangle-target.png",
+      "role": "landmark"
+    }
+  ]
+}
+

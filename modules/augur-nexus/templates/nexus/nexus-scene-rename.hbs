@@ -1,0 +1,10 @@
+<div class="nexus-scene-rename-shell">
+    <form class="nexus-scene-rename-form">
+        <label for="nexus-scene-name">Scene Name</label>
+        <input id="nexus-scene-name" type="text" name="sceneName" value="{{sceneName}}" {{#unless hasScene}}disabled{{/unless}}>
+        <div class="nexus-scene-rename-actions">
+            <button type="button" class="site-entry-clear nexus-browser-action" data-action="cancelRename">Cancel</button>
+            <button type="submit" class="site-entry-clear nexus-browser-action" data-action="saveRename" {{#unless hasScene}}disabled{{/unless}}>Save</button>
+        </div>
+    </form>
+</div>

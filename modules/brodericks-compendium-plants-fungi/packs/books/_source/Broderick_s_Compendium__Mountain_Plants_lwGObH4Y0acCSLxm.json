@@ -1,0 +1,49 @@
+{
+  "_id": "lwGObH4Y0acCSLxm",
+  "name": "Broderick's Compendium: Mountain Plants",
+  "type": "loot",
+  "img": "icons/sundries/books/book-worn-brown.webp",
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "value": "<p>@Compendium[brodericks-compendium-plants-fungi.plants.xxOxPza4c4LbF7BM]{Alligator Teeth}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.URLXRBQmRqAxUkIK]{Angelica}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.84ipgN15NQeNQVFa]{Arctic Creeper}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.7yiEoLRUtdIFa4kW]{Ardulan}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.QHAKnyjeSr88UvLZ]{Arnica}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.r00vl9KWMGOU8IC9]{Barisc}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.8UycduFe5gErGffC]{Base Mullein}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.umcUH1LTrps70uDL]{Basil}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.6z5cJ6F6MpKLqC4M]{Basilisk Breath}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.br8VSIj3nPqpTeZ3]{Bishop's Weed}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.ZBnhwpbrowRUIMoX]{Blackberry}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.fyaa25ETQmluHfdu]{Black Rose}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.OhmdyycMTc1UBtgR]{Bloodkeep}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.RTBM65v0QmMHlUCt]{Bloodspine}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.8EeplhyK0ZCfFb93]{Bloodstaunch}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.MFt7ovGX4WMANYpq]{Bocraugh}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.Ni4BBineG2G4ekG7]{Brandac}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.MOGXu9k6PR2tJO8O]{Calithil}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.ztiNeUJ1B86iAvpn]{Ceran}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.HIaVrUqCH9lmvLXL]{Darkanda Bush}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.qbbInAKNR2pukZFu]{Dathlil}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.PVE7CCasTq1tW4Pv]{Devarencia}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.PzFFu2fPDssLZVdz]{Devil's Crown}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.wwMdZYNEuPkpC7iM]{Dragon's Breath}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.SVXbXvbONc00ctTc]{Dragonspine}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.4FoRJEa8mMpchSZk]{Dwarf Mallow}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.kTw2oSjxi96Pyprv]{Dwarven Oak}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.VSqv625UBr68MlFz]{Elandir}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.s8XqwuB7GDwj0URk]{Ember Root}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.5d0qRa9V1r4TdeJ3]{Entriste}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.fuRldSqzIjvIyMiy]{Ephedra}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.RZzeHqyJ8JpLqfaB]{Fire Flower}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.KWgxE4PPoGBzheaN]{Flintmoss}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.Dz7boHKxkq10ApCW]{Footleaf}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.WUqlKqQeDwPJ7YCZ]{Fumitore}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.NalETLzVX12V7ppE]{Furyax}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.eQWObxg21oi2Ayzt]{Gefnul}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.6Uwcywqc93xe5vR6]{Goblinberry Bush}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.xzmMBWyGD3VFfnD5]{Golden Coin Cactus}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.RLxLb0MHOOmS6Zmc]{Green-Air Bramble}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.3j0JjDLQXIHCYBPl]{Guardseye}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.giPkvF3Oeh1LwQoA]{Halfling Thistle}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.FfLVdHNsY14ymhN9]{Helmthorne}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.KRQE8eHYLET9BrA7]{Kathkusa}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.TfqdwBQ5PIqu7WTC]{Laumspur}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.BVzzmRZWFv5jgNJl]{Lesser Centaury}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.XZmhCqm2xLCGFOtN]{Midnight Coneflower}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.127ml3rDVETEmBFO]{Mimetry Sprigs}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.5VyOZjI26VYFXT0s]{Mordock Bramble}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.zqI8YSSsfYzo75bD]{Mother's Mercy}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.sOgvYpM59YQ9qnBA]{Mother's Worry}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.IRb0RYjW6H0I0fyu]{Mountain Garlic}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.eBaOGIZNmhRyHxqM]{Mountain Setwall}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.fJkH6QBhuJDkaa80]{Oede}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.tCMQUGnQZB4KgdjS]{Oliosse}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.F2mT99BndrMbY01E]{Orevine}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.MnZI9Kno0qgEk9Dm]{Poznan's Chain}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.iSRVxM2DMjJgOpZX]{Redgold's Feather}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.3PbIXg04cXFAMzDH]{Redstar Flowers}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.mX16PiCZopseLPVN]{Sarasar}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.sO5EXJOLHeLXdyJF]{Serapia's Turbith}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.H45DlroNzMEVoM7T]{Seregon}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.miNgUsWNHzYItgWu]{Shepherd's Purse}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.EQsmSemDgDT09PZS]{Silverleaf}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.Wjo1dLgm8yZAyKQT]{Silverthorn (Aelebera)}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.ePWeScp5dn6zWsws]{Sky Lotus}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.w961AJqVUWxBsYMQ]{Slimmerane}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.jsertEToEMktFjgD]{Spellbane}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.TPZ4qHwmyVoHBacy]{Spring Adonis}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.UT3B2C1GxXint0Qx]{Strawberry}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.p2QBqmlSe0RO1Ql5]{Tahtoalethi (Wishfern)}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.DSkn5qMqs0oI4tyK]{Takara Bulb}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.lQpqYbAc3P8rlp1s]{Thornapple}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.CQOe9HEiBXOG9w1Y]{Thurl}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.I10cThY7c5btt49a]{Umozokai Flower}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.zS1qoQCfm0HXs4uO]{Wolfweed}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.zT4PZvKM9lEUpuUz]{Yavethalion}</p><p>@Compendium[brodericks-compendium-plants-fungi.plants.imwdz9KphRq8kh2f]{Zulsendra}</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "Broderick's Compendium: Plants and Fungi Across the Realm (version 2.0)",
+    "quantity": 1,
+    "weight": null,
+    "price": null,
+    "attunement": 0,
+    "equipped": false,
+    "rarity": "common",
+    "identified": true,
+    "damage": {
+      "parts": []
+    },
+    "details": {
+      "description": "<p>A book might contain poetry, historical accounts, information pertaining to a particular field of lore, diagrams and notes on gnomish contraptions, or just about anything else that can be represented using text or pictures. A book of spells is a @Compendium[dnd5e.items.LBajgahniRJbAgDr]{Spellbook}.</p>"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "Vp3gqdXZHIvyDk7G": 3
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.2.1",
+    "coreVersion": "13.348",
+    "createdTime": null,
+    "modifiedTime": 1686091329776,
+    "lastModifiedBy": "BcW0cItLn46tmIlJ",
+    "compendiumSource": "Compendium.dnd5e.items.RMi9efrW9ouHVLI2",
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!lwGObH4Y0acCSLxm"
+}

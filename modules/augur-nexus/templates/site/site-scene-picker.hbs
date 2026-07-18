@@ -1,0 +1,29 @@
+<div class="augur-nexus site-scene-picker">
+    <div class="site-scene-picker-search">
+        <i class="fas fa-search"></i>
+        <input type="search" name="sceneSearch" placeholder="Search scenes">
+    </div>
+    <div class="site-scene-list">
+        {{#each scenes}}
+        <div class="nexus-browser-pill site-scene-card site-scene-pill {{#if this.isSelected}}current active{{/if}}" data-scene-id="{{this.id}}" data-scene-name="{{this.name}}" data-scene-folder="{{this.folderName}}" role="button" tabindex="0" aria-label="{{this.name}}">
+            <div class="nexus-browser-pill-backdrop {{#unless this.thumb}}no-thumb{{/unless}}">
+                {{#if this.thumb}}
+                <img src="{{this.thumb}}" alt="{{this.name}}">
+                {{else}}
+                <div class="site-scene-fallback"><i class="fas fa-map"></i></div>
+                {{/if}}
+            </div>
+            <div class="nexus-browser-pill-overlay"></div>
+            <div class="nexus-browser-pill-copy">
+                <div class="nexus-browser-pill-name">{{this.name}}</div>
+                <div class="site-scene-pill-meta">
+                    <span class="nexus-browser-pill-type">{{#if this.isActive}}Active Scene{{else}}Scene{{/if}}</span>
+                    {{#if this.folderName}}
+                    <span class="site-scene-pill-folder" title="{{this.folderName}}">{{this.folderName}}</span>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

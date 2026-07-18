@@ -1,0 +1,5 @@
+2026/07/17-13:58:04.041 52bc Recovering log #245
+2026/07/17-13:58:04.041 52bc Level-0 table #247: started
+2026/07/17-13:58:04.054 52bc Level-0 table #247: 753 bytes OK
+2026/07/17-13:58:04.062 52bc Delete type=0 #245
+2026/07/17-13:58:04.062 52bc Delete type=3 #244

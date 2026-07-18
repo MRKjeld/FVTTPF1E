@@ -1,0 +1,125 @@
+{
+  "name": "Corpsebomb",
+  "type": "consumable",
+  "flags": {
+    "betterRolls5e": {
+      "critRange": {
+        "value": null
+      },
+      "critDamage": {
+        "value": ""
+      },
+      "quickDesc": {
+        "value": true,
+        "altValue": true
+      },
+      "quickProperties": {
+        "value": true,
+        "altValue": true
+      },
+      "quickOther": {
+        "value": true,
+        "altValue": true
+      },
+      "quickFlavor": {
+        "value": true,
+        "altValue": true
+      },
+      "quickCharges": {
+        "value": {
+          "quantity": false
+        },
+        "altValue": {
+          "quantity": false
+        }
+      }
+    }
+  },
+  "img": "modules/brodericks-compendium-plants-fungi/images/corpsebomb.webp",
+  "effects": [],
+  "_id": "v1wcOHl0LVCTHRgJ",
+  "system": {
+    "description": {
+      "value": "<p><em>Biome: Swamps, Underdark & Caves</em></p><p>The fungus begins life as a tiny spore that floats until inhaled and lodges in the moist tissue of the lungs. The spore grows, causing irritation, pain, and eventually death once the fungus reaches a sizable mass. After the host dies, the fungus rapidly expands and pushes a hollow tendril out of the corpse. At the exposed end the tendril forms a thin membrane inflated by gases from the rotting body. When the membrane ruptures and disperses spores, every breathing creature within 40 feet must make a DC 10 Constitution saving throw or inhale spores. If they fail, each hour thereafter the creature must make a Constitution save with a cumulative -1 penalty; each failed hour inflicts cumulative piercing damage ([[/roll 1d6]] the first hour, 2d6 the second, [[/roll 3d6]] the third, etc.) as the fungus spreads through organs. A single successful save stops the process and renders the fungus inert. If the fungus catches fire, the spore sac may explode: everyone within 20 feet must make a DC 15 Dexterity save or suffer [[/roll 3d6]] fire damage (half on a success); the blast incinerates all spores.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "Broderick's Compendium: Plants and Fungi Across the Realm (version 2.0)",
+    "quantity": 1,
+    "weight": 0,
+    "price": 0,
+    "attunement": 0,
+    "equipped": false,
+    "rarity": "uncommon",
+    "identified": true,
+    "activation": {
+      "type": "",
+      "cost": 0,
+      "condition": ""
+    },
+    "duration": {
+      "value": null,
+      "units": ""
+    },
+    "cover": null,
+    "crewed": false,
+    "target": {
+      "value": null,
+      "width": null,
+      "units": "",
+      "type": ""
+    },
+    "range": {
+      "value": null,
+      "long": null,
+      "units": ""
+    },
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": null,
+      "recovery": "",
+      "autoDestroy": false
+    },
+    "consume": {
+      "type": "",
+      "target": null,
+      "amount": null
+    },
+    "ability": null,
+    "actionType": "",
+    "attackBonus": 0,
+    "chatFlavor": "",
+    "critical": null,
+    "damage": {
+      "parts": [],
+      "versatile": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "",
+      "dc": null,
+      "scaling": "spell"
+    },
+    "consumableType": "potion",
+    "attuned": false
+  },
+  "ownership": {
+    "default": 0,
+    "0dke80Cb9LhbPTyn": 3
+  },
+  "folder": null,
+  "sort": 57800000,
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.2.1",
+    "coreVersion": "13.348",
+    "createdTime": null,
+    "modifiedTime": 1756493242358,
+    "lastModifiedBy": "lQk7CCByj6wH9AQa",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!v1wcOHl0LVCTHRgJ"
+}

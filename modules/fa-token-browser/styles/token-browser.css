@@ -1,0 +1,1714 @@
+/* Token Browser Styles */
+
+/* Theme variables scoped to our app (dark defaults) */
+#token-browser-app, .color-variants-panel, #actor-token-update-dialog {
+  --fa-bg: rgba(10, 9, 17, 0.85);
+  --fa-bg-soft: rgba(10, 9, 17, 0.3);
+  --fa-panel: rgba(0, 0, 0, 0.76);
+  --fa-border: rgba(255, 255, 255, 0.1);
+  --fa-text: #eee;
+  --fa-text-muted: #999;
+  --fa-cloud: rgba(93, 169, 253, 0.6);
+  --fa-locked: #873b1f;
+  --fa-creature-type: rgba(215, 171, 0, 0.65);
+  --fa-scale: rgba(34, 197, 94, 0.5);
+}
+
+#token-browser-app.fa-theme-light, .color-variants-panel.fa-theme-light, #actor-token-update-dialog.fa-theme-light {
+  --fa-bg: rgba(255, 255, 255, 0.80);
+  --fa-bg-soft: rgba(0, 0, 0, 0.05);
+  --fa-panel: rgba(218, 216, 204, 0.76);
+  --fa-border: rgba(0, 0, 0, 0.15);
+  --fa-text: #222;
+  --fa-text-muted: #555;
+  --fa-cloud: #3b82f6;
+  --fa-locked: #873b1f;
+  --fa-creature-type: #9a7b00;
+  --fa-scale: #008330;
+}
+
+/* Light theme hover override for token items */
+#token-browser-app.fa-theme-light .token-item:hover {
+  border-color: rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Light theme title color override */
+#token-browser-app.fa-theme-light .window-title {
+  color: var(--fa-bg);
+}
+
+/* Light theme panel box shadow */
+.color-variants-panel.fa-theme-light {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+
+/* Override ApplicationV2 window styling for better integration */
+
+/* Only apply minimum size when window is not minimized */
+#token-browser-app:not(.minimized, .minimizing, .maximizing) {
+  min-width: 455px;
+  min-height: 455px;
+}
+
+ #token-browser-app .window-header {
+  border-color: var(--fa-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#token-browser-app .header-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+#token-browser-app .window-title {
+  color: var(--fa-text-muted);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  white-space: nowrap;
+}
+
+#token-browser-app .window-title i {
+  color: #4CAF50;
+  font-size: 1.1em;
+}
+
+#token-browser-app .window-title .title-cloud-icon {
+  color: rgba(93, 169, 253, 0.6);
+  font-size: 0.85em;
+  margin: 0 0.15rem;
+}
+
+#token-browser-app .window-title .title-stats {
+  font-weight: normal;
+  opacity: 0.9;
+}
+
+/* Custom FA icon styling */
+#token-browser-app .custom-fa-icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* Header Patreon auth styling */
+#token-browser-app .header-patreon-auth {
+  margin-left: auto;
+  pointer-events: auto;
+  position: relative;
+  z-index: 5;
+}
+
+#token-browser-app .header-patreon-auth .patreon-connect-button {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.2rem 0.8rem;
+  background: linear-gradient(135deg, #ff424d, #ff6b35);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: 500;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(255, 66, 77, 0.3);
+  pointer-events: auto;
+  position: relative;
+  z-index: 10;
+}
+
+#token-browser-app .header-patreon-auth .patreon-connect-button:hover {
+  background: linear-gradient(135deg, #e63946, #f77f00);
+  box-shadow: 0 2px 6px rgba(255, 66, 77, 0.4);
+  transform: translateY(-1px);
+}
+
+#token-browser-app .header-patreon-auth .auth-status-display {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.8rem;
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  border-radius: 4px;
+  color: rgb(34, 197, 94);
+  font-size: 0.8em;
+  font-weight: 500;
+  pointer-events: auto;
+  position: relative;
+  z-index: 10;
+}
+
+#token-browser-app .window-content {
+  padding: 0;
+  backdrop-filter: blur(5px);
+}
+
+.token-browser {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.token-browser-header {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.6rem;
+}
+
+.token-browser-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.2rem;
+  border-color: var(--fa-border);
+  background: var(--fa-bg-soft);
+}
+
+.auth-status-display[data-disconnect-handler="true"]:hover {
+  background: rgba(34, 197, 94, 0.15);
+  border-color: rgba(34, 197, 94, 0.4);
+  transform: translateY(-1px);
+  transition: all 0.2s ease;
+}
+
+.token-browser-search {
+  display: flex;
+  align-items: center;
+  width: -webkit-fill-available;
+}
+
+#token-browser-app .search-input-wrapper {
+  position: relative;
+  flex: 1;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+#token-browser-app .search-input-wrapper .search-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--fa-text-muted);
+  font-size: 0.9em;
+  pointer-events: none;
+}
+
+#token-search {
+  width: 100%;
+  padding: 0.5rem 0.2rem 0.5rem 2.25rem;
+  background: transparent;
+  border-radius: 4px;
+  /* color: #eee; */
+  font-size: 0.9em;
+  transition: all 0.2s ease;
+  min-height: 36px;
+  outline: none;
+}
+
+#token-search:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(109, 109, 109, 0.378);
+}
+
+#token-search::placeholder {
+  color: var(--fa-text-muted);
+  opacity: 0.8;
+}
+
+#token-browser-app .clear-search {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--fa-text-muted);
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#token-browser-app .search-input-wrapper.has-text .clear-search {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#token-browser-app .clear-search:hover {
+  color: var(--fa-text);
+}
+
+.token-browser-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.token-browser-stats {
+  color: var(--fa-text-muted);
+  max-width: 105px;
+  min-width: 80px;
+  height: 1.8em;
+  line-height: 0.9em;
+  font-size: 0.9em;
+  overflow: hidden;
+  align-content: center;
+  padding-top: 2px;
+}
+
+/* Main Color Filter Checkbox */
+#token-browser-app .main-color-filter {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  flex: 1;
+}
+
+/* Hide Locked Filter Checkbox */
+#token-browser-app .hide-locked-filter {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  flex: 1;
+  padding-right: 10px;
+}
+
+#token-browser-app .main-color-checkbox,
+#token-browser-app .hide-locked-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: var(--fa-text-muted);
+  font-size: 0.9em;
+  transition: color 0.2s ease;
+}
+
+#token-browser-app .main-color-checkbox:hover,
+#token-browser-app .hide-locked-checkbox:hover {
+  color: var(--fa-text);
+}
+
+#token-browser-app .main-color-checkbox.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+
+
+#token-browser-app .main-color-checkbox input[type="checkbox"],
+#token-browser-app .hide-locked-checkbox input[type="checkbox"] {
+  cursor: pointer;
+}
+
+#token-browser-app .main-color-checkbox.disabled input[type="checkbox"] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+#token-browser-app .main-color-checkbox input[type="checkbox"]:checked::after,
+#token-browser-app .hide-locked-checkbox input[type="checkbox"]:checked::after {
+  color: var(--fa-text-muted);
+  cursor: pointer;
+  font-size: 17px;
+}
+
+#token-browser-app .main-color-checkbox input[type="checkbox"]::before,
+#token-browser-app .hide-locked-checkbox input[type="checkbox"]::before {
+  font-size: 15px;
+  margin-right: 1px;
+}
+
+#token-browser-app .checkbox-label {
+  white-space: nowrap;
+  user-select: none;
+}
+
+/* Color Variants Panel */
+.color-variants-panel {
+  background: var(--fa-panel);
+  position: fixed;
+  border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  min-width: 280px;
+  max-width: 400px;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  backdrop-filter: blur(2px);
+}
+
+.color-variants-panel.visible {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.color-variants-panel .variant-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem 0.5rem;
+}
+
+.color-variants-panel .variant-title {
+  font-weight: bold;
+  color: var(--fa-text);
+  font-size: 0.9em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.color-variants-panel .variant-close {
+  background: none;
+  border: none;
+  color: var(--fa-text-muted);
+  font-size: 1.2em;
+  cursor: pointer;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+
+.color-variants-panel .variant-close:hover {
+  color: var(--fa-text);
+}
+
+.color-variants-panel .variant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 0.3rem;
+  padding: 0.5rem;
+  max-height: 420px;
+  overflow-y: auto;
+}
+
+
+
+.color-variants-panel .variant-item {
+  padding: 0.5rem;
+  height: auto;
+  cursor: grab;
+}
+
+.color-variants-panel .variant-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.color-variants-panel .variant-item .token-thumbnail {
+  width: 100px;
+  height: 100px;
+}
+
+.color-variants-panel .variant-item .token-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.color-variants-panel .variant-item[draggable="true"] {
+  cursor: grab;
+}
+
+.color-variants-panel .variant-item.dragging {
+  cursor: grabbing;
+}
+
+.color-variants-panel .variant-number {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.7em;
+  font-weight: bold;
+  border-radius: 4px 0 0 0;
+}
+
+#token-browser-app .sort-selector {
+  display: flex;
+  align-items: center;
+  padding-top: 2px;
+}
+
+#token-browser-app .sort-selector select {
+  outline: none;
+  background: transparent;
+  border-radius: 4px;
+  color: var(--fa-text-muted);
+  font-size: 0.75em;
+  min-width: 92px;
+  transition: all 0.2s ease;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%23999" d="M2 0L0 2h4zm0 5L0 3h4z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 5px top 1.1em;
+  background-size: 7px;
+  margin-right: 5px;
+}
+
+#token-browser-app .sort-selector select:focus {
+  outline: none;
+  color: var(--fa-text);
+  box-shadow: 0 0 0 2px rgba(109, 109, 109, 0.378);
+}
+
+
+#token-browser-app .sort-selector select option {
+  background: rgb(20 20 35);
+  color: var(--fa-text-muted);
+  padding: 4px 8px;
+}
+
+#token-browser-app .thumbnail-size-selector {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 4px;
+  padding-left: 5px;
+}
+
+#token-browser-app .thumbnail-size-selector label {
+  color: var(--fa-text-muted);
+  font-size: 0.9em;
+  white-space: nowrap;
+  padding-right: 2px;
+}
+
+#token-browser-app .size-icons {
+  display: flex;
+  padding-top: 1px;
+}
+
+#token-browser-app .size-btn {
+  border: none;
+  margin: -3px;
+  color: var(--fa-text-muted);
+  transition: all 0.2s ease;
+  background-color: transparent;
+}
+
+#token-browser-app .size-btn:hover {
+  color: var(--fa-text);
+  outline: none; 
+  background-color: transparent;
+}
+
+#token-browser-app .size-btn:focus {
+  color: var(--fa-text);
+  outline: none; 
+  background-color: transparent;
+}
+
+#token-browser-app .size-btn.active {
+  color: white;
+  box-shadow: none;
+  outline: none;
+}
+
+#token-browser-app .size-btn i {
+  font-size: 0.9em;
+}
+
+/* Grid Layout with Size Variants */
+#token-browser-app .token-grid {
+  display: grid;
+  gap: 0.5rem;
+  padding: 0.5rem 0.6em;
+  overflow-y: auto;
+  flex: 1;
+  /* Performance optimization: Grid transitions don't work reliably, so just transition opacity and transform */
+  transition: opacity 0.2s ease 0.2s, transform 0.1s ease 0.2s;
+  align-content: start; /* Prevent stretching when few items */
+  
+  /* Performance optimizations */
+  contain: layout style paint;
+  will-change: scroll-position;
+  transform: translateZ(0); /* Force hardware acceleration */
+}
+
+/* Small thumbnails (80px) */
+#token-browser-app .token-grid[data-thumbnail-size="small"] {
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-auto-rows: min-content; /* Fixed height rows */
+}
+
+#token-browser-app .token-grid[data-thumbnail-size="small"] .token-thumbnail {
+  width: 80px;
+  height: 80px;
+}
+
+#token-browser-app .token-grid[data-thumbnail-size="small"] .token-name {
+  font-size: 0.85em;
+}
+
+#token-browser-app .token-grid[data-thumbnail-size="small"] .token-details {
+  font-size: 0.7em;
+}
+
+#token-browser-app .token-grid[data-thumbnail-size="small"] .token-info {
+  height: 3em;
+}
+
+/* Medium thumbnails (96px) */
+#token-browser-app .token-grid[data-thumbnail-size="medium"] {
+  grid-template-columns: repeat(auto-fill, minmax(116px, 1fr));
+  grid-auto-rows: min-content; /* Fixed height rows */
+}
+
+#token-browser-app .token-grid[data-thumbnail-size="medium"] .token-thumbnail {
+  width: 96px;
+  height: 96px;
+}
+
+#token-browser-app .token-grid[data-thumbnail-size="medium"] .token-name {
+  font-size: 0.90em;
+}
+
+#token-browser-app .token-grid[data-thumbnail-size="medium"] .token-details {
+  font-size: 0.75em;
+}
+
+/* Large thumbnails (128px) */
+#token-browser-app .token-grid[data-thumbnail-size="large"] {
+  grid-template-columns: repeat(auto-fill, minmax(148px, 1fr));
+  grid-auto-rows: min-content; /* Fixed height rows */
+}
+
+#token-browser-app .token-grid[data-thumbnail-size="large"] .token-thumbnail {
+  width: 128px;
+  height: 128px;
+}
+
+/* Base Token Styles */
+#token-browser-app .token-base, .color-variants-panel .token-base {
+  position: relative;
+  cursor: pointer;
+  border-radius: 4px;
+  overflow: hidden;
+  background: rgba(115, 115, 115, 0.35);
+  border: 1px solid var(--fa-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Token Items */
+#token-browser-app .token-item, .color-variants-panel .token-item {
+  padding: 0.8rem;
+  animation: fadeInUp 0.3s ease-out;
+  height: fit-content;
+  
+  /* Performance optimizations */
+  contain: layout style;
+  backface-visibility: hidden;
+}
+
+#token-browser-app .token-item:hover, .color-variants-panel .token-item:hover {
+  border-color: rgba(255, 255, 255, 0.33);
+  transform: translateY(-2px) translateZ(0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  will-change: transform;
+}
+
+/* Drag and Drop States */
+#token-browser-app .token-item[draggable="true"], .color-variants-panel .token-item[draggable="true"] {
+  cursor: grab !important;
+}
+
+#token-browser-app .token-item.dragging, .color-variants-panel .token-item.dragging {
+  cursor: grabbing !important;
+  /* Removed opacity and scale effects - visual feedback now handled by floating preview */
+}
+
+/* Thumbnails */
+#token-browser-app .token-thumbnail, .color-variants-panel .token-thumbnail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  /* Performance optimization: Only transition specific properties that actually change */
+  /* Add delay so thumbnails transition after grid settles */
+  transition: width 0.2s ease 0.05s, height 0.2s ease 0.05s, transform 0.15s ease;
+}
+
+/* Performance mode: Disable transitions for large token counts */
+#token-browser-app .token-grid.performance-mode .token-thumbnail {
+  transition: none !important;
+}
+
+#token-browser-app .token-grid.performance-mode .token-item {
+  transition: none !important;
+}
+
+#token-browser-app .token-grid.performance-mode .token-name {
+  transition: none !important;
+}
+
+#token-browser-app .token-thumbnail img, .color-variants-panel .token-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* Transition removed for performance - not needed for current hover effects */
+}
+
+/* Token Info */
+#token-browser-app .token-info {
+  margin-bottom: -0.5em;
+  padding-top: 0.8em;
+  text-align: center;
+  width: 110%;
+  height: 3.5em; /* Changed to min-height to accommodate token details */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#token-browser-app .token-name {
+  display: block;
+  font-size: 1em;
+  color: var(--fa-text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
+  height: 1.2em; /* Single line height */
+  width: 100%;
+  text-align: center;
+  /* Performance optimization: Only transition color */
+  transition: color 0.15s ease;
+}
+
+#token-browser-app .token-item:hover .token-name {
+  color: var(--fa-text);
+}
+
+/* Token Variant (bottom right corner) */
+#token-browser-app .token-variant {
+  position: absolute;
+  bottom: 0.25rem;
+  right: 0.0rem;
+  color: rgb(147 147 147);
+  font-size: 0.8em;
+  font-weight: 400;
+  z-index: 3;
+}
+
+/* Token Details (size, scale, creature type) */
+#token-browser-app .token-details {
+  margin-top: 0.3rem;
+  display: flex;
+  justify-content: center;
+  font-size: 0.8em;
+  line-height: 1.1;
+  width: 115%;
+}
+
+#token-browser-app .token-size, #token-browser-app .token-scale, #token-browser-app .token-creature-type {
+  color: rgba(135, 135, 135, 0.8);
+  padding: 0.1rem 0.2rem;
+  font-weight: 500;
+  overflow: hidden;
+  white-space: nowrap;
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+#token-browser-app .token-creature-type {
+  color: var(--fa-creature-type);
+  text-overflow: clip;
+}
+
+#token-browser-app .token-scale {
+  color: var(--fa-scale);
+}
+
+
+#token-browser-app .cloud-token:hover {
+  border-color: rgba(74, 158, 255, 0.6);
+  box-shadow: 0 4px 8px rgba(74, 158, 255, 0.2);
+}
+
+/* Token Status Icons */
+#token-browser-app .token-status-icon, .color-variants-panel .token-status-icon {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75em;
+  z-index: 2;
+}
+
+#token-browser-app .token-status-icon.local-storage, .color-variants-panel .token-status-icon.local-storage {
+  color: rgba(128, 128, 128, 0.7);
+}
+
+#token-browser-app .token-status-icon.free-cloud, .color-variants-panel .token-status-icon.free-cloud {
+  color: var(--fa-cloud);
+  opacity: 0.6;
+}
+
+#token-browser-app .token-status-icon.premium-cloud, .color-variants-panel .token-status-icon.premium-cloud {
+  color: var(--fa-cloud);
+}
+
+#token-browser-app .token-status-icon.cached-cloud, .color-variants-panel .token-status-icon.cached-cloud {
+  color: #387239;
+}
+
+/* Locked token styles for premium tokens without authentication */
+#token-browser-app .token-item.locked-token, .color-variants-panel .token-item.locked-token {
+  position: relative;
+  cursor: not-allowed !important;
+  background: rgba(75, 75, 75, 0.35);
+}
+
+#token-browser-app .token-item.locked-token .token-thumbnail, .color-variants-panel .token-item.locked-token .token-thumbnail {
+  opacity: 0.6;
+  filter: grayscale(55%);
+}
+
+#token-browser-app .token-item.locked-token .token-name {
+  color: #5a5a5a;
+}
+
+#token-browser-app .token-item.locked-token .token-details .token-size, #token-browser-app .token-item.locked-token .token-details .token-scale, #token-browser-app .token-item.locked-token .token-details .token-creature-type {
+  color: #595959;
+}
+
+#token-browser-app .token-status-icon.locked, .color-variants-panel .token-status-icon.locked {
+  color: var(--fa-locked);
+}
+
+/* Empty State */
+#token-browser-app .token-empty-state {
+  text-align: center;
+  padding: 2rem;
+  color: var(--fa-text-muted);
+  border-radius: 6px;
+}
+
+#token-browser-app .token-empty-state p {
+  margin: 0.5rem 0;
+}
+
+#token-browser-app .token-empty-state p strong {
+  color: var(--fa-text);
+  font-weight: 600;
+}
+
+/* FA Token Browser - Folder Selection Dialog Styles */
+.fa-token-browser-folder-selection-dialog {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 20px;
+  gap: 20px;
+}
+
+.fa-token-browser-folder-selection-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.fa-token-browser-folder-selection-header p {
+  margin: 0;
+  color: var(--fa-text-muted);
+  font-size: 14px;
+  line-height: 1.4;
+  flex: 1;
+}
+
+.fa-token-browser-add-folder-button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.fa-token-browser-add-folder-button:hover {
+  background: #45a049;
+}
+
+.fa-token-browser-folder-list {
+  flex: 1;
+  min-height: 0; /* allow list to shrink so inner scroller works */
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #444;
+  border-radius: 6px;
+  background: var(--fa-bg-soft);
+}
+
+.fa-token-browser-folder-list-header {
+  padding: 12px 16px;
+  border-bottom: 1px solid #444;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.fa-token-browser-folder-count {
+  color: var(--fa-text);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.fa-token-browser-folder-items {
+  flex: 1;
+  min-height: 0; /* ensure content can scroll within flex parent */
+  overflow-y: auto;
+  padding: 8px;
+}
+
+.fa-token-browser-folder-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid var(--fa-border);
+  border-radius: 6px;
+  background: var(--fa-bg-soft);
+  margin-bottom: 8px;
+}
+
+.fa-token-browser-folder-item:hover {
+  background: var(--fa-bg-soft);
+  border-color: var(--fa-border);
+  opacity: 1.2;
+}
+
+.fa-token-browser-folder-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 0;
+}
+
+.fa-token-browser-folder-info {
+  flex: 1;
+  min-width: 0;
+  margin-right: 15px;
+}
+
+.fa-token-browser-folder-label {
+  font-weight: 600;
+  color: var(--fa-text);
+  margin-bottom: 4px;
+  word-break: break-all;
+}
+
+.fa-token-browser-folder-path {
+  font-size: 12px;
+  color: var(--fa-text-muted);
+  font-family: monospace;
+  word-break: break-all;
+}
+
+.fa-token-browser-folder-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.fa-token-browser-folder-item button {
+  background: none;
+  border: none;
+  color: var(--fa-text-muted);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+
+.fa-token-browser-folder-item button:hover {
+  background: var(--fa-bg-soft);
+  color: var(--fa-text);
+}
+
+.fa-token-browser-edit-folder-btn {
+  color: #4CAF50;
+}
+
+.fa-token-browser-edit-folder-btn:hover {
+  color: #45a049;
+  background: rgba(76, 175, 80, 0.1);
+}
+
+.fa-token-browser-remove-folder-btn {
+  color: #f44336;
+}
+
+.fa-token-browser-remove-folder-btn:hover {
+  color: #d32f2f;
+  background: rgba(244, 67, 54, 0.1);
+}
+
+.fa-token-browser-no-folders-message {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--fa-text-muted);
+}
+
+.fa-token-browser-no-folders-message i {
+  font-size: 48px;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.fa-token-browser-no-folders-message p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.fa-token-browser-folder-selection-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 20px;
+  border-top: 1px solid var(--fa-border);
+}
+
+.fa-token-browser-folder-selection-footer button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fa-token-browser-cancel-button {
+  background: #666;
+  color: white;
+}
+
+.fa-token-browser-cancel-button:hover {
+  background: #555;
+}
+
+.fa-token-browser-save-button {
+  background: #4CAF50;
+  color: white;
+}
+
+.fa-token-browser-save-button:hover {
+  background: #45a049;
+}
+
+/* Folder Enable/Disable Checkbox */
+.fa-token-browser-folder-enable {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.fa-token-browser-folder-checkbox {
+  margin: 0;
+  cursor: pointer;
+}
+
+.fa-token-browser-folder-disabled {
+  opacity: 0.5;
+  background: var(--fa-bg-soft) !important;
+}
+
+.fa-token-browser-folder-disabled .fa-token-browser-folder-label {
+  text-decoration: line-through;
+  color: var(--fa-text-muted);
+  opacity: 0.6;
+}
+
+/* Folder Label Editing */
+.fa-token-browser-folder-label {
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+
+.fa-token-browser-folder-label:hover {
+  background: var(--fa-bg-soft);
+  border-radius: 4px;
+}
+
+.fa-token-browser-folder-label-input {
+  background: var(--fa-text);
+  color: var(--fa-bg);
+  border: 1px solid var(--fa-border);
+  border-radius: 4px;
+  padding: 2px 4px;
+  font-size: 14px;
+  width: 100%;
+  max-width: 200px;
+}
+
+.fa-token-browser-folder-label-input:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+/* Empty Search State */
+#token-browser-app .no-search-results {
+  display: none;
+  margin-top: 2rem;
+}
+
+#token-browser-app .empty-search-state {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: var(--fa-text-muted);
+  border-radius: 6px;
+}
+
+#token-browser-app .empty-search-state i {
+  font-size: 2.5em;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+#token-browser-app .empty-search-state p {
+  margin: 0.5rem 0;
+  font-size: 0.95em;
+}
+
+#token-browser-app .empty-search-state strong {
+  color: var(--fa-text);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  #token-browser-app .token-browser-header {
+    gap: 0.5rem;
+  }
+
+  /* Header responsive layout */
+  #token-browser-app .window-header {
+    padding: 0.5rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  #token-browser-app .header-content {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  #token-browser-app .custom-fa-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 0.3rem;
+  }
+
+  #token-browser-app .header-patreon-auth {
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  
+  #token-browser-app .search-input-wrapper {
+    max-width: none;
+  }
+  
+  
+  
+  #token-browser-app .token-browser-controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  #token-browser-app .main-color-filter {
+    width: 100%;
+    justify-content: center;
+  }
+
+  #token-browser-app .main-color-checkbox {
+    font-size: 0.8em;
+  }
+  
+  #token-browser-app .token-grid[data-thumbnail-size="small"] {
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 0.75rem;
+  }
+  
+  #token-browser-app .token-grid[data-thumbnail-size="medium"] {
+    grid-template-columns: repeat(auto-fill, minmax(104px, 1fr));
+    gap: 0.75rem;
+  }
+  
+  #token-browser-app .token-grid[data-thumbnail-size="large"] {
+    grid-template-columns: repeat(auto-fill, minmax(122px, 1fr));
+    gap: 0.75rem;
+  }
+  
+  #token-browser-app .token-grid[data-thumbnail-size="small"] .token-thumbnail {
+    width: 70px;
+    height: 70px;
+  }
+  
+  #token-browser-app .token-grid[data-thumbnail-size="medium"] .token-thumbnail {
+    width: 84px;
+    height: 84px;
+  }
+  
+  #token-browser-app .token-grid[data-thumbnail-size="large"] .token-thumbnail {
+    width: 112px;
+    height: 112px;
+  }
+  
+  /* Adjust token details for mobile */
+  #token-browser-app .token-details {
+    gap: 0.2rem;
+  }
+  
+  #token-browser-app .token-size,
+  #token-browser-app .token-scale,
+  #token-browser-app .token-creature-type {
+    font-size: 0.65em;
+    padding: 0.05rem 0.3rem;
+  }
+  
+  #token-browser-app .token-variant {
+    font-size: 0.65em;
+    padding: 0.1rem 0.25rem;
+  }
+}
+
+/* Lazy Loading Indicator */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Smooth appearance for new items */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover preview functionality handled by JavaScript event listeners */
+
+/* Token Hover Preview */
+.token-hover-preview {
+  position: fixed;
+  z-index: 9999;
+  background: rgba(61, 60, 62, 0.606);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+  max-width: min(600px, calc(100vw - 40px));
+  max-height: calc(100vh - 40px);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+}
+
+.token-hover-preview.visible {
+  opacity: 1;
+}
+
+.token-hover-preview img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 600px;
+  border-radius: 4px;
+  display: block;
+  margin: 0 auto;
+  transition: opacity 0.3s ease;
+}
+
+.token-hover-preview .preview-info {
+  margin-top: 0.75rem;
+  text-align: center;
+}
+
+.token-hover-preview .preview-filename {
+  font-weight: bold;
+  color: var(--fa-text);
+  font-size: 0.9em;
+  margin-bottom: 0.25rem;
+  word-break: break-word;
+  line-height: 1.3;
+}
+
+.token-hover-preview .preview-path {
+  color: var(--fa-text-muted);
+  font-size: 0.75em;
+  opacity: 0.8;
+  word-break: break-all;
+  line-height: 1.2;
+}
+
+.token-hover-preview .preview-dimensions {
+  color: var(--fa-text-muted);
+  font-size: 0.7em;
+  margin-top: 0.25rem;
+  padding-top: 0.25rem;
+  border-top: 1px solid var(--fa-border);
+  text-align: center;
+  font-family: monospace;
+}
+
+/* Responsive preview sizing */
+@media (max-width: 600px) {
+  .token-hover-preview {
+    max-width: 340px;
+    padding: 0.75rem;
+  }
+  
+  .token-hover-preview img {
+    max-width: 260px;
+  }
+  
+  .token-hover-preview .preview-filename {
+    font-size: 0.85em;
+  }
+  
+  .token-hover-preview .preview-path {
+    font-size: 0.7em;
+  }
+}
+
+/* Image Skeleton Loading */
+#token-browser-app .image-skeleton {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(80, 80, 80, 0.8), rgba(90, 90, 90, 0.8));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#token-browser-app .skeleton-shimmer {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+#token-browser-app .skeleton-icon {
+  color: var(--fa-text-muted);
+  opacity: 0.3;
+  font-size: 1.5em;
+  z-index: 1;
+}
+
+#token-browser-app .skeleton-error-state {
+  background: rgba(120, 50, 50, 0.8);
+}
+
+#token-browser-app .skeleton-error {
+  color: rgba(255, 100, 100, 0.8);
+  font-size: 1.2em;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* --- Preloading state for drag-ready token items (moved from JS) --- */
+#token-browser-app .token-item.preloading:not(:has(.token-status-icon.cached-cloud)):not(:has(.token-status-icon.local-storage)), .color-variants-panel .token-item.preloading:not(:has(.token-status-icon.cached-cloud)):not(:has(.token-status-icon.local-storage)) {
+  position: relative;
+  opacity: 0.8;
+  pointer-events: none;
+  cursor: progress !important; /* Ensure loading cursor shows */
+}
+
+#token-browser-app .token-item.preloading:not(:has(.token-status-icon.cached-cloud)):not(:has(.token-status-icon.local-storage))::before, .color-variants-panel .token-item.preloading:not(:has(.token-status-icon.cached-cloud)):not(:has(.token-status-icon.local-storage))::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+   background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  z-index: 1;
+}
+
+#token-browser-app .token-item.cloud-token.preloading:not(:has(.token-status-icon.cached-cloud)):not(:has(.token-status-icon.local-storage))::after, .color-variants-panel .token-item.cloud-token.preloading:not(:has(.token-status-icon.cached-cloud)):not(:has(.token-status-icon.local-storage))::after {
+  content: '⟳';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  color: #4a9eff;
+  text-shadow: 0 0 6px rgba(74, 158, 255, 0.6);
+  z-index: 2;
+  animation: fa-token-browser-spin 1s linear infinite;
+}
+
+/* Ensure pointer events are blocked for children while preloading */
+#token-browser-app .token-item.preloading *, .color-variants-panel .token-item.preloading * {
+  pointer-events: none;
+}
+
+@keyframes fa-token-browser-spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Loading Indicator - moved from JavaScript injection */
+#fa-token-browser-loading {
+  position: fixed;
+  bottom: 2px;
+  right: 0px;
+  z-index: 10000;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(100%) scale(0.9);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#fa-token-browser-loading.visible {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+#fa-token-browser-loading .loading-content {
+  background: rgba(10, 9, 17, 0.85);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  padding: 3px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+  min-width: 300px;
+  max-width: 320px;
+  pointer-events: all;
+}
+
+#fa-token-browser-loading .loading-header {
+  display: flex;
+  justify-content: right;
+}
+
+#fa-token-browser-loading .loading-spinner {
+  font-size: 1.5rem;
+  color: var(--fa-text-muted);
+  flex-shrink: 0;
+}
+
+#fa-token-browser-loading .loading-spinner i {
+  animation: fa-token-browser-spin 1s linear infinite;
+}
+
+#fa-token-browser-loading .loading-cancel {
+  background: transparent;
+  color: var(--fa-text-muted);
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 18px;
+  height: 18px;
+  transition: all 0.2s ease;
+}
+
+#fa-token-browser-loading .loading-cancel:hover {
+  border: none;
+  color: var(--fa-text);
+}
+
+#fa-token-browser-loading .loading-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--fa-text);
+  margin-bottom: 8px;
+  margin-top: -18px;
+}
+
+#fa-token-browser-loading .loading-subtext {
+  font-size: 0.9rem;
+  color: var(--fa-text-muted);
+  opacity: 0.9;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+/* Drag Preview - moved from JavaScript injection */
+.fa-token-browser-drag-preview {
+  position: fixed;
+  pointer-events: none;
+  z-index: 10000;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+/* Actor Drop Target Visual Feedback */
+.actor-drop-target {
+  background-color: rgba(0, 123, 255, 0.2) !important;
+  border: 2px dashed #007bff !important;
+  border-radius: 4px !important;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3) !important;
+  transition: all 0.2s ease !important;
+}
+
+.actor-drop-target:hover {
+  background-color: rgba(0, 123, 255, 0.3) !important;
+  box-shadow: 0 0 12px rgba(0, 123, 255, 0.5) !important;
+}
+
+/* Ensure proper cursor during drag over actors */
+.actor-drop-target * {
+  pointer-events: none !important;
+}
+
+/* Actor Token Update Dialog Styling */
+#actor-token-update-dialog {
+  padding: 0;
+  max-width: 500px;
+  /* background: var(--fa-bg); */
+  color: var(--fa-text-muted);
+  border-radius: 8px;
+  /* border: 1px solid var(--fa-border); */
+  backdrop-filter: blur(5px);
+}
+
+/* Dialog content wrapper */
+#actor-token-update-dialog .dialog-content {
+  padding: 20px;
+}
+
+#actor-token-update-dialog .confirmation-message {
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--fa-text);
+}
+
+#actor-token-update-dialog .confirmation-message p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+#actor-token-update-dialog .token-comparison {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  justify-content: center;
+  background: rgba(115, 115, 115, 0.35);
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid var(--fa-border);
+}
+
+#actor-token-update-dialog .token-preview {
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#actor-token-update-dialog .token-label {
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--fa-text);
+}
+
+#actor-token-update-dialog .token-image {
+  width: 128px;
+  height: 128px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+#actor-token-update-dialog .options {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid var(--fa-border);
+  text-align: center;
+}
+
+#actor-token-update-dialog .checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--fa-text-muted);
+  user-select: none;
+}
+
+#actor-token-update-dialog .checkbox-label:hover {
+  color: var(--fa-text);
+}
+
+#actor-token-update-dialog .checkbox-label input[type="checkbox"] {
+  margin: 0;
+  width: 16px;
+  height: 16px;
+}
+
+#actor-token-update-dialog .token-details {
+  display: contents;
+  font-size: 0.9em;
+  color: var(--fa-text-muted);
+}
+
+#actor-token-update-dialog .detail-row {
+  margin-bottom: 8px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+#actor-token-update-dialog .detail-row:last-child {
+  margin-bottom: 0;
+}
+
+#actor-token-update-dialog .detail-row strong {
+  color: var(--fa-text);
+  display: inline-block;
+  min-width: 50px;
+}
+
+#actor-token-update-dialog .dialog-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid var(--fa-border);
+}
+
+#actor-token-update-dialog .dialog-buttons button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  min-width: 120px;
+  justify-content: center;
+}
+
+#actor-token-update-dialog .cancel-btn {
+  background: rgba(115, 115, 115, 0.35);
+  color: var(--fa-text-muted);
+  border: 1px solid var(--fa-border);
+}
+
+#actor-token-update-dialog .cancel-btn:hover {
+  background: rgba(115, 115, 115, 0.5);
+  border-color: var(--fa-border);
+  color: var(--fa-text);
+  transform: translateY(-1px);
+}
+
+#actor-token-update-dialog .confirm-btn {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white;
+  border: 1px solid rgba(76, 175, 80, 0.3);
+  box-shadow: 0 2px 4px rgba(76, 175, 80, 0.2);
+}
+
+#actor-token-update-dialog .confirm-btn:hover {
+  background: linear-gradient(135deg, #45a049, #3d8b40);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(76, 175, 80, 0.4);
+}
+
+#actor-token-update-dialog .confirm-btn:active,
+#actor-token-update-dialog .cancel-btn:active {
+  transform: translateY(0);
+}
+
+/* Title bar styling to match Token Browser */
+#actor-token-update-dialog .window-header {
+  /* background: var(--fa-bg); */
+  border-bottom: 1px solid var(--fa-border);
+  border-color: var(--fa-border);
+  color: var(--fa-text-muted);
+}
+
+#actor-token-update-dialog .window-title {
+  /* color: var(--fa-text-muted); */
+  font-weight: 600;
+}

@@ -1,0 +1,117 @@
+{
+  "themes": [
+    {
+      "id": "ruins",
+      "label": "Ruins",
+      "iconId": "ancient-ruins",
+      "mapColorId": "green",
+      "defaultNames": [
+        "Ancient Ruins",
+        "Abandoned Ruins",
+        "Forgotten Ruins",
+        "Collapsed Ruins"
+      ],
+      "defaultIconByRole": {
+        "landmark": "ancient-ruins",
+        "entrance": "door"
+      }
+    },
+    {
+      "id": "facility",
+      "label": "Facility",
+      "iconId": "airtight-hatch",
+      "mapColorId": "blue",
+      "defaultNames": [
+        "Abandoned Facility",
+        "Remote Facility",
+        "Buried Facility",
+        "Research Facility"
+      ],
+      "defaultIconByRole": {
+        "landmark": "digital-trace",
+        "entrance": "double-doors"
+      }
+    },
+    {
+      "id": "outpost",
+      "label": "Outpost",
+      "iconId": "barracks",
+      "mapColorId": "white",
+      "defaultNames": [
+        "Remote Outpost",
+        "Forward Outpost",
+        "Abandoned Outpost",
+        "Frontier Outpost"
+      ],
+      "defaultIconByRole": {
+        "landmark": "barracks",
+        "entrance": "door"
+      }
+    },
+    {
+      "id": "temple",
+      "label": "Temple",
+      "iconId": "ancient-columns",
+      "mapColorId": "magenta",
+      "defaultNames": [
+        "Ancient Temple",
+        "Forgotten Temple",
+        "Buried Temple",
+        "Silent Temple"
+      ],
+      "defaultIconByRole": {
+        "landmark": "ancient-columns",
+        "entrance": "steel-door"
+      }
+    },
+    {
+      "id": "habitat",
+      "label": "Habitat",
+      "iconId": "habitat-dome",
+      "mapColorId": "orange",
+      "defaultNames": [
+        "Habitat Dome",
+        "Remote Habitat",
+        "Sealed Habitat",
+        "Abandoned Habitat"
+      ],
+      "defaultIconByRole": {
+        "landmark": "habitat-dome",
+        "entrance": "elevator"
+      }
+    },
+    {
+      "id": "crash-site",
+      "label": "Crash Site",
+      "iconId": "impact-point",
+      "mapColorId": "red",
+      "defaultNames": [
+        "Crash Site",
+        "Wreck Site",
+        "Debris Field",
+        "Broken Lander"
+      ],
+      "defaultIconByRole": {
+        "landmark": "impact-point",
+        "entrance": "door"
+      }
+    },
+    {
+      "id": "relay",
+      "label": "Relay",
+      "iconId": "radar-dish",
+      "mapColorId": "yellow",
+      "defaultNames": [
+        "Relay Station",
+        "Signal Relay",
+        "Remote Relay",
+        "Silent Relay"
+      ],
+      "defaultIconByRole": {
+        "landmark": "radar-dish",
+        "entrance": "double-doors"
+      }
+    }
+  ]
+}
+

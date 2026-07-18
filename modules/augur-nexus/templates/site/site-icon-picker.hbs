@@ -1,0 +1,55 @@
+<div class="augur-nexus site-icon-picker">
+    <div class="site-icon-picker-header">
+        <div class="site-icon-picker-role">Showing {{pickerLabel}} Icons</div>
+        {{#if (eq currentTab "built-in")}}
+        <div class="site-icon-picker-filter">
+            <label class="checkbox">
+                <input type="checkbox" name="showThemeIconsOnly" {{#if showThemeIconsOnly}}checked{{/if}}>
+                {{themeIconsOnlyLabel}}
+            </label>
+        </div>
+        {{/if}}
+    </div>
+
+    <div class="site-icon-tabs" role="tablist" aria-label="Icon Source">
+        <button type="button" class="site-icon-tab {{#if (eq currentTab "built-in")}}active{{/if}}" data-icon-tab="built-in" aria-pressed="{{#if (eq currentTab "built-in")}}true{{else}}false{{/if}}">Built-In</button>
+        <button type="button" class="site-icon-tab {{#if (eq currentTab "custom")}}active{{/if}}" data-icon-tab="custom" aria-pressed="{{#if (eq currentTab "custom")}}true{{else}}false{{/if}}">Custom</button>
+    </div>
+
+    <div class="site-icon-picker-body">
+    {{#if (eq currentTab "built-in")}}
+    <div class="site-icon-grid">
+        {{#each icons}}
+        <div class="site-icon-card {{#if (eq this.id ../selected)}}active{{/if}}" data-site-icon-id="{{this.id}}" role="button" tabindex="0" aria-label="{{this.label}}">
+            <div class="site-icon-visual"><img src="{{this.src}}" alt="{{this.label}}"></div>
+            <div class="site-icon-name">{{this.label}}</div>
+            {{#if this.genreLabel}}
+            <div class="site-icon-meta">{{this.genreLabel}}</div>
+            {{/if}}
+        </div>
+        {{/each}}
+    </div>
+    {{else}}
+    <div class="site-icon-custom-toolbar">
+        <button type="button" class="site-entry-clear" data-action="chooseCustomIconFolder" title="Choose custom icon folder"><i class="fas fa-folder-open"></i></button>
+        <div class="site-icon-custom-folder" title="{{customFolderPath}}">{{#if hasCustomFolder}}{{customFolderPath}}{{else}}No custom icon folder selected{{/if}}</div>
+        {{#if hasCustomFolder}}
+        <button type="button" class="site-entry-clear" data-action="clearCustomIconFolder" title="Clear custom icon folder"><i class="fas fa-xmark"></i></button>
+        {{/if}}
+    </div>
+
+    <div class="site-icon-grid">
+        {{#each customIcons}}
+        <div class="site-icon-card {{#if (eq this.src ../currentCustomIconSrc)}}active{{/if}}" data-site-icon-id="custom-folder" data-site-icon-src="{{this.src}}" role="button" tabindex="0" aria-label="{{this.label}}">
+            <div class="site-icon-visual"><img src="{{this.src}}" alt="{{this.label}}"></div>
+            <div class="site-icon-name">{{this.label}}</div>
+        </div>
+        {{/each}}
+    </div>
+
+    {{#unless customIcons.length}}
+    <div class="site-icon-empty">{{#if hasCustomFolder}}No image files were found in the selected folder.{{else}}Choose a folder to show your custom icon library here.{{/if}}</div>
+    {{/unless}}
+    {{/if}}
+    </div>
+</div>

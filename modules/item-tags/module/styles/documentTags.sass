@@ -1,0 +1,63 @@
+$color-red: rgb(253, 92, 92)
+$color-green: rgb(181, 235, 181)
+$color-green-highlight: rgb(201, 255, 201)
+$color-purple: rgb(170, 105, 212)
+
+// Item Tags
+.item-tags
+  .tag-container
+    display: flex
+    padding: 4px
+    background-color: #FFFFFF33
+    border: #00000033 solid 1px
+    border-radius: 1pt
+    flex-wrap: wrap
+    align-content: flex-start
+    overflow-x: scroll
+
+    .tag
+      margin: 1px
+      border: #585858 solid 1px
+      padding: 4px
+      background-color: $color-green
+      border-radius: 5pt 1pt 1pt 5pt
+      align-items: center
+      display: inline
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 1px 1px #fff
+      transition: 50ms all ease-in-out
+
+      &:hover
+        scale: 1.05
+        background-color: $color-green-highlight
+
+      .text
+        display: inline-block
+        top: -5px
+        margin: 0 5px 0 5px
+        cursor: pointer
+
+        &:hover
+          text-decoration: underline
+
+      .icon
+        margin: 0px 4px 0 4px
+        background-color: transparent !important
+
+    .on-drag
+      background-color: $color-purple
+
+    .tag-input
+      background-color: transparent
+      border: none
+      width: 120px
+      flex-grow: 1
+
+  .confirmation
+    margin-top: 5pt
+    display: flex
+
+    .cancel
+      background-color: $color-red
+
+    .save
+      background-color: $color-green

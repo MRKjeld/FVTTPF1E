@@ -1,0 +1,142 @@
+{
+  "id": "midi-qol",
+  "title": "Midi QOL",
+  "description": "Automates rolling weapon/spell attacks and applying damage amongst other things",
+
+  "version": "13.0.61",
+  "authors": [
+    {
+      "name": "Tim Posney",
+      "url": "https://gitlab.com/tposney",
+      "discord": "tposney#1462",
+      "twitter": "",
+      "patreon": "",
+      "gitlab": "tposney",
+      "github": "",
+      "ko-fi": "tposney",
+      "reddit": "",
+      "email": ""
+    },
+    {
+      "name": "Micheal Roth",
+      "url": "https://github.com/roth-michael",
+      "discord": "hi25114",
+      "ko-fi": "hi25114"
+    },
+    {
+      "name": "Themis",
+      "url": "https://github.com/thatlonelybugbear",
+      "discord": "thatlonelybugbear#4394",
+      "ko-fi": "thatlonelybugbear"
+    }
+  ],
+  "socket": true,
+  "scripts": [],
+  "esmodules": ["midi-qol.js"],
+  "styles": ["css/styles.css"],
+  "relationships": {
+    "systems": [
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "5.2.0",
+          "maximum": "5.3.99"
+        }
+      }
+    ],
+    "requires": [
+      {
+        "id": "socketlib",
+        "type": "module"
+      },
+      {
+        "id": "lib-wrapper",
+        "type": "module"
+      },
+      {
+        "id": "dae",
+        "type": "module",
+        "compatibility": {
+          "minimum": "13.0.23"
+        }
+      }
+    ]
+  },
+  "packs": [
+    {
+      "name": "midiqol-sample-items",
+      "label": "MidiQOL Sample Items",
+      "path": "./packs/sampleitems",
+      "module": "world",
+      "type": "Item",
+      "system": "dnd5e",
+      "lang": []
+    }
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "cs",
+      "name": "Češky",
+      "path": "lang/cs.json"
+    },
+    {
+      "lang": "ja",
+      "name": " 日本語",
+      "path": "lang/ja.json"
+    },
+    {
+      "lang": "ko",
+      "name": "Korean",
+      "path": "lang/ko.json"
+    },
+    {
+      "lang": "fr",
+      "name": "Français",
+      "path": "lang/fr.json"
+    },
+    {
+      "lang": "pt-BR",
+      "name": "Português (Brasil)",
+      "path": "lang/pt-BR.json"
+    },
+    {
+      "lang": "es",
+      "name": "Spanish",
+      "path": "lang/es.json"
+    },
+    {
+      "lang": "de",
+      "name": "Deutsch",
+      "path": "lang/de.json"
+    },
+    {
+      "lang": "it",
+      "name": "Italian",
+      "path": "lang/it.json"
+    },
+    {
+      "lang": "zh-tw",
+      "name": "正體中文",
+      "path": "lang/zh-tw.json"
+    }
+  ],
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13.351",
+    "maximum": "13.999"
+  },
+  "bugs": "https://gitlab.com/tposney/midi-qol/-/issues",
+  "flags": {
+    "allowBugReporter": true
+  },
+  "url": "https://gitlab.com/tposney/midi-qol",
+  "manifest": "https://gitlab.com/tposney/midi-qol/raw/v13/package/module.json",
+  "download": "https://gitlab.com/tposney/midi-qol/raw/v13/package/midi-qol-v13.0.61.zip",
+  "changelog": "https://gitlab.com/tposney/midi-qol/raw/v13/Changelog.md"
+}

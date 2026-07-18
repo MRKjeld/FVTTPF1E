@@ -1,0 +1,314 @@
+{
+    "id": "classicfantasycompendium",
+    "title": "Classic Fantasy Compendium",
+    "description": "Open Game Content from Old-School Essentials Classic Fantasy SRD",
+    "version": "2.0.0",
+    "relationships": {
+        "systems": [
+            {
+                "id": "ose",
+                "type": "system",
+                "manifest": "https://github.com/NecroticGnome/ose-foundry-core/releases/latest/download/system.json",
+                "compatibility": {
+                    "minimum": "2.1.0",
+                    "verified": "2.1.1"
+                }
+            },
+            {
+                "id": "uft",
+                "type": "system",
+                "manifest": "https://github.com/unitedfantasytoolkit/unitedfantasytoolkit/releases/latest/download/system.json",
+                "compatibility": {
+                    "minimum": "0.1.0",
+                    "verified": "0.1.0"
+                }
+            }
+        ]
+    },
+    "authors": [
+        {
+            "name": "Classic Fantasy Compendium Contributors",
+            "url": "https://github.com/unitedfantasytoolkit/classicfantasycompendium/graphs/contributors"
+        },
+        {
+            "name": "OSE Content Contributors",
+            "url": "https://github.com/NecroticGnome/ose-foundry-content/graphs/contributors"
+        },
+        {
+            "name": "OGL COPYRIGHT NOTICE",
+            "url": "https://github.com/NecroticGnome/ose-foundry-content/blob/main/LICENSES/LicenseRef-OGL-1.0a.txt"
+        }
+    ],
+    "scripts": [],
+    "esmodules": [],
+    "styles": [],
+    "packs": [
+        {
+            "name": "abilities-cleric",
+            "label": "Abilities: Cleric",
+            "package": "classicfantasycompendium",
+            "path": "packs/abilities-cleric",
+            "type": "Item",
+            "system": "ose"
+        },
+        {
+            "name": "abilities-dwarf",
+            "label": "Abilities: Dwarf",
+            "package": "classicfantasycompendium",
+            "path": "packs/abilities-dwarf",
+            "type": "Item",
+            "system": "ose"
+        },
+        {
+            "name": "abilities-elf",
+            "label": "Abilities: Elf",
+            "package": "classicfantasycompendium",
+            "path": "packs/abilities-elf",
+            "type": "Item",
+            "system": "ose"
+        },
+        {
+            "name": "abilities-fighter",
+            "label": "Abilities: Fighter",
+            "package": "classicfantasycompendium",
+            "path": "packs/abilities-fighter",
+            "type": "Item",
+            "system": "ose"
+        },
+        {
+            "name": "abilities-halfling",
+            "label": "Abilities: Halfling",
+            "package": "classicfantasycompendium",
+            "path": "packs/abilities-halfling",
+            "type": "Item",
+            "system": "ose"
+        },
+        {
+            "name": "abilities-magic-user",
+            "label": "Abilities: Magic-User",
+            "package": "classicfantasycompendium",
+            "path": "packs/abilities-magic-user",
+            "type": "Item",
+            "system": "ose"
+        },
+        {
+            "name": "abilities-thief",
+            "label": "Abilities: Thief",
+            "package": "classicfantasycompendium",
+            "path": "packs/abilities-thief",
+            "type": "Item",
+            "system": "ose"
+        },
+        {
+            "name": "equipment-adventuring-gear",
+            "label": "Equipment: Adventuring Gear",
+            "package": "classicfantasycompendium",
+            "path": "packs/equipment-adventuring-gear",
+            "type": "Item",
+            "system": "ose"
+        },
+        {
+            "name": "equipment-ammunition",
+            "label": "Equipment: Ammunition",
+            "package": "classicfantasycompendium",
+            "path": "packs/equipment-ammunition",
+            "type": "Item",
+            "system": "ose"
+        },
+        {
+            "name": "equipment-armour",
+            "label": "Equipment: Armour",
+            "package": "classicfantasycompendium",
+            "path": "packs/equipment-armour",
+            "type": "Item",
+            "system": "ose"
+        },
+        {
+            "name": "equipment-coins",
+            "label": "Equipment: Coins",
+            "package": "classicfantasycompendium",
+            "path": "packs/equipment-coins",
+            "type": "Item",
+            "system": "ose"
+        },
+        {
+            "name": "equipment-weapons",
+            "label": "Equipment: Weapons",
+            "package": "classicfantasycompendium",
+            "path": "packs/equipment-weapons",
+            "type": "Item",
+            "system": "ose"
+        },
+        {
+            "name": "monsters",
+            "label": "Monsters",
+            "package": "classicfantasycompendium",
+            "path": "packs/monsters",
+            "type": "Actor",
+            "system": "ose"
+        },
+        {
+            "name": "spells",
+            "label": "Spells",
+            "package": "classicfantasycompendium",
+            "path": "packs/spells",
+            "type": "Item",
+            "system": "ose"
+        },
+        {
+            "name": "tables-encounters",
+            "label": "Tables: Encounters",
+            "package": "classicfantasycompendium",
+            "path": "packs/tables-encounters",
+            "type": "RollTable",
+            "system": "ose"
+        },
+        {
+            "name": "tables-items",
+            "label": "Tables: Items",
+            "package": "classicfantasycompendium",
+            "path": "packs/tables-items",
+            "type": "RollTable",
+            "system": "ose"
+        },
+        {
+            "name": "treasures",
+            "label": "Treasure Tables",
+            "package": "classicfantasycompendium",
+            "path": "packs/treasures",
+            "type": "RollTable",
+            "system": "ose"
+        },
+        {
+            "name": "treasures-armour-shields",
+            "label": "Treasures: Armour and Shields",
+            "package": "classicfantasycompendium",
+            "path": "packs/treasures-armour-shields",
+            "type": "Item",
+            "system": "ose"
+        },
+        {
+            "name": "treasures-miscellaneous-items",
+            "label": "Treasures: Miscellaneous Items",
+            "package": "classicfantasycompendium",
+            "path": "packs/treasures-miscellaneous-items",
+            "type": "Item",
+            "system": "ose"
+        },
+        {
+            "name": "treasures-potions",
+            "label": "Treasures: Potions",
+            "package": "classicfantasycompendium",
+            "path": "packs/treasures-potions",
+            "type": "Item",
+            "system": "ose"
+        },
+        {
+            "name": "treasures-rings",
+            "label": "Treasures: Rings",
+            "package": "classicfantasycompendium",
+            "path": "packs/treasures-rings",
+            "type": "Item",
+            "system": "ose"
+        },
+        {
+            "name": "treasures-rods-staffs-wands",
+            "label": "Treasures: Rods, Staffs, Wands",
+            "package": "classicfantasycompendium",
+            "path": "packs/treasures-rods-staffs-wands",
+            "type": "Item",
+            "system": "ose"
+        },
+        {
+            "name": "treasures-swords",
+            "label": "Treasures: Swords",
+            "package": "classicfantasycompendium",
+            "path": "packs/treasures-swords",
+            "type": "Item",
+            "system": "ose"
+        },
+        {
+            "name": "treasures-weapons",
+            "label": "Treasures: Weapons",
+            "package": "classicfantasycompendium",
+            "path": "packs/treasures-weapons",
+            "type": "Item",
+            "system": "ose"
+        },
+        {
+            "name": "classic-fantasy-srd",
+            "label": "Classic Fantasy SRD",
+            "package": "classicfantasycompendium",
+            "path": "packs/classic-fantasy-srd",
+            "type": "JournalEntry",
+            "system": "ose"
+        }
+    ],
+    "packFolders": [
+        {
+            "name": "Classic Fantasy",
+            "sorting": "m",
+            "folders": [
+                {
+                    "name": "Rules",
+                    "sorting": "m",
+                    "packs": [
+                        "classic-fantasy-srd",
+                        "tables-encounters",
+                        "tables-items"
+                    ]
+                },
+                {
+                    "name": "Character Options",
+                    "packs": [
+                        "abilities-cleric",
+                        "abilities-dwarf",
+                        "abilities-elf",
+                        "abilities-fighter",
+                        "abilities-halfling",
+                        "abilities-magic-user",
+                        "abilities-thief",
+                        "spells"
+                    ]
+                },
+                {
+                    "name": "Creatures",
+                    "sorting": "m",
+                    "packs": [
+                        "monsters"
+                    ]
+                },
+                {
+                    "name": "Equipment",
+                    "packs": [
+                        "equipment-adventuring-gear",
+                        "equipment-ammunition",
+                        "equipment-armour",
+                        "equipment-coins",
+                        "equipment-weapons"
+                    ]
+                },
+                {
+                    "name": "Treasure",
+                    "packs": [
+                        "treasures",
+                        "treasures-armour-shields",
+                        "treasures-miscellaneous-items",
+                        "treasures-potions",
+                        "treasures-rings",
+                        "treasures-rods-staffs-wands",
+                        "treasures-swords",
+                        "treasures-weapons"
+                    ]
+                }
+            ]
+        }
+    ],
+    "compatibility": {
+        "minimum": "13",
+        "verified": "13"
+    },
+    "url": "https://github.com/NecroticGnome/ose-foundry-content",
+    "manifest": "https://github.com/NecroticGnome/ose-foundry-content/releases/download/2.0.0/module.json",
+    "download": "https://github.com/NecroticGnome/ose-foundry-content/releases/download/2.0.0/module.zip"
+}

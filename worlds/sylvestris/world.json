@@ -1,0 +1,16 @@
+{
+  "title": "Sylvestris",
+  "id": "sylvestris",
+  "system": "pf1",
+  "background": "assets/sylvestris.webp",
+  "coreVersion": "13.351",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "systemVersion": "11.11",
+  "lastPlayed": "Fri Jul 17 2026 13:58:04 GMT+1200 (New Zealand Standard Time)",
+  "playtime": 205350,
+  "description": "",
+  "flags": {}
+}

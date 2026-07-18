@@ -1,0 +1,57 @@
+.item-tags .tag-container {
+  display: flex;
+  padding: 4px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: rgba(0, 0, 0, 0.2) solid 1px;
+  border-radius: 1pt;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  overflow-x: scroll;
+}
+.item-tags .tag-container .tag {
+  margin: 1px;
+  border: #585858 solid 1px;
+  padding: 4px;
+  background-color: rgb(181, 235, 181);
+  border-radius: 5pt 1pt 1pt 5pt;
+  align-items: center;
+  display: inline;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 1px 1px #fff;
+  transition: 50ms all ease-in-out;
+}
+.item-tags .tag-container .tag:hover {
+  scale: 1.05;
+  background-color: rgb(201, 255, 201);
+}
+.item-tags .tag-container .tag .text {
+  display: inline-block;
+  top: -5px;
+  margin: 0 5px 0 5px;
+  cursor: pointer;
+}
+.item-tags .tag-container .tag .text:hover {
+  text-decoration: underline;
+}
+.item-tags .tag-container .tag .icon {
+  margin: 0px 4px 0 4px;
+  background-color: transparent !important;
+}
+.item-tags .tag-container .on-drag {
+  background-color: rgb(170, 105, 212);
+}
+.item-tags .tag-container .tag-input {
+  background-color: transparent;
+  border: none;
+  width: 120px;
+  flex-grow: 1;
+}
+.item-tags .confirmation {
+  margin-top: 5pt;
+  display: flex;
+}
+.item-tags .confirmation .cancel {
+  background-color: rgb(253, 92, 92);
+}
+.item-tags .confirmation .save {
+  background-color: rgb(181, 235, 181);
+}/*# sourceMappingURL=documentTags.css.map */

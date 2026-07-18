@@ -1,0 +1,114 @@
+<div class="token-browser">
+  <div class="token-browser-header">
+    <div class="token-browser-controls">
+      <div class="token-browser-stats">
+        <span>{{#if hasMore}}{{images.length}} of {{totalImages}} {{tokenLabel}} loaded{{else}}{{totalImages}} {{tokenLabel}} found{{/if}}</span>
+      </div>
+      <div class="token-browser-search">
+      <div class="search-input-wrapper">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" id="token-search" placeholder="Search tokens... (e.g., 'bandit OR pirate', 'large NOT fiend' etc.)" autocomplete="off" />
+        <button type="button" class="clear-search" title="Clear search">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+      <div class="sort-selector">
+        <select id="sort-select">
+          <option value="default">Default Sorting</option>
+          <option value="name">Sort by Name</option>
+          <option value="modified">Sort by Latest</option>
+        </select>
+      </div>
+      <div class="thumbnail-size-selector">
+        <label>Size:</label>
+        <div class="size-icons">
+          <button class="size-btn" data-size="small" title="Small thumbnails">
+            <i class="fas fa-th"></i>
+          </button>
+          <button class="size-btn active" data-size="medium" title="Medium thumbnails">
+            <i class="fas fa-th-large"></i>
+          </button>
+          <button class="size-btn" data-size="large" title="Large thumbnails">
+            <i class="fas fa-stop"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  {{#if images.length}}
+    <div class="token-grid">
+      {{#each images}}
+        <div class="token-base token-item {{#if (eq source 'cloud')}}cloud-token{{/if}}{{#if (and (eq source 'cloud') (eq tier 'premium') (not ../isAuthenticated) (not isCached))}} locked-token{{/if}}" data-path="{{path}}" data-filename="{{filename}}" data-source="{{source}}" {{#if tier}}data-tier="{{tier}}"{{/if}} {{#if (and (eq source 'cloud') (eq tier 'premium') (not ../isAuthenticated) (not isCached))}}draggable="false" style="cursor: not-allowed;"{{else if (eq source 'cloud')}}draggable="false"{{else}}draggable="false"{{/if}}>
+          <div class="token-thumbnail">
+            <img src="{{url}}" alt="{{filename}}" {{#if originalUrl}}data-original-url="{{originalUrl}}"{{/if}} {{#if enhancedThumbnail}}onerror="this.src=this.getAttribute('data-original-url');"{{/if}} />
+            {{#if variant}}
+              <div class="token-variant">{{variant}}</div>
+            {{/if}}
+          </div>
+          <div class="token-info">
+            <span class="token-name" title="{{displayName}}">{{displayName}}</span>
+            <div class="token-details">
+              {{#if size}}<span class="token-size">{{size}}</span>{{/if}}
+              {{#if scale}}<span class="token-scale">{{scale}}</span>{{/if}}
+              {{#if creatureType}}<span class="token-creature-type">{{creatureType}}</span>{{/if}}
+            </div>
+          </div>
+          {{#if (eq source 'cloud')}}
+            {{#if isCached}}
+              <div class="token-status-icon cached-cloud" title="Cloud token (cached locally)">
+                <i class="fas fa-cloud-check"></i>
+              </div>
+            {{else if (eq tier 'premium')}}
+              {{#if ../isAuthenticated}}
+                <div class="token-status-icon premium-cloud" title="Premium cloud token">
+                  <i class="fas fa-cloud-plus"></i>
+                </div>
+              {{else}}
+                <div class="token-status-icon premium-cloud locked" title="Premium cloud token (authentication required)">
+                  <i class="fas fa-lock"></i>
+                </div>
+              {{/if}}
+            {{else}}
+              <div class="token-status-icon free-cloud" title="Free cloud token">
+                <i class="fas fa-cloud"></i>
+              </div>
+            {{/if}}
+          {{else}}
+            <div class="token-status-icon local-storage" title="Local storage">
+              <i class="fas fa-folder"></i>
+            </div>
+          {{/if}}
+        </div>
+      {{/each}}
+    </div>
+  {{else}}
+    <div class="token-empty-state">
+      <p><em>No images found in the selected folders.</em></p>
+      {{#if customTokenFoldersString}}
+        <p><strong>Current folders:</strong> "{{customTokenFoldersString}}"</p>
+      {{else}}
+        <p><strong>No folders configured.</strong></p>
+      {{/if}}
+      <p>Go to <strong>Game Settings > Module Settings</strong> to configure token folders.</p>
+    </div>
+  {{/if}}
+  
+  <div class="token-browser-footer">
+    <div class="main-color-filter">
+      <label class="main-color-checkbox{{#unless hasColorVariants}} disabled{{/unless}}">
+        <input type="checkbox" id="main-color-only" title="{{#if hasColorVariants}}Right-click tokens to see color variants in a popup panel{{else}}No color variants available in current token set{{/if}}" {{#unless hasColorVariants}}disabled{{/unless}} />
+        <span class="checkbox-label">Color variants on Right Click</span>
+      </label>
+    </div>
+    {{#unless isAuthenticated}}
+    <div class="hide-locked-filter">
+      <label class="hide-locked-checkbox">
+        <input type="checkbox" id="hide-locked" title="Hide locked premium tokens from the grid" />
+        <span class="checkbox-label">Hide locked</span>
+      </label>
+    </div>
+    {{/unless}}
+  </div>
+</div> 

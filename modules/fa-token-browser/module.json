@@ -1,0 +1,39 @@
+{
+  "id": "fa-token-browser",
+  "title": "FA Token Browser",
+  "version": "0.9.61",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "description": "<p>A powerful token browser for Foundry VTT with support for multiple game systems including D&D 5e, Pathfinder 1e/2e, DSA5/The Dark Eye, Black Flag, and Daggerheart. Features unified local and cloud token access, advanced search, multiple folder support, and smart deduplication with enhanced system-specific actor creation.</p>",
+  "authors": [
+    {
+      "name": "Forgotten Adventures"
+    }
+  ],
+  "esmodules": [
+    "scripts/geometry.js",
+    "scripts/search-engine.js",
+    "scripts/system-detection.js",
+    "scripts/actor-factory.js",
+    "scripts/patreon-auth-service.js",
+    "scripts/token-data-types.js",
+    "scripts/local-token-service.js",
+    "scripts/token-data-service.js",
+    "scripts/forge-integration.js",
+    "scripts/token-cache-manager.js",
+    "scripts/cloud-token-service.js",
+    "scripts/token-preview-manager.js",
+    "scripts/token-dragdrop-manager.js",
+    "scripts/event-manager.js",
+    "scripts/lazy-loading-manager.js",
+    "scripts/folder-selection-dialog.js",
+    "scripts/token-browser.js"
+  ],
+  "styles": [
+    "styles/token-browser.css"
+  ],
+  "manifest": "https://raw.githubusercontent.com/Forgotten-Adventures/FA-Token-Browser/main/module.json",
+  "download": "https://github.com/Forgotten-Adventures/FA-Token-Browser/raw/main/fa-token-browser.zip"
+}

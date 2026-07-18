@@ -1,0 +1,67 @@
+<div class="midi-qol-damage-card midi-qol-player-damage-card">
+  {{#if playerButtons}}
+  <div id="midi-qol-dmg-header" class="midi-qol-dmg-header">
+    {{damageApplied}}
+  </div>
+  {{/if}}
+  {{#each damageList as |damage iid|}}
+  {{#if isCharacter}}
+  <div class="midi-qol-tooltip midi-qol-dmg-row" data-hp-applied="{{#if ../damageWasApplied}}true{{else}}false{{/if}}" data-actor-uuid="{{damage.displayUuid}}">
+    <img src="{{damage.tokenImg}}" id="{{damage.tokenId}}" class="midi-qol-target-name" height="22">
+    {{#if damage.tooltip}}<div class="midi-qol-tooltiptext"><div>{{{damage.tooltip}}}</div></div>{{/if}}
+    {{!-- Total damage/healing applied at start of line --}}
+    <span id="dmg-total-{{damage.displayUuid}}" class="midi-qol-dmg-total{{#if damage.noChange}} midi-qol-dmg-hidden{{/if}}{{#if damage.isHealing}} midi-qol-dmg-healing{{/if}}" data-hp-total="{{damage.totalDamage}}"><span class="dmg-total-sign">{{#if damage.isHealing}}+{{else}}-{{/if}}</span><span class="dmg-total-value">{{#if damage.totalDamage}}{{damage.totalDamage}}{{else}}0{{/if}}</span></span>
+    {{!-- Direct vitality damage/healing (not overflow) --}}
+    {{#if damage.absVitalityDamage}}<span id="dmg-vit-direct-{{damage.displayUuid}}" class="midi-qol-dmg-vitality-total{{#if damage.vitalityDamageIsHealing}} midi-qol-dmg-healing{{/if}}" data-vit-amount="{{damage.absVitalityDamage}}"><i class="fas fa-heart-crack"></i><span class="dmg-vit-sign">{{#if damage.vitalityDamageIsHealing}}+{{else}}-{{/if}}</span><span class="dmg-vit-value">{{damage.absVitalityDamage}}</span></span>{{/if}}
+    {{!-- Temp HP: blue symbol --}}
+    <span id="dmg-temp-{{damage.displayUuid}}" class="midi-qol-dmg-temp{{#unless damage.tempHpChanged}} midi-qol-dmg-hidden{{/unless}}{{#if damage.tempHpIncrease}} midi-qol-dmg-healing{{/if}}" title="Temp HP">
+      <i class="fas fa-shield-alt"></i><span class="dmg-temp-old">{{damage.damageItem.oldTempHP}}</span>&rarr;<span class="dmg-temp-new">{{damage.damageItem.newTempHP}}</span>
+    </span>
+    {{!-- HP: red symbol --}}
+    <span id="dmg-hp-{{damage.displayUuid}}" class="midi-qol-dmg-hp{{#unless damage.hpChanged}} midi-qol-dmg-hidden{{/unless}}{{#if damage.isHealing}} midi-qol-dmg-healing{{/if}}">
+      <i class="fas fa-heart"></i> <span class="dmg-hp-old">{{damage.damageItem.oldHP}}</span>&rarr;<span class="dmg-hp-new">{{damage.damageItem.newHP}}</span>
+    </span>
+    {{!-- Vitality: black symbol --}}
+    <span id="dmg-vitality-{{damage.displayUuid}}" class="midi-qol-dmg-vitality{{#unless damage.vitalityChanged}} midi-qol-dmg-hidden{{/unless}}{{#if damage.vitalityIncrease}} midi-qol-dmg-healing{{/if}}">
+      <i class="fas fa-heart-crack"></i><span class="dmg-vit-old">{{damage.oldVitality}}</span>&rarr;<span class="dmg-vit-new">{{damage.newVitality}}</span>
+    </span>
+    {{!-- Max HP: skull icon --}}
+    <span id="dmg-tempmax-{{damage.displayUuid}}" class="midi-qol-dmg-tempmax{{#unless damage.tempMaxChanged}} midi-qol-dmg-hidden{{/unless}}">
+      <i class="fas fa-skull"></i><span class="dmg-tempmax-old">{{damage.damageItem.oldTempMax}}</span>&rarr;<span class="dmg-tempmax-new">{{damage.damageItem.newTempMax}}</span>
+    </span>
+    {{!-- No change: show (0) --}}
+    <span id="dmg-nochange-{{damage.displayUuid}}" class="midi-qol-dmg-nochange{{#unless damage.noChange}} midi-qol-dmg-hidden{{/unless}}">(0)</span>
+    {{#if ../playerButtons}}
+    <span class="midi-qol-dmg-controls">
+      <select id="dmg-multiplier-{{damage.displayUuid}}" class="midi-qol-dmg-multiplier">
+        <option value="calc" selected>=</option>
+        <option value="x1">1</option>
+        <option value="x0.5">½</option>
+        <option value="x2">2</option>
+        <option value="x0.25">¼</option>
+        <option value="-1">+</option>
+      </select>
+      <div class="midi-qol-dmg-btn-pair">
+        <button id="apply-{{damage.displayUuid}}" class="midi-qol-dmg-btn midi-qol-dmg-btn-apply" title="{{localize 'midi-qol.DamageCardApplyHeader'}}">
+          <i class="fas fa-check"></i>
+        </button>
+        <button id="reverse-{{damage.displayUuid}}" class="midi-qol-dmg-btn midi-qol-dmg-btn-reverse" title="{{localize 'midi-qol.DamageCardUndoHeader'}}">
+          <i class="fas fa-arrow-rotate-left"></i>
+        </button>
+      </div>
+    </span>
+    {{/if}}
+  </div>
+  {{else}}
+  <div class="midi-qol-tooltip midi-qol-dmg-row">
+    <img src="{{damage.tokenImg}}" id="{{damage.tokenId}}" class="midi-qol-target-name" height="22">
+    {{#if ../showImmun}}{{#if damage.tooltip}}<div class="midi-qol-tooltiptext"><div>{{{damage.tooltip}}}</div></div>{{/if}}{{/if}}
+    {{#if damage.isHealing}}
+    <span class="midi-qol-dmg-text midi-qol-dmg-healing">{{damage.absRawTotalDamage}} {{localize "DND5E.Healing"}} &rarr; {{damage.absPlayerViewTotalDamage}} {{localize "midi-qol.Healed"}}</span>
+    {{else}}
+    <span class="midi-qol-dmg-text">{{damage.damageItem.rawTotalDamage}} {{localize "DND5E.Damage"}} &rarr; {{damage.playerViewTotalDamage}} {{localize "midi-qol.DamageDealt"}}</span>
+    {{/if}}
+  </div>
+  {{/if}}
+  {{/each}}
+</div>

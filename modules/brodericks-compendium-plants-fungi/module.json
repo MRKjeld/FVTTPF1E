@@ -1,0 +1,187 @@
+{
+    "id": "brodericks-compendium-plants-fungi",
+    "title": "Broderick's Compendium: Plants and Fungi Across the Realm",
+    "description": "A module that includes over 600 fantasy plants from Broderick's Compendium: Plants and Fungi Across the Realm (version 2.0) (Source: https://www.reddit.com/r/DnD/comments/83oupp/brodericks_compendium_plants_and_fungi_across_the/ ). This addon includes roll tables for Arctic, City, Coastal, Desert, Forest, Jungle, Mountain, Ocean, Plains, River, Swamp, and Underdark/Cave regions as per the source material.",
+    "license": "GPL-3.0-only",
+    "authors": [
+        {
+            "name": "Marc Straube",
+            "email": "email@marcstraube.de",
+            "discord": "nerdy_by_nature",
+            "url": "https://github.com/marcstraube",
+            "flags": {}
+        },
+        {
+            "name": "Miles LuVisi",
+            "email": "mluvisi16@gmail.com",
+            "discord": "VitaMorte",
+            "url": "https://github.com/mluvisi16",
+            "flags": {}
+        }
+    ],
+    "version": "3.26.0",
+    "compatibility": {
+        "minimum": "11",
+        "verified": "13"
+    },
+    "packs": [
+        {
+            "name": "monsters",
+            "label": "Monsters (Broderick's Compendium)",
+            "path": "packs/monsters",
+            "type": "Actor",
+            "system": "dnd5e",
+            "ownership": {
+                "PLAYER": "OBSERVER",
+                "ASSISTANT": "OWNER"
+            },
+            "flags": {}
+        },
+        {
+            "name": "plants",
+            "label": "Plants and Fungi (Broderick's Compendium)",
+            "path": "packs/plants",
+            "type": "Item",
+            "system": "dnd5e",
+            "ownership": {
+                "PLAYER": "OBSERVER",
+                "ASSISTANT": "OWNER"
+            },
+            "flags": {}
+        },
+        {
+            "name": "plants-pf2e",
+            "label": "Plants and Fungi (Broderick's Compendium)",
+            "path": "packs/plants-pf2e",
+            "type": "Item",
+            "system": "pf2e",
+            "ownership": {
+                "PLAYER": "OBSERVER",
+                "ASSISTANT": "OWNER"
+            },
+            "flags": {}
+        },
+        {
+            "name": "books",
+            "label": "Books (Broderick's Compendium)",
+            "path": "packs/books",
+            "type": "Item",
+            "system": "dnd5e",
+            "ownership": {
+                "PLAYER": "OBSERVER",
+                "ASSISTANT": "OWNER"
+            },
+            "flags": {}
+        },
+        {
+            "name": "planttables",
+            "label": "Plant RollTables (Broderick's Compendium)",
+            "path": "packs/plantrolltables",
+            "type": "RollTable",
+            "system": "dnd5e",
+            "ownership": {
+                "PLAYER": "OBSERVER",
+                "ASSISTANT": "OWNER"
+            },
+            "flags": {}
+        },
+        {
+            "name": "planttables-pf2e",
+            "label": "Plant RollTables (Broderick's Compendium)",
+            "path": "packs/plantrolltables-pf2e",
+            "type": "RollTable",
+            "system": "pf2e",
+            "ownership": {
+                "PLAYER": "OBSERVER",
+                "ASSISTANT": "OWNER"
+            },
+            "flags": {}
+        }
+    ],
+    "packFolders": [
+        {
+            "name": "Broderick's Compendium",
+            "color": "#163800",
+            "sorting": "a",
+            "folders": [
+                {
+                    "name": "Actors",
+                    "sorting": "a",
+                    "color": "#265408",
+                    "packs": [
+                        "monsters"
+                    ],
+                    "folders": []
+                },
+                {
+                    "name": "Items",
+                    "sorting": "a",
+                    "color": "#265408",
+                    "packs": [
+                        "plants",
+                        "plants-pf2e",
+                        "books"
+                    ],
+                    "folders": []
+                },
+                {
+                    "name": "Roll Tables",
+                    "sorting": "a",
+                    "color": "#265408",
+                    "packs": [
+                        "planttables",
+                        "planttables-pf2e"
+                    ],
+                    "folders": []
+                }
+            ],
+            "packs": []
+        }
+    ],
+    "scripts": [
+        "scripts/init.js"
+    ],
+    "styles": [
+        "styles/style.css"
+    ],
+    "languages": [
+        {
+            "lang": "de",
+            "name": "Deutsch",
+            "path": "lang/de.json",
+            "flags": {}
+        },
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json",
+            "flags": {}
+        }
+    ],
+    "relationships": {
+        "systems": [
+            {
+                "id": "dnd5e",
+                "type": "system",
+                "manifest": "https://github.com/foundryvtt/dnd5e/releases/latest/download/system.json",
+                "compatibility": {
+                    "verified": "5.0.0"
+                }
+            },
+            {
+                "id": "pf2e",
+                "type": "system",
+                "manifest": "https://github.com/foundryvtt/pf2e/releases/latest/download/system.json",
+                "compatibility": {
+                    "verified": "7.0.0"
+                }
+            }
+        ]
+    },
+    "url": "https://github.com/mluvisi16/brodericks-compendium-plants-fungi",
+    "manifest": "https://github.com/mluvisi16/brodericks-compendium-plants-fungi/releases/latest/download/module.json",
+    "download": "https://github.com/mluvisi16/brodericks-compendium-plants-fungi/releases/download/v3.26.0/module.zip",
+    "changelog": "https://github.com/mluvisi16/brodericks-compendium-plants-fungi/releases",
+    "readme": "https://github.com/mluvisi16/brodericks-compendium-plants-fungi/blob/master/README.md",
+    "flags": {}
+}

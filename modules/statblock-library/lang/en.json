@@ -1,0 +1,6 @@
+{
+  "TYPES.JournalEntryPage.statblock-library.statblock": "Statblock",
+  "SBL": {
+    "ImportButton": "Import {name}"
+  }
+}

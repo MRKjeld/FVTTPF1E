@@ -1,0 +1,104 @@
+<div class="augur-nexus-tool nexus-site-panel site-edit-shell">
+    <fieldset class="site-panel-section">
+        <legend><i class="fas fa-pen-to-square"></i> Edit Mode</legend>
+        <div class="site-edit-status">
+            {{#if hasSelection}}
+            <div class="site-edit-selected">
+                {{#if selectedSiteIconSrc}}
+                <div class="picker-btn-thumb site-edit-selected-thumb">
+                    <img src="{{selectedSiteIconSrc}}" alt="{{selectedSiteName}}">
+                </div>
+                {{/if}}
+                <div class="site-edit-selected-copy">
+                    <strong>{{selectedSiteName}}</strong>
+                    <span>Click another site on the map to edit it.</span>
+                </div>
+            </div>
+            {{else}}
+            <div class="site-edit-empty">
+                <i class="fas fa-location-dot"></i>
+                <span>Click a site on the map to edit it.</span>
+            </div>
+            {{/if}}
+        </div>
+    </fieldset>
+
+    <fieldset class="site-panel-section {{#unless hasSelection}}site-panel-section-disabled{{/unless}}">
+        <legend><i class="fas fa-location-dot"></i> Site</legend>
+
+        <div class="form-group">
+            <label>Name</label>
+            <div class="site-name-entry">
+                <input type="text" name="siteName" value="{{siteName}}" placeholder="Site" {{#unless hasSelection}}disabled{{/unless}}>
+                <button type="button" class="site-entry-clear" data-action="applySiteName" title="Apply site name" hidden {{#unless hasSelection}}disabled{{/unless}}><i class="fas fa-check"></i></button>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Icon Type</label>
+            <div class="site-role-switcher site-icon-type-switcher" role="tablist" aria-label="Icon Type">
+                {{#each iconRoles}}
+                <button type="button" class="site-role-option {{#if (eq ../selectedIconRole this.id)}}active{{/if}}" data-site-icon-role="{{this.id}}" {{#unless ../hasSelection}}disabled{{/unless}}>{{this.label}}</button>
+                {{/each}}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Icon</label>
+            <button type="button" class="picker-btn" data-action="pickSiteIcon" {{#unless hasSelection}}disabled{{/unless}}>
+                <div class="picker-btn-thumb">
+                    {{#if selectedIconSrc}}
+                    <img src="{{selectedIconSrc}}" alt="{{selectedIconLabel}}" style="filter: drop-shadow(0 0 4px {{selectedIconColor}});">
+                    {{else}}
+                    <i class="fas fa-location-dot"></i>
+                    {{/if}}
+                </div>
+                <span class="picker-btn-label">{{selectedIconLabel}}</span>
+                <i class="fas fa-image picker-btn-icon"></i>
+            </button>
+        </div>
+
+        <div class="form-group">
+            <label>Icon Size</label>
+            <div class="form-fields">
+                <input type="range" name="iconSize" min="50" max="256" step="1" value="{{selectedIconSize}}" {{#unless hasSelection}}disabled{{/unless}}>
+                <span class="range-value" data-site-icon-size-value>{{selectedIconSize}}</span>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset class="site-panel-section {{#unless hasSelection}}site-panel-section-disabled{{/unless}}">
+        <legend><i class="fas fa-palette"></i> Colors</legend>
+
+        <div class="form-group">
+            <label>Icon Color</label>
+            <div class="site-color-grid">
+                {{#each colors}}
+                <button type="button" class="site-color-swatch {{#if (eq ../selectedIconColor this.value)}}active{{/if}}" data-site-icon-color="{{this.value}}" title="{{this.label}}" style="--site-color: {{this.value}};" {{#unless ../hasSelection}}disabled{{/unless}}></button>
+                {{/each}}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Label Color</label>
+            <div class="site-color-grid">
+                {{#each colors}}
+                <button type="button" class="site-color-swatch {{#if (eq ../selectedLabelColor this.value)}}active{{/if}}" data-site-label-color="{{this.value}}" title="{{this.label}}" style="--site-color: {{this.value}};" {{#unless ../hasSelection}}disabled{{/unless}}></button>
+                {{/each}}
+            </div>
+        </div>
+    </fieldset>
+
+    <div class="site-info compact">
+        <div class="site-action place"><i class="fas fa-hand-pointer"></i><span><strong>Left Click</strong> to select a site</span></div>
+        <div class="site-action edit"><i class="fas fa-sliders"></i><span><strong>Panel Controls</strong> update it</span></div>
+        <div class="site-action move site-action-full"><i class="fas fa-arrows-up-down-left-right"></i><span><strong>Drag Selected Site</strong> to move it on the map</span></div>
+    </div>
+
+    <div class="site-panel-footer-actions">
+        <button type="button" class="site-mode-action" data-action="doneEditing">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back To Sites</span>
+        </button>
+    </div>
+</div>

@@ -1,0 +1,101 @@
+{
+  "themes": [
+    {
+      "id": "castle",
+      "label": "Castle",
+      "iconId": "castle",
+      "mapColorId": "green",
+      "defaultNames": [
+        "Ruined Castle",
+        "Forgotten Keep",
+        "Blackstone Hold",
+        "Old Watchcastle"
+      ],
+      "defaultIconByRole": {
+        "landmark": "castle",
+        "entrance": "portcullis"
+      }
+    },
+    {
+      "id": "temple",
+      "label": "Temple",
+      "iconId": "domed-temple",
+      "mapColorId": "magenta",
+      "defaultNames": [
+        "Silent Temple",
+        "Sunken Temple",
+        "Forgotten Shrine",
+        "Ancient Sanctum"
+      ],
+      "defaultIconByRole": {
+        "landmark": "domed-temple",
+        "entrance": "ornate-door"
+      }
+    },
+    {
+      "id": "ruins",
+      "label": "Ruins",
+      "iconId": "ancient-ruins",
+      "mapColorId": "yellow",
+      "defaultNames": [
+        "Ancient Ruins",
+        "Collapsed Ruins",
+        "Forgotten Ruins",
+        "Broken Stones"
+      ],
+      "defaultIconByRole": {
+        "landmark": "ancient-ruins",
+        "entrance": "barred-entrance"
+      }
+    },
+    {
+      "id": "tomb",
+      "label": "Tomb",
+      "iconId": "pyramid",
+      "mapColorId": "red",
+      "defaultNames": [
+        "Ancient Tomb",
+        "Silent Tomb",
+        "Buried Tomb",
+        "Forgotten Sepulcher"
+      ],
+      "defaultIconByRole": {
+        "landmark": "pyramid",
+        "entrance": "crypt-entrance"
+      }
+    },
+    {
+      "id": "manor",
+      "label": "Manor",
+      "iconId": "noble-house",
+      "mapColorId": "white",
+      "defaultNames": [
+        "Old Manor",
+        "Blackthorn Manor",
+        "Forgotten Estate",
+        "Ruined Hall"
+      ],
+      "defaultIconByRole": {
+        "landmark": "noble-house",
+        "entrance": "wooden-door"
+      }
+    },
+    {
+      "id": "vault",
+      "label": "Vault",
+      "iconId": "guardian-statue",
+      "mapColorId": "blue",
+      "defaultNames": [
+        "Sealed Vault",
+        "Ancient Vault",
+        "Hidden Vault",
+        "Forgotten Repository"
+      ],
+      "defaultIconByRole": {
+        "landmark": "guardian-statue",
+        "entrance": "steel-door"
+      }
+    }
+  ]
+}
+

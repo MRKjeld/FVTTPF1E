@@ -1,0 +1,71 @@
+{
+    "id": "objects-interactions-fx",
+    "title": "✨ Automated Objects, Interactions and Effects 🔥",
+    "description": "Animations. Automations. Interactions. Effects. And soon Objects too! Immerse your players on the game, let they experience the interactions and feel the combat!",
+    "version": "1.1.5",
+    "authors": [
+        {
+            "name": "ZotyDev",
+            "email": "official@zoty.dev",
+            "url": "https://www.zoty.dev",
+            "flags": {}
+        }
+    ],
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "./module/lang/en.json",
+            "flags": {}
+        }
+    ],
+    "compatibility": {
+        "minimun": "10",
+        "verified": "11"
+    },
+    "license": "./LICENSE",
+    "url": "https://github.com/ZotyDev/objects-interactions-fx",
+    "bugs": "https://github.com/ZotyDev/objects-interactions-fx/issues",
+    "manifest": "https://github.com/ZotyDev/objects-interactions-fx/releases/latest/download/module.json",
+    "download": "https://github.com/ZotyDev/objects-interactions-fx/releases/download/1.1.5/module.zip",
+    "readme": "https://github.com/ZotyDev/objects-interactions-fx/blob/main/README.md",
+    "changelog": "https://github.com/ZotyDev/objects-interactions-fx/blob/main/CHANGELOG.md",
+    "relationships": {
+        "systems": [
+            {
+                "id": "dnd5e",
+                "type": "system",
+                "compatibility": {}
+            }
+        ],
+        "requires": [
+            {
+                "id": "item-tags",
+                "type": "module",
+                "compatibility": {}
+            },
+            {
+                "id": "sequencer",
+                "type": "module",
+                "compatibility": {}
+            },
+            {
+                "id": "socketlib",
+                "type": "module",
+                "compatibility": {}
+            }
+        ]
+    },
+    "socket": true,
+    "esmodules": [
+        "./module/scripts/Main.js",
+        "./module/scripts/automation/ActorInventor.js",
+        "./module/scripts/library/CanvasEffects.js",
+        "./module/scripts/library/Socket.js",
+        "./module/scripts/library/HandlebarsHelpers.js"
+    ],
+    "styles": [
+        "./module/styles/ItemTags.css",
+        "./module/styles/Settings.css"
+    ]
+}

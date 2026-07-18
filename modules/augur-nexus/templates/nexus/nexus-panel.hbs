@@ -1,0 +1,115 @@
+<div class="augur-nexus-tool nexus-browser-panel-shell">
+    <div class="nexus-browser-hero-wrap">
+        <div class="nexus-browser-hero {{#if hasRootScene}}has-root{{/if}}">
+            <span class="nexus-browser-hero-backdrop {{#unless rootSceneThumb}}no-thumb{{/unless}}">
+                {{#if rootSceneThumb}}
+                <img src="{{rootSceneThumb}}" alt="{{rootSceneName}}">
+                {{else}}
+                <i class="fas fa-map"></i>
+                {{/if}}
+            </span>
+            <span class="nexus-browser-hero-overlay"></span>
+            <button type="button" class="nexus-browser-hero-corner-action" data-action="setCurrentAsNexus" title="Set the current scene as the Nexus scene">
+                <i class="fas fa-crosshairs"></i>
+            </button>
+            <div class="nexus-browser-hero-copy">
+                <div class="nexus-browser-root-name" title="{{rootSceneName}}">{{rootSceneName}}</div>
+                <div class="nexus-browser-pill-type">Nexus Scene</div>
+            </div>
+            <div class="nexus-browser-root-actions hero">
+                <button type="button" class="site-entry-clear nexus-browser-action icon-only" data-action="returnToParentScene" title="Return to the parent scene" aria-label="Return to the parent scene" {{#unless hasBackTarget}}disabled{{/unless}}>
+                    <i class="fas fa-circle-arrow-left"></i>
+                </button>
+                <button type="button" class="site-entry-clear nexus-browser-action icon-only" data-action="openSitesTool" title="Open Sites tool" aria-label="Open Sites tool" {{#unless canOpenSitesTool}}disabled{{/unless}}>
+                    <i class="fas fa-location-dot"></i>
+                </button>
+                <button type="button" class="site-entry-clear nexus-browser-action" data-action="openRootScene" title="Open the Nexus scene" {{#unless hasRootScene}}disabled{{/unless}}>
+                    <i class="fas fa-map"></i>
+                    <span>{{#if canOpenRootScene}}Go To Nexus{{else if hasRootScene}}Nexus Active{{else}}No Nexus Scene{{/if}}</span>
+                </button>
+            </div>
+        </div>
+        <div class="nexus-browser-summary-line under-pill">
+            <span class="nexus-browser-summary-chip" title="{{currentSceneName}}">Current: {{currentSceneName}}</span>
+            {{#if hasParentScene}}
+            <span class="nexus-browser-summary-chip" title="{{parentSceneName}}">Parent: {{parentSceneName}}</span>
+            {{/if}}
+        </div>
+    </div>
+
+    <div class="nexus-browser-search-bar">
+        <i class="fas fa-search"></i>
+        <input type="text" name="nexusSceneSearch" value="{{searchQuery}}" placeholder="Search scenes" autocomplete="off" spellcheck="false">
+        <button type="button" class="site-entry-clear nexus-browser-search-clear" data-action="clearSceneSearch" title="Clear search" {{#unless isSearching}}hidden{{/unless}}>
+            <i class="fas fa-times"></i>
+        </button>
+        <button type="button" class="site-entry-clear nexus-browser-collapse-all" data-action="collapseAllScenes" title="Collapse all scenes" {{#unless hasRows}}disabled{{/unless}}>
+            <i class="fas fa-compress-alt"></i>
+        </button>
+    </div>
+    <section class="nexus-browser-section nexus-browser-tree-section">
+        <div class="nexus-browser-tree" {{#unless hasRows}}hidden{{/unless}}>
+            {{#each rows}}
+            <div class="nexus-browser-pill-shell {{#if this.isPending}}pending-site{{/if}} {{#if this.hasIcon}}has-site-icon{{/if}}" style="margin-left: {{this.indent}};" title="{{this.name}}" data-node-id="{{this.id}}" data-scene-id="{{this.sceneId}}" data-parent-node-id="{{this.parentNodeId}}" data-parent-scene-id="{{this.parentSceneId}}" data-site-id="{{this.siteId}}" data-page-id="{{this.pageId}}" data-journal-entry-id="{{this.journalEntryId}}" data-depth="{{this.depth}}" data-name="{{this.name}}" data-has-children="{{this.hasChildren}}">
+                {{#if ../showSceneIcons}}
+                {{#if this.iconSrc}}
+                <span class="nexus-browser-pill-emblem">
+                    <img src="{{this.iconSrc}}" alt="{{this.name}}">
+                </span>
+                {{/if}}
+                {{/if}}
+                <div class="nexus-browser-pill {{#if this.isCurrent}}current{{/if}} {{#if this.isCurrentAncestor}}current-ancestor{{/if}} {{#if this.isRoot}}root{{/if}} {{#if this.hasChildren}}has-children{{/if}}">
+                    {{#if this.isPending}}
+                    {{else}}
+                    <span class="nexus-browser-pill-backdrop {{#unless this.thumb}}no-thumb{{/unless}}">
+                        {{#if this.thumb}}
+                        <img src="{{this.thumb}}" alt="{{this.name}}">
+                        {{/if}}
+                    </span>
+                    <span class="nexus-browser-pill-overlay"></span>
+                    {{/if}}
+                    <span class="nexus-browser-pill-copy">
+                        <span class="nexus-browser-pill-name">{{this.name}}</span>
+                        <span class="nexus-browser-pill-type">{{this.nodeTypeLabel}}</span>
+                    </span>
+                    <span class="nexus-browser-pill-actions">
+                        {{#if this.hasOptions}}
+                        <span class="nexus-browser-pill-options">
+                            <button type="button" class="nexus-browser-pill-action secondary" data-action="toggleSceneOptions" data-scene-id="{{this.sceneId}}" data-can-rename="{{#if this.canRename}}true{{else}}false{{/if}}" data-can-configure="{{#if this.canConfigure}}true{{else}}false{{/if}}" data-can-delete="{{#if this.canDelete}}true{{else}}false{{/if}}" title="Scene options" aria-label="Scene options" aria-expanded="false">
+                                <i class="fas fa-ellipsis"></i>
+                            </button>
+                        </span>
+                        {{/if}}
+                        {{#if this.canOpen}}
+                        <button type="button" class="nexus-browser-pill-action secondary" data-action="openLineageScene" data-node-kind="{{this.nodeKind}}" data-scene-id="{{this.sceneId}}" data-site-id="{{this.siteId}}" data-page-id="{{this.pageId}}" data-journal-entry-id="{{this.journalEntryId}}" data-parent-scene-id="{{this.parentSceneId}}" title="{{this.openLabel}}">
+                            <i class="fas fa-map"></i>
+                        </button>
+                        {{/if}}
+                        {{#if this.hasChildren}}
+                        <button type="button" class="nexus-browser-pill-action {{#if this.isCollapsed}}collapsed{{/if}}" data-action="toggleLineageBranch" data-scene-id="{{this.id}}" title="Toggle child scenes">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        {{/if}}
+                    </span>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        <div class="nexus-browser-empty" {{#if hasRows}}hidden{{/if}}>{{#if isSearching}}No scenes match this search.{{else}}No lineage data yet. Use Sites or set the current scene as the Nexus scene.{{/if}}</div>
+    </section>
+    <div class="nexus-browser-footer">
+        <label class="nexus-browser-icon-toggle">
+            <input type="checkbox" name="nexusBrowserShowIcons" {{#if showSceneIcons}}checked{{/if}}>
+            <span class="nexus-browser-icon-toggle-box" aria-hidden="true">
+                <i class="fas fa-check"></i>
+            </span>
+            <span class="nexus-browser-icon-toggle-label">Show Icons</span>
+        </label>
+        <div class="nexus-browser-root-create">
+            <button type="button" class="site-entry-clear nexus-browser-new-root" data-action="toggleRootSceneMenu" title="Create a new root scene" aria-expanded="false">
+                <i class="fas fa-plus"></i>
+                <span>New Root Scene</span>
+            </button>
+        </div>
+    </div>
+</div>
