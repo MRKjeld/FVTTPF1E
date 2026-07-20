@@ -67,11 +67,11 @@
         "video": {
             "animation": "horror",
             "color": "purple",
-            "customPath": "",
+            "customPath": "jb2a.markers.horror.purple.02",
             "dbSection": "static",
-            "enableCustom": false,
+            "enableCustom": true,
             "menuType": "conditions",
-            "variant": "01"
+            "variant": "02"
         }
     },
     "macro": {

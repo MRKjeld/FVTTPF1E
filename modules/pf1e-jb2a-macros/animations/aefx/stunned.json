@@ -66,12 +66,12 @@
         },
         "video": {
             "animation": "stun",
-            "color": "random",
-            "customPath": "",
+            "color": "purple",
+            "customPath": "jb2a.markers.stun.purple.01",
             "dbSection": "static",
-            "enableCustom": false,
+            "enableCustom": true,
             "menuType": "conditions",
-            "variant": "03"
+            "variant": "01"
         }
     },
     "macro": {
@@ -126,8 +126,8 @@
     "activeEffectType": "ontoken",
     "metaData": {
         "name": "PF1e Animations",
-        "version": 12,
-        "moduleVersion": "2.6.6",
+        "version": 13,
+        "moduleVersion": "2.20.1",
         "label": "Stunned",
         "menu": "aefx"
     }

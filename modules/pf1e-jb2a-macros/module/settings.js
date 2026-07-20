@@ -97,6 +97,18 @@ Hooks.once("init", () => {
       default: false,
     });
 
+    game.settings.register("pf1e-jb2a-macros", "useNativeAnimations", {
+      scope: "world",
+      config: true,
+      name: game.i18n.localize(
+        "pf1e-jb2a-macros.settings.useNativeAnimations.name"
+      ),
+      hint: game.i18n.localize(
+        "pf1e-jb2a-macros.settings.useNativeAnimations.hint"
+      ),
+      type: Boolean,
+      default: true,
+    });
     game.settings.register("pf1e-jb2a-macros", "debug", {
       scope: "client",
       config: true,

@@ -114,6 +114,10 @@
 				"name": "Debug Mode",
 				"hint": "Enables console logs of what PF1e Animations module is doing."
 			},
+			"useNativeAnimations": {
+				"name": "Use Native Animation Hook (Experimental)",
+				"hint": "Play weapon/spell animations directly via Sequencer using this module's own item-name matching, instead of routing through Automated Animations' Autorecognition settings. Disable to fall back to the Automated Animations-based pipeline."
+			},
 			"tmfx": {
 				"name": "Use Token Magic Effects",
 				"hint": "A few animations benefit from being animated by Token Magic FX rather than Sequencer. Note that this setting is only shown when the Token Magic FX module is installed."

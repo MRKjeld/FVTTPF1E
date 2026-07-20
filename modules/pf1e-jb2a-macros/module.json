@@ -61,7 +61,8 @@
         "module/updateMenu.js",
         "module/blacklistMenu.js",
         "module/settings.js",
-        "module/modifiers-matter.js"
+        "module/modifiers-matter.js",
+        "module/native-animations.js"
     ],
     "scripts": [],
     "styles": [

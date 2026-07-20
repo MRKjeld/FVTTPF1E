@@ -274,7 +274,9 @@ pf1eAnimations.hooks.createChatMessage = Hooks.on(
       // to find a weapon-specific animation. Without this, entries merged via
       // the Update Menu (e.g. "Antler", "Dagger") are registered but never
       // looked up.
-      if (linkedItem) {
+      // Superseded by module/native-animations.js's own pf1PostActionUse hook
+      // when that pipeline is enabled — skip here to avoid double-playing.
+      if (linkedItem && !game.settings.get("pf1e-jb2a-macros", "useNativeAnimations")) {
         const weaponHitTargets =
           ["failure", "criticalFailure"].includes(degreeOfSuccess) &&
           game.settings.get("pf1e-jb2a-macros", "randomHitAnims")
