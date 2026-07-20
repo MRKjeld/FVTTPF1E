@@ -1,0 +1,6783 @@
+{
+  "speaker": {
+    "scene": null,
+    "token": "467rcmGL2tShazGg",
+    "actor": "V2e2L7vltbTE5tJc",
+    "alias": "Quick!"
+  },
+  "actor": {
+    "changes": {},
+    "name": "Quick!",
+    "img": "icons/svg/mystery-man.svg",
+    "type": "character",
+    "system": {
+      "abilities": {
+        "str": {
+          "value": "...",
+          "damage": "...",
+          "drain": "...",
+          "userPenalty": "...",
+          "checkMod": "...",
+          "total": "...",
+          "undrained": "...",
+          "base": "...",
+          "penalty": "...",
+          "mod": "...",
+          "baseMod": "...",
+          "unmod": "..."
+        },
+        "dex": {
+          "value": "...",
+          "damage": "...",
+          "drain": "...",
+          "userPenalty": "...",
+          "checkMod": "...",
+          "total": "...",
+          "undrained": "...",
+          "base": "...",
+          "penalty": "...",
+          "mod": "...",
+          "maxBonus": "...",
+          "baseMod": "...",
+          "unmod": "..."
+        },
+        "con": {
+          "value": "...",
+          "damage": "...",
+          "drain": "...",
+          "userPenalty": "...",
+          "checkMod": "...",
+          "total": "...",
+          "undrained": "...",
+          "base": "...",
+          "penalty": "...",
+          "mod": "...",
+          "baseMod": "...",
+          "unmod": "..."
+        },
+        "int": {
+          "value": "...",
+          "damage": "...",
+          "drain": "...",
+          "userPenalty": "...",
+          "checkMod": "...",
+          "total": "...",
+          "undrained": "...",
+          "base": "...",
+          "penalty": "...",
+          "mod": "...",
+          "baseMod": "...",
+          "unmod": "..."
+        },
+        "wis": {
+          "value": "...",
+          "damage": "...",
+          "drain": "...",
+          "userPenalty": "...",
+          "checkMod": "...",
+          "total": "...",
+          "undrained": "...",
+          "base": "...",
+          "penalty": "...",
+          "mod": "...",
+          "baseMod": "...",
+          "unmod": "..."
+        },
+        "cha": {
+          "value": "...",
+          "damage": "...",
+          "drain": "...",
+          "userPenalty": "...",
+          "checkMod": "...",
+          "total": "...",
+          "undrained": "...",
+          "base": "...",
+          "penalty": "...",
+          "mod": "...",
+          "baseMod": "...",
+          "unmod": "..."
+        }
+      },
+      "attributes": {
+        "hpAbility": "con",
+        "cmbAbility": "str",
+        "naturalAC": 0,
+        "ac": {
+          "normal": "...",
+          "touch": "...",
+          "flatFooted": "..."
+        },
+        "cmd": {
+          "strAbility": "...",
+          "dexAbility": "...",
+          "total": "...",
+          "flatFootedTotal": "..."
+        },
+        "sr": {
+          "formula": "...",
+          "total": "..."
+        },
+        "clCheck": false,
+        "saveNotes": "",
+        "acNotes": "",
+        "cmdNotes": "",
+        "srNotes": "",
+        "attack": {
+          "meleeAbility": "...",
+          "rangedAbility": "...",
+          "general": "...",
+          "melee": "...",
+          "natural": "...",
+          "ranged": "...",
+          "thrown": "...",
+          "shared": "...",
+          "critConfirm": "..."
+        },
+        "energyDrain": 0,
+        "quadruped": false,
+        "savingThrows": {
+          "fort": "...",
+          "ref": "...",
+          "will": "..."
+        },
+        "hp": {
+          "temp": "...",
+          "nonlethal": "...",
+          "offset": "...",
+          "max": "...",
+          "value": "..."
+        },
+        "wounds": {
+          "offset": "...",
+          "max": "...",
+          "threshold": "...",
+          "value": "..."
+        },
+        "vigor": {
+          "temp": "...",
+          "offset": "...",
+          "max": "...",
+          "value": "..."
+        },
+        "init": {
+          "value": "...",
+          "ability": "...",
+          "bonus": "...",
+          "total": "..."
+        },
+        "speed": {
+          "land": "...",
+          "climb": "...",
+          "swim": "...",
+          "burrow": "...",
+          "fly": "..."
+        },
+        "spells": {
+          "spellbooks": "..."
+        },
+        "bab": {
+          "total": "..."
+        },
+        "acp": {
+          "armorBonus": "...",
+          "shieldBonus": "...",
+          "gear": "...",
+          "encumbrance": "...",
+          "total": "...",
+          "skill": "...",
+          "attackPenalty": "..."
+        },
+        "maxDexBonus": null,
+        "cmb": {
+          "bonus": "...",
+          "total": "...",
+          "value": "..."
+        },
+        "mDex": {
+          "armorBonus": "...",
+          "shieldBonus": "..."
+        },
+        "damage": {
+          "general": "...",
+          "weapon": "...",
+          "natural": "...",
+          "melee": "...",
+          "meleeAll": "...",
+          "ranged": "...",
+          "rangedAll": "...",
+          "thrown": "...",
+          "spell": "...",
+          "shared": "..."
+        },
+        "woundThresholds": {
+          "level": "...",
+          "mod": "...",
+          "penaltyBase": "...",
+          "penalty": "..."
+        },
+        "hd": {
+          "total": "..."
+        },
+        "encumbrance": {
+          "levels": "...",
+          "carriedWeight": "...",
+          "level": "...",
+          "acp": "...",
+          "maxDex": "..."
+        }
+      },
+      "details": {
+        "height": "",
+        "weight": "",
+        "gender": "",
+        "deity": "",
+        "age": "",
+        "alignment": "tn",
+        "biography": {
+          "value": "..."
+        },
+        "bonusFeatFormula": "",
+        "bonusSkillRankFormula": "",
+        "carryCapacity": {
+          "bonus": "...",
+          "multiplier": "..."
+        },
+        "notes": {
+          "value": "..."
+        },
+        "xp": {
+          "value": "...",
+          "max": "...",
+          "pct": "..."
+        },
+        "level": {
+          "value": "..."
+        },
+        "feats": {
+          "bonus": "..."
+        },
+        "skills": {
+          "bonus": "..."
+        },
+        "mythicTier": 0
+      },
+      "skills": {
+        "acr": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "..."
+        },
+        "apr": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "...",
+          "background": "..."
+        },
+        "art": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "...",
+          "subSkills": "...",
+          "background": "..."
+        },
+        "blf": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "..."
+        },
+        "clm": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "..."
+        },
+        "crf": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "...",
+          "subSkills": "...",
+          "background": "..."
+        },
+        "dip": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "..."
+        },
+        "dev": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "..."
+        },
+        "dis": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "..."
+        },
+        "esc": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "..."
+        },
+        "fly": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "..."
+        },
+        "han": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "...",
+          "background": "..."
+        },
+        "hea": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "..."
+        },
+        "int": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "..."
+        },
+        "kar": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "..."
+        },
+        "kdu": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "..."
+        },
+        "ken": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "...",
+          "background": "..."
+        },
+        "kge": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "...",
+          "background": "..."
+        },
+        "khi": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "...",
+          "background": "..."
+        },
+        "klo": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "..."
+        },
+        "kna": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "..."
+        },
+        "kno": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "...",
+          "background": "..."
+        },
+        "kpl": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "..."
+        },
+        "kre": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "..."
+        },
+        "lin": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "...",
+          "background": "..."
+        },
+        "lor": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "...",
+          "subSkills": "...",
+          "background": "..."
+        },
+        "per": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "..."
+        },
+        "prf": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "...",
+          "subSkills": "...",
+          "background": "..."
+        },
+        "pro": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "...",
+          "subSkills": "...",
+          "background": "..."
+        },
+        "rid": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "..."
+        },
+        "sen": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "..."
+        },
+        "slt": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "...",
+          "background": "..."
+        },
+        "spl": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "..."
+        },
+        "ste": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "..."
+        },
+        "sur": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "..."
+        },
+        "swm": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "..."
+        },
+        "umd": {
+          "ability": "...",
+          "rt": "...",
+          "acp": "...",
+          "rank": "...",
+          "mod": "...",
+          "cs": "..."
+        }
+      },
+      "traits": {
+        "size": {
+          "base": "...",
+          "value": "..."
+        },
+        "ageCategory": {
+          "base": "...",
+          "value": "...",
+          "physical": "...",
+          "mental": "..."
+        },
+        "senses": {
+          "dv": "...",
+          "ts": "...",
+          "bs": "...",
+          "bse": "...",
+          "ll": "...",
+          "ls": "...",
+          "sid": "...",
+          "tr": "...",
+          "si": "...",
+          "sc": "...",
+          "custom": "..."
+        },
+        "hardness": 0,
+        "dr": {
+          "value": "...",
+          "custom": "..."
+        },
+        "eres": {
+          "value": "...",
+          "custom": "..."
+        },
+        "cres": "",
+        "regen": "",
+        "fastHealing": "",
+        "languages": {
+          "base": "...",
+          "custom": "...",
+          "standard": "...",
+          "total": "...",
+          "names": "..."
+        },
+        "di": {
+          "base": "...",
+          "custom": "...",
+          "standard": "...",
+          "total": "...",
+          "names": "..."
+        },
+        "dv": {
+          "base": "...",
+          "custom": "...",
+          "standard": "...",
+          "total": "...",
+          "names": "..."
+        },
+        "ci": {
+          "base": "...",
+          "custom": "...",
+          "standard": "...",
+          "total": "...",
+          "names": "..."
+        },
+        "stature": "tall",
+        "weaponProf": {
+          "base": "...",
+          "custom": "...",
+          "standard": "...",
+          "total": "...",
+          "names": "..."
+        },
+        "armorProf": {
+          "base": "...",
+          "custom": "...",
+          "standard": "...",
+          "total": "...",
+          "names": "..."
+        },
+        "aura": {
+          "custom": "..."
+        },
+        "creatureTypes": {
+          "base": "...",
+          "custom": "...",
+          "standard": "...",
+          "total": "...",
+          "names": "..."
+        },
+        "creatureSubtypes": {
+          "base": "...",
+          "custom": "...",
+          "standard": "...",
+          "total": "...",
+          "names": "..."
+        },
+        "reach": {
+          "base": "...",
+          "natural": "...",
+          "total": "..."
+        },
+        "humanoid": true,
+        "undead": false,
+        "construct": false,
+        "living": true
+      },
+      "currency": {
+        "pp": 0,
+        "gp": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "altCurrency": {
+        "pp": 0,
+        "gp": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "config": {
+        "noManeuvers": false
+      },
+      "resources": {},
+      "ac": {
+        "normal": {
+          "total": "...",
+          "base": "...",
+          "enh": "...",
+          "misc": "..."
+        },
+        "natural": {
+          "total": "...",
+          "base": "...",
+          "misc": "...",
+          "enh": "..."
+        },
+        "shield": {
+          "total": "...",
+          "base": "...",
+          "enh": "...",
+          "misc": "..."
+        }
+      },
+      "conditions": {
+        "bleed": false,
+        "blind": false,
+        "confused": false,
+        "cowering": false,
+        "dazed": false,
+        "dazzled": false,
+        "dead": false,
+        "deaf": false,
+        "disabled": false,
+        "dying": false,
+        "entangled": false,
+        "exhausted": false,
+        "fatigued": false,
+        "flatFooted": false,
+        "frightened": false,
+        "grappled": false,
+        "helpless": false,
+        "incorporeal": false,
+        "invisible": false,
+        "nauseated": false,
+        "panicked": false,
+        "paralyzed": false,
+        "petrified": false,
+        "pinned": false,
+        "prone": false,
+        "shaken": false,
+        "sickened": false,
+        "sleep": false,
+        "squeezing": false,
+        "stable": false,
+        "staggered": false,
+        "stunned": false,
+        "unconscious": false,
+        "burrow": false,
+        "fly": false,
+        "hover": false,
+        "swim": false
+      }
+    },
+    "prototypeToken": {
+      "name": "Quick!",
+      "displayName": 0,
+      "actorLink": true,
+      "width": 1,
+      "height": 1,
+      "texture": {
+        "src": "icons/svg/mystery-man.svg",
+        "anchorX": 0.5,
+        "anchorY": 0.5,
+        "offsetX": 0,
+        "offsetY": 0,
+        "fit": "contain",
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "tint": {},
+        "alphaThreshold": 0.75
+      },
+      "lockRotation": false,
+      "rotation": 0,
+      "alpha": 1,
+      "disposition": 1,
+      "displayBars": 0,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "bar2": {
+        "attribute": null
+      },
+      "light": {
+        "negative": false,
+        "priority": 0,
+        "alpha": 0.5,
+        "angle": 360,
+        "bright": 0,
+        "color": null,
+        "coloration": 1,
+        "dim": 0,
+        "attenuation": 0.5,
+        "luminosity": 0.5,
+        "saturation": 0,
+        "contrast": 0,
+        "shadows": 0,
+        "animation": {
+          "type": "...",
+          "speed": "...",
+          "intensity": "...",
+          "reverse": "..."
+        },
+        "darkness": {
+          "min": "...",
+          "max": "..."
+        }
+      },
+      "sight": {
+        "enabled": true,
+        "range": 0,
+        "angle": 360,
+        "visionMode": "basic",
+        "color": null,
+        "attenuation": 0.1,
+        "brightness": 0,
+        "saturation": 0,
+        "contrast": 0
+      },
+      "detectionModes": [],
+      "occludable": {
+        "radius": 0
+      },
+      "ring": {
+        "enabled": false,
+        "colors": {
+          "ring": "...",
+          "background": "..."
+        },
+        "effects": 1,
+        "subject": {
+          "scale": "...",
+          "texture": "..."
+        }
+      },
+      "turnMarker": {
+        "mode": 1,
+        "animation": null,
+        "src": null,
+        "disposition": false
+      },
+      "movementAction": null,
+      "flags": {},
+      "randomImg": false,
+      "appendNumber": false,
+      "prependAdjective": false
+    },
+    "sort": 0,
+    "ownership": {
+      "default": 0,
+      "SdezpwNPddvDQzam": 3
+    },
+    "flags": {
+      "sequencer": {
+        "effects": []
+      }
+    },
+    "overrides": {},
+    "statuses": {},
+    "sourceInfo": {
+      "system.attributes.bab.total": {
+        "negative": [],
+        "positive": [
+          "..."
+        ]
+      },
+      "system.traits.reach.total.melee": {
+        "negative": [],
+        "positive": [
+          "..."
+        ]
+      },
+      "system.traits.reach.total.reach": {
+        "negative": [],
+        "positive": [
+          "..."
+        ]
+      },
+      "system.traits.weaponProf": {
+        "negative": [],
+        "positive": [
+          "..."
+        ]
+      },
+      "system.traits.languages": {
+        "negative": [],
+        "positive": [
+          "..."
+        ]
+      },
+      "system.traits.creatureTypes": {
+        "negative": [],
+        "positive": [
+          "..."
+        ]
+      },
+      "system.traits.creatureSubtypes": {
+        "negative": [],
+        "positive": [
+          "..."
+        ]
+      },
+      "system.attributes.speed.land.total": {
+        "negative": [],
+        "positive": [
+          "..."
+        ]
+      },
+      "system.attributes.speed.climb.total": {
+        "negative": [],
+        "positive": [
+          "..."
+        ]
+      },
+      "system.attributes.speed.swim.total": {
+        "negative": [],
+        "positive": [
+          "..."
+        ]
+      },
+      "system.attributes.speed.burrow.total": {
+        "negative": [],
+        "positive": [
+          "..."
+        ]
+      },
+      "system.attributes.speed.fly.total": {
+        "negative": [],
+        "positive": [
+          "..."
+        ]
+      },
+      "system.details.carryCapacity.bonus.total": {
+        "negative": [],
+        "positive": [
+          "..."
+        ]
+      },
+      "system.details.carryCapacity.multiplier.total": {
+        "negative": [],
+        "positive": [
+          "...",
+          "..."
+        ]
+      },
+      "system.attributes.sr.total": {
+        "negative": [],
+        "positive": [
+          "..."
+        ]
+      },
+      "system.attributes.wounds.threshold": {
+        "negative": [],
+        "positive": [
+          "..."
+        ]
+      },
+      "system.abilities.str.total": {
+        "negative": [],
+        "positive": [
+          "..."
+        ]
+      },
+      "system.abilities.str.undrained": {
+        "negative": [],
+        "positive": [
+          "..."
+        ]
+      },
+      "system.abilities.dex.total": {
+        "negative": [],
+        "positive": [
+          "..."
+        ]
+      },
+      "system.abilities.dex.undrained": {
+        "negative": [],
+        "positive": [
+          "..."
+        ]
+      },
+      "system.abilities.con.total": {
+        "negative": [],
+        "positive": [
+          "..."
+        ]
+      },
+      "system.abilities.con.undrained": {
+        "negative": [],
+        "positive": [
+          "..."
+        ]
+      },
+      "system.abilities.int.total": {
+        "negative": [],
+        "positive": [
+          "..."
+        ]
+      },
+      "system.abilities.int.undrained": {
+        "negative": [],
+        "positive": [
+          "..."
+        ]
+      },
+      "system.abilities.wis.total": {
+        "negative": [],
+        "positive": [
+          "..."
+        ]
+      },
+      "system.abilities.wis.undrained": {
+        "negative": [],
+        "positive": [
+          "..."
+        ]
+      },
+      "system.abilities.cha.total": {
+        "negative": [],
+        "positive": [
+          "..."
+        ]
+      },
+      "system.abilities.cha.undrained": {
+        "negative": [],
+        "positive": [
+          "..."
+        ]
+      },
+      "system.skills.acr.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.skills.apr.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.skills.art.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.skills.blf.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.skills.clm.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.skills.crf.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.skills.dip.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.skills.dev.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.skills.dis.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.skills.esc.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.skills.fly.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.skills.han.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.skills.hea.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.skills.int.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.skills.kar.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.skills.kdu.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.skills.ken.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.skills.kge.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.skills.khi.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.skills.klo.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.skills.kna.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.skills.kno.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.skills.kpl.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.skills.kre.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.skills.lin.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.skills.lor.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.skills.per.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.skills.prf.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.skills.pro.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.skills.rid.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.skills.sen.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.skills.slt.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.skills.spl.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.skills.ste.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.skills.sur.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.skills.swm.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.skills.umd.mod": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.attributes.ac.normal.total": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.attributes.ac.flatFooted.total": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.attributes.attack.shared": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "...",
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.attributes.savingThrows.fort.total": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.attributes.savingThrows.ref.total": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.attributes.savingThrows.will.total": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.attributes.cmd.total": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.attributes.cmd.flatFootedTotal": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.attributes.hp.max": {
+        "negative": [],
+        "positive": [
+          "...",
+          "..."
+        ]
+      },
+      "system.attributes.wounds.max": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.attributes.vigor.max": {
+        "negative": [],
+        "positive": [
+          "..."
+        ]
+      },
+      "system.details.feats.bonus": {
+        "negative": [],
+        "positive": [
+          "...",
+          "...",
+          "..."
+        ]
+      },
+      "system.details.skills.bonus": {
+        "negative": [],
+        "positive": [
+          "..."
+        ]
+      },
+      "system.attributes.init.total": {
+        "negative": [],
+        "positive": [
+          "...",
+          "..."
+        ]
+      },
+      "system.attributes.ac.touch.total": {
+        "negative": [],
+        "positive": [
+          "...",
+          "..."
+        ]
+      },
+      "system.attributes.spells.spellbooks.primary.cl.total": {
+        "negative": [],
+        "positive": [
+          "..."
+        ]
+      },
+      "system.attributes.spells.spellbooks.primary.concentration.total": {
+        "negative": [
+          "...",
+          "...",
+          "..."
+        ],
+        "positive": []
+      }
+    },
+    "changeFlags": {
+      "immuneToMorale": false
+    },
+    "equipment": {
+      "shield": {
+        "type": 0
+      },
+      "armor": {
+        "type": 0
+      }
+    },
+    "classes": {
+      "wizard": {
+        "level": 20,
+        "unlevel": 20,
+        "name": "Wizard",
+        "hd": 6,
+        "hitDice": 20,
+        "mythicTier": 0,
+        "bab": "low",
+        "hp": false,
+        "type": "base",
+        "isBase": true,
+        "isMythic": false,
+        "savingThrows": {
+          "fort": "...",
+          "ref": "...",
+          "will": "..."
+        },
+        "fc": {
+          "hp": "...",
+          "skill": "...",
+          "alt": "..."
+        }
+      }
+    },
+    "changeOverrides": {
+      "system.attributes.speed.land.total": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.attributes.speed.climb.total": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.attributes.speed.swim.total": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.attributes.speed.burrow.total": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.attributes.speed.fly.total": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.details.carryCapacity.bonus.total": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.details.carryCapacity.multiplier.total": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.attributes.sr.total": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.attributes.wounds.threshold": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.abilities.str.total": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.abilities.str.undrained": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.abilities.dex.total": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.abilities.dex.undrained": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.abilities.con.total": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.abilities.con.undrained": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.abilities.int.total": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.abilities.int.undrained": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.abilities.wis.total": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.abilities.wis.undrained": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.abilities.cha.total": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.abilities.cha.undrained": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.acr.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.apr.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.art.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.blf.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.clm.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.crf.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.dip.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.dev.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.dis.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.esc.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.fly.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.han.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.hea.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.int.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.kar.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.kdu.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.ken.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.kge.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.khi.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.klo.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.kna.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.kno.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.kpl.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.kre.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.lin.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.lor.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.per.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.prf.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.pro.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.rid.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.sen.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.slt.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.spl.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.ste.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.sur.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.swm.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.skills.umd.mod": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.ac.natural.total": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.ac.natural.misc": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.attributes.attack.shared": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.attributes.savingThrows.fort.total": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.attributes.savingThrows.ref.total": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.attributes.savingThrows.will.total": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.attributes.cmd.total": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.attributes.cmd.flatFootedTotal": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.attributes.hp.max": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.attributes.wounds.max": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.attributes.vigor.max": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.details.feats.bonus": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.details.skills.bonus": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.attributes.init.total": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.attributes.ac.normal.total": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.attributes.ac.touch.total": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      },
+      "system.attributes.ac.flatFooted.total": {
+        "add": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        },
+        "set": {
+          "alchemical": "...",
+          "base": "...",
+          "circumstance": "...",
+          "competence": "...",
+          "deflection": "...",
+          "dodge": "...",
+          "enh": "...",
+          "haste": "...",
+          "inherent": "...",
+          "insight": "...",
+          "luck": "...",
+          "morale": "...",
+          "profane": "...",
+          "racial": "...",
+          "resist": "...",
+          "sacred": "...",
+          "size": "...",
+          "trait": "...",
+          "untyped": "...",
+          "untypedPerm": "..."
+        }
+      }
+    }
+  },
+  "token": {
+    "tempDisplayObjectParent": null,
+    "transform": {
+      "worldTransform": {
+        "array": null,
+        "a": 5.658777455732392,
+        "b": 0,
+        "c": 0,
+        "d": 5.658777455732392,
+        "tx": 1112.3510286155906,
+        "ty": 300.75005026329154
+      },
+      "localTransform": {
+        "array": null,
+        "a": 1,
+        "b": 0,
+        "c": 0,
+        "d": 1,
+        "tx": 1500,
+        "ty": 640
+      },
+      "position": {
+        "scope": "[Circular]"
+      },
+      "scale": {
+        "scope": "[Circular]"
+      },
+      "pivot": {
+        "scope": "[Circular]"
+      },
+      "skew": {
+        "scope": "[Circular]"
+      }
+    },
+    "alpha": 1,
+    "visible": true,
+    "renderable": true,
+    "cullable": true,
+    "cullArea": null,
+    "worldAlpha": 1,
+    "filterArea": null,
+    "filters": null,
+    "isSprite": false,
+    "isMask": false,
+    "children": [
+      {
+        "tempDisplayObjectParent": null,
+        "transform": {
+          "worldTransform": "...",
+          "localTransform": "...",
+          "position": "...",
+          "scale": "...",
+          "pivot": "...",
+          "skew": "..."
+        },
+        "alpha": 1,
+        "visible": false,
+        "renderable": true,
+        "cullable": false,
+        "cullArea": null,
+        "worldAlpha": 1,
+        "filterArea": null,
+        "filters": null,
+        "isSprite": false,
+        "isMask": false,
+        "children": [],
+        "sortableChildren": false,
+        "sortDirty": false,
+        "shader": null,
+        "shaderSettings": {
+          "maxStyles": "...",
+          "maxTextures": "...",
+          "pixelLine": "..."
+        },
+        "state": {
+          "data": "..."
+        },
+        "currentPath": null,
+        "batches": [],
+        "batchTint": -1,
+        "batchDirty": -1,
+        "vertexData": null,
+        "pluginName": "smooth"
+      },
+      {
+        "tempDisplayObjectParent": null,
+        "transform": {
+          "worldTransform": "...",
+          "localTransform": "...",
+          "position": "...",
+          "scale": "...",
+          "pivot": "...",
+          "skew": "..."
+        },
+        "alpha": 1,
+        "visible": true,
+        "renderable": true,
+        "cullable": false,
+        "cullArea": null,
+        "worldAlpha": 1,
+        "filterArea": null,
+        "filters": null,
+        "isSprite": false,
+        "isMask": false,
+        "children": [],
+        "sortableChildren": false,
+        "sortDirty": false
+      },
+      {
+        "tempDisplayObjectParent": null,
+        "transform": {
+          "worldTransform": "...",
+          "localTransform": "...",
+          "position": "...",
+          "scale": "...",
+          "pivot": "...",
+          "skew": "..."
+        },
+        "alpha": 1,
+        "visible": true,
+        "renderable": true,
+        "cullable": false,
+        "cullArea": null,
+        "worldAlpha": 1,
+        "filterArea": null,
+        "filters": null,
+        "isSprite": false,
+        "isMask": false,
+        "children": [],
+        "sortableChildren": false,
+        "sortDirty": false
+      },
+      {
+        "tempDisplayObjectParent": null,
+        "transform": {
+          "worldTransform": "...",
+          "localTransform": "...",
+          "position": "...",
+          "scale": "...",
+          "pivot": "...",
+          "skew": "..."
+        },
+        "alpha": 1,
+        "visible": false,
+        "renderable": true,
+        "cullable": false,
+        "cullArea": null,
+        "worldAlpha": 1,
+        "filterArea": null,
+        "filters": null,
+        "isSprite": false,
+        "isMask": false,
+        "children": [
+          "...",
+          "..."
+        ],
+        "sortableChildren": false,
+        "sortDirty": true,
+        "bar1": {
+          "tempDisplayObjectParent": "...",
+          "transform": "...",
+          "alpha": "...",
+          "visible": "...",
+          "renderable": "...",
+          "cullable": "...",
+          "cullArea": "...",
+          "worldAlpha": "...",
+          "filterArea": "...",
+          "filters": "...",
+          "isSprite": "...",
+          "isMask": "...",
+          "children": "...",
+          "sortableChildren": "...",
+          "sortDirty": "...",
+          "shader": "...",
+          "shaderSettings": "...",
+          "state": "...",
+          "currentPath": "...",
+          "batches": "...",
+          "batchTint": "...",
+          "batchDirty": "...",
+          "vertexData": "...",
+          "pluginName": "..."
+        },
+        "bar2": {
+          "tempDisplayObjectParent": "...",
+          "transform": "...",
+          "alpha": "...",
+          "visible": "...",
+          "renderable": "...",
+          "cullable": "...",
+          "cullArea": "...",
+          "worldAlpha": "...",
+          "filterArea": "...",
+          "filters": "...",
+          "isSprite": "...",
+          "isMask": "...",
+          "children": "...",
+          "sortableChildren": "...",
+          "sortDirty": "...",
+          "shader": "...",
+          "shaderSettings": "...",
+          "state": "...",
+          "currentPath": "...",
+          "batches": "...",
+          "batchTint": "...",
+          "batchDirty": "...",
+          "vertexData": "...",
+          "pluginName": "..."
+        }
+      },
+      {
+        "tempDisplayObjectParent": null,
+        "transform": {
+          "worldTransform": "...",
+          "localTransform": "...",
+          "position": "...",
+          "scale": "...",
+          "pivot": "...",
+          "skew": "..."
+        },
+        "alpha": 1,
+        "visible": true,
+        "renderable": true,
+        "cullable": false,
+        "cullArea": null,
+        "worldAlpha": 1,
+        "filterArea": null,
+        "filters": null,
+        "isSprite": true,
+        "isMask": false,
+        "children": [],
+        "sortableChildren": false,
+        "sortDirty": false,
+        "blendMode": 0,
+        "uvs": {
+          "0": "...",
+          "1": "...",
+          "2": "...",
+          "3": "...",
+          "4": "...",
+          "5": "...",
+          "6": "...",
+          "7": "..."
+        },
+        "vertexData": {
+          "0": "...",
+          "1": "...",
+          "2": "...",
+          "3": "...",
+          "4": "...",
+          "5": "...",
+          "6": "...",
+          "7": "..."
+        },
+        "vertexTrimmedData": null,
+        "indices": {
+          "0": "...",
+          "1": "...",
+          "2": "...",
+          "3": "...",
+          "4": "...",
+          "5": "..."
+        },
+        "pluginName": "batch",
+        "canvas": {},
+        "context": {},
+        "dirty": false,
+        "localStyleID": 42
+      },
+      {
+        "tempDisplayObjectParent": null,
+        "transform": {
+          "worldTransform": "...",
+          "localTransform": "...",
+          "position": "...",
+          "scale": "...",
+          "pivot": "...",
+          "skew": "..."
+        },
+        "alpha": 1,
+        "visible": true,
+        "renderable": true,
+        "cullable": false,
+        "cullArea": null,
+        "worldAlpha": 1,
+        "filterArea": null,
+        "filters": null,
+        "isSprite": false,
+        "isMask": false,
+        "children": [
+          "..."
+        ],
+        "sortableChildren": false,
+        "sortDirty": false,
+        "bg": {
+          "tempDisplayObjectParent": "...",
+          "transform": "...",
+          "alpha": "...",
+          "visible": "...",
+          "renderable": "...",
+          "cullable": "...",
+          "cullArea": "...",
+          "worldAlpha": "...",
+          "filterArea": "...",
+          "filters": "...",
+          "isSprite": "...",
+          "isMask": "...",
+          "children": "...",
+          "sortableChildren": "...",
+          "sortDirty": "...",
+          "shader": "...",
+          "shaderSettings": "...",
+          "state": "...",
+          "currentPath": "...",
+          "batches": "...",
+          "batchTint": "...",
+          "batchDirty": "...",
+          "vertexData": "...",
+          "pluginName": "..."
+        },
+        "overlay": null
+      },
+      {
+        "tempDisplayObjectParent": null,
+        "transform": {
+          "worldTransform": "...",
+          "localTransform": "...",
+          "position": "...",
+          "scale": "...",
+          "pivot": "...",
+          "skew": "..."
+        },
+        "alpha": 1,
+        "visible": true,
+        "renderable": true,
+        "cullable": false,
+        "cullArea": null,
+        "worldAlpha": 1,
+        "filterArea": null,
+        "filters": null,
+        "isSprite": false,
+        "isMask": false,
+        "children": [],
+        "sortableChildren": false,
+        "sortDirty": false,
+        "shader": null,
+        "shaderSettings": {
+          "maxStyles": "...",
+          "maxTextures": "...",
+          "pixelLine": "..."
+        },
+        "state": {
+          "data": "..."
+        },
+        "currentPath": null,
+        "batches": [],
+        "batchTint": -1,
+        "batchDirty": -1,
+        "vertexData": null,
+        "pluginName": "smooth"
+      },
+      {
+        "tempDisplayObjectParent": null,
+        "transform": {
+          "worldTransform": "...",
+          "localTransform": "...",
+          "position": "...",
+          "scale": "...",
+          "pivot": "...",
+          "skew": "..."
+        },
+        "alpha": 1,
+        "visible": true,
+        "renderable": true,
+        "cullable": false,
+        "cullArea": null,
+        "worldAlpha": 1,
+        "filterArea": null,
+        "filters": null,
+        "isSprite": false,
+        "isMask": false,
+        "children": [],
+        "sortableChildren": false,
+        "sortDirty": false,
+        "shader": null,
+        "shaderSettings": {
+          "maxStyles": "...",
+          "maxTextures": "...",
+          "pixelLine": "..."
+        },
+        "state": {
+          "data": "..."
+        },
+        "currentPath": null,
+        "batches": [],
+        "batchTint": -1,
+        "batchDirty": -1,
+        "vertexData": null,
+        "pluginName": "smooth"
+      },
+      {
+        "tempDisplayObjectParent": null,
+        "transform": {
+          "worldTransform": "...",
+          "localTransform": "...",
+          "position": "...",
+          "scale": "...",
+          "pivot": "...",
+          "skew": "..."
+        },
+        "alpha": 1,
+        "visible": false,
+        "renderable": true,
+        "cullable": false,
+        "cullArea": null,
+        "worldAlpha": 1,
+        "filterArea": null,
+        "filters": null,
+        "isSprite": true,
+        "isMask": false,
+        "children": [],
+        "sortableChildren": false,
+        "sortDirty": false,
+        "blendMode": 0,
+        "uvs": null,
+        "vertexData": {
+          "0": "...",
+          "1": "...",
+          "2": "...",
+          "3": "...",
+          "4": "...",
+          "5": "...",
+          "6": "...",
+          "7": "..."
+        },
+        "vertexTrimmedData": null,
+        "indices": "[Circular]",
+        "pluginName": "batch",
+        "canvas": {},
+        "context": {},
+        "dirty": true,
+        "localStyleID": -1
+      }
+    ],
+    "sortableChildren": true,
+    "sortDirty": false,
+    "renderFlags": {
+      "flags": {
+        "redraw": {
+          "propagate": "...",
+          "reset": "..."
+        },
+        "redrawEffects": {
+          "propagate": "...",
+          "reset": "..."
+        },
+        "refresh": {
+          "propagate": "...",
+          "alias": "...",
+          "reset": "..."
+        },
+        "refreshState": {
+          "propagate": "...",
+          "reset": "..."
+        },
+        "refreshVisibility": {
+          "propagate": "...",
+          "reset": "..."
+        },
+        "refreshTransform": {
+          "propagate": "...",
+          "alias": "...",
+          "reset": "..."
+        },
+        "refreshPosition": {
+          "propagate": "...",
+          "reset": "..."
+        },
+        "refreshRotation": {
+          "propagate": "...",
+          "reset": "..."
+        },
+        "refreshSize": {
+          "propagate": "...",
+          "reset": "..."
+        },
+        "refreshElevation": {
+          "propagate": "...",
+          "reset": "..."
+        },
+        "refreshMesh": {
+          "propagate": "...",
+          "reset": "..."
+        },
+        "refreshShader": {
+          "propagate": "...",
+          "reset": "..."
+        },
+        "refreshShape": {
+          "propagate": "...",
+          "reset": "..."
+        },
+        "refreshBorder": {
+          "propagate": "...",
+          "reset": "..."
+        },
+        "refreshBars": {
+          "propagate": "...",
+          "reset": "..."
+        },
+        "refreshEffects": {
+          "propagate": "...",
+          "reset": "..."
+        },
+        "refreshNameplate": {
+          "propagate": "...",
+          "reset": "..."
+        },
+        "refreshTarget": {
+          "propagate": "...",
+          "reset": "..."
+        },
+        "refreshTooltip": {
+          "propagate": "...",
+          "reset": "..."
+        },
+        "refreshRingVisuals": {
+          "propagate": "...",
+          "reset": "..."
+        },
+        "refreshRuler": {
+          "propagate": "...",
+          "reset": "..."
+        },
+        "refreshTurnMarker": {
+          "propagate": "...",
+          "reset": "..."
+        },
+        "recoverFromPreview": {
+          "deprecated": "...",
+          "propagate": "...",
+          "reset": "..."
+        }
+      },
+      "priority": "OBJECTS"
+    },
+    "scene": {
+      "name": "World Map",
+      "active": true,
+      "navigation": true,
+      "navOrder": 0,
+      "navName": "",
+      "background": {
+        "src": "assets/sylvestris_jpeg.jpeg",
+        "anchorX": 0,
+        "anchorY": 0,
+        "offsetX": 0,
+        "offsetY": 0,
+        "fit": "fill",
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "tint": {},
+        "alphaThreshold": 0
+      },
+      "foreground": null,
+      "foregroundElevation": 20,
+      "thumb": "worlds/sylvestris/assets/scenes/EPXA750LWdI3ZdBV-thumb.webp",
+      "width": 2048,
+      "height": 1536,
+      "padding": 0.25,
+      "initial": {
+        "x": null,
+        "y": null,
+        "scale": null
+      },
+      "backgroundColor": {},
+      "grid": {
+        "type": 1,
+        "size": 20,
+        "sizeX": 20,
+        "sizeY": 20,
+        "distance": 5,
+        "units": "ft",
+        "style": "solidLines",
+        "thickness": 1,
+        "color": {},
+        "alpha": 0.2,
+        "diagonals": 4
+      },
+      "tokenVision": false,
+      "fog": {
+        "exploration": false,
+        "overlay": null,
+        "colors": {
+          "explored": "...",
+          "unexplored": "..."
+        }
+      },
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": "...",
+          "alpha": "...",
+          "bright": "...",
+          "color": "...",
+          "coloration": "...",
+          "luminosity": "...",
+          "saturation": "...",
+          "contrast": "...",
+          "shadows": "...",
+          "darkness": "..."
+        },
+        "cycle": true,
+        "base": {
+          "hue": "...",
+          "intensity": "...",
+          "luminosity": "...",
+          "saturation": "...",
+          "shadows": "..."
+        },
+        "dark": {
+          "hue": "...",
+          "intensity": "...",
+          "luminosity": "...",
+          "saturation": "...",
+          "shadows": "..."
+        }
+      },
+      "playlistSound": null,
+      "journalEntryPage": null,
+      "weather": "",
+      "sort": 100000,
+      "ownership": {
+        "default": 0,
+        "SdezpwNPddvDQzam": 3
+      },
+      "flags": {},
+      "dimensions": {
+        "width": 3088,
+        "height": 2336,
+        "size": 20,
+        "rect": {
+          "x": "...",
+          "y": "...",
+          "width": "...",
+          "height": "...",
+          "type": "..."
+        },
+        "sceneX": 520,
+        "sceneY": 400,
+        "sceneWidth": 2048,
+        "sceneHeight": 1536,
+        "sceneRect": {
+          "x": "...",
+          "y": "...",
+          "width": "...",
+          "height": "...",
+          "type": "..."
+        },
+        "distance": 5,
+        "distancePixels": 4,
+        "ratio": 1.3333333333333333,
+        "maxR": 3872.0330577101226,
+        "rows": 117,
+        "columns": 155
+      }
+    },
+    "controlIcon": null,
+    "mouseInteractionManager": {
+      "lastClick": {
+        "x": 1167,
+        "y": 348
+      },
+      "layer": {
+        "tempDisplayObjectParent": {
+          "tempDisplayObjectParent": "...",
+          "transform": "...",
+          "alpha": "...",
+          "visible": "...",
+          "renderable": "...",
+          "cullable": "...",
+          "cullArea": "...",
+          "worldAlpha": "...",
+          "filterArea": "...",
+          "filters": "...",
+          "isSprite": "...",
+          "isMask": "...",
+          "sortDirty": "..."
+        },
+        "transform": {
+          "worldTransform": "...",
+          "localTransform": "...",
+          "position": "...",
+          "scale": "...",
+          "pivot": "...",
+          "skew": "..."
+        },
+        "alpha": 1,
+        "visible": true,
+        "renderable": true,
+        "cullable": false,
+        "cullArea": null,
+        "worldAlpha": 1,
+        "filterArea": {
+          "x": "...",
+          "y": "...",
+          "width": "...",
+          "height": "...",
+          "type": "..."
+        },
+        "filters": [
+          "..."
+        ],
+        "isSprite": false,
+        "isMask": false,
+        "children": [
+          "...",
+          "...",
+          "..."
+        ],
+        "sortableChildren": true,
+        "sortDirty": false,
+        "hitArea": {}
+      },
+      "permissions": {},
+      "callbacks": {},
+      "options": {
+        "target": null
+      },
+      "state": 0,
+      "interactionData": {
+        "origin": {
+          "x": "...",
+          "y": "..."
+        },
+        "screenOrigin": {
+          "x": "...",
+          "y": "..."
+        },
+        "destination": {
+          "x": "...",
+          "y": "..."
+        }
+      },
+      "dragTime": 1784515022110,
+      "lcTime": 0,
+      "rcTime": 1380743.700000003,
+      "controlIcon": null,
+      "viewId": "board"
+    },
+    "shape": {
+      "points": [
+        0,
+        0,
+        20,
+        0,
+        20,
+        20,
+        0,
+        20
+      ],
+      "type": 0,
+      "closeStroke": true
+    },
+    "detectionFilter": null,
+    "border": "[Circular]",
+    "effects": "[Circular]",
+    "bars": "[Circular]",
+    "tooltip": "[Circular]",
+    "targetArrows": "[Circular]",
+    "targetPips": "[Circular]",
+    "nameplate": "[Circular]",
+    "ruler": {},
+    "targeted": {},
+    "mesh": {
+      "tempDisplayObjectParent": null,
+      "transform": {
+        "worldTransform": {
+          "array": "...",
+          "a": "...",
+          "b": "...",
+          "c": "...",
+          "d": "...",
+          "tx": "...",
+          "ty": "..."
+        },
+        "localTransform": {
+          "array": "...",
+          "a": "...",
+          "b": "...",
+          "c": "...",
+          "d": "...",
+          "tx": "...",
+          "ty": "..."
+        },
+        "position": {
+          "scope": "..."
+        },
+        "scale": {
+          "scope": "..."
+        },
+        "pivot": {
+          "scope": "..."
+        },
+        "skew": {
+          "scope": "..."
+        }
+      },
+      "alpha": 1,
+      "visible": true,
+      "renderable": true,
+      "cullable": true,
+      "cullArea": null,
+      "worldAlpha": 1,
+      "filterArea": null,
+      "filters": [],
+      "isSprite": true,
+      "isMask": false,
+      "children": [],
+      "sortableChildren": false,
+      "sortDirty": false,
+      "indices": {
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 0,
+        "4": 2,
+        "5": 3
+      },
+      "uvs": {
+        "0": 0,
+        "1": 0,
+        "2": 1,
+        "3": 0,
+        "4": 1,
+        "5": 1,
+        "6": 0,
+        "7": 1
+      },
+      "vertexData": {
+        "0": 1112.35107421875,
+        "1": 300.75006103515625,
+        "2": 1225.526611328125,
+        "3": 300.75006103515625,
+        "4": 1225.526611328125,
+        "5": 413.92559814453125,
+        "6": 1112.35107421875,
+        "7": 413.92559814453125
+      },
+      "vertexTrimmedData": null,
+      "canvasTransform": {
+        "array": null,
+        "a": 0.0390625,
+        "b": 0,
+        "c": 0,
+        "d": 0.0390625,
+        "tx": 1510,
+        "ty": 650
+      },
+      "canvasBounds": {
+        "x": 1502.5,
+        "y": 640.625,
+        "width": 14.6875,
+        "height": 18.75,
+        "type": 1
+      },
+      "hidden": false,
+      "occluded": false,
+      "occlusionMode": 0,
+      "unoccludedAlpha": 1,
+      "occludedAlpha": 0.5,
+      "textureAlphaThreshold": 0.75,
+      "name": "Token.467rcmGL2tShazGg"
+    },
+    "voidMesh": "[Circular]",
+    "detectionFilterMesh": "[Circular]",
+    "texture": {
+      "noFrame": true,
+      "baseTexture": {
+        "resolution": 1,
+        "width": 512,
+        "height": 512,
+        "anisotropicLevel": 0,
+        "format": 6408,
+        "type": 5121,
+        "target": 3553,
+        "alphaMode": 1,
+        "uid": 20,
+        "touched": 77947,
+        "isPowerOfTwo": true,
+        "dirtyId": 0,
+        "dirtyStyleId": 0,
+        "cacheId": null,
+        "valid": true,
+        "textureCacheIds": [
+          "...",
+          "..."
+        ],
+        "destroyed": false,
+        "resource": {
+          "destroyed": "...",
+          "internal": "...",
+          "onResize": "...",
+          "onUpdate": "...",
+          "onError": "...",
+          "source": "...",
+          "noSubImage": "...",
+          "svg": "...",
+          "scale": "...",
+          "src": "..."
+        },
+        "parentTextureArray": null
+      },
+      "valid": true,
+      "destroyed": false,
+      "uvMatrix": null,
+      "orig": {
+        "x": 0,
+        "y": 0,
+        "width": 512,
+        "height": 512,
+        "type": 1
+      },
+      "defaultAnchor": {
+        "x": 0,
+        "y": 0
+      },
+      "textureCacheIds": []
+    },
+    "turnMarker": null,
+    "b": 0,
+    "t": 4.45,
+    "cursor": "pointer",
+    "hitArea": "[Circular]",
+    "healthEstimate": {
+      "tempDisplayObjectParent": null,
+      "transform": {
+        "worldTransform": {
+          "array": "...",
+          "a": "...",
+          "b": "...",
+          "c": "...",
+          "d": "...",
+          "tx": "...",
+          "ty": "..."
+        },
+        "localTransform": {
+          "array": "...",
+          "a": "...",
+          "b": "...",
+          "c": "...",
+          "d": "...",
+          "tx": "...",
+          "ty": "..."
+        },
+        "position": {
+          "scope": "..."
+        },
+        "scale": {
+          "scope": "..."
+        },
+        "pivot": {
+          "scope": "..."
+        },
+        "skew": {
+          "scope": "..."
+        }
+      },
+      "alpha": 1,
+      "visible": false,
+      "renderable": true,
+      "cullable": false,
+      "cullArea": null,
+      "worldAlpha": 1,
+      "filterArea": null,
+      "filters": null,
+      "isSprite": true,
+      "isMask": false,
+      "children": [],
+      "sortableChildren": false,
+      "sortDirty": false,
+      "blendMode": 0,
+      "uvs": {
+        "0": 0,
+        "1": 0,
+        "2": 1,
+        "3": 0,
+        "4": 1,
+        "5": 1,
+        "6": 0,
+        "7": 1
+      },
+      "vertexData": {
+        "0": 846.3884887695312,
+        "1": 88.5458984375,
+        "2": 1491.4891357421875,
+        "3": 88.5458984375,
+        "4": 1491.4891357421875,
+        "5": 296.5059814453125,
+        "6": 846.3884887695312,
+        "7": 296.5059814453125
+      },
+      "vertexTrimmedData": null,
+      "indices": "[Circular]",
+      "pluginName": "batch",
+      "canvas": {},
+      "context": {},
+      "dirty": false,
+      "localStyleID": 37
+    }
+  },
+  "character": null,
+  "scope": {
+    "item": {
+      "links": {},
+      "actions": {},
+      "scriptCalls": {},
+      "name": "Alchemist's Fire",
+      "type": "weapon",
+      "img": "systems/pf1/icons/items/potions/unique-6.jpg",
+      "system": {
+        "description": {
+          "value": "...",
+          "instructions": "...",
+          "unidentified": "..."
+        },
+        "tags": [
+          "..."
+        ],
+        "quantity": 2,
+        "weight": {
+          "value": "...",
+          "total": "...",
+          "converted": "..."
+        },
+        "equipped": false,
+        "carried": true,
+        "price": 20,
+        "size": "med",
+        "resizing": false,
+        "timeworn": false,
+        "artifact": false,
+        "identified": true,
+        "unidentified": {
+          "price": "...",
+          "name": "..."
+        },
+        "cursed": false,
+        "cl": 0,
+        "aura": {
+          "custom": "...",
+          "school": "..."
+        },
+        "hp": {
+          "base": "...",
+          "offset": "...",
+          "max": "...",
+          "value": "..."
+        },
+        "broken": false,
+        "hardness": {
+          "base": "...",
+          "total": "..."
+        },
+        "changes": [],
+        "changeFlags": {
+          "immuneToMorale": "...",
+          "loseDexToAC": "...",
+          "noMediumEncumbrance": "...",
+          "noHeavyEncumbrance": "...",
+          "mediumArmorFullSpeed": "...",
+          "heavyArmorFullSpeed": "...",
+          "lowLightVision": "...",
+          "seeInvisibility": "...",
+          "seeInDarkness": "..."
+        },
+        "contextNotes": [],
+        "actions": [
+          "..."
+        ],
+        "attackNotes": [],
+        "effectNotes": [],
+        "uses": {
+          "value": "...",
+          "per": "...",
+          "autoDeductChargesCost": "...",
+          "maxFormula": "...",
+          "rechargeFormula": "...",
+          "max": "..."
+        },
+        "links": {
+          "children": "..."
+        },
+        "tag": "alchemistsFire",
+        "flags": {
+          "boolean": "...",
+          "dictionary": "..."
+        },
+        "scriptCalls": [
+          "...",
+          "...",
+          "..."
+        ],
+        "masterwork": false,
+        "enh": null,
+        "proficient": true,
+        "held": "1h",
+        "ammo": {
+          "type": "...",
+          "capacity": "...",
+          "misfire": "...",
+          "explode": "..."
+        },
+        "subType": "misc",
+        "weaponSubtype": "splash",
+        "hands": 1,
+        "baseTypes": [
+          "..."
+        ],
+        "weaponGroups": {
+          "base": "...",
+          "custom": "...",
+          "standard": "...",
+          "total": "...",
+          "names": "..."
+        },
+        "material": {
+          "base": "...",
+          "normal": "...",
+          "addon": "..."
+        },
+        "properties": {
+          "ato": "...",
+          "blc": "...",
+          "brc": "...",
+          "dea": "...",
+          "dis": "...",
+          "dst": "...",
+          "dbl": "...",
+          "fin": "...",
+          "frg": "...",
+          "grp": "...",
+          "imp": "...",
+          "mnk": "...",
+          "nnl": "...",
+          "prf": "...",
+          "rch": "...",
+          "sct": "...",
+          "sma": "...",
+          "slf": "...",
+          "spc": "...",
+          "snd": "...",
+          "thr": "...",
+          "trp": "..."
+        },
+        "showInQuickbar": true,
+        "sources": [
+          "...",
+          "...",
+          "...",
+          "..."
+        ],
+        "showInCombat": true,
+        "alignments": {
+          "lawful": "...",
+          "chaotic": "...",
+          "good": "...",
+          "evil": "..."
+        }
+      },
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "SdezpwNPddvDQzam": 3
+      },
+      "flags": {},
+      "changes": {}
+    },
+    "shared": {
+      "event": {
+        "isTrusted": true
+      },
+      "action": {
+        "name": "Throw",
+        "img": "systems/pf1/icons/items/potions/unique-6.jpg",
+        "description": "",
+        "tag": "throw",
+        "activation": {
+          "cost": "...",
+          "type": "...",
+          "unchained": "..."
+        },
+        "duration": {
+          "value": "...",
+          "units": "...",
+          "dismiss": "...",
+          "concentration": "..."
+        },
+        "target": {
+          "value": "..."
+        },
+        "range": {
+          "value": "...",
+          "units": "...",
+          "maxIncrements": "...",
+          "minValue": "...",
+          "minUnits": "..."
+        },
+        "uses": {
+          "autoDeductChargesCost": "...",
+          "perAttack": "...",
+          "self": "...",
+          "spellPointCost": "..."
+        },
+        "measureTemplate": {
+          "type": "...",
+          "size": "...",
+          "color": "...",
+          "texture": "..."
+        },
+        "actionType": "twak",
+        "damage": {
+          "parts": "...",
+          "critParts": "...",
+          "nonCritParts": "..."
+        },
+        "extraAttacks": {
+          "type": "...",
+          "manual": "...",
+          "formula": "..."
+        },
+        "ability": {
+          "attack": "...",
+          "damage": "...",
+          "max": "...",
+          "damageMult": "...",
+          "critRange": "...",
+          "critMult": "..."
+        },
+        "save": {
+          "dc": "...",
+          "type": "...",
+          "description": "...",
+          "harmless": "..."
+        },
+        "notes": {
+          "effect": "...",
+          "footer": "..."
+        },
+        "soundEffect": null,
+        "powerAttack": {
+          "multiplier": "...",
+          "damageBonus": "...",
+          "critMultiplier": "..."
+        },
+        "naturalAttack": {
+          "primary": "...",
+          "secondary": "..."
+        },
+        "nonlethal": false,
+        "splash": false,
+        "touch": true,
+        "ammo": {
+          "type": "...",
+          "cost": "...",
+          "misfire": "..."
+        },
+        "conditionals": {},
+        "enh": {
+          "value": "..."
+        },
+        "material": {
+          "normal": "...",
+          "addon": "..."
+        },
+        "alignments": {
+          "lawful": "...",
+          "chaotic": "...",
+          "good": "...",
+          "evil": "..."
+        }
+      },
+      "item": "[Circular]",
+      "token": {
+        "name": "Quick!",
+        "displayName": 0,
+        "actorId": "V2e2L7vltbTE5tJc",
+        "actorLink": true,
+        "width": 1,
+        "height": 1,
+        "texture": {
+          "src": "...",
+          "anchorX": "...",
+          "anchorY": "...",
+          "offsetX": "...",
+          "offsetY": "...",
+          "fit": "...",
+          "scaleX": "...",
+          "scaleY": "...",
+          "rotation": "...",
+          "tint": "...",
+          "alphaThreshold": "..."
+        },
+        "shape": 4,
+        "x": 1500,
+        "y": 640,
+        "elevation": 0,
+        "sort": 8,
+        "locked": false,
+        "lockRotation": false,
+        "rotation": 0,
+        "alpha": 1,
+        "hidden": false,
+        "disposition": 1,
+        "displayBars": 0,
+        "bar1": {
+          "attribute": "..."
+        },
+        "bar2": {
+          "attribute": "..."
+        },
+        "light": {
+          "negative": "...",
+          "priority": "...",
+          "alpha": "...",
+          "angle": "...",
+          "bright": "...",
+          "color": "...",
+          "coloration": "...",
+          "dim": "...",
+          "attenuation": "...",
+          "luminosity": "...",
+          "saturation": "...",
+          "contrast": "...",
+          "shadows": "...",
+          "animation": "...",
+          "darkness": "..."
+        },
+        "sight": {
+          "enabled": "...",
+          "range": "...",
+          "angle": "...",
+          "visionMode": "...",
+          "color": "...",
+          "attenuation": "...",
+          "brightness": "...",
+          "saturation": "...",
+          "contrast": "..."
+        },
+        "detectionModes": [
+          "...",
+          "..."
+        ],
+        "occludable": {
+          "radius": "..."
+        },
+        "ring": {
+          "enabled": "...",
+          "colors": "...",
+          "effects": "...",
+          "subject": "..."
+        },
+        "turnMarker": {
+          "mode": "...",
+          "animation": "...",
+          "src": "...",
+          "disposition": "..."
+        },
+        "movementAction": "walk",
+        "flags": {
+          "sequencer": "..."
+        },
+        "actors": {},
+        "regions": {}
+      },
+      "rollData": {
+        "abilities": {
+          "str": "...",
+          "dex": "...",
+          "con": "...",
+          "int": "...",
+          "wis": "...",
+          "cha": "..."
+        },
+        "attributes": {
+          "hpAbility": "...",
+          "cmbAbility": "...",
+          "naturalAC": "...",
+          "ac": "...",
+          "cmd": "...",
+          "sr": "...",
+          "clCheck": "...",
+          "saveNotes": "...",
+          "acNotes": "...",
+          "cmdNotes": "...",
+          "srNotes": "...",
+          "attack": "...",
+          "energyDrain": "...",
+          "quadruped": "...",
+          "savingThrows": "...",
+          "hp": "...",
+          "wounds": "...",
+          "vigor": "...",
+          "init": "...",
+          "speed": "...",
+          "spells": "...",
+          "bab": "...",
+          "acp": "...",
+          "maxDexBonus": "...",
+          "cmb": "...",
+          "mDex": "...",
+          "damage": "...",
+          "woundThresholds": "...",
+          "hd": "...",
+          "encumbrance": "..."
+        },
+        "details": {
+          "height": "...",
+          "weight": "...",
+          "gender": "...",
+          "deity": "...",
+          "age": "...",
+          "alignment": "...",
+          "biography": "...",
+          "bonusFeatFormula": "...",
+          "bonusSkillRankFormula": "...",
+          "carryCapacity": "...",
+          "notes": "...",
+          "xp": "...",
+          "level": "...",
+          "feats": "...",
+          "skills": "...",
+          "mythicTier": "..."
+        },
+        "skills": {
+          "acr": "...",
+          "apr": "...",
+          "art": "...",
+          "blf": "...",
+          "clm": "...",
+          "crf": "...",
+          "dip": "...",
+          "dev": "...",
+          "dis": "...",
+          "esc": "...",
+          "fly": "...",
+          "han": "...",
+          "hea": "...",
+          "int": "...",
+          "kar": "...",
+          "kdu": "...",
+          "ken": "...",
+          "kge": "...",
+          "khi": "...",
+          "klo": "...",
+          "kna": "...",
+          "kno": "...",
+          "kpl": "...",
+          "kre": "...",
+          "lin": "...",
+          "lor": "...",
+          "per": "...",
+          "prf": "...",
+          "pro": "...",
+          "rid": "...",
+          "sen": "...",
+          "slt": "...",
+          "spl": "...",
+          "ste": "...",
+          "sur": "...",
+          "swm": "...",
+          "umd": "..."
+        },
+        "traits": {
+          "size": "...",
+          "ageCategory": "...",
+          "senses": "...",
+          "hardness": "...",
+          "dr": "...",
+          "eres": "...",
+          "cres": "...",
+          "regen": "...",
+          "fastHealing": "...",
+          "languages": "...",
+          "di": "...",
+          "dv": "...",
+          "ci": "...",
+          "stature": "...",
+          "weaponProf": "...",
+          "armorProf": "...",
+          "aura": "...",
+          "creatureTypes": "...",
+          "creatureSubtypes": "...",
+          "reach": "...",
+          "humanoid": "...",
+          "undead": "...",
+          "construct": "...",
+          "living": "..."
+        },
+        "currency": {
+          "pp": "...",
+          "gp": "...",
+          "sp": "...",
+          "cp": "..."
+        },
+        "altCurrency": {
+          "pp": "...",
+          "gp": "...",
+          "sp": "...",
+          "cp": "..."
+        },
+        "config": {
+          "noManeuvers": "..."
+        },
+        "resources": {},
+        "ac": {
+          "normal": "...",
+          "natural": "...",
+          "shield": "..."
+        },
+        "conditions": {
+          "bleed": "...",
+          "blind": "...",
+          "confused": "...",
+          "cowering": "...",
+          "dazed": "...",
+          "dazzled": "...",
+          "dead": "...",
+          "deaf": "...",
+          "disabled": "...",
+          "dying": "...",
+          "entangled": "...",
+          "exhausted": "...",
+          "fatigued": "...",
+          "flatFooted": "...",
+          "frightened": "...",
+          "grappled": "...",
+          "helpless": "...",
+          "incorporeal": "...",
+          "invisible": "...",
+          "nauseated": "...",
+          "panicked": "...",
+          "paralyzed": "...",
+          "petrified": "...",
+          "pinned": "...",
+          "prone": "...",
+          "shaken": "...",
+          "sickened": "...",
+          "sleep": "...",
+          "squeezing": "...",
+          "stable": "...",
+          "staggered": "...",
+          "stunned": "...",
+          "unconscious": "...",
+          "burrow": "...",
+          "fly": "...",
+          "hover": "...",
+          "swim": "...",
+          "loseDexToAC": "..."
+        },
+        "step": 5,
+        "combat": {
+          "round": "..."
+        },
+        "size": 4,
+        "ageCategory": {
+          "value": "...",
+          "physical": "...",
+          "mental": "..."
+        },
+        "armor": {
+          "type": "...",
+          "total": "...",
+          "ac": "...",
+          "enh": "..."
+        },
+        "shield": {
+          "type": "...",
+          "total": "...",
+          "ac": "...",
+          "enh": "..."
+        },
+        "spells": {
+          "primary": "...",
+          "secondary": "...",
+          "tertiary": "...",
+          "spelllike": "...",
+          "wizard": "..."
+        },
+        "dFlags": {},
+        "bFlags": {},
+        "range": {
+          "melee": "...",
+          "reach": "..."
+        },
+        "classes": "[Circular]",
+        "alignment": {
+          "lawful": "...",
+          "evil": "...",
+          "chaotic": "...",
+          "good": "...",
+          "neutral": "..."
+        },
+        "item": {
+          "description": "...",
+          "tags": "...",
+          "quantity": "...",
+          "weight": "...",
+          "equipped": "...",
+          "carried": "...",
+          "price": "...",
+          "size": "...",
+          "resizing": "...",
+          "timeworn": "...",
+          "artifact": "...",
+          "identified": "...",
+          "unidentified": "...",
+          "cursed": "...",
+          "cl": "...",
+          "aura": "...",
+          "hp": "...",
+          "broken": "...",
+          "hardness": "...",
+          "changes": "...",
+          "changeFlags": "...",
+          "contextNotes": "...",
+          "actions": "...",
+          "attackNotes": "...",
+          "effectNotes": "...",
+          "uses": "...",
+          "links": "...",
+          "tag": "...",
+          "flags": "...",
+          "scriptCalls": "...",
+          "masterwork": "...",
+          "enh": "...",
+          "proficient": "...",
+          "held": "...",
+          "ammo": "...",
+          "subType": "...",
+          "weaponSubtype": "...",
+          "hands": "...",
+          "baseTypes": "...",
+          "weaponGroups": "...",
+          "material": "...",
+          "properties": "...",
+          "showInQuickbar": "...",
+          "sources": "...",
+          "showInCombat": "...",
+          "alignments": "...",
+          "dFlags": "...",
+          "bFlags": "...",
+          "auraStrength": "...",
+          "primaryAttack": "...",
+          "proficiencyPenalty": "..."
+        },
+        "cl": 0,
+        "action": {
+          "name": "...",
+          "img": "...",
+          "description": "...",
+          "tag": "...",
+          "activation": "...",
+          "duration": "...",
+          "target": "...",
+          "range": "...",
+          "uses": "...",
+          "measureTemplate": "...",
+          "bab": "...",
+          "attackName": "...",
+          "actionType": "...",
+          "attackBonus": "...",
+          "critConfirmBonus": "...",
+          "damage": "...",
+          "extraAttacks": "...",
+          "ability": "...",
+          "save": "...",
+          "notes": "...",
+          "soundEffect": "...",
+          "powerAttack": "...",
+          "naturalAttack": "...",
+          "held": "...",
+          "nonlethal": "...",
+          "splash": "...",
+          "touch": "...",
+          "ammo": "...",
+          "effect": "...",
+          "area": "...",
+          "conditionals": "...",
+          "enh": "...",
+          "material": "...",
+          "alignments": "..."
+        },
+        "dc": 0,
+        "sizeBonus": 0,
+        "bab": 10,
+        "d20": "",
+        "dcBonus": 0,
+        "chargeCost": 1,
+        "chargeCostBonus": 0,
+        "critMultBonus": 0,
+        "fullAttack": 0,
+        "powerAttackBonus": 0,
+        "powerAttackPenalty": 0,
+        "critMult": 1,
+        "critCount": 0,
+        "ablMult": 1
+      },
+      "skipDialog": false,
+      "chatMessage": true,
+      "dice": "1d20",
+      "cost": null,
+      "fullAttack": false,
+      "useOptions": {},
+      "attackBonus": [],
+      "damageBonus": [],
+      "attacks": [
+        {
+          "type": "...",
+          "label": "...",
+          "attackBonus": "...",
+          "abstract": "...",
+          "ammo": "...",
+          "chargeCost": "...",
+          "chatAttack": "...",
+          "attackBonusTotal": "..."
+        }
+      ],
+      "chatAttacks": [
+        {
+          "action": "...",
+          "actionUse": "...",
+          "attack": "...",
+          "hasRange": "...",
+          "critConfirm": "...",
+          "hasAttack": "...",
+          "hasCritConfirm": "...",
+          "hasDamage": "...",
+          "damage": "...",
+          "damageRows": "...",
+          "nonlethal": "...",
+          "critDamage": "...",
+          "ammo": "...",
+          "hasCards": "...",
+          "cards": "...",
+          "effectNotes": "...",
+          "effectNotesHTML": "...",
+          "notesOnly": "...",
+          "targets": "...",
+          "rollData": "...",
+          "isHealing": "...",
+          "label": "...",
+          "method": "..."
+        }
+      ],
+      "rollMode": "publicroll",
+      "useMeasureTemplate": true,
+      "conditionals": [],
+      "conditionalPartsCommon": {},
+      "casterLevelCheck": false,
+      "scriptData": {},
+      "templateData": {
+        "action": "[Circular]",
+        "item": "[Circular]",
+        "footnotes": []
+      },
+      "formData": {
+        "d20": "",
+        "attack-bonus": "",
+        "damage-bonus": "",
+        "haste-attack": false,
+        "power-attack": false,
+        "manyshot": false,
+        "rapid-shot": false,
+        "point-blank-shot": false,
+        "held": "1h",
+        "measure-template": true,
+        "rollMode": "publicroll",
+        "fullAttack": false,
+        "cl-check": false
+      },
+      "template": {
+        "t": "circle",
+        "x": 1460,
+        "y": 650,
+        "elevation": 0,
+        "sort": 0,
+        "distance": 5,
+        "direction": 0,
+        "angle": 0,
+        "width": 0,
+        "borderColor": {},
+        "fillColor": {},
+        "texture": null,
+        "hidden": false,
+        "flags": {
+          "pf1": "..."
+        }
+      },
+      "targets": [],
+      "saveDC": 0,
+      "category": "use"
+    },
+    "action": "[Circular]"
+  },
+  "item": "[Circular]",
+  "shared": "[Circular]",
+  "action": "[Circular]"
+}
