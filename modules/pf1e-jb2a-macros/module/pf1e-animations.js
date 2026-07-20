@@ -267,6 +267,26 @@ pf1eAnimations.hooks.createChatMessage = Hooks.on(
     ) {
       const degreeOfSuccess =
         pf1eAnimations.degreeOfSuccessWithRerollHandling(data);
+
+      // PF1-FIX: Automated Animations has no native pf1 attack hook (unlike
+      // its built-in dnd5e/pf2e support), so the weapon/attack item must be
+      // forwarded explicitly for AA's autorec name-matching (melee/range/etc.)
+      // to find a weapon-specific animation. Without this, entries merged via
+      // the Update Menu (e.g. "Antler", "Dagger") are registered but never
+      // looked up.
+      if (linkedItem) {
+        const weaponHitTargets =
+          ["failure", "criticalFailure"].includes(degreeOfSuccess) &&
+          game.settings.get("pf1e-jb2a-macros", "randomHitAnims")
+            ? []
+            : targets;
+        AutomatedAnimations.playAnimation(token, linkedItem, {
+          playOnMiss: true,
+          targets: targets,
+          hitTargets: weaponHitTargets,
+        });
+      }
+
       const pack =
         game.packs.get("pf1e-jb2a-macros.pf1e-actions") ||
         game.packs.get("pf1e-jb2a-macros.pf1-actions") ||
